@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<RulePackDef>
+		<defName>RH_TET_Dwarf_Namer</defName>
+		<include>
+			<li>RH_TET_GlobalUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->[RH_TET_DwarfMaleName] [RH_TET_DwarfSurname]</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+  
+	<RulePackDef>
+		<defName>RH_TET_Dwarf_Female_Namer</defName>
+		<include>
+			<li>RH_TET_GlobalUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->[RH_TET_DwarfFemaleName] [RH_TET_DwarfSurname]</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+  
+	<RulePackDef>
+		<defName>RH_TET_NamerFactionDwarfKarak</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[pack]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>pack</keyword>
+					<path>NameBanks/RH_TET_Dwarf_Karak</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+
+</Defs>

@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Abstract Classes -->
+
+	<!-- Warmachine Parent Abstract -->
+	<ThingDef Name="RH_TET_Dwarfs_WarmachineBase" Abstract="True">
+		<category>Building</category>
+		<thingClass>Building</thingClass>
+		<techLevel>Medieval</techLevel>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
+		<graphicData>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeTop>Damage/Edge</edgeTop>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+	</ThingDef>
+
+	<!-- Warmachine Abstract -->
+	<ThingDef Name="RH_TET_Dwarfs_WarmachineBuilding" ParentName="RH_TET_Dwarfs_WarmachineBase" Abstract="True">
+		<thingClass>Building_TurretGun</thingClass>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Building</altitudeLayer>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<hasTooltip>true</hasTooltip>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Mannable">
+				<manWorkType>Violent</manWorkType>
+			</li>
+		</comps>
+		<designationCategory>Security</designationCategory>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsSecurity</li>
+		</thingCategories>
+		<minifiedDef>MinifiedThing</minifiedDef>
+	</ThingDef>
+
+	<!-- Warmachine Turret Abstract -->
+	<ThingDef Name="RH_TET_Dwarfs_WarmachineWeapon" Abstract="True">
+		<category>Item</category>
+		<thingClass>ThingWithComps</thingClass>
+		<equipmentType>Primary</equipmentType>
+		<techLevel>Medieval</techLevel>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Flammability>0</Flammability>
+			<Mass>10</Mass>
+		</statBases>
+		<pathCost>40</pathCost>
+		<selectable>True</selectable>
+		<alwaysHaulable>True</alwaysHaulable>
+		<useHitPoints>False</useHitPoints>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<altitudeLayer>Building</altitudeLayer>
+		<stealable>false</stealable>
+		<soundInteract>Interact_BeatFire</soundInteract>
+		<tickerType>Never</tickerType>
+		<destroyOnDrop>True</destroyOnDrop>
+		<tradeability>None</tradeability>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li><compClass>CompEquippable</compClass></li>
+		</comps>
+	</ThingDef>
+
+	<!-- Warmachine Ammunition Abstract -->
+	<ThingDef Name="RH_TET_Dwarfs_ChangableAmmo" ParentName="RH_TET_Dwarfs_WarmachineWeapon" Abstract="True">
+		<comps>
+			<li Class="CompProperties_ChangeableProjectile"/>
+		</comps>
+	</ThingDef>
+	
+
+	<ThingDef Name="RH_TET_Dwarfs_ProjectileBase" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>Bullet</thingClass>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+		</projectile>
+	</ThingDef>
+
+	<!-- Arrow Abstract -->
+	<ThingDef Name="RH_TET_Dwarfs_ArrowBase" ParentName="RH_TET_Dwarfs_ProjectileBase" Abstract="True">
+		<graphicData>
+			<texPath>Things/Projectile/Arrow_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Transparent</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Arrow</damageDef>
+		</projectile>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_ArrowBase">
+		<defName>RH_TET_Dwarfs_BoltThrower_Bolt_Round</defName>
+		<thingClass>Projectile_Explosive</thingClass>
+		<label>bolt thrower bolt</label>
+		<graphicData>
+			<texPath>Things/Projectiles/RH_TET_Dwarfs_BoltThrower_Bolt</texPath>
+		</graphicData>
+		<projectile>
+			<damageDef>Stab</damageDef>
+			<damageAmountBase>65</damageAmountBase>
+			<speed>100</speed>
+			<explosionRadius>1.50</explosionRadius>
+			<explosionDamageFalloff>false</explosionDamageFalloff>
+			<!--<explosionEffect>GiantExplosion</explosionEffect>-->
+			<armorPenetrationBase>1.0</armorPenetrationBase>
+			<soundExplode>RH_TET_Dwarf_Quarreller</soundExplode>
+			<soundAmbient>RH_TET_Dwarf_GoblinHewerAmbient</soundAmbient>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+		</projectile>
+	</ThingDef>
+
+	<!-- Flying Rock Chunk -->
+	<ThingDef ParentName="RH_TET_Dwarfs_ArrowBase">
+		<defName>RH_TET_Dwarfs_GrudgeThrower_RockChunk</defName>
+		<thingClass>Projectile_Explosive</thingClass>
+		<label>rock chunk</label>
+		<graphicData>
+			<texPath>Things/Projectiles/StoneChunk</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(138,172,168)</color>
+		</graphicData>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<flyOverhead>true</flyOverhead>
+			<damageAmountBase>55</damageAmountBase>
+			<explosionRadius>3</explosionRadius>
+			<explosionDamageFalloff>true</explosionDamageFalloff>
+			<explosionEffect>GiantExplosion</explosionEffect>
+			<speed>35</speed>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>Bridge_Collapse</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+			<armorPenetrationBase>0.55</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<!-- Grudge Writ (grudge thrower) -->
+	<ThingDef ParentName="RH_TET_Dwarfs_ArrowBase">
+		<defName>RH_TET_Dwarfs_GrudgeThrower_GrudgeWrit_Round</defName>
+		<thingClass>Projectile_Explosive</thingClass>
+		<label>Dawi grudge writ</label>
+		<graphicData>
+			<texPath>Things/Projectiles/RH_TET_Dwarfs_GrudgeThrower_Writ_Round</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(138,172,168)</color>
+		</graphicData>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<flyOverhead>true</flyOverhead>
+			<damageAmountBase>65</damageAmountBase>
+			<explosionRadius>5</explosionRadius>
+			<explosionDamageFalloff>true</explosionDamageFalloff>
+			<explosionEffect>GiantExplosion</explosionEffect>
+			<speed>45</speed>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>Bridge_Collapse</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+			<armorPenetrationBase>1.10</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+	
+	<!-- Cannon Ammo -->
+	<ThingDef ParentName="RH_TET_Dwarfs_ArrowBase">
+		<defName>RH_TET_Dwarfs_Cannon_Ball_Round</defName>
+		<thingClass>Projectile_Explosive</thingClass>
+		<label>Dawi cannon ball</label>
+		<graphicData>
+			<texPath>Things/Projectiles/RH_TET_Dwarfs_CannonBall</texPath>
+		</graphicData>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>100</damageAmountBase>
+			<speed>120</speed>
+			<explosionRadius>2</explosionRadius>
+			<explosionDamageFalloff>false</explosionDamageFalloff>
+			<!--<explosionEffect>GiantExplosion</explosionEffect>-->
+			<soundExplode>MortarIncendiary_Explode</soundExplode>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+			<armorPenetrationBase>2.0</armorPenetrationBase>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="RH_TET_Dwarfs_ArrowBase">
+		<defName>RH_TET_Dwarfs_Cannon_Shell_Round</defName>
+		<thingClass>Projectile_Explosive</thingClass>
+		<label>Dawi cannon shell</label>
+		<graphicData>
+			<texPath>Things/Projectiles/RH_TET_Dwarfs_CannonShell</texPath>
+		</graphicData>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>120</damageAmountBase>
+			<speed>110</speed>
+			<explosionRadius>3</explosionRadius>
+			<explosionDamageFalloff>false</explosionDamageFalloff>
+			<!--<explosionEffect>GiantExplosion</explosionEffect>-->
+			<soundExplode>MortarIncendiary_Explode</soundExplode>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+			<armorPenetrationBase>3.0</armorPenetrationBase>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+		</projectile>
+	</ThingDef>
+	
+	<!-- Organ Gun Projectile -->
+	<ThingDef ParentName="RH_TET_Dwarfs_ArrowBase">
+		<defName>RH_TET_Dwarfs_OrganGun_Round_Shot</defName>
+		<thingClass>Projectile_Explosive</thingClass>
+		<label>organ gun round</label>
+		<graphicData>
+			<texPath>Things/Projectiles/RH_TET_Dwarfs_OrganGun</texPath>
+		</graphicData>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>25</damageAmountBase>
+			<speed>100</speed>
+			<explosionRadius>1.5</explosionRadius>
+			<explosionDamageFalloff>false</explosionDamageFalloff>
+			<!--<explosionEffect>GiantExplosion</explosionEffect>-->
+			<armorPenetrationBase>2.0</armorPenetrationBase>
+			<soundExplode>MortarIncendiary_Explode</soundExplode>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+		</projectile>
+	</ThingDef>
+	
+	<!-- Flame Cannon Round -->
+	<ThingDef ParentName="RH_TET_Dwarfs_ArrowBase">
+		<defName>RH_TET_Dwarfs_FlameCannon_Round_Shot</defName>
+		<thingClass>Projectile_Explosive</thingClass>
+		<label>flame cannon round</label>
+		<graphicData>
+			<texPath>Things/Projectiles/RH_TET_Dwarfs_FlameCannonBall</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(138,172,168)</color>
+		</graphicData>
+		<projectile>
+			<speed>40</speed>
+			<damageDef>Flame</damageDef>
+			<damageAmountBase>55</damageAmountBase>
+			<explosionRadius>6</explosionRadius>
+			<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>0.6</preExplosionSpawnChance>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<explosionDamageFalloff>true</explosionDamageFalloff>
+			<explosionEffect>GiantExplosion</explosionEffect>
+			<soundExplode>Explosion_GiantBomb</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+			<armorPenetrationBase>0.2</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+	
+	<!-- Goblin Hewer Projectile -->
+	<ThingDef ParentName="RH_TET_Dwarfs_ArrowBase">
+		<defName>RH_TET_Dwarfs_GoblinHewer_Round_Shot</defName>
+		<thingClass>Projectile_Explosive</thingClass>
+		<label>goblin hewer ax</label>
+		<graphicData>
+			<texPath>Things/Projectiles/RH_TET_Dwarf_ThrowingAx/RH_TET_Dwarf_ThrowingAx</texPath>
+		</graphicData>
+		<projectile>
+			<damageDef>Cut</damageDef>
+			<damageAmountBase>20</damageAmountBase>
+			<speed>75</speed>
+			<explosionRadius>1.0</explosionRadius>
+			<explosionDamageFalloff>false</explosionDamageFalloff>
+			<!--<explosionEffect>GiantExplosion</explosionEffect>-->
+			<armorPenetrationBase>1.0</armorPenetrationBase>
+			<soundExplode>RH_TET_Dwarf_GoblinHewerThunk</soundExplode>
+			<soundAmbient>RH_TET_Dwarf_GoblinHewerAmbient</soundAmbient>
+			<soundImpactAnticipate>RH_TET_Dwarf_GoblinHewerAmbient</soundImpactAnticipate>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+		</projectile>
+	</ThingDef>
+	
+	<!-- Ammo Items -->
+	<ThingDef>
+		<defName>RH_TET_Dwarfs_BoltThrower_Bolt</defName>
+		<label>Dawi bolt thrower bolt</label>
+		<description>A large arrow that's fired from a bolt thrower.\n\nThe size of these arrows puts those of a quarreller to shame, and the same is true for the damage they can cause to an enemy.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/WarmachineAmmo/BoltThrower</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>true</rotatable>
+		<pathCost>15</pathCost>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<tickerType>Normal</tickerType>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<MarketValue>10</MarketValue>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>.75</DeteriorationRate>
+			<Mass>1</Mass>
+		</statBases>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_Artillery</li>
+		</thingCategories>
+		<projectileWhenLoaded>RH_TET_Dwarfs_BoltThrower_Bolt_Round</projectileWhenLoaded>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>RH_TET_Dwarfs_GrudgeThrower_GrudgeWrit</defName>
+		<label>Dawi grudge writ</label>
+		<description>A large rock with grudges written on it, fired from a Grudge Thrower.\n\nThe destructive power of a Grudge Writ surpasses that of a normal rock. They're written upon with some of the innumerable grudges of the dwarves. Due to a combination of the innate magic that dawi weild, and their skill at perfectly shaping stone, these grudge writs do much more damage than a normal stone chunk.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/WarmachineAmmo/GrudgeThrower</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+		<soundInteract>Stone_Drop</soundInteract>
+		<soundDrop>Stone_Drop</soundDrop>
+		<tickerType>Normal</tickerType>
+		<stackLimit>5</stackLimit>
+		<statBases>
+			<MarketValue>12</MarketValue>
+			<Flammability>0</Flammability>
+			<Mass>15</Mass>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_Artillery</li>
+		</thingCategories>
+		<projectileWhenLoaded>RH_TET_Dwarfs_GrudgeThrower_GrudgeWrit_Round</projectileWhenLoaded>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>RH_TET_Dwarfs_Cannon_Ball</defName>
+		<label>Dawi cannon ball</label>
+		<description>A large metal ball and a pouch of black powder, fired from a cannon.\n\nCannon balls are devastating to the foes of the dawi when fired from a dwarfen cannon. They're each crafted with the utmost care, to make them as accurate as possible.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/WarmachineAmmo/CannonBall</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+				<wickTicks>
+					<min>30</min>
+					<max>60</max>
+				</wickTicks>
+			</li>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>true</rotatable>
+		<pathCost>15</pathCost>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<tickerType>Normal</tickerType>
+		<stackLimit>5</stackLimit>
+		<statBases>
+			<MarketValue>15</MarketValue>
+			<Flammability>0.5</Flammability>
+			<Mass>3</Mass>
+			<DeteriorationRate>.75</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_Artillery</li>
+		</thingCategories>
+		<projectileWhenLoaded>RH_TET_Dwarfs_Cannon_Ball_Round</projectileWhenLoaded>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>RH_TET_Dwarfs_Cannon_Shell</defName>
+		<label>Dawi cannon shell</label>
+		<description>A large metal bullet and a pouch of black powder, fired from a cannon.\n\nThe destructive power of a cannon shell surpasses that of even a cannon ball. They're crafted with the faces of ancestors on them, as a way to avenge grudges from beyond the grave.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/WarmachineAmmo/CannonShell</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+				<wickTicks>
+					<min>30</min>
+					<max>60</max>
+				</wickTicks>
+			</li>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>true</rotatable>
+		<pathCost>15</pathCost>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<tickerType>Normal</tickerType>
+		<stackLimit>5</stackLimit>
+		<statBases>
+			<MarketValue>18</MarketValue>
+			<Flammability>0.5</Flammability>
+			<Mass>3</Mass>
+			<DeteriorationRate>.75</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_Artillery</li>
+		</thingCategories>
+		<projectileWhenLoaded>RH_TET_Dwarfs_Cannon_Shell_Round</projectileWhenLoaded>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>RH_TET_Dwarfs_OrganGun_Round</defName>
+		<label>Dawi organ gun round</label>
+		<description>A bunch of organ gun rounds, and some black powder.\n\nA series of miniature cannon balls blasting at you is nothing to scoff at.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/WarmachineAmmo/OrganGun</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+				<wickTicks>
+					<min>30</min>
+					<max>60</max>
+				</wickTicks>
+			</li>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>true</rotatable>
+		<pathCost>15</pathCost>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<tickerType>Normal</tickerType>
+		<stackLimit>5</stackLimit>
+		<statBases>
+			<MarketValue>15</MarketValue>
+			<Flammability>0.5</Flammability>
+			<Mass>2</Mass>
+			<DeteriorationRate>.75</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_Artillery</li>
+		</thingCategories>
+		<projectileWhenLoaded>RH_TET_Dwarfs_OrganGun_Round_Shot</projectileWhenLoaded>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>RH_TET_Dwarfs_GoblinHewer_Round</defName>
+		<label>Dawi goblin hewer ax</label>
+		<description>An ax intended to be fired by a dwarfen goblin hewer warmachine. It's oddly weighted, so impracticle for weilding manually, but that makes it very powerful when flung at high power by the goblin hewer.\n\nThese mow down infantry like few other things, and are feared by the enemies of the dawi.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/WarmachineAmmo/GoblinHewer</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>true</rotatable>
+		<pathCost>15</pathCost>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<tickerType>Normal</tickerType>
+		<stackLimit>5</stackLimit>
+		<statBases>
+			<MarketValue>10</MarketValue>
+			<Flammability>0.1</Flammability>
+			<Mass>2</Mass>
+			<DeteriorationRate>.75</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_Artillery</li>
+		</thingCategories>
+		<projectileWhenLoaded>RH_TET_Dwarfs_GoblinHewer_Round_Shot</projectileWhenLoaded>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>RH_TET_Dwarfs_FlameCannon_Round</defName>
+		<label>Dawi flame cannon round</label>
+		<description>An explosive round for a flame cannon.\n\nThese shells are dangerous just to have around, and the dawi are careful to treat them so. Their devastation once fired is second to none.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/WarmachineAmmo/FlameCannon</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>5</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+				<wickTicks>
+					<min>30</min>
+					<max>60</max>
+				</wickTicks>
+			</li>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>true</rotatable>
+		<pathCost>15</pathCost>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<tickerType>Normal</tickerType>
+		<stackLimit>5</stackLimit>
+		<statBases>
+			<MarketValue>20</MarketValue>
+			<Flammability>1.0</Flammability>
+			<Mass>2</Mass>
+			<DeteriorationRate>.85</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_Artillery</li>
+		</thingCategories>
+		<projectileWhenLoaded>RH_TET_Dwarfs_FlameCannon_Round_Shot</projectileWhenLoaded>
+	</ThingDef>
+
+	<!-- Warmachine Turrets -->
+	<!-- Bolt Thrower Turret -->
+	<ThingDef ParentName="RH_TET_Dwarfs_ChangableAmmo">
+		<defName>RH_TET_Dwarfs_BoltThrower_Turret</defName>
+		<label>Dawi bolt thrower</label>
+		<description>A bolt thrower emplcement. Hurls large bolts, at high speed.\n\nThe most basic of dawi warmachines, they still do considerable damage, and no foe likes to see them across the battlefield.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_BoltThrower</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>0.95</AccuracyTouch>
+			<AccuracyShort>0.90</AccuracyShort>
+			<AccuracyMedium>0.88</AccuracyMedium>
+			<AccuracyLong>0.85</AccuracyLong>
+			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+		</statBases>
+		<building>
+			<fixedStorageSettings>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_BoltThrower_Bolt</li>
+					</thingDefs>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_BoltThrower_Bolt</li>
+					</thingDefs>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<hasStandardCommand>true</hasStandardCommand>
+				<requireLineOfSight>true</requireLineOfSight>
+				<warmupTime>1.2</warmupTime>
+				<range>275</range>
+				<soundCast>Bow_Large</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<!-- Grudge Thrower Turret -->
+	<ThingDef ParentName="RH_TET_Dwarfs_ChangableAmmo">
+		<defName>RH_TET_Dwarfs_GrudgeThrower_Turret</defName>
+		<label>Dawi grudge thrower</label>
+		<description>A dwarfen grudge thrower emplacement. Tosses stones that explode upon impact. Reasonably accurate, has a minimum range./n/nAccuracy and damage, that's what the dawi pack into the grudge thrower. With the anger of the grudge imbued into the construction of each, these machines are truly one of the best weapons of war available to the dawi.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_GrudgeThrower</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>0</AccuracyTouch>
+			<AccuracyShort>0.71</AccuracyShort>
+			<AccuracyMedium>0.65</AccuracyMedium>
+			<AccuracyLong>0.6</AccuracyLong>
+			<RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+		</statBases>
+		<building>
+			<fixedStorageSettings>
+				<filter>
+					<categories>
+						<li>StoneChunks</li>
+					</categories>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_GrudgeThrower_GrudgeWrit</li>
+					</thingDefs>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<filter>
+					<categories>
+						<li>StoneChunks</li>
+					</categories>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_GrudgeThrower_GrudgeWrit</li>
+					</thingDefs>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<requireLineOfSight>false</requireLineOfSight>
+				<hasStandardCommand>true</hasStandardCommand>
+				<warmupTime>3.5</warmupTime>
+				<minRange>20</minRange>
+				<range>500</range>
+				<forcedMissRadius>3</forcedMissRadius>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>Bow_Large</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<!-- Cannon Turret -->
+	<ThingDef ParentName="RH_TET_Dwarfs_ChangableAmmo">
+		<defName>RH_TET_Dwarfs_Cannon_Turret</defName>
+		<label>Dawi cannon</label>
+		<description>A cannon emplacement. Hurls cannon balls and shells at very high speed.\n\nSolid metal construction, and capable of packing a massive punch. The dwarfen cannon is more accurate than that of any other race, and the dawi carry that with them as a point of pride.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_Cannon</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>0.9</AccuracyTouch>
+			<AccuracyShort>0.95</AccuracyShort>
+			<AccuracyMedium>0.85</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+		</statBases>
+		<building>
+			<fixedStorageSettings>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_Cannon_Ball</li>
+						<li>RH_TET_Dwarfs_Cannon_Shell</li>
+					</thingDefs>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_Cannon_Ball</li>
+						<li>RH_TET_Dwarfs_Cannon_Shell</li>
+					</thingDefs>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<hasStandardCommand>true</hasStandardCommand>
+				<requireLineOfSight>true</requireLineOfSight>
+				<warmupTime>2.5</warmupTime>
+				<range>500</range>
+				<soundCast>RH_TET_Dwarf_Cannon</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<!-- Organ Gun Turret -->
+	<ThingDef ParentName="RH_TET_Dwarfs_ChangableAmmo">
+		<defName>RH_TET_Dwarfs_OrganGun_Turret</defName>
+		<label>Dawi organ gun</label>
+		<description>An organ gun emplacement. Hurls several organ gun shot balls at very high speed.\n\nYoung dawi love the organ gun. The series of thundrous blasts when it fires, and the foes being ripped limb from limb are truly glorious to behold.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_OrganGun</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>.95</AccuracyTouch>
+			<AccuracyShort>0.90</AccuracyShort>
+			<AccuracyMedium>0.85</AccuracyMedium>
+			<AccuracyLong>0.8</AccuracyLong>
+			<RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+		</statBases>
+		<building>
+			<fixedStorageSettings>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_OrganGun_Round</li>
+					</thingDefs>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_OrganGun_Round</li>
+					</thingDefs>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<hasStandardCommand>true</hasStandardCommand>
+				<requireLineOfSight>true</requireLineOfSight>
+				<warmupTime>2.5</warmupTime>
+				<range>40</range>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<soundCast>RH_TET_Dwarf_OrganGun</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<!-- Flame Cannon Turret -->
+	<ThingDef ParentName="RH_TET_Dwarfs_ChangableAmmo">
+		<defName>RH_TET_Dwarfs_FlameCannon_Turret</defName>
+		<label>Dawi flame cannon</label>
+		<description>A flame cannon emplacement. Hurls rounds that explode, and create lots of fire. Has a minimum range, and wisely so considering how destructive its explosive ammunition is.\n\nFew weapons cause the fear in dwarfen foes that the flame cannon does. They control a battlefield, and devastate the terrain and foes alike.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_FlameCannon</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>0</AccuracyTouch>
+			<AccuracyShort>0.75</AccuracyShort>
+			<AccuracyMedium>0.65</AccuracyMedium>
+			<AccuracyLong>0.55</AccuracyLong>
+			<RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
+		</statBases>
+		<building>
+			<fixedStorageSettings>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_FlameCannon_Round</li>
+					</thingDefs>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_FlameCannon_Round</li>
+					</thingDefs>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<hasStandardCommand>true</hasStandardCommand>
+				<requireLineOfSight>true</requireLineOfSight>
+				<forcedMissRadius>5</forcedMissRadius>
+				<warmupTime>4</warmupTime>
+				<minRange>10</minRange>
+				<range>35</range>
+				<soundCast>RH_TET_Dwarf_Cannon</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+	</ThingDef>
+	
+	<!-- Goblin Hewer Turret -->
+	<ThingDef ParentName="RH_TET_Dwarfs_ChangableAmmo">
+		<defName>RH_TET_Dwarfs_GoblinHewer_Turret</defName>
+		<label>Dawi goblin hewer</label>
+		<description>A goblin hewer emplacement. Hurls several specially made axes at high speed.\n\nA creation of Malakai Makaisson, it's a rare and terrifying slayer manned warmachine.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_GoblinHewer</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>.85</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyLong>0.8</AccuracyLong>
+			<RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+		</statBases>
+		<building>
+			<fixedStorageSettings>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_GoblinHewer_Round</li>
+					</thingDefs>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_GoblinHewer_Round</li>
+					</thingDefs>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<hasStandardCommand>true</hasStandardCommand>
+				<requireLineOfSight>true</requireLineOfSight>
+				<warmupTime>2.5</warmupTime>
+				<range>35</range>
+				<burstShotCount>6</burstShotCount>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<soundCast>RH_TET_Dwarf_GoblinHewer</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+	</ThingDef>
+	
+	<!-- Warmachines -->
+	<!-- Bolt Thrower -->
+	<ThingDef ParentName="RH_TET_Dwarfs_WarmachineBuilding">
+		<defName>RH_TET_Dwarfs_BoltThrower</defName>
+		<label>Dawi bolt thrower</label>
+		<description>Large warmachine. Fires large lethal bolts at enemies.\n\nThe most basic of dawi warmachines, they still do considerable damage, and no foe likes to see them across the battlefield.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_BoltThrower_Empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<uiIconPath>UI/Menu/RH_TET_Dwarfs_BoltThrower_MenuIcon</uiIconPath>
+		<statBases>
+			<WorkToBuild>5500</WorkToBuild>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>.25</Flammability>
+			<Beauty>0</Beauty>
+			<Mass>75</Mass>
+		</statBases>
+		<size>(2,2)</size>
+		<costList>
+			<Steel>150</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<fillPercent>0.7</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<building>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_BoltThrower_Blueprint</texPath>
+			</blueprintGraphicData>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<turretGunDef>RH_TET_Dwarfs_BoltThrower_Turret</turretGunDef>
+			<turretBurstWarmupTime>2.5</turretBurstWarmupTime>
+			<turretBurstCooldownTime>8</turretBurstCooldownTime>
+			<turretTopDrawSize>4</turretTopDrawSize>
+			<buildingTags>
+				<li>Artillery_BaseDestroyer</li>
+				<li>Artillery_MannedMortar</li>
+			</buildingTags>
+		</building>
+		<inspectorTabs>
+			<li>ITab_Shells</li>
+		</inspectorTabs>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WarmachinesBasic</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<!-- Grudge Thrower -->
+	<ThingDef ParentName="RH_TET_Dwarfs_WarmachineBuilding">
+		<defName>RH_TET_Dwarfs_GrudgeThrower</defName>
+		<label>dawi grudge thrower</label>
+		<description>A grudge thrower. Hurls stone chunks at enemies, which explode upon impact. Great at smashing groups of enemies. Has a minimum range./n/nAccuracy and damage, that's what the dawi pack into the grudge thrower. With the anger of the grudge imbued into the construction of each, these machines are truly one of the best weapons of war available to the dawi.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_GrudgeThrower_Empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<interactionCellOffset>(-2,0,-1)</interactionCellOffset>
+		<uiIconPath>UI/Menu/RH_TET_Dwarfs_GrudgeThrower_MenuIcon</uiIconPath>
+		<statBases>
+			<WorkToBuild>9000</WorkToBuild>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Flammability>.25</Flammability>
+			<Beauty>0</Beauty>
+			<Mass>100</Mass>
+		</statBases>
+		<costList>
+			<Steel>225</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<size>(3,3)</size>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<fillPercent>0.75</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<placeWorkers>
+			<li>PlaceWorker_NotUnderRoof</li>
+		</placeWorkers>
+		<building>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_GrudgeThrower_Blueprint</texPath>
+			</blueprintGraphicData>
+			<!--<ai_combatDangerous>true</ai_combatDangerous>-->
+			<turretGunDef>RH_TET_Dwarfs_GrudgeThrower_Turret</turretGunDef>
+			<turretBurstWarmupTime>5</turretBurstWarmupTime>
+			<turretBurstCooldownTime>20</turretBurstCooldownTime>
+			<turretTopDrawSize>4</turretTopDrawSize>
+			<buildingTags>
+				<li>Artillery_DwarfsBaseDestroyer</li>
+				<li>Artillery_BaseDestroyer</li>
+				<li>Artillery_MannedMortar</li>
+			</buildingTags>
+		</building>
+		<inspectorTabs>
+			<li>ITab_Shells</li>
+		</inspectorTabs>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WarmachinesBasic</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<!-- Cannon -->
+	<ThingDef ParentName="RH_TET_Dwarfs_WarmachineBuilding">
+		<defName>RH_TET_Dwarfs_Cannon</defName>
+		<label>Dawi cannon</label>
+		<description>Large warmachine. Fires lethal cannon balls and shells at enemies. Wreaks much damage!\n\nSolid metal construction, and capable of packing a massive punch. The dwarfen cannon is more accurate than that of any other race, and the dawi carry that with them as a point of pride.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_Cannon_Empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<uiIconPath>UI/Menu/RH_TET_Dwarfs_Cannon_MenuIcon</uiIconPath>
+		<statBases>
+			<WorkToBuild>9000</WorkToBuild>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>.25</Flammability>
+			<Beauty>0</Beauty>
+			<Mass>75</Mass>
+		</statBases>
+		<size>(2,2)</size>
+		<costList>
+			<Steel>225</Steel>
+			<ComponentIndustrial>7</ComponentIndustrial>
+		</costList>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<fillPercent>0.7</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+		<building>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_Cannon_Blueprint</texPath>
+			</blueprintGraphicData>
+			<!--<ai_combatDangerous>true</ai_combatDangerous>-->
+			<turretGunDef>RH_TET_Dwarfs_Cannon_Turret</turretGunDef>
+			<turretBurstWarmupTime>4</turretBurstWarmupTime>
+			<turretBurstCooldownTime>10</turretBurstCooldownTime>
+			<turretTopDrawSize>4</turretTopDrawSize>
+			<buildingTags>
+				<li>Artillery_BaseDestroyer</li>
+				<li>Artillery_MannedMortar</li>
+			</buildingTags>
+		</building>
+		<inspectorTabs>
+			<li>ITab_Shells</li>
+		</inspectorTabs>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WarmachinesAdvanced</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<!-- Organ Gun -->
+	<ThingDef ParentName="RH_TET_Dwarfs_WarmachineBuilding">
+		<defName>RH_TET_Dwarfs_OrganGun</defName>
+		<label>Dawi organ gun</label>
+		<description>Large warmachine. Fires a series of lethal metal balls at enemies. Turns enemies to swiss cheese!\n\nYoung dawi love the organ gun. The series of thundrous blasts when it fires, and the foes being ripped limb from limb are truly glorious to behold.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_OrganGun_Empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<uiIconPath>UI/Menu/RH_TET_Dwarfs_OrganGun_MenuIcon</uiIconPath>
+		<statBases>
+			<WorkToBuild>11000</WorkToBuild>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>.25</Flammability>
+			<Beauty>0</Beauty>
+			<Mass>75</Mass>
+		</statBases>
+		<size>(2,2)</size>
+		<costList>
+			<Steel>250</Steel>
+			<ComponentIndustrial>10</ComponentIndustrial>
+		</costList>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<fillPercent>0.7</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<specialDisplayRadius>40</specialDisplayRadius>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+		<building>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_OrganGun_Blueprint</texPath>
+			</blueprintGraphicData>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<turretGunDef>RH_TET_Dwarfs_OrganGun_Turret</turretGunDef>
+			<turretBurstWarmupTime>4</turretBurstWarmupTime>
+			<turretBurstCooldownTime>10</turretBurstCooldownTime>
+			<turretTopDrawSize>4</turretTopDrawSize>
+			<buildingTags>
+				<li>Artillery_BaseDestroyer</li>
+				<li>Artillery_MannedMortar</li>
+			</buildingTags>
+		</building>
+		<inspectorTabs>
+			<li>ITab_Shells</li>
+		</inspectorTabs>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WarmachinesFinal</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<!-- Flame Cannon -->
+	<ThingDef ParentName="RH_TET_Dwarfs_WarmachineBuilding">
+		<defName>RH_TET_Dwarfs_FlameCannon</defName>
+		<label>Dawi flame cannon</label>
+		<description>Large warmachine. Fires lethal highly explosive rounds at enemies. Makes much fire! Has a minimum range, and wisely so considering how destructive its explosive ammunition is.\n\nFew weapons cause the fear in dwarfen foes that the flame cannon does. They control a battlefield, and devastate the terrain and foes alike.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_FlameCannon_Empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<uiIconPath>UI/Menu/RH_TET_Dwarfs_FlameCannon_MenuIcon</uiIconPath>
+		<statBases>
+			<WorkToBuild>13000</WorkToBuild>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>.25</Flammability>
+			<Beauty>0</Beauty>
+			<Mass>75</Mass>
+		</statBases>
+		<size>(2,2)</size>
+		<costList>
+			<Steel>275</Steel>
+			<ComponentIndustrial>12</ComponentIndustrial>
+		</costList>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<fillPercent>0.7</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<specialDisplayRadius>35</specialDisplayRadius>
+		<constructionSkillPrerequisite>14</constructionSkillPrerequisite>
+		<building>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_FlameCannon_Blueprint</texPath>
+			</blueprintGraphicData>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<turretGunDef>RH_TET_Dwarfs_FlameCannon_Turret</turretGunDef>
+			<turretBurstWarmupTime>4</turretBurstWarmupTime>
+			<turretBurstCooldownTime>10</turretBurstCooldownTime>
+			<turretTopDrawSize>4</turretTopDrawSize>
+			<buildingTags>
+				<li>Artillery_BaseDestroyer</li>
+				<li>Artillery_MannedMortar</li>
+			</buildingTags>
+		</building>
+		<inspectorTabs>
+			<li>ITab_Shells</li>
+		</inspectorTabs>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WarmachinesFinal</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<!-- Goblin Hewer -->
+	<ThingDef ParentName="RH_TET_Dwarfs_WarmachineBuilding">
+		<defName>RH_TET_Dwarfs_GoblinHewer</defName>
+		<label>Dawi goblin hewer</label>
+		<description>Large warmachine. Fires a series of sharp axes at high speed. Slashes through foes relentlessly.\n\nA creation of Malakai Makaisson, it's a rare and terrifying slayer manned warmachine.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_GoblinHewer_Empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<uiIconPath>UI/Menu/RH_TET_Dwarfs_GoblinHewer_MenuIcon</uiIconPath>
+		<statBases>
+			<WorkToBuild>12500</WorkToBuild>
+			<MaxHitPoints>225</MaxHitPoints>
+			<Flammability>.10</Flammability>
+			<Beauty>0</Beauty>
+			<Mass>70</Mass>
+		</statBases>
+		<size>(2,2)</size>
+		<costList>
+			<Steel>200</Steel>
+			<ComponentIndustrial>12</ComponentIndustrial>
+		</costList>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<fillPercent>0.7</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<specialDisplayRadius>35</specialDisplayRadius>
+		<constructionSkillPrerequisite>13</constructionSkillPrerequisite>
+		<building>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Security/Warmachines/RH_TET_Dwarfs_GoblinHewer_Blueprint</texPath>
+			</blueprintGraphicData>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<turretGunDef>RH_TET_Dwarfs_GoblinHewer_Turret</turretGunDef>
+			<turretBurstWarmupTime>4</turretBurstWarmupTime>
+			<turretBurstCooldownTime>10</turretBurstCooldownTime>
+			<turretTopDrawSize>4</turretTopDrawSize>
+			<buildingTags>
+				<li>Artillery_BaseDestroyer</li>
+				<li>Artillery_MannedMortar</li>
+			</buildingTags>
+		</building>
+		<inspectorTabs>
+			<li>ITab_Shells</li>
+		</inspectorTabs>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WarmachinesBasicPlus</li>
+		</researchPrerequisites>
+	</ThingDef>
+	
+</Defs>

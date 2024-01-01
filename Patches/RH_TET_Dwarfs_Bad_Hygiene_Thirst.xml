@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Dubs Bad Hygiene</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Dwarf_Ale"]</xpath>
+					<value>
+						<li Class="DubsBadHygiene.WaterExt">
+							<water>0.2</water>
+							<UseForWashing>false</UseForWashing>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Dwarf_BugmansXXX"]</xpath>
+					<value>
+						<li Class="DubsBadHygiene.WaterExt">
+							<water>0.2</water>
+							<UseForWashing>false</UseForWashing>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+

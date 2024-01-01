@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RH_TET_Rat</defName>
+		<label>rat</label>
+		<description>A widely-hated and vile rodent known for soiling kitchens and spreading disease, rats have a way of following humans everywhere they go. It eats almost anything and lives almost anywhere. This one was bred in a skaven warren, and is especially repugnant.</description>
+		<statBases>
+			<MoveSpeed>6.0</MoveSpeed>
+			<MarketValue>35</MarketValue>
+			<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+		</statBases>
+		<tools>
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>3.6</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>3.6</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.7</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>QuadrupedAnimalWithPaws</body>
+			<baseBodySize>0.15</baseBodySize>
+			<baseHungerRate>0.60</baseHungerRate>
+			<baseHealthScale>0.29</baseHealthScale>
+			<foodType>OmnivoreRoughAnimal</foodType>
+			<leatherDef>Leather_Light</leatherDef>
+			<wildness>0.50</wildness>
+			<trainability>None</trainability>
+			<petness>0.01</petness>
+			<manhunterOnTameFailChance>.99</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>.99</manhunterOnDamageChance>
+			<mateMtbHours>8</mateMtbHours>
+			<gestationPeriodDays>12</gestationPeriodDays>
+			<litterSizeCurve>
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(2.2, 1)</li>
+					<li>(2.8, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeExpectancy>8</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.2</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.6</minAge>
+					<soundWounded>Pawn_Boomrat_Wounded</soundWounded>
+					<soundDeath>Pawn_Boomrat_Death</soundDeath>
+					<soundCall>Pawn_Boomrat_Call</soundCall>
+					<soundAngry>Pawn_Boomrat_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>AnimalCommon</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RH_TET_Rat</defName>
+		<label>swarm rat</label>
+		<race>RH_TET_Rat</race>
+		<combatPower>30</combatPower>
+		<ecoSystemWeight>0.01</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Skaven/RH_TET_Rat</texPath>
+					<color>(110,95,82)</color>
+					<drawSize>.9</drawSize>
+					<shaderType>CutoutComplex</shaderType>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
+					<drawSize>.9</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Skaven/RH_TET_Rat</texPath>
+					<color>(110,95,82)</color>
+					<drawSize>1.0</drawSize>
+					<shaderType>CutoutComplex</shaderType>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
+					<drawSize>1.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Skaven/RH_TET_Rat</texPath>
+					<color>(110,95,82)</color>
+					<drawSize>1.1</drawSize>
+					<shaderType>CutoutComplex</shaderType>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
+					<drawSize>1.1</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RH_TET_GiantRat</defName>
+		<label>giant rat</label>
+		<description>A large unnatural rodent, the giant is a beast bred by skaven breeders, and prodded with spears and other weapons into a battle frenzy when a fight ensues.</description>
+		<statBases>
+			<MoveSpeed>5.9</MoveSpeed>
+			<MarketValue>150</MarketValue>
+			<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+		</statBases>
+		<tools>
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>8.4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>8.4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.7</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>QuadrupedAnimalWithPaws</body>
+			<herdAnimal>true</herdAnimal>
+			<baseBodySize>0.50</baseBodySize>
+			<baseHungerRate>0.65</baseHungerRate>
+			<baseHealthScale>0.7</baseHealthScale>
+			<foodType>OmnivoreRoughAnimal</foodType>
+			<leatherDef>Leather_Light</leatherDef>
+			<wildness>0.75</wildness>
+			<petness>0.01</petness>
+			<manhunterOnTameFailChance>.99</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>.99</manhunterOnDamageChance>
+			<nuzzleMtbHours>120</nuzzleMtbHours>
+			<gestationPeriodDays>20</gestationPeriodDays>
+			<litterSizeCurve>
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(1.5, 1)</li>
+					<li>(2, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeExpectancy>12</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.2</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.6</minAge>
+					<soundWounded>Pawn_Alphabeaver_Wounded</soundWounded>
+					<soundDeath>Pawn_Alphabeaver_Death</soundDeath>
+					<soundCall>Pawn_Alphabeaver_Call</soundCall>
+					<soundAngry>Pawn_Alphabeaver_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>AnimalUncommon</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RH_TET_GiantRat</defName>
+		<label>giant rat</label>
+		<race>RH_TET_GiantRat</race>
+		<combatPower>40</combatPower>
+		<ecoSystemWeight>0.35</ecoSystemWeight>
+		<wildGroupSize>3~9</wildGroupSize>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Skaven/RH_TET_Rat</texPath>
+					<drawSize>1.5</drawSize>
+					<color>(177,136,112)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.35, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.08)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Skaven/RH_TET_Rat</texPath>
+					<drawSize>2.0</drawSize>
+					<color>(109,84,49)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.35, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.08)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
+					<drawSize>2.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Skaven/RH_TET_Rat</texPath>
+					<drawSize>2.3</drawSize>
+					<color>(112,82,65)</color>
+					<shadowData>
+						<volume>(0.35, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.08)</offset>
+					</shadowData>
+					<shaderType>CutoutComplex</shaderType>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
+					<drawSize>2.3</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+  
+	<FleshTypeDef>
+		<defName>RH_TET_SkavenMeat</defName>
+		<ateDirect>AteHumanlikeMeatDirect</ateDirect>
+		<ateAsIngredient>AteHumanlikeMeatAsIngredient</ateAsIngredient>
+		<corpseCategory>CorpsesHumanlike</corpseCategory>
+		<damageEffecter>Damage_HitFlesh</damageEffecter>
+		<genericWounds>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundFleshA</texture>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundFleshB</texture>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundFleshC</texture>
+			</li>
+		</genericWounds>
+		<bandagedWounds>
+			<li>
+				<texture>Things/Pawn/Wounds/BandagedA</texture>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/BandagedB</texture>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/BandagedC</texture>
+			</li>
+		</bandagedWounds>
+		<hediffWounds>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<hediff>Scarification</hediff>
+				<wounds>
+					<li>
+						<texture>Things/Pawn/Wounds/ScarificationA</texture>
+						<tintWithSkinColor>true</tintWithSkinColor>
+						<displayOverApparel>false</displayOverApparel>
+						<displayPermanent>false</displayPermanent>
+					</li>
+					<li>
+						<texture>Things/Pawn/Wounds/ScarificationB</texture>
+						<tintWithSkinColor>true</tintWithSkinColor>
+						<displayOverApparel>false</displayOverApparel>
+						<displayPermanent>false</displayPermanent>
+					</li>
+					<li>
+						<texture>Things/Pawn/Wounds/ScarificationC</texture>
+						<tintWithSkinColor>true</tintWithSkinColor>
+						<displayOverApparel>false</displayOverApparel>
+						<displayPermanent>false</displayPermanent>
+					</li>
+				</wounds>
+			</li>
+			<li>
+				<hediff>MissingBodyPart</hediff>
+				<wounds>
+					<li>
+						<textureSouth>Things/Pawn/Wounds/MissingEye_Scar_south</textureSouth>
+						<textureNorth>Things/Pawn/Wounds/MissingEye_Scar_south</textureNorth>
+						<textureEast>Things/Pawn/Wounds/MissingEye_Scar_east</textureEast>
+						<textureWest>Things/Pawn/Wounds/MissingEye_Scar_east</textureWest>
+						<flipWest>true</flipWest>
+						<onlyOnPart>Eye</onlyOnPart>
+						<flipOnWoundAnchorTag>LeftEye</flipOnWoundAnchorTag>
+						<flipOnRotation>South</flipOnRotation>
+						<tintWithSkinColor>true</tintWithSkinColor>
+						<missingBodyPartFresh>false</missingBodyPartFresh>
+						<scale>0.7</scale>
+					</li>
+					<li>
+						<textureSouth>Things/Pawn/Wounds/MissingEye_Fresh</textureSouth>
+						<textureNorth>Things/Pawn/Wounds/MissingEye_Fresh</textureNorth>
+						<textureEast>Things/Pawn/Wounds/MissingEye_Fresh</textureEast>
+						<textureWest>Things/Pawn/Wounds/MissingEye_Fresh</textureWest>
+						<flipWest>true</flipWest>
+						<onlyOnPart>Eye</onlyOnPart>
+						<flipOnWoundAnchorTag>LeftEye</flipOnWoundAnchorTag>
+						<flipOnRotation>South</flipOnRotation>
+						<missingBodyPartFresh>true</missingBodyPartFresh>
+						<scale>0.7</scale>
+					</li>
+				</wounds>
+			</li>
+			<li>
+				<hediff>BionicEye</hediff>
+				<wounds>
+					<li>
+						<textureSouth>Things/Pawn/Wounds/BionicEye_south</textureSouth>
+						<textureNorth>Things/Pawn/Wounds/BionicEye_south</textureNorth>
+						<textureEast>Things/Pawn/Wounds/BionicEye_east</textureEast>
+						<textureWest>Things/Pawn/Wounds/BionicEye_east</textureWest>
+						<flipWest>true</flipWest>
+						<flipOnWoundAnchorTag>LeftEye</flipOnWoundAnchorTag>
+						<flipOnRotation>South</flipOnRotation>
+						<scale>0.85</scale>
+					</li>
+				</wounds>
+			</li>
+			<li>
+				<hediff>ArchotechEye</hediff>
+				<wounds>
+					<li>
+						<textureSouth>Things/Pawn/Wounds/ArchotechEye_south</textureSouth>
+						<textureNorth>Things/Pawn/Wounds/ArchotechEye_south</textureNorth>
+						<textureEast>Things/Pawn/Wounds/ArchotechEye_east</textureEast>
+						<textureWest>Things/Pawn/Wounds/ArchotechEye_east</textureWest>
+						<flipWest>true</flipWest>
+						<flipOnWoundAnchorTag>LeftEye</flipOnWoundAnchorTag>
+						<flipOnRotation>South</flipOnRotation>
+						<scale>0.85</scale>
+					</li>
+				</wounds>
+			</li>
+		</hediffWounds>
+	</FleshTypeDef>
+
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RH_TET_SkavenSlaveNaked</defName>
+		<label>skaven slave</label>
+		<description>Standing a stunted four feet tall, Skavenslaves form the largest bulk of the swollen Skaven population. They are usually born in this manner, barely holding out through a cruel, abused childhood and, being of little value, simply shoved into forced labour. Living past any more than a handful of years is quite a cursed accomplishment. Almost all Skaven born as slaves die as slaves These are base, cunning creatures, incapable of joining a properly civilized society.</description>
+		<statBases>
+			<MoveSpeed>6.0</MoveSpeed>
+			<MarketValue>100</MarketValue>
+			<ComfyTemperatureMin>-15</ComfyTemperatureMin>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.7</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<fleshType>RH_TET_SkavenMeat</fleshType>
+			<body>Monkey</body>
+			<petness>0.01</petness>
+			<manhunterOnTameFailChance>.99</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>.99</manhunterOnDamageChance>
+			<herdAnimal>false</herdAnimal>
+			<baseBodySize>0.8</baseBodySize>
+			<baseHungerRate>0.70</baseHungerRate>
+			<baseHealthScale>0.40</baseHealthScale>
+			<foodType>OmnivoreRoughAnimal</foodType>
+			<leatherDef>Leather_Light</leatherDef>
+			<trainability>Advanced</trainability>
+			<wildness>0.99</wildness>
+			<nuzzleMtbHours>48</nuzzleMtbHours>
+			<gestationPeriodDays>16</gestationPeriodDays>
+			<lifeExpectancy>30</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.2</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.6</minAge>
+					<soundWounded>Pawn_Monkey_Wounded</soundWounded>
+					<soundDeath>Pawn_Monkey_Death</soundDeath>
+					<soundCall>Pawn_Monkey_Call</soundCall>
+					<soundAngry>Pawn_Monkey_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>AnimalUncommon</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RH_TET_SkavenSlaveNaked</defName>
+		<label>skaven slave</label>
+		<race>RH_TET_SkavenSlaveNaked</race>
+		<combatPower>35</combatPower>
+		<ecoSystemWeight>0.01</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Skaven/SlaveNaked_Rat</texPath>
+					<drawSize>1.1</drawSize>
+					<shadowData>
+						<volume>(0.35, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.08)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Skaven/Slave_Rat_Dessicated</texPath>
+					<drawSize>1.1</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Skaven/SlaveNaked_Rat</texPath>
+					<drawSize>1.3</drawSize>
+					<shadowData>
+						<volume>(0.2, 0.2, 0.2)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Skaven/Slave_Rat_Dessicated</texPath>
+					<drawSize>1.3</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Skaven/SlaveNaked_Rat</texPath>
+					<drawSize>1.5</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Skaven/Slave_Rat_Dessicated</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+  
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RH_TET_SkavenSlave</defName>
+		<label>skaven slave</label>
+		<description>Standing a stunted four feet tall, Skavenslaves form the largest bulk of the swollen Skaven population. They are usually born in this manner, barely holding out through a cruel, abused childhood and, being of little value, simply shoved into forced labour. Living past any more than a handful of years is quite a cursed accomplishment. Almost all Skaven born as slaves die as slaves These are base, cunning creatures, incapable of joining a properly civilized society.</description>
+		<statBases>
+			<MoveSpeed>6.0</MoveSpeed>
+			<MarketValue>100</MarketValue>
+			<ComfyTemperatureMin>-20</ComfyTemperatureMin>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.7</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<fleshType>RH_TET_SkavenMeat</fleshType>
+			<body>Monkey</body>
+			<petness>0.01</petness>
+			<manhunterOnTameFailChance>.99</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>.99</manhunterOnDamageChance>
+			<herdAnimal>false</herdAnimal>
+			<baseBodySize>0.8</baseBodySize>
+			<baseHungerRate>0.70</baseHungerRate>
+			<baseHealthScale>0.45</baseHealthScale>
+			<foodType>OmnivoreRoughAnimal</foodType>
+			<leatherDef>Leather_Light</leatherDef>
+			<trainability>Advanced</trainability>
+			<wildness>0.99</wildness>
+			<nuzzleMtbHours>48</nuzzleMtbHours>
+			<gestationPeriodDays>16</gestationPeriodDays>
+			<lifeExpectancy>30</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.2</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.6</minAge>
+					<soundWounded>Pawn_Monkey_Wounded</soundWounded>
+					<soundDeath>Pawn_Monkey_Death</soundDeath>
+					<soundCall>Pawn_Monkey_Call</soundCall>
+					<soundAngry>Pawn_Monkey_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>AnimalUncommon</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RH_TET_SkavenSlave</defName>
+		<label>skaven slave</label>
+		<race>RH_TET_SkavenSlave</race>
+		<combatPower>42</combatPower>
+		<ecoSystemWeight>0.01</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Skaven/Slave_Rat</texPath>
+					<drawSize>1.3</drawSize>
+					<shadowData>
+						<volume>(0.35, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.08)</offset>
+					</shadowData>
+					<shaderType>CutoutComplex</shaderType>
+					<color>(91,76,65)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Skaven/Slave_Rat_Dessicated</texPath>
+					<drawSize>1.3</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Skaven/Slave_Rat</texPath>
+					<drawSize>1.5</drawSize>
+					<shadowData>
+						<volume>(0.2, 0.2, 0.2)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+					<shaderType>CutoutComplex</shaderType>
+					<color>(91,76,65)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Skaven/Slave_Rat_Dessicated</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Skaven/Slave_Rat</texPath>
+					<drawSize>1.6</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+					<shaderType>CutoutComplex</shaderType>
+					<color>(91,76,65)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Skaven/Slave_Rat_Dessicated</texPath>
+					<drawSize>1.6</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RH_TET_SkavenClanRat</defName>
+		<label>skaven clan rat</label>
+		<description>Clanrats form the vast overall bulk of Skaven military power, a large verminous horde of ratmen that go to war as basic and highly-expendable front-line infantry.</description>
+		<statBases>
+			<MoveSpeed>6.0</MoveSpeed>
+			<MarketValue>120</MarketValue>
+			<ComfyTemperatureMin>-20</ComfyTemperatureMin>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>11</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.7</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<fleshType>RH_TET_SkavenMeat</fleshType>
+			<body>Monkey</body>
+			<petness>0.01</petness>
+			<manhunterOnTameFailChance>.99</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>.99</manhunterOnDamageChance>
+			<herdAnimal>false</herdAnimal>
+			<baseBodySize>1.0</baseBodySize>
+			<baseHungerRate>0.70</baseHungerRate>
+			<baseHealthScale>0.45</baseHealthScale>
+			<foodType>OmnivoreRoughAnimal</foodType>
+			<leatherDef>Leather_Light</leatherDef>
+			<trainability>Advanced</trainability>
+			<wildness>0.99</wildness>
+			<nuzzleMtbHours>48</nuzzleMtbHours>
+			<gestationPeriodDays>16</gestationPeriodDays>
+			<lifeExpectancy>30</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.2</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.6</minAge>
+					<soundWounded>Pawn_Monkey_Wounded</soundWounded>
+					<soundDeath>Pawn_Monkey_Death</soundDeath>
+					<soundCall>Pawn_Monkey_Call</soundCall>
+					<soundAngry>Pawn_Monkey_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>AnimalUncommon</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RH_TET_SkavenClanRat</defName>
+		<label>skaven clan rat</label>
+		<race>RH_TET_SkavenClanRat</race>
+		<combatPower>48</combatPower>
+		<ecoSystemWeight>0.01</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Skaven/Clan_Rat</texPath>
+					<drawSize>1.5</drawSize>
+					<shadowData>
+						<volume>(0.35, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.08)</offset>
+					</shadowData>
+					<shaderType>CutoutComplex</shaderType>
+					<color>(71,69,66)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Skaven/Slave_Rat_Dessicated</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Skaven/Clan_Rat</texPath>
+					<drawSize>1.8</drawSize>
+					<shadowData>
+						<volume>(0.2, 0.2, 0.2)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+					<shaderType>CutoutComplex</shaderType>
+					<color>(71,69,66)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Skaven/Slave_Rat_Dessicated</texPath>
+					<drawSize>1.8</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Skaven/Clan_Rat</texPath>
+					<drawSize>1.9</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+					<shaderType>CutoutComplex</shaderType>
+					<color>(71,69,66)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Skaven/Slave_Rat_Dessicated</texPath>
+					<drawSize>1.9</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+  
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>RH_TET_SkavenTunnelSpawner</defName>
+		<label>tunnel</label>
+		<thingClass>TheEndTimes_Dwarfs.SkavenTunnelSpawner</thingClass>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<alwaysFlee>true</alwaysFlee>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingNaturalBase">
+		<defName>RH_TET_SkavenTunnel</defName>
+		<label>tunnel</label>
+		<description>A skaven tunnel. If attacked, the skaven will defend it. More skaven will arrive from the under tunnels if this remains open.</description>
+		<thingClass>TheEndTimes_Dwarfs.SkavenTunnel</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Misc/RH_TET_SkavenTunnel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.6</drawSize>
+		</graphicData>
+		<uiIconScale>0.65</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<fillPercent>0.5</fillPercent>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<Flammability>0.0</Flammability>
+		</statBases>
+		<pathCost>50</pathCost>
+		<receivesSignals>true</receivesSignals>
+		<blockWind>true</blockWind>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<Steel>30</Steel>
+		</killedLeavings>
+		<comps>
+			<li Class="CompProperties_CanBeDormant">
+				<startsDormant>true</startsDormant>
+			</li>
+			<li Class="CompProperties_WakeUpDormant"/>
+			<li Class="CompProperties_SpawnerPawn">
+				<spawnablePawnKinds>
+					<li>RH_TET_Rat</li>
+					<li>RH_TET_GiantRat</li>
+					<li>RH_TET_SkavenSlave</li>
+					<li>RH_TET_SkavenSlaveNaked</li>
+					<li>RH_TET_SkavenClanRat</li>
+				</spawnablePawnKinds>
+				<lordJob>TheEndTimes_Dwarfs.LordJob_DefendAndExpandTunnel</lordJob>
+				<spawnSound>Hive_Spawn</spawnSound>
+				<initialPawnsPoints>200</initialPawnsPoints>
+				<maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal><!-- 60k ticks = 1 day, 10 hp per day -->
+			</li>
+			<li Class="TheEndTimes_Dwarfs.CompProperties_SpawnerTunnels"/>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>ChunkSlagSteel</thingToSpawn>
+				<spawnCount>2</spawnCount>
+				<spawnIntervalRange>5000~36000</spawnIntervalRange>
+				<saveKeysPrefix>steelslag</saveKeysPrefix>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>ChunkGranite</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>12000~30000</spawnIntervalRange>
+				<saveKeysPrefix>granitechunk</saveKeysPrefix>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>ChunkMarble</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>12000~36000</spawnIntervalRange>
+				<saveKeysPrefix>marblechunk</saveKeysPrefix>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>ChunkSlate</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>24000~48000</spawnIntervalRange>
+				<saveKeysPrefix>slatechunk</saveKeysPrefix>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>ChunkSandstone</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>24000~48000</spawnIntervalRange>
+				<saveKeysPrefix>sandstonechunk</saveKeysPrefix>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>ChunkLimestone</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>26000~50000</spawnIntervalRange>
+				<saveKeysPrefix>limestonechunk</saveKeysPrefix>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>Pemmican</thingToSpawn>
+				<spawnCount>25</spawnCount>
+				<spawnIntervalRange>2500~10000</spawnIntervalRange>
+				<spawnMaxAdjacent>50</spawnMaxAdjacent>
+				<spawnForbidden>true</spawnForbidden>
+				<saveKeysPrefix>pemmican</saveKeysPrefix>
+			</li>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>Filth_RubbleRock</filthDef>
+				<spawnCountOnSpawn>10</spawnCountOnSpawn>
+				<spawnMtbHours>4</spawnMtbHours>
+				<spawnRadius>5</spawnRadius>
+			</li>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>Filth_AnimalFilth</filthDef>
+				<spawnCountOnSpawn>10</spawnCountOnSpawn>
+				<spawnMtbHours>4</spawnMtbHours>
+				<spawnRadius>5</spawnRadius>
+			</li>
+			<li Class="CompProperties_Maintainable">
+				<ticksHealthy>60000</ticksHealthy>
+				<ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
+				<damagePerTickRare>10</damagePerTickRare>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>RH_TET_SkavenGlower</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>1~100</spawnIntervalRange>
+				<spawnMaxAdjacent>1</spawnMaxAdjacent>
+				<saveKeysPrefix>pod</saveKeysPrefix>
+				<inheritFaction>true</inheritFaction>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingNaturalBase">
+		<defName>RH_TET_SkavenGlower</defName>
+		<label>skaven glower</label>
+		<description>A glowing pod made by skaven. Glows under its own light for a long time, then dies.</description>
+		<thingClass>Building</thingClass>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<tickerType>Rare</tickerType>
+		<thingCategories>
+			<li>BuildingsSpecial</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>1.0</Flammability>
+			<MarketValue>250</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(91,255,50,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Lifespan">
+				<lifespanTicks>2400000</lifespanTicks>
+			</li>
+		</comps>
+		<graphicData>
+			<texPath>Things/Building/Misc/RH_TET_SkavenPod</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+	</ThingDef>
+
+	<DutyDef>
+		<defName>RH_TET_SkavenDefendAndExpandTunnel</defName>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="TheEndTimes_Dwarfs.JobGiver_TunnelDefense">
+					<needLOSToAcquireNonPawnTargets>true</needLOSToAcquireNonPawnTargets>
+					<targetAcquireRadius>30</targetAcquireRadius>
+					<chaseTarget>false</chaseTarget>
+				</li>
+				<li Class="ThinkNode_ChancePerHour_Constant">
+					<mtbHours>2.5</mtbHours>
+					<subNodes>
+						<li Class="TheEndTimes_Dwarfs.JobGiver_MaintainTunnels"/>
+					</subNodes>
+				</li>
+				<li Class="TheEndTimes_Dwarfs.JobGiver_MaintainTunnels">
+					<onlyIfDamagingState>true</onlyIfDamagingState>
+				</li>
+				<li Class="ThinkNode_ConditionalBodySize">
+					<min>0.7</min>
+					<subNodes>
+						<li Class="TheEndTimes_Dwarfs.ThinkNode_ConditionalTunnelCanReproduce">
+							<subNodes>
+								<li Class="ThinkNode_ChancePerHour_InsectDigChance">
+									<subNodes>
+										<li Class="JobGiver_MineRandom"/>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+				<li Class="ThinkNode_Tagger">
+					<tagToGive>SatisfyingNeeds</tagToGive>
+					<subNodes>
+						<li Class="ThinkNode_PrioritySorter">
+							<subNodes>
+								<li Class="JobGiver_GetFood"/>
+								<li Class="JobGiver_GetRest"/>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+				<li Class="TheEndTimes_Dwarfs.JobGiver_WanderTunnel">
+					<maxDanger>Deadly</maxDanger>
+				</li>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
+
+	<DutyDef>
+		<defName>RH_TET_SkavenDefendTunnelAggressively</defName>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="TheEndTimes_Dwarfs.JobGiver_TunnelDefense">
+					<needLOSToAcquireNonPawnTargets>true</needLOSToAcquireNonPawnTargets>
+					<targetAcquireRadius>50</targetAcquireRadius>
+					<chaseTarget>false</chaseTarget>
+				</li>
+				<li Class="TheEndTimes_Dwarfs.JobGiver_WanderTunnel">
+					<maxDanger>Deadly</maxDanger>
+				</li>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
+  
+	<!-- TODO JEH Add for flavor.
+		<ThingDef ParentName="BaseFilth">
+		<defName>RH_TET_Filth_RatDroppings</defName>
+		<label>rat droppings</label>
+		<graphicData>
+			<texPath>Things/Filth/RatDroppings</texPath>
+			<color>(147,115,98,97)</color>
+		</graphicData>
+		<filth>
+			<placementMask>
+				<li>Terrain</li>
+			</placementMask>
+			<disappearsInDays>45~50</disappearsInDays>
+			<cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>
+			<canFilthAttach>true</canFilthAttach>
+		</filth>
+	</ThingDef>  
+	-->
+  
+</Defs>

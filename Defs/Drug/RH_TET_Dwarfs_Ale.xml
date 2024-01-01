@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="DrugBase">
+		<defName>RH_TET_Dwarf_Ale</defName>
+		<label>dwarfen ale</label>
+		<description>Inarguably the finest ale in the world. Higher alcohol content and nutrition than other ales and beers, although far more delicious despite that. Much sought after the world over. Over use can lead to alcohol addiction.</description>
+		<graphicData>
+			<texPath>Things/Item/Drug/DwarfAle</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<equippedAngleOffset>-150</equippedAngleOffset>
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<DeteriorationRate>0.3</DeteriorationRate>
+			<MarketValue>25</MarketValue>
+			<Mass>0.3</Mass>
+			<Nutrition>0.65</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Fluid, Processed, Liquor</foodType>
+			<joy>0.33</joy>
+			<joyKind>Chemical</joyKind>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<chairSearchRadius>25</chairSearchRadius>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholHigh</hediffDef>
+					<severity>0.09</severity>
+					<toleranceChemical>Alcohol</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholTolerance</hediffDef>
+					<severity>0.02</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<equipmentType>Primary</equipmentType>
+		<techLevel>Neolithic</techLevel>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Alcohol</chemical>
+				<addictiveness>0.015</addictiveness>
+				<minToleranceToAddict>0.25</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>10</listOrder>
+			</li>
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+		</comps>
+		<tools>
+			<li>
+				<label>bottom</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.8</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Dwarf_MakeAleWort</defName>
+		<label>make dwarfen ale wort</label>
+		<description>Make ale wort from hops and barley malt.</description>
+		<jobString>Making ale wort.</jobString>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1000</workAmount>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<researchPrerequisite><li>RH_TET_Dwarf_AleOne</li></researchPrerequisite>
+		<recipeUsers>
+			<li>Brewery</li>
+			<li>RH_TET_Dwarfs_Brewery</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawHops</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarf_Barley</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Dwarf_Barley</li>
+				<li>RawHops</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarf_AleWort>5</RH_TET_Dwarf_AleWort>
+		</products>
+	</RecipeDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>RH_TET_Dwarf_AleWort</defName>
+		<label>dwarfen ale wort</label>
+		<description>Dwarfen ale awaiting fermentation. Must ferment in an ale barrel before becoming dwarfen ale, and being consumable.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Wort</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<statBases>
+			<DeteriorationRate>.75</DeteriorationRate>
+			<MarketValue>3</MarketValue>
+			<Mass>0.8</Mass>
+			<MaxHitPoints>60</MaxHitPoints>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>6</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!-- Bugman's -->
+	<ThingDef ParentName="DrugBase">
+		<defName>RH_TET_Dwarf_BugmansXXX</defName>
+		<label>Bugmans XXX</label>
+		<description>A recipe of the legendary ale of Josef Bugman. Higher alcohol content and nutrition even than other dwarf ales, but by far the most delicious ale on the planet. Renowned everywhere. Over use can lead to alcohol addiction.</description>
+		<graphicData>
+			<texPath>Things/Item/Drug/BugmansXXX</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<equippedAngleOffset>-150</equippedAngleOffset>
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<DeteriorationRate>0.3</DeteriorationRate>
+			<MarketValue>35</MarketValue>
+			<Mass>0.3</Mass>
+			<Nutrition>1</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Fluid, Processed, Liquor</foodType>
+			<joy>0.75</joy>
+			<joyKind>Chemical</joyKind>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<chairSearchRadius>25</chairSearchRadius>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholHigh</hediffDef>
+					<severity>0.15</severity>
+					<toleranceChemical>Alcohol</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholTolerance</hediffDef>
+					<severity>0.05</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<equipmentType>Primary</equipmentType>
+		<techLevel>Neolithic</techLevel>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Alcohol</chemical>
+				<addictiveness>0.025</addictiveness>
+				<minToleranceToAddict>0.25</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>10</listOrder>
+			</li>
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+		</comps>
+		<tools>
+			<li>
+				<label>bottom</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Dwarf_MakeBugmansXXXWort</defName>
+		<label>make Bugman's XXX wort</label>
+		<description>Make Bugman's XXX wort from ambrosia, hops, and barley malt.</description>
+		<jobString>Making Bugman's XXX wort.</jobString>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1250</workAmount>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<researchPrerequisite><li>RH_TET_Dwarf_AleTwo</li></researchPrerequisite>
+		<recipeUsers>
+			<li>Brewery</li>
+			<li>RH_TET_Dwarfs_Brewery</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawHops</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarf_Barley</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Ambrosia</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Dwarf_Barley</li>
+				<li>RawHops</li>
+				<li>Ambrosia</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarf_BugmansXXXWort>5</RH_TET_Dwarf_BugmansXXXWort>
+		</products>
+	</RecipeDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>RH_TET_Dwarf_BugmansXXXWort</defName>
+		<label>Bugman's XXX wort</label>
+		<description>Bugman's XXX awaiting fermentation. Must ferment in an ale barrel before becoming Bugman's XXX, and being consumable.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/BugmansXXX/BugmansXXX</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<statBases>
+			<DeteriorationRate>.65</DeteriorationRate>
+			<MarketValue>5</MarketValue>
+			<Mass>0.8</Mass>
+			<MaxHitPoints>60</MaxHitPoints>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>8</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+	</ThingDef>
+  
+</Defs>

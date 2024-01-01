@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>RH_TET_Dwarfs_Cigarette</defName>
+		<label>cigarette</label>
+		<description>Tobacco leaves prepared in small rolls for smoking. The drug improves mood, has a stimulant effect, and reduces hunger; but can lead to lung health issues, and is addictive.\n\Cigarettes can be produced at a crafting spot without equipment, and are occasionally used in dwarfen culture; a pipe is the much preferred method of consuming tobacco.</description>
+		<descriptionHyperlinks>
+			<HediffDef>RH_TET_Dwarfs_TobaccoHigh</HediffDef>
+			<HediffDef>RH_TET_Dwarfs_TobaccoTolerance</HediffDef>
+			<HediffDef>RH_TET_Dwarfs_TobaccoAddiction</HediffDef>
+			<HediffDef>Carcinoma</HediffDef>
+			<HediffDef>Asthma</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/Cigarette</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>450</WorkToMake>
+			<MarketValue>6</MarketValue>
+			<Mass>0.05</Mass>
+			<DeteriorationRate>6</DeteriorationRate>
+			<Flammability>1.3</Flammability>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<ingestible>
+			<foodType>Plant, Processed</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.80</joy>
+			<baseIngestTicks>720</baseIngestTicks>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Smoke</ingestSound>
+			<ingestEffect>Smoke_Joint</ingestEffect>
+			<ingestEffectEat>EatVegetarian</ingestEffectEat>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.27,0,0.08)</offset>
+					<behind>true</behind>
+				</northDefault>
+				<east>
+					<offset>(0.45,0,0.08)</offset>
+				</east>
+				<south>
+					<offset>(0.27,0,0.08)</offset>
+				</south>
+				<west>
+					<offset>(-0.50,0,0.08)</offset>
+					<flip>true</flip>
+				</west>
+			</ingestHoldOffsetStanding>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Smoke {0}</ingestCommandString>
+			<ingestReportString>Smoking {0}.</ingestReportString>
+			<ingestReportStringEat>Consuming {0}.</ingestReportStringEat>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>RH_TET_Dwarfs_TobaccoHigh</hediffDef>
+					<severity>0.5</severity>
+					<toleranceChemical>RH_TET_Dwarfs_TobaccoChem</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetNeed">
+					<need>Rest</need>
+					<offset>0.1</offset>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>RH_TET_Dwarfs_TobaccoTolerance</hediffDef>
+					<severity>0.025</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CraftingSpot</li>
+				<li>DrugLab</li>
+				<li>RH_TET_Dwarfs_DrugLab</li>
+			</recipeUsers>
+			<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+			<workSkill>Cooking</workSkill>
+		</recipeMaker>
+		<costList>
+			<RH_TET_Dwarf_TobaccoLeaves>5</RH_TET_Dwarf_TobaccoLeaves>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>RH_TET_Dwarfs_TobaccoChem</chemical>
+				<addictiveness>0.03</addictiveness>
+				<minToleranceToAddict>0.12</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>20</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>RH_TET_Dwarfs_TobaccoHigh</defName>
+		<label>tobacco buzz</label>
+		<labelNoun>a buzz from tobacco</labelNoun>
+		<description>Tobacco's active chemical in the bloodstream. Generates a soft feeling of euphoria.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1.0</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<hungerRateFactorOffset>-0.1</hungerRateFactorOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+  
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_TobaccoHigh</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>RH_TET_Dwarfs_TobaccoHigh</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>buzzed on tobacco</label>
+				<description>I feel good.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- Tobacco addiction -->
+
+	<ChemicalDef>
+		<defName>RH_TET_Dwarfs_TobaccoChem</defName>
+		<label>Tobacco</label>
+		<addictionHediff>RH_TET_Dwarfs_TobaccoAddiction</addictionHediff>
+		<toleranceHediff>RH_TET_Dwarfs_TobaccoTolerance</toleranceHediff>
+		<onGeneratedAddictedToleranceChance>0.5</onGeneratedAddictedToleranceChance>
+	</ChemicalDef>
+
+	<NeedDef ParentName="DrugAddictionNeedBase">
+		<defName>RH_TET_Dwarfs_Chemical_Tobacco</defName>
+		<needClass>Need_Chemical</needClass>
+		<label>tobacco</label>
+		<description>Because of a tobacco dependence, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+		<listPriority>25</listPriority>
+	</NeedDef>
+  
+	<HediffDef ParentName="DrugToleranceBase">
+		<defName>RH_TET_Dwarfs_TobaccoTolerance</defName>
+		<label>tobacco tolerance</label>
+		<description>A built-up tolerance to tobacco. The more severe this tolerance is, the more tobacco it takes to get the same effect.</description>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.015</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_DrugEffectFactor">
+				<chemical>RH_TET_Dwarfs_TobaccoChem</chemical>
+			</li>
+		</comps>
+		<hediffGivers>
+			<li Class="HediffGiver_RandomDrugEffect">
+				<hediff>Asthma</hediff>
+				<baseMtbDays>180</baseMtbDays>
+				<minSeverity>0.50</minSeverity>
+				<partsToAffect>
+					<li>Lung</li>
+				</partsToAffect>
+				<countToAffect>2</countToAffect>
+			</li>
+			<li Class="HediffGiver_RandomDrugEffect">
+				<hediff>Carcinoma</hediff>
+				<baseMtbDays>180</baseMtbDays>
+				<minSeverity>0.40</minSeverity>
+				<partsToAffect>
+					<li>Lung</li>
+				</partsToAffect>
+				<countToAffect>1</countToAffect>
+			</li>
+		</hediffGivers>
+	</HediffDef>
+
+	<HediffDef ParentName="AddictionBase">
+		<defName>RH_TET_Dwarfs_TobaccoAddiction</defName>
+		<label>tobacco dependence</label>
+		<description>A chemical addiction to tobacco. Long-term use of tobacco has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.\nWithout regular doses of tobacco, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+		<hediffClass>Hediff_Addiction</hediffClass>
+		<causesNeed>RH_TET_Dwarfs_Chemical_Tobacco</causesNeed>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.0333</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+			</li>
+			<li>
+				<label>withdrawal</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.10</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>Binging_DrugMajor</mentalState>
+						<mtbDays>50</mtbDays>
+					</li>
+				</mentalStateGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_TobaccoWithdrawal</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>RH_TET_Dwarfs_TobaccoAddiction</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<visible>false</visible>
+			</li>
+			<li>
+				<label>tobacco withdrawal</label>
+				<description>I really wish I could smoke. I feel crabby, and it's hard to focus.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+	<RecipeDef>
+		<defName>RH_TET_Dwarf_MakeMedicine</defName>
+		<label>make medicine</label>
+		<description>Make medicine at dawi drug lab.</description>
+		<jobString>Making medicine.</jobString>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Intellectual</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>false</allowMixingIngredients>
+		<workAmount>700</workAmount>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicineHerbal</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarf_MedicinalMushroom</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Cloth</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MedicineHerbal</li>
+				<li>RH_TET_Dwarf_MedicinalMushroom</li>
+				<li>Steel</li>
+				<li>Cloth</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_MedicineMedieval>1</RH_TET_Dwarfs_MedicineMedieval>
+		</products>
+		<researchPrerequisite>RH_TET_Dwarf_Medicine</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+			<Intellectual>4</Intellectual>
+		</skillRequirements>
+		<recipeUsers>
+			<li>DrugLab</li>
+			<li>RH_TET_Dwarfs_DrugLab</li>
+		</recipeUsers>
+	</RecipeDef>
+  
+	<RecipeDef>
+		<defName>RH_TET_Dwarf_MakeMedicineBulk</defName>
+		<label>make medicine bulk (x4)</label>
+		<description>Make medicine at dawi drug lab in bulk.</description>
+		<jobString>Making medicine in bulk.</jobString>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Intellectual</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>false</allowMixingIngredients>
+		<workAmount>2800</workAmount>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicineHerbal</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarf_MedicinalMushroom</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Cloth</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MedicineHerbal</li>
+				<li>RH_TET_Dwarf_MedicinalMushroom</li>
+				<li>Steel</li>
+				<li>Cloth</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_MedicineMedieval>4</RH_TET_Dwarfs_MedicineMedieval>
+		</products>
+		<researchPrerequisite>RH_TET_Dwarf_Medicine</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+			<Intellectual>4</Intellectual>
+		</skillRequirements>
+		<recipeUsers>
+			<li>DrugLab</li>
+			<li>RH_TET_Dwarfs_DrugLab</li>
+		</recipeUsers>
+	</RecipeDef>
+  
+</Defs>

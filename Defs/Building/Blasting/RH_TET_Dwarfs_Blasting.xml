@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="RH_TET_Dwarfs_ExposionThingBase" Abstract="True">
+		<category>Building</category>
+		<designationCategory>RH_TET_Dwarfs_Buildings</designationCategory>
+		<drawerType>RealtimeOnly</drawerType>
+		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<repairEffect>Repair</repairEffect>
+		<selectable>true</selectable>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+
+	<ThingDef Name="RH_TET_Dwarfs_BlastingChargeBase" ParentName="RH_TET_Dwarfs_ExposionThingBase" Abstract="True">
+		<altitudeLayer>Building</altitudeLayer>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<WorkToBuild>150</WorkToBuild>
+			<Beauty>-4</Beauty>
+		</statBases>
+		<thingClass>TheEndTimes_Dwarfs.Building_BlastingCharge</thingClass>
+		<tickerType>Normal</tickerType>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ExposionThingBase">
+		<defName>RH_TET_Dwarfs_BlastingDetonator</defName>
+		<label>manual detonator</label>
+		<description>A dwarfen blast detonator for mining charges. Pawns press the plunger down, and any charges attached to this via blasting wire explode.\n\nMake sure the blasting wire is underneath both this detonator, and the blast charge itself.\n\nDwarfs know about mining, and doing so via demoltions was a logical technological step as they advanced. While many older dwarfs still swear by and prefer metal tools for getting a mining job done, many others have see the light and realize the usefulness of explosives.</description>
+		<thingClass>TheEndTimes_Dwarfs.Building_DetonatorManual</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Blasting/RH_TET_Dwarfs_BlastingDetonator</texPath>
+			<graphicClass>TheEndTimes_Dwarfs.Graphic_Variants</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1,1)</drawSize>
+			<shadowData>
+				<volume>(.6, 0.5, .6)</volume>
+				<offset>(0, 0, -.2)</offset>
+			</shadowData>
+		</graphicData>
+		<costList>
+			<WoodLog>20</WoodLog>
+			<Steel>45</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsBlasting</li>
+		</thingCategories>
+		<comps>
+			<li Class="TheEndTimes_Dwarfs.CompProperties_WiredBlasterSender"/>
+		</comps>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.35</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToBuild>1500</WorkToBuild>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Mass>10</Mass>
+		</statBases>
+		<size>(1,1)</size>
+		<constructEffect>ConstructWood</constructEffect>
+		<passability>PassThroughOnly</passability>
+		<pathCost>35</pathCost>
+		<hasInteractionCell>False</hasInteractionCell>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_Blasting</li>
+		</researchPrerequisites>
+		<building>
+			<expandHomeArea>false</expandHomeArea>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ExposionThingBase">
+		<defName>RH_TET_Dwarfs_BlastingWire</defName>
+		<label>blasting wire</label>
+		<description>Dwarfen blasting wire. May go under buildings. Wrapped to seal out water and elements, though may still fail if wet.\n\nMust be placed under the blasting detonator and underneath any blasting charges to function.\n\nBlasting wire serves the simple function of delivering a tiny charge to a blasting cap which is mounted on an explosive. Many dwarfs learn to love the sound of a dwarfen blasting box plunger being pressed down, and the resulting explosion. It's a powerful feeling!</description>
+		<thingClass>Building</thingClass>
+		<drawerType>MapMeshOnly</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Blasting/RH_TET_Dwarfs_BlastWireAtlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>Basic</linkType>
+			<linkFlags>
+				<li>Custom2</li>
+			</linkFlags>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<clearBuildingArea>false</clearBuildingArea>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<uiIconPath>UI/Menu/RH_TET_Dwarfs_BlastingWireIcon</uiIconPath>
+		<tickerType>Rare</tickerType>
+		<passability>Standable</passability>
+		<statBases>
+			<MaxHitPoints>105</MaxHitPoints>
+			<WorkToBuild>30</WorkToBuild>
+			<Flammability>0.15</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<costList>
+			<Steel>1</Steel>
+			<RH_TET_BlackPowder>1</RH_TET_BlackPowder>
+		</costList>
+		<costStuffCount>1</costStuffCount>
+		<resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<building Class="TheEndTimes_Dwarfs.BuildingProperties_BlastingWire">
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+			<canPlaceOverWall>true</canPlaceOverWall>
+			<failChanceWhenFullyWet>.025</failChanceWhenFullyWet>
+			<daysToDryByself>.2</daysToDryByself>
+			<baseDryingTemp>20</baseDryingTemp>
+			<failEffecter>RH_TET_Dwarfs_BlastWireFail</failEffecter>
+			<fireOnFail>true</fireOnFail>
+			<dryOffJobDurationTicks>20</dryOffJobDurationTicks>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Blasting/RH_TET_Dwarfs_BlastWireOverlayAtlas</texPath>
+			</blueprintGraphicData>
+			<expandHomeArea>false</expandHomeArea>
+		</building>
+		<comps>
+			<li Class="TheEndTimes_Dwarfs.CompProperties_WiredBlasterTransmitter">
+				<signalDelayPerTile>0.3</signalDelayPerTile>
+			</li>
+		</comps>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<damageMultipliers>
+			<li>
+				<damageDef>Bomb</damageDef>
+				<multiplier>.2</multiplier>
+			</li>
+			<li>
+				<damageDef>Flame</damageDef>
+				<multiplier>.35</multiplier>
+			</li>
+		</damageMultipliers>
+		<placeWorkers>
+			<li>TheEndTimes_Dwarfs.PlaceWorker_BlastingWire</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_Blasting</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_BlastingChargeBase">
+		<defName>RH_TET_Dwarfs_BlastingChargeDigging</defName>
+		<label>digging blast</label>
+		<description>A dwarfen mining charge intended to bust up rock. Leaves many rock chunks around.\n\nIn order to function, the blasting wire must be placed underneath this blasting charge, and the blasting box that will detonate it.\n\nThis is the most basic dwarfen blasting charge there is, and perhaps one of the most useful. It breaks up stone into large rocks, so that the material therein can be used for other building or sculpting purposes.</description>
+		<graphicData>
+			<texPath>Things/Building/Blasting/RH_TET_Dwarfs_BlastingChargeDigging</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(.35, 0.15, .7)</volume>
+			</shadowData>
+		</graphicData>
+		<thingClass>TheEndTimes_Dwarfs.Building_AdvancedBlastingExplosive</thingClass>
+		<statBases>
+			<RH_TET_Dwarfs_RockYield>0.8</RH_TET_Dwarfs_RockYield>
+			<RH_TET_Dwarfs_ResourceYield>0.9</RH_TET_Dwarfs_ResourceYield>
+			<RH_TET_Dwarfs_WoodYield>.5</RH_TET_Dwarfs_WoodYield>
+			<Mass>10</Mass>
+		</statBases>
+		<costList>
+			<Steel>20</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<RH_TET_BlackPowder>30</RH_TET_BlackPowder>
+		</costList>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsBlasting</li>
+		</thingCategories>
+		<specialDisplayRadius>4.0</specialDisplayRadius>
+		<comps>
+			<li Class="TheEndTimes_Dwarfs.CompProperties_BlastingExplosive">
+				<miningRadius>4</miningRadius>
+				<explosiveRadius>4</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<startWickHitPointsPercent>0.25</startWickHitPointsPercent>
+				<wickTicks>
+					<min>140</min>
+					<max>160</max>
+				</wickTicks>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.CompProperties_WiredBlasterReceiver"/>
+		</comps>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<building>
+			<expandHomeArea>false</expandHomeArea>
+			<isTrap>false</isTrap>
+		</building>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_Blasting</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_BlastingChargeBase">
+		<defName>RH_TET_Dwarfs_BlastingChargeClearing</defName>
+		<label>clearing blast</label>
+		<description>A dwarfen mining charge intended to clear an area. Destroys most everything in the blast radius.\n\nIn order to function, the blasting wire must be placed underneath this blasting charge, and the blasting box that will detonate it.\n\nThis type of blast is used to clear large areas, and is most useful when the clans are already overwhelmed with large rocks. Dwarfs don't prefer this type of charge, as it is powerful enough to destroy even the rocks of the mountain.</description>
+		<building>
+			<expandHomeArea>false</expandHomeArea>
+			<isTrap>false</isTrap>
+		</building>
+		<thingClass>TheEndTimes_Dwarfs.Building_BlastingChargeSquare</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Blasting/RH_TET_Dwarfs_BlastingChargeClearing</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(.35, 0.15, .7)</volume>
+			</shadowData>
+		</graphicData>
+		<statBases>
+			<RH_TET_Dwarfs_RockYield>0.1</RH_TET_Dwarfs_RockYield>
+			<RH_TET_Dwarfs_ResourceYield>0.25</RH_TET_Dwarfs_ResourceYield>
+			<RH_TET_Dwarfs_WoodYield>0.1</RH_TET_Dwarfs_WoodYield>
+			<Mass>10</Mass>
+		</statBases>
+		<costList>
+			<Steel>20</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<RH_TET_BlackPowder>30</RH_TET_BlackPowder>
+		</costList>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsBlasting</li>
+		</thingCategories>
+		<comps>
+			<li Class="TheEndTimes_Dwarfs.CompProperties_BlastingExplosive">
+				<miningRadius>4.5</miningRadius>
+				<explosiveRadius>4.0</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<startWickHitPointsPercent>0.25</startWickHitPointsPercent>
+				<wickTicks>
+					<min>140</min>
+					<max>160</max>
+				</wickTicks>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.CompProperties_WiredBlasterReceiver"/>
+		</comps>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<placeWorkers>
+			<li>TheEndTimes_Dwarfs.PlaceWorker_BlastingExplosiveSquare</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_Blasting</li>
+		</researchPrerequisites>
+	</ThingDef>
+	
+	<ThingDef ParentName="RH_TET_Dwarfs_BlastingChargeBase">
+		<defName>RH_TET_Dwarfs_BlastingChargeIncendiary</defName>
+		<label>incendiary blast</label>
+		<description>A blasting charge that will create a large fire ball explosion.\n\nIn order to function, the blasting wire must be placed underneath this blasting charge, and the blasting box that will detonate it.\n\nThese charges are useful for starting controlled burns to get rid of unwanted items, the bodies of enemies, or even large areas of plants; all from the large fires that result. They're also useful for deterring enemies!</description>
+		<building>
+			<isTrap>true</isTrap>
+			<expandHomeArea>false</expandHomeArea>
+		</building>
+		<graphicData>
+			<texPath>Things/Building/Blasting/RH_TET_Dwarfs_BlastingChargeIncendiary</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(.6, 0.15, .6)</volume>
+			</shadowData>
+		</graphicData>
+		<statBases>
+			<Mass>10</Mass>
+		</statBases>
+		<costList>
+			<Steel>20</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<RH_TET_BlackPowder>55</RH_TET_BlackPowder>
+		</costList>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsBlasting</li>
+		</thingCategories>
+		<specialDisplayRadius>3.5</specialDisplayRadius>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<compClass>TheEndTimes_Dwarfs.CompCustomBlast</compClass>
+				<explosiveRadius>3.5</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<startWickHitPointsPercent>0.25</startWickHitPointsPercent>
+				<wickTicks>
+					<min>30</min>
+					<max>60</max>
+				</wickTicks>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.CompProperties_WiredBlasterReceiver"/>
+		</comps>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_AdvancedBlasting</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_BlastingChargeBase">
+		<defName>RH_TET_Dwarfs_BlastingChargeFocused</defName>
+		<label>focused blast</label>
+		<description>A powerful blasting charge that is focussed upwards, to remove overhead mountain roofs. Must be placed on the edge of the overhead mountain in order to work.\n\nIn order to function, the blasting wire must be placed underneath this blasting charge, and the blasting box that will detonate it.\n\nOn a rare occasion that a dwarf would want to bring down overhead mountain, this is the go to blast. Many dwarfs simply refuse to use this blast, as they hold the mountain to be sacred. There's a tool for every job however, and this type of blast definitely has its uses.</description>
+		<graphicData>
+			<texPath>Things/Building/Blasting/RH_TET_Dwarfs_BlastingChargeFocussed</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(.8, 0.5, .45)</volume>
+			</shadowData>
+		</graphicData>
+		<costList>
+			<Steel>25</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<RH_TET_BlackPowder>50</RH_TET_BlackPowder>
+		</costList>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsBlasting</li>
+		</thingCategories>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.35</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToBuild>1500</WorkToBuild>
+			<MaxHitPoints>125</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>-3</Beauty>
+			<RH_TET_Dwarfs_RockYield>.55</RH_TET_Dwarfs_RockYield>
+			<RH_TET_Dwarfs_ResourceYield>.55</RH_TET_Dwarfs_ResourceYield>
+			<RH_TET_Dwarfs_WoodYield>.10</RH_TET_Dwarfs_WoodYield>
+			<Mass>10</Mass>
+		</statBases>
+		<size>(1,1)</size>
+		<constructEffect>ConstructMetal</constructEffect>
+		<passability>PassThroughOnly</passability>
+		<pathCost>45</pathCost>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<comps>
+			<li Class="TheEndTimes_Dwarfs.CompProperties_BlastingExplosive">
+				<compClass>TheEndTimes_Dwarfs.CompMountainBreakerExplosive</compClass>
+				<miningRadius>2.5</miningRadius>
+				<explosiveRadius>2.5</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<startWickHitPointsPercent>0.25</startWickHitPointsPercent>
+				<wickTicks>
+					<min>140</min>
+					<max>160</max>
+				</wickTicks>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.CompProperties_WiredBlasterReceiver"/>
+		</comps>
+		<building>
+			<isTrap>false</isTrap>
+			<expandHomeArea>false</expandHomeArea>
+		</building>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_AdvancedBlasting</li>
+		</researchPrerequisites>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<placeWorkers>
+			<li>TheEndTimes_Dwarfs.PlaceWorker_MountainBreakerExplosive</li>
+		</placeWorkers>
+		<modExtensions/>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ExposionThingBase">
+		<defName>RH_TET_Dwarfs_BlastingBench</defName>
+		<label>dawi munitions bench</label>
+		<thingClass>Building_WorkTable</thingClass>
+		<description>A workbench dedicated to making black powder, firearms, and things that require black powder in their construction. This includes warmachine ammo, thunderer rifles, and so on.\n\nA dedicated and safe spot to work with explosives is necessary. All dwarfs see the sound logic in that, and all honor it. In the early days, there were a handful of engineers that didn't consider the danger of what they were working with; that left them either dead or mained. The rest of those responsible for such crafting quickly devised the blasting bench as a solution.</description>
+		<graphicData>
+			<texPath>Things/Building/Production/Blasting/RH_TET_Dwarfs_BlastingBench</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(3.1,1.4)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<statBases>
+			<Cleanliness>-1</Cleanliness>
+			<Flammability>.75</Flammability>
+			<Mass>50</Mass>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkTableWorkSpeedFactor>0.75</WorkTableWorkSpeedFactor>
+			<WorkToBuild>3500</WorkToBuild>
+		</statBases>
+		<castEdgeShadows>true</castEdgeShadows>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<costStuffCount>75</costStuffCount>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsProduction</li>
+		</thingCategories>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<size>(3,1)</size>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<passability>PassThroughOnly</passability>
+		<pathCost>75</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+		</building>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li>
+				<compClass>CompReportWorkSpeed</compClass>
+			</li>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+			<li>PlaceWorker_ReportWorkSpeedPenalties</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_BlackPowder</li>
+		</researchPrerequisites>
+		<designationCategory>Production</designationCategory>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>RH_TET_Dwarfs_CollapsedMountainRocks</defName>
+		<graphicData>
+			<texPath>Things/Building/Natural/CollapsedRocks</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>None</linkType>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<thingClass>Mineable</thingClass>
+		<description>Collapsed mountain roof rock. Still has roof over it.\n\nDwarfs look at this material with sadness, as it represents the death of the mountain to them.</description>
+		<label>collapsed mountain</label>
+		<drawerType>MapMeshOnly</drawerType>
+		<category>Building</category>
+		<selectable>true</selectable>
+		<filthLeaving>Filth_RubbleRock</filthLeaving>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>200</pathCost>
+		<pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>1</fillPercent>
+		<coversFloor>true</coversFloor>
+		<neverMultiSelect>false</neverMultiSelect>
+		<saveCompressible>false</saveCompressible>
+		<holdsRoof>true</holdsRoof>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<blockLight>true</blockLight>
+		<mineable>true</mineable>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<building>
+			<isInert>true</isInert>
+			<canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+			<deconstructible>false</deconstructible>
+			<isNaturalRock>false</isNaturalRock>
+			<claimable>false</claimable>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWeapon">
+		<defName>RH_TET_Dwarfs_BlastingCharges</defName>
+		<label>dawi blasting charges</label>
+		<description>Mining explosives used by dwarfs, it turns out that they work very well as weapons as well. They can be thrown a short distance, where they'll explode, damaging anything and anyone nearby.\n\nIt is rather laborious work to carve out tunnels. These blasting charges save much time for the dawi in their mining endeavors, and they are very handy to have around when raki or grobi show their ugly faces.</description>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Weapons/Ranged/RH_TET_Dwarfs_MiningCharges</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>.6</drawSize>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<soundInteract>Interact_Grenade</soundInteract>
+		<techLevel>Medieval</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<costList>
+			<Steel>20</Steel>
+			<RH_TET_BlackPowder>50</RH_TET_BlackPowder>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+				<li>RH_TET_Dwarfs_BlastingBench</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+			<researchPrerequisite>RH_TET_Dwarf_AdvancedBlasting</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<weaponTags>
+			<li>GrenadeDestructive</li>
+			<li>RH_TET_Dwarfs_GrenadeDestructive</li>
+		</weaponTags>
+		<thingCategories>
+			<li>Grenades</li>
+			<li>RH_TET_Dwarfs_WeaponsRanged</li>
+		</thingCategories>
+		<verbs>
+			<li>
+				<label>throw blasting charge</label>
+				<verbClass>Verb_LaunchProjectile</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>12.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>ThrowGrenade</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>RH_TET_Dwarfs_Proj_BlastingCharge</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.66</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+			<li>
+				<compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>RH_TET_Dwarfs_Proj_BlastingCharge</defName>
+		<label>blasting charge</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectiles/RH_TET_DwarfsBlastingCharge</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<explosionRadius>1.9</explosionRadius>
+			<damageDef>Bomb</damageDef>
+			<explosionDelay>100</explosionDelay>
+		</projectile>
+	</ThingDef>
+
+</Defs>

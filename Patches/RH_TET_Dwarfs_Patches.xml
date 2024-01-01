@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/IncidentDef[defName="Infestation"]/workerClass</xpath>
+		<value>
+			<workerClass>TheEndTimes_Dwarfs.IncidentWorker_Infestation</workerClass>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/IncidentDef[defName="Infestation"]/letterText</xpath>
+		<value>
+			<letterText>Skaven are tunneling towards you! They will break through in a few seconds and begin the process of taking over the area.\n\nThe tunnels will spawn more skaven, and more tunnels will appear as more skaven are drawn to the area. They will also have rock and steel chunks dragged out of them by the skaven, in an effort to clear their tunnels.\n\nIf you don't want the skaven to infest the whole area, destroy the tunnels. But beware - the filthy raki will defend them.</letterText>
+		</value>
+	</Operation>
+  
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/JoyGiverDef[defName = "UseTelescope"]/thingDefs</xpath>
+		<value>
+			<li>RH_TET_Dwarf_Telescope</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[@Name="ApparelMakeableBase"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_HandTailoringBench</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[@Name="SculptureBase"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_DwarfPillarSculptingSpot</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[@Name="MakeStoneBlocksBase"]/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_TableStonecutter</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName="Make_Patchleather"]/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_HandTailoringBench</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "Apparel_TribalA"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_HandTailoringBench</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "Apparel_TribalHeaddress"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_HandTailoringBench</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "GoJuice"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_DrugLab</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "Penoxycyline"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_DrugLab</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "Flake"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_DrugLab</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "Yayo"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_DrugLab</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "WakeUp"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_DrugLab</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "MedicineIndustrial"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_DrugLab</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "SmokeleafJoint"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_DrugLab</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "PsychiteTea"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_Hearth</li>
+			<li>RH_TET_Dwarfs_DrugLab</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/WorkGiverDef[defName = "DoBillsStonecut"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_TableStonecutter</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/WorkGiverDef[defName = "DoBillsButcherFlesh"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_TableButcher</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/WorkGiverDef[defName = "DoBillsProduceDrugs"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_DrugLab</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/WorkGiverDef[defName = "DoBillsBrew"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>RH_TET_Dwarfs_Brewery</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/WorkGiverDef[defName = "DoBillsSculpt"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>RH_TET_DwarfPillarSculptingSpot</li>
+		</value>
+	</Operation>
+	
+	<!-- Making stone chunks usable by grudge thrower. -->
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[@Name = "ChunkRockBase"]/projectileWhenLoaded</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "ChunkRockBase"]</xpath>
+				<value><projectileWhenLoaded/></value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[@Name = "ChunkRockBase"]/projectileWhenLoaded</xpath>
+		<value>
+			<projectileWhenLoaded>RH_TET_Dwarfs_GrudgeThrower_RockChunk</projectileWhenLoaded>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThinkTreeDef[defName = "MentalStateNonCritical"]/thinkRoot/subNodes</xpath>
+		<value>
+			<li Class="ThinkNode_ConditionalMentalState">
+				<state>RH_TET_Dwarfs_LonelyGrumbling</state>
+				<subNodes>
+					<li Class="JobGiver_WanderOwnRoom">
+						<maxDanger>Deadly</maxDanger>
+					</li>
+				</subNodes>
+			</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - The End Times</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[1]/options</xpath>
+					<value>
+						<RH_TET_DwarfClansman>7</RH_TET_DwarfClansman>
+						<RH_TET_DwarfWarrior>7</RH_TET_DwarfWarrior>
+						<RH_TET_DwarfRanged>7</RH_TET_DwarfRanged>
+						<RH_TET_DwarfSlayer>2</RH_TET_DwarfSlayer>
+						<RH_TET_DwarfMinerBlaster>2</RH_TET_DwarfMinerBlaster>
+						<RH_TET_DwarfThane>1</RH_TET_DwarfThane>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[2]/options</xpath>
+					<value>
+						<RH_TET_DwarfClansman>7</RH_TET_DwarfClansman>
+						<RH_TET_DwarfWarrior>7</RH_TET_DwarfWarrior>
+						<RH_TET_DwarfRanged>7</RH_TET_DwarfRanged>
+						<RH_TET_DwarfSlayer>2</RH_TET_DwarfSlayer>
+						<RH_TET_DwarfMinerBlaster>2</RH_TET_DwarfMinerBlaster>
+						<RH_TET_DwarfThane>1</RH_TET_DwarfThane>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[3]/options</xpath>
+					<value>
+						<RH_TET_DwarfClansman>7</RH_TET_DwarfClansman>
+						<RH_TET_DwarfWarrior>7</RH_TET_DwarfWarrior>
+						<RH_TET_DwarfRanged>7</RH_TET_DwarfRanged>
+						<RH_TET_DwarfSlayer>2</RH_TET_DwarfSlayer>
+						<RH_TET_DwarfMinerBlaster>2</RH_TET_DwarfMinerBlaster>
+						<RH_TET_DwarfThane>1</RH_TET_DwarfThane>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[4]/options</xpath>
+					<value>
+						<RH_TET_DwarfClansman>7</RH_TET_DwarfClansman>
+						<RH_TET_DwarfWarrior>7</RH_TET_DwarfWarrior>
+						<RH_TET_DwarfRanged>7</RH_TET_DwarfRanged>
+						<RH_TET_DwarfSlayer>2</RH_TET_DwarfSlayer>
+						<RH_TET_DwarfMinerBlaster>2</RH_TET_DwarfMinerBlaster>
+						<RH_TET_DwarfThane>1</RH_TET_DwarfThane>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[5]/options</xpath>
+					<value>
+						<RH_TET_DwarfClansman>8</RH_TET_DwarfClansman>
+						<RH_TET_DwarfWarrior>8</RH_TET_DwarfWarrior>
+						<RH_TET_DwarfRanged>8</RH_TET_DwarfRanged>
+						<RH_TET_DwarfSlayer>3</RH_TET_DwarfSlayer>
+						<RH_TET_DwarfMinerBlaster>3</RH_TET_DwarfMinerBlaster>
+						<RH_TET_DwarfThane>1</RH_TET_DwarfThane>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[6]/guards</xpath>
+					<value>
+						<RH_TET_DwarfClansman>8</RH_TET_DwarfClansman>
+						<RH_TET_DwarfWarrior>8</RH_TET_DwarfWarrior>
+						<RH_TET_DwarfRanged>8</RH_TET_DwarfRanged>
+						<RH_TET_DwarfSlayer>3</RH_TET_DwarfSlayer>
+						<RH_TET_DwarfMinerBlaster>3</RH_TET_DwarfMinerBlaster>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Dwarf_Stonebread"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Stove</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Dwarf_BulkStonebread"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Stove</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Dwarf_Race_Standard"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Dwarf_Slayer_Race_Standard"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<!--
+				<li Class="PatchOperationRemove"> 
+					<xpath>//WorkGiverDef[defName = "RH_TET_DoSmithing"]/fixedBillGiverDefs/li[1]</xpath>
+				</li>
+				-->
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_CookPickling"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarfs_Hearth</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_CookCure"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarfs_Hearth</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_CookPicklingBulk"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarfs_Hearth</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_CookCureBulk"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarfs_Hearth</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - The End Times - WITH GUNS!!</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[1]/options</xpath>
+					<value>
+						<RH_TET_DwarfClansman>7</RH_TET_DwarfClansman>
+						<RH_TET_DwarfWarrior>7</RH_TET_DwarfWarrior>
+						<RH_TET_DwarfRanged>7</RH_TET_DwarfRanged>
+						<RH_TET_DwarfSlayer>2</RH_TET_DwarfSlayer>
+						<RH_TET_DwarfThane>1</RH_TET_DwarfThane>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[2]/options</xpath>
+					<value>
+						<RH_TET_DwarfClansman>7</RH_TET_DwarfClansman>
+						<RH_TET_DwarfWarrior>7</RH_TET_DwarfWarrior>
+						<RH_TET_DwarfRanged>7</RH_TET_DwarfRanged>
+						<RH_TET_DwarfSlayer>2</RH_TET_DwarfSlayer>
+						<RH_TET_DwarfThane>1</RH_TET_DwarfThane>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[3]/options</xpath>
+					<value>
+						<RH_TET_DwarfClansman>7</RH_TET_DwarfClansman>
+						<RH_TET_DwarfWarrior>7</RH_TET_DwarfWarrior>
+						<RH_TET_DwarfRanged>7</RH_TET_DwarfRanged>
+						<RH_TET_DwarfSlayer>2</RH_TET_DwarfSlayer>
+						<RH_TET_DwarfThane>1</RH_TET_DwarfThane>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[4]/options</xpath>
+					<value>
+						<RH_TET_DwarfClansman>7</RH_TET_DwarfClansman>
+						<RH_TET_DwarfWarrior>7</RH_TET_DwarfWarrior>
+						<RH_TET_DwarfRanged>7</RH_TET_DwarfRanged>
+						<RH_TET_DwarfSlayer>2</RH_TET_DwarfSlayer>
+						<RH_TET_DwarfThane>1</RH_TET_DwarfThane>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[5]/options</xpath>
+					<value>
+						<RH_TET_DwarfClansman>8</RH_TET_DwarfClansman>
+						<RH_TET_DwarfWarrior>8</RH_TET_DwarfWarrior>
+						<RH_TET_DwarfRanged>8</RH_TET_DwarfRanged>
+						<RH_TET_DwarfSlayer>3</RH_TET_DwarfSlayer>
+						<RH_TET_DwarfThane>1</RH_TET_DwarfThane>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[6]/guards</xpath>
+					<value>
+						<RH_TET_DwarfClansman>8</RH_TET_DwarfClansman>
+						<RH_TET_DwarfWarrior>8</RH_TET_DwarfWarrior>
+						<RH_TET_DwarfRanged>8</RH_TET_DwarfRanged>
+						<RH_TET_DwarfSlayer>3</RH_TET_DwarfSlayer>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Dwarf_Stonebread"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Stove</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Dwarf_BulkStonebread"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Stove</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Dwarf_Race_Standard"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Dwarf_Slayer_Race_Standard"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - The End Times - Empire</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Empire_CookBrinedMeat"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarfs_Hearth</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Empire_CookBrinedMeatBulk"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarfs_Hearth</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Dwarfs_Cigarette"]/recipeMaker/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Empire_DrugLab</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Orbital_BulkGoods"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Saltpeter</thingDef>
+				<countRange>
+					<min>200</min>
+					<max>500</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_BlackPowder</thingDef>
+				<countRange>
+					<min>200</min>
+					<max>500</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Dwarf_Gromril</thingDef>
+				<countRange>
+					<min>25</min>
+					<max>100</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Orbital_CombatSupplier"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Saltpeter</thingDef>
+				<countRange>
+					<min>50</min>
+					<max>200</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_BlackPowder</thingDef>
+				<countRange>
+					<min>10</min>
+					<max>100</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Dwarf_Gromril</thingDef>
+				<countRange>
+					<min>10</min>
+					<max>50</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Orbital_PirateMerchant"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Saltpeter</thingDef>
+				<countRange>
+					<min>25</min>
+					<max>100</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_BlackPowder</thingDef>
+				<countRange>
+					<min>10</min>
+					<max>50</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Dwarf_Gromril</thingDef>
+				<countRange>
+					<min>10</min>
+					<max>50</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Orbital_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Saltpeter</thingDef>
+				<countRange>
+					<min>25</min>
+					<max>100</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_BlackPowder</thingDef>
+				<countRange>
+					<min>10</min>
+					<max>100</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Dwarf_Gromril</thingDef>
+				<countRange>
+					<min>25</min>
+					<max>100</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Base_Neolithic_Standard"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Saltpeter</thingDef>
+				<countRange>
+					<min>100</min>
+					<max>500</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_BlackPowder</thingDef>
+				<countRange>
+					<min>10</min>
+					<max>50</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Dwarf_Gromril</thingDef>
+				<countRange>
+					<min>5</min>
+					<max>25</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Base_Outlander_Standard"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Saltpeter</thingDef>
+				<countRange>
+					<min>100</min>
+					<max>500</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_BlackPowder</thingDef>
+				<countRange>
+					<min>10</min>
+					<max>50</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Dwarf_Gromril</thingDef>
+				<countRange>
+					<min>5</min>
+					<max>25</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>/Defs/ThinkTreeDef[defName = "MainColonistBehaviorCore"]/thinkRoot/subNodes/li[1]/subNodes/li[5]</xpath>
+		<value>
+			<li Class="TheEndTimes_Dwarfs.JobGiver_Rule"/>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Extended Storage (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Dwarfs_Shelf"]/thingClass</xpath>
+					<value>
+						<thingClass>ExtendedStorage.Building_ExtendedStorage</thingClass>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Dwarfs_Shelf"]/inspectorTabs</xpath>
+					<value>
+						<inspectorTabs>
+							<li>ExtendedStorage.ITab_ExtendedStorage</li>
+						</inspectorTabs>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Dwarfs_Shelf"]/statBases</xpath>
+					<value>
+						<ES_StorageFactor>8</ES_StorageFactor>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Dwarfs_Shelf"]/drawGUIOverlay</xpath>
+					<value>
+						<drawGUIOverlay>True</drawGUIOverlay>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

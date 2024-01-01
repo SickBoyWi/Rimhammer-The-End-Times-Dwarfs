@@ -1,0 +1,1164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Food -->
+	<RecipeDef>
+		<defName>RH_TET_Dwarf_Stonebread</defName>
+		<label>make stonebread</label>
+		<description>Make stonebread, a hearty bread made from stoneroot. It doesn't taste amazing, but provides great nutrition and lasts a long time without refrigeration.</description>
+		<jobString>Making stonebread.</jobString>
+		<workAmount>700</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>false</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarf_RawStoneroot</li>
+					</thingDefs>
+				</filter>
+				<count>.5</count><!-- game multiplies this by 20 -->
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Dwarf_RawStoneroot</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<recipeUsers>
+			<li>Campfire</li>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+			<li>RH_TET_Dwarfs_Hearth</li>
+		</recipeUsers>
+		<products>
+			<RH_TET_Dwarf_Stonebread>1</RH_TET_Dwarf_Stonebread>
+		</products>
+		<workSkill>Cooking</workSkill>
+		<skillRequirements>
+			<Cooking>6</Cooking>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_Stonebread</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Dwarf_BulkStonebread</defName>
+		<label>make bulk stonebread</label>
+		<description>Make much stonebread, a hearty bread made from stoneroot. It doesn't taste amazing, but provides great nutrition and lasts a long time without refrigeration.</description>
+		<jobString>Making bulk stonebread.</jobString>
+		<workAmount>4000</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>false</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarf_RawStoneroot</li>
+					</thingDefs>
+				</filter>
+				<count>4.75</count><!-- game multiplies this by 20 -->
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Dwarf_RawStoneroot</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<recipeUsers>
+			<li>Campfire</li>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+			<li>RH_TET_Dwarfs_Hearth</li>
+		</recipeUsers>
+		<products>
+			<RH_TET_Dwarf_Stonebread>10</RH_TET_Dwarf_Stonebread>
+		</products>
+		<workSkill>Cooking</workSkill>
+		<skillRequirements>
+			<Cooking>6</Cooking>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_Stonebread</researchPrerequisite>
+	</RecipeDef>
+ 
+	<RecipeDef ParentName="CookMealFineBase">
+		<defName>RH_TET_Dwarfs_CookKuriMeal</defName>
+		<label>cook kuri meal</label>
+		<description>Cook kuri meal. It's a meat stew boiled up by travelling Dwarfs from whatever ingredients are at hand. Traditionally spiced with wild berries. Delicious, and nutritious.</description>
+		<jobString>Cooking fine meal.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>0.25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawBerries</li>
+					</thingDefs>
+				</filter>
+				<count>.25</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+			<thingDefs>
+				<li>RawBerries</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<recipeUsers>
+			<li>Campfire</li>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+			<li>RH_TET_Dwarfs_Hearth</li>
+		</recipeUsers>
+		<products>
+			<RH_TET_Dwarf_KuriMeal>1</RH_TET_Dwarf_KuriMeal>
+		</products>
+		<researchPrerequisite>RH_TET_Dwarf_Stonebread</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef ParentName="CookMealFineBulkBase">
+		<defName>RH_TET_Dwarfs_CookKuriMealBulk</defName>
+		<label>cook kuri meal x4</label>
+		<description>Cook 4 kuri meals. It's a meat stew boiled up by travelling Dwarfs from whatever ingredients are at hand. Traditionally spiced with wild berries. Delicious, and nutritious.</description>
+		<jobString>Cooking 4 fine meals.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>1.0</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawBerries</li>
+					</thingDefs>
+				</filter>
+				<count>1.0</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+			<thingDefs>
+				<li>RawBerries</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<recipeUsers>
+			<li>Campfire</li>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+			<li>RH_TET_Dwarfs_Hearth</li>
+		</recipeUsers>
+		<products>
+			<RH_TET_Dwarf_KuriMeal>4</RH_TET_Dwarf_KuriMeal>
+		</products>
+		<researchPrerequisite>RH_TET_Dwarf_Stonebread</researchPrerequisite>
+	</RecipeDef>
+
+	<!-- Black Powder -->
+	<RecipeDef>
+		<defName>RH_TET_BlackPowder</defName>
+		<label>make black powder</label>
+		<description>Combine charcoal from wood, sulfur, and saltpeter into black powder. Makes things go BOOM!</description>
+		<jobString>Making black powder.</jobString>
+		<workAmount>700</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<!--<requiredGiverWorkType>Crafting</requiredGiverWorkType>-->
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>false</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Sulfur</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Saltpeter</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Sulfur</li>
+				<li>RH_TET_Saltpeter</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+		</recipeUsers>
+		<products>
+			<RH_TET_BlackPowder>10</RH_TET_BlackPowder>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_BlackPowder</researchPrerequisite>
+	</RecipeDef>
+  
+	<RecipeDef>
+		<defName>RH_TET_BlackPowderBulk</defName>
+		<label>make bulk black powder</label>
+		<description>Combine charcoal from wood, sulfur, and saltpeter into black powder, several times at once. Makes things go BOOM!</description>
+		<jobString>Making bulk black powder.</jobString>
+		<workAmount>2600</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<!--<requiredGiverWorkType>Crafting</requiredGiverWorkType>-->
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>false</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Sulfur</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Saltpeter</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Sulfur</li>
+				<li>RH_TET_Saltpeter</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+		</recipeUsers>
+		<products>
+			<RH_TET_BlackPowder>40</RH_TET_BlackPowder>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_BlackPowder</researchPrerequisite>
+	</RecipeDef>
+  
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_Make_BlackPowderFromChemfuel</defName>
+		<label>make black powder from chemfuel</label>
+		<description>Make a batch of black powder by drying chemfuel into powder.</description>
+		<jobString>Refining black powder from chemfuel.</jobString>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>300</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Chemfuel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+		</recipeUsers>
+		<products>
+			<RH_TET_BlackPowder>20</RH_TET_BlackPowder>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<researchPrerequisite>RH_TET_Dwarf_BlackPowder</researchPrerequisite>
+	</RecipeDef>
+  
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_Make_ChemfuelFromAnimalFat</defName>
+		<label>make chemfuel from animal fat</label>
+		<description>Make a batch of chemfuel by boiling down animal fat.</description>
+		<jobString>Rendering chemfuel from animal fat.</jobString>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>300</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_AnimalFat</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_AnimalFat</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+		</recipeUsers>
+		<products>
+			<Chemfuel>20</Chemfuel>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<researchPrerequisite>RH_TET_Dwarf_BlackPowder</researchPrerequisite>
+	</RecipeDef>
+  
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_Make_StoneBlocksAnyBulk</defName>
+		<label>make any stone blocks in bulk</label>
+		<description>Cut rock chunks into usable stone blocks, in bulk.</description>
+		<workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>StoneChunks</li>
+					</categories>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>StoneChunks</li>
+			</categories>
+		</fixedIngredientFilter>
+		<specialProducts>
+			<li>Butchery</li>
+		</specialProducts>
+		<jobString>Cutting stone blocks from chunks in bulk.</jobString>
+		<workAmount>6200</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+		<targetCountAdjustment>80</targetCountAdjustment>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_TableStonecutter</li>
+			<li>TableStonecutter</li>
+		</recipeUsers>
+	</RecipeDef>
+  
+	<!-- Warmachine Ammo Recipes -->
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_MakeBoltThrowerBolt</defName>
+		<label>Make bolt thrower bolt</label>
+		<description>Create a bolt for firing from a bolt thrower.</description>
+		<jobString>Making bolt thrower bolt.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>250</workAmount>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+			<li>RH_TET_TableSmithy</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_BoltThrower_Bolt>1</RH_TET_Dwarfs_BoltThrower_Bolt>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>5</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_WarmachinesBasic</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_MakeBoltThrowerBolt_Bulk</defName>
+		<label>Make bolt thrower bolts</label>
+		<description>Create several bolts for firing from a bolt thrower.</description>
+		<jobString>Making bolt thrower bolts.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1250</workAmount>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+			<li>RH_TET_TableSmithy</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_BoltThrower_Bolt>5</RH_TET_Dwarfs_BoltThrower_Bolt>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>5</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_WarmachinesBasic</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_MakeGrudgeThrower_GrudgeWrit</defName>
+		<label>Make grudge writ</label>
+		<description>Create a grudge writ for for firing from a GrudgeThrower.\n\nWhile a grudge thrower can throw a normal rock chunk, the effort and perfection of a stone chunk into a writ makes them more effective.</description>
+		<jobString>Making grudge writ.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>350</workAmount>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_TableStonecutter</li>
+			<li>RH_TET_DwarfPillarSculptingSpot</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>StoneChunks</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>StoneChunks</li>
+			</categories>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_GrudgeThrower_GrudgeWrit>1</RH_TET_Dwarfs_GrudgeThrower_GrudgeWrit>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_WarmachinesBasicPlus</researchPrerequisite>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_MakeGrudgeThrower_GrudgeWrits</defName>
+		<label>Making grudge writs</label>
+		<description>Create some grudge writs for firing from a GrudgeThrower.\n\nWhile a grudge thrower can throw a normal rock chunk, the effort and perfection of a stone chunk into a writ makes them more effective.</description>
+		<jobString>Making grudge writs.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1750</workAmount>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_TableStonecutter</li>
+			<li>RH_TET_DwarfPillarSculptingSpot</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>StoneChunks</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>StoneChunks</li>
+			</categories>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_GrudgeThrower_GrudgeWrit>5</RH_TET_Dwarfs_GrudgeThrower_GrudgeWrit>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_WarmachinesBasicPlus</researchPrerequisite>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_MakeCannonBall</defName>
+		<label>Make cannon ball</label>
+		<description>Create a cannon ball for firing from a cannon.</description>
+		<jobString>Making cannon ball.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>400</workAmount>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_BlackPowder</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>RH_TET_BlackPowder</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_Cannon_Ball>1</RH_TET_Dwarfs_Cannon_Ball>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_WarmachinesAdvanced</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_MakeCannonShell</defName>
+		<label>Make cannon shell</label>
+		<description>Create a cannon shell for firing from a cannon.</description>
+		<jobString>Making cannon shell.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>450</workAmount>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_BlackPowder</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>RH_TET_BlackPowder</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_Cannon_Shell>1</RH_TET_Dwarfs_Cannon_Shell>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_WarmachinesAdvanced</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_MakeCannonBalls</defName>
+		<label>Make cannon balls</label>
+		<description>Create a cannon balls for firing from a cannon.</description>
+		<jobString>Making cannon balls.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>2000</workAmount>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_BlackPowder</li>
+					</thingDefs>
+				</filter>
+				<count>75</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>RH_TET_BlackPowder</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_Cannon_Ball>5</RH_TET_Dwarfs_Cannon_Ball>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_WarmachinesAdvanced</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_MakeCannonShells</defName>
+		<label>Make cannon shells</label>
+		<description>Create a cannon shells for firing from a cannon.</description>
+		<jobString>Making cannon shells.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>2250</workAmount>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>125</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_BlackPowder</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>RH_TET_BlackPowder</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_Cannon_Shell>5</RH_TET_Dwarfs_Cannon_Shell>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_WarmachinesAdvanced</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_MakeOrganGunRound</defName>
+		<label>Make organ gun round</label>
+		<description>Create a round to be fired from the organ gun. Consists of four steel balls, and black powder.</description>
+		<jobString>Making organ gun round.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>450</workAmount>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_BlackPowder</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>RH_TET_BlackPowder</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_OrganGun_Round>1</RH_TET_Dwarfs_OrganGun_Round>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_WarmachinesFinal</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_MakeOrganGunRounds</defName>
+		<label>Make organ gun rounds</label>
+		<description>Create a bunch of rounds to be fired from the organ gun. Consists of four steel balls, and black powder.</description>
+		<jobString>Making organ gun rounds.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>2250</workAmount>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_BlackPowder</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>RH_TET_BlackPowder</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_OrganGun_Round>5</RH_TET_Dwarfs_OrganGun_Round>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_WarmachinesFinal</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_MakeFlameCannonRound</defName>
+		<label>Make flame cannon round</label>
+		<description>Create a highly explosive round to be fired from a flame cannon.</description>
+		<jobString>Making flame cannon round.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>500</workAmount>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_BlackPowder</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>RH_TET_BlackPowder</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_FlameCannon_Round>1</RH_TET_Dwarfs_FlameCannon_Round>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>9</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_WarmachinesFinal</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_MakeFlameCannonRounds</defName>
+		<label>Make flame cannon rounds</label>
+		<description>Create highly explosive rounds to be fired from a flame cannon.</description>
+		<jobString>Making flame cannon rounds.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>2000</workAmount>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>80</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_BlackPowder</li>
+					</thingDefs>
+				</filter>
+				<count>160</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>RH_TET_BlackPowder</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_FlameCannon_Round>4</RH_TET_Dwarfs_FlameCannon_Round>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>9</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_WarmachinesFinal</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_MakeGoblinHewerRound</defName>
+		<label>Make goblin hewer ax</label>
+		<description>Create an ax to be fired from the goblin hewer. Poorly weighted and cumbersom to be weilded by hand, but fantasticly devastating when fired at high speed.</description>
+		<jobString>Making goblin hewer ax.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>450</workAmount>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+			<li>RH_TET_TableSmithy</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_GoblinHewer_Round>1</RH_TET_Dwarfs_GoblinHewer_Round>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>5</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_WarmachinesBasicPlus</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_MakeGoblinHewerRounds</defName>
+		<label>Make goblin hewer axes</label>
+		<description>Create axes to be fired from the goblin hewer. Poorly weighted and cumbersom to be weilded by hand, but fantasticly devastating when fired at high speed.</description>
+		<jobString>Making goblin hewer axes.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>2250</workAmount>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+			<li>RH_TET_TableSmithy</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>125</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_GoblinHewer_Round>5</RH_TET_Dwarfs_GoblinHewer_Round>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>5</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarf_WarmachinesBasicPlus</researchPrerequisite>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_RepairApparel</defName>
+		<label>repair apparel</label>
+		<description>Repair apparel at a dwarfen tailor bench.</description>
+		<jobString>Repairing.</jobString>
+		<workerClass>TheEndTimes_Magic.RecipeWorkerWithJob_Repair</workerClass>
+		<workSkill>Crafting</workSkill>
+		<ingredients/>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_HandTailoringBench</li>
+		</recipeUsers>
+		<workAmount>100</workAmount>
+		<effectWorking>Tailor</effectWorking>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Apparel</li>
+			</categories>
+		</fixedIngredientFilter>
+		<skillRequirements>
+			<Crafting>4</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarfs_RepairBasic</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_RepairArmor</defName>
+		<label>repair armor</label>
+		<description>Repair armor at a forge.</description>
+		<jobString>Repairing.</jobString>
+		<workerClass>TheEndTimes_Magic.RecipeWorkerWithJob_Repair</workerClass>
+		<workSkill>Crafting</workSkill>
+		<ingredients/>
+		<recipeUsers>
+			<li>RH_TET_TableSmithy</li>
+		</recipeUsers>
+		<workAmount>200</workAmount>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Apparel</li>
+			</categories>
+		</fixedIngredientFilter>
+		<skillRequirements>
+			<Crafting>10</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarfs_RepairAdvanced</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_RepairMeleeWeapon</defName>
+		<label>repair weapon or shield</label>
+		<description>Repair weapon or shield at a forge.</description>
+		<jobString>Repairing.</jobString>
+		<workerClass>TheEndTimes_Magic.RecipeWorkerWithJob_Repair</workerClass>
+		<workSkill>Crafting</workSkill>
+		<ingredients/>
+		<recipeUsers>
+			<li>RH_TET_TableSmithy</li>
+		</recipeUsers>
+		<workAmount>50</workAmount>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<fixedIngredientFilter>
+			<categories>
+				<li>WeaponsMelee</li>
+			</categories>
+		</fixedIngredientFilter>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarfs_RepairAdvanced</researchPrerequisite>
+	</RecipeDef>
+  
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_RepairRangedWeapon</defName>
+		<label>repair weapon</label>
+		<description>Repair weapon at a blasting bench.</description>
+		<jobString>Repairing.</jobString>
+		<workerClass>TheEndTimes_Magic.RecipeWorkerWithJob_Repair</workerClass>
+		<workSkill>Crafting</workSkill>
+		<ingredients/>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+		</recipeUsers>
+		<workAmount>200</workAmount>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<fixedIngredientFilter>
+			<categories>
+				<li>WeaponsRanged</li>
+			</categories>
+		</fixedIngredientFilter>
+		<skillRequirements>
+			<Crafting>10</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>RH_TET_Dwarfs_RepairAdvanced</researchPrerequisite>
+	</RecipeDef>
+
+</Defs>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<DesignationCategoryDef>
+		<defName>RH_TET_Dwarfs_Buildings</defName>
+		<label>Dwarfs</label>
+		<description>Dwarfen specific buildings.</description>
+		<order>10</order>
+		<specialDesignatorClasses>
+			<li>Designator_Cancel</li>
+			<li>Designator_Deconstruct</li>
+			<li>TheEndTimes_Dwarfs.Designator_SelectBlastingWire</li>
+			<li>TheEndTimes_Dwarfs.Designator_DecorateWall</li>
+		</specialDesignatorClasses>
+	</DesignationCategoryDef>
+	
+</Defs>

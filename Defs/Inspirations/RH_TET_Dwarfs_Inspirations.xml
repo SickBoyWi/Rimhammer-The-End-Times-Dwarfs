@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<InspirationDef>
+		<defName>RH_TET_Dwarfs_Mining_Frenzy_Yield</defName>
+		<label>Favor of Grungi</label>
+		<baseDurationDays>8</baseDurationDays>
+		<beginLetter>[PAWN_pronoun] has been favored by Grungi, and will receive increased mining yields for 8 days.</beginLetter>
+		<beginLetterDef>PositiveEvent</beginLetterDef>
+		<endMessage>{0} is no longer favored (mining yield).</endMessage>
+		<baseInspectLine>Favor of Grungi: Mining Yield</baseInspectLine>
+		<requiredNonDisabledStats>
+			<li>MiningYield</li>
+		</requiredNonDisabledStats>
+		<statOffsets>
+			<MiningYield>10</MiningYield>
+		</statOffsets>
+		<associatedSkills>
+			<li>Mining</li>
+		</associatedSkills>
+		<requiredSkills>
+			<Mining>6</Mining>
+		</requiredSkills>
+	</InspirationDef>
+
+	<InspirationDef>
+		<defName>RH_TET_Dwarfs_Inspired_Tending</defName>
+		<label>Favor of Valaya</label>
+		<baseDurationDays>8</baseDurationDays>
+		<beginLetter>[PAWN_pronoun] has been favored by Valaya, and for 8 days will tend medical injuries significantly faster than normal.</beginLetter>
+		<beginLetterDef>PositiveEvent</beginLetterDef>
+		<endMessage>{0} is no longer favored (tending speed).</endMessage>
+		<baseInspectLine>Favor of Valaya: Tending Speed</baseInspectLine>
+		<requiredNonDisabledStats>
+			<li>MedicalTendSpeed</li>
+		</requiredNonDisabledStats>
+		<statFactors>
+			<MedicalTendSpeed>2.5</MedicalTendSpeed>
+		</statFactors>
+		<requiredNonDisabledWorkTypes>
+			<li>Doctor</li>
+		</requiredNonDisabledWorkTypes>
+		<requiredSkills>
+			<Medicine>1</Medicine>
+		</requiredSkills>
+		<associatedSkills>
+			<li>Medicine</li>
+		</associatedSkills>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</InspirationDef>
+
+	<InspirationDef>
+		<defName>RH_TET_Dwarfs_Frenzy_Combat</defName>
+		<label>Favor of Grimnir</label>
+		<baseDurationDays>8</baseDurationDays>
+		<beginLetter>[PAWN_pronoun] has been favored by Grimnir, and will hit more accurately with a melee weapon for the next 8 days.</beginLetter>
+		<beginLetterDef>PositiveEvent</beginLetterDef>
+		<endMessage>{0} is no longer favored (melee frenzy).</endMessage>
+		<baseInspectLine>Favor of Grimnir: Melee Accuracy</baseInspectLine>
+		<requiredNonDisabledStats>
+			<li>MeleeHitChance</li>
+		</requiredNonDisabledStats>
+		<statOffsets>
+			<MeleeHitChance>10</MeleeHitChance>
+		</statOffsets>
+		<associatedSkills>
+			<li>Melee</li>
+		</associatedSkills>
+	</InspirationDef>
+
+	<InspirationDef>
+		<defName>RH_TET_Dwarfs_Frenzy_GenWork</defName>
+		<label>Favor of Smednir</label>
+		<baseDurationDays>8</baseDurationDays>
+		<beginLetter>[PAWN_pronoun] has been favored by Smednir, and for the next 8 days will craft, smith, smelt, tailor, and perform other such tasks much faster than usual.</beginLetter>
+		<beginLetterDef>PositiveEvent</beginLetterDef>
+		<endMessage>{0} is no longer favored (create speed).</endMessage>
+		<baseInspectLine>Favor of Smednir: Creation Speed</baseInspectLine>
+		<requiredNonDisabledStats>
+			<li>GeneralLaborSpeed</li>
+		</requiredNonDisabledStats>
+		<statFactors>
+			<GeneralLaborSpeed>2.5</GeneralLaborSpeed>
+		</statFactors>
+		<requiredAnyNonDisabledWorkType>
+			<li>Art</li>
+			<li>Smithing</li>
+			<li>Construction</li>
+			<li>Tailoring</li>
+		</requiredAnyNonDisabledWorkType>
+		<requiredAnySkill>
+			<Construction>3</Construction>
+			<Artistic>3</Artistic>
+			<Crafting>3</Crafting>
+		</requiredAnySkill>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</InspirationDef>
+
+	<InspirationDef>
+		<defName>RH_TET_Dwarfs_Frenzy_Constr</defName>
+		<label>Favor of Morgrim</label>
+		<baseDurationDays>8</baseDurationDays>
+		<beginLetter>[PAWN_pronoun] has been favored by Morgrim, and for the next 8 days will construct much faster than usual.</beginLetter>
+		<beginLetterDef>PositiveEvent</beginLetterDef>
+		<endMessage>{0} is no longer favored (construction speed).</endMessage>
+		<baseInspectLine>Favor of Morgrim: Construction Speed</baseInspectLine>
+		<requiredNonDisabledStats>
+			<li>ConstructionSpeed</li>
+		</requiredNonDisabledStats>
+		<statFactors>
+			<ConstructionSpeed>2.5</ConstructionSpeed>
+		</statFactors>
+		<requiredNonDisabledWorkTypes>
+			<li>Construction</li>
+		</requiredNonDisabledWorkTypes>
+		<requiredAnySkill>
+			<Construction>3</Construction>
+		</requiredAnySkill>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</InspirationDef>
+
+	<InspirationDef>
+		<defName>RH_TET_Dwarfs_Frenzy_Dodge</defName>
+		<label>Favor of Gazul</label>
+		<baseDurationDays>8</baseDurationDays>
+		<beginLetter>[PAWN_pronoun] has been favored by Gazul, and will an uncanny ability to dodge enemy blows for the next 8 days.</beginLetter>
+		<beginLetterDef>PositiveEvent</beginLetterDef>
+		<endMessage>{0} is no longer favored (dodge chance).</endMessage>
+		<baseInspectLine>Favor of Gazul: Melee Dodge Chance</baseInspectLine>
+		<requiredNonDisabledStats>
+			<li>MeleeDodgeChance</li>
+		</requiredNonDisabledStats>
+		<statOffsets>
+			<MeleeDodgeChance>12</MeleeDodgeChance>
+		</statOffsets>
+		<associatedSkills>
+			<li>Melee</li>
+		</associatedSkills>
+	</InspirationDef>
+
+</Defs>

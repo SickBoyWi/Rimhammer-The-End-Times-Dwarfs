@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DesignationDef>
+		<defName>RH_TET_Dwarfs_BlastingWireDryOut</defName>
+		<texturePath>Things/Building/Blasting/RH_TET_Dwarfs_Blasting_DryOut</texturePath>
+		<targetType>Thing</targetType>
+		<designateCancelable>false</designateCancelable>
+	</DesignationDef>
+	
+	<DesignationDef>
+		<defName>RH_TET_Dwarfs_DecorateWallDes</defName>
+		<texturePath>UI/Designators/RH_TET_Dwarfs_DecWall_Ghost</texturePath>
+		<targetType>Thing</targetType>
+	</DesignationDef>
+	
+</Defs>

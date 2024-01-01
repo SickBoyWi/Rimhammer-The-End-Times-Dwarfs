@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Base: dwarfen Mechanical Bionic body part (medieval tech) -->
+
+	<ThingDef Name="RH_TET_Dwarfs_BodyPartBionicBase" ParentName="BodyPartBase" Abstract="True">
+		<techLevel>Medieval</techLevel>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BodyPartsBionic</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Item/Health/HealthItem</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.80</drawSize>
+			<color>(120,120,120)</color>
+		</graphicData>
+		<tradeTags>
+			<li>RH_TET_Dwarfs_Bionic</li>
+		</tradeTags>
+		<techHediffsTags>
+			<li>RH_TET_Dwarfs_Advanced</li>
+		</techHediffsTags>
+		<statBases>
+			<WorkToMake>26000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>14</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>RH_TET_Dwarfs_Bionics</researchPrerequisite>
+			<recipeUsers>
+				<!--<li>FabricationBench</li> Removing this to keep non-dwarfs from making them. -->
+				<li>RH_TET_Dwarfs_BlastingBench</li>
+				<li>RH_TET_TableSmithy</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+  
+	<!-- Mechanical Bionic arm -->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Dwarfs_BionicArm</defName>
+		<label>mechanical arm</label>
+		<description>An mechanical bionic arm. Invstalled via a surgery.</description>
+		<labelNoun>a mechanical bionic arm</labelNoun>
+		<descriptionHyperlinks><ThingDef>RH_TET_Dwarfs_BionicArm</ThingDef></descriptionHyperlinks>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>12</power>
+						<cooldownTime>2</cooldownTime>
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>RH_TET_Dwarfs_BionicArm</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.10</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_BodyPartBionicBase">
+		<defName>RH_TET_Dwarfs_BionicArm</defName>
+		<label>mechanical arm</label>
+		<description>An advanced artificial arm, constructed by the most skilled dwarf engineers. Servos, gears, and metal make it strong. Somehow unwittedly imbued with a touch of dwarfen innate magic when created, if the creator is skilled enough to follow the proper procedure. A slight improvement over a natural arm.</description>
+		<descriptionHyperlinks><RecipeDef>RH_TET_Dwarfs_InstallBionicArm</RecipeDef></descriptionHyperlinks>
+		<costList>
+			<Steel>30</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<Uranium>10</Uranium>
+		</costList>
+		<thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+		<statBases>
+			<Mass>5</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>RH_TET_Dwarfs_InstallBionicArm</defName>
+		<label>install mechanical arm</label>
+		<description>Install a mechanical arm.</description>
+		<descriptionHyperlinks><ThingDef>RH_TET_Dwarfs_BionicArm</ThingDef></descriptionHyperlinks>
+		<jobString>Installing mechanical arm.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_BionicArm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Dwarfs_BionicArm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Dwarfs_BionicArm</addsHediff>
+	</RecipeDef>
+
+	<!-- Mechanical Bionic leg -->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Dwarfs_BionicLeg</defName>
+		<label>mechanical leg</label>
+		<labelNoun>a mechanical leg</labelNoun>
+		<description>An installed mechanical leg.</description>
+		<descriptionHyperlinks><ThingDef>RH_TET_Dwarfs_BionicLeg</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>RH_TET_Dwarfs_BionicLeg</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.10</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_BodyPartBionicBase">
+		<defName>RH_TET_Dwarfs_BionicLeg</defName>
+		<label>mechanical leg</label>
+		<description>An advanced artificial leg constructed by the most skilled dwarf engineers. Servos, gears, and metal make it strong. Somehow unwittedly imbued with a touch of dwarfen innate magic when created, if the creator is skilled enough to follow the proper procedure. A slight improvement over a natural leg.</description>
+		<descriptionHyperlinks><RecipeDef>RH_TET_Dwarfs_InstallBionicLeg</RecipeDef></descriptionHyperlinks>
+		<costList>
+			<Steel>30</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<Uranium>10</Uranium>
+		</costList>
+		<thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+		<statBases>
+			<Mass>8</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>RH_TET_Dwarfs_InstallBionicLeg</defName>
+		<label>install mechanical leg</label>
+		<description>Install a mechanical leg.</description>
+		<descriptionHyperlinks><ThingDef>RH_TET_Dwarfs_BionicLeg</ThingDef></descriptionHyperlinks>
+		<jobString>Installing mechanical leg.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_BionicLeg</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Dwarfs_BionicLeg</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Leg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Dwarfs_BionicLeg</addsHediff>
+	</RecipeDef>
+
+</Defs>

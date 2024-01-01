@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Glowstone</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GLO_WeldGlowstoneClusterElectric"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GLO_Weld4GlowstoneClusterElectric"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GLO_CutGlowstoneCluster"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarfs_TableStonecutter</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GLO_Cut4GlowstoneCluster"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarfs_TableStonecutter</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GLO_WeldLargeGlowstoneElectric"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GLO_Weld4LargeGlowstoneElectric"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GLO_CutLargeGlowstone"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarfs_TableStonecutter</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GLO_Cut4LargeGlowstone"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarfs_TableStonecutter</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GLO_WeldSmallGlowstoneElectric"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GLO_Weld4SmallGlowstoneElectric"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GLO_CrushSmallGlowstone"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarfs_TableStonecutter</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GLO_Crush4SmallGlowstone"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarfs_TableStonecutter</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GLO_MakeEightGlowstoneTilesElectric"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GLO_MakeFortyGlowstoneTilesElectric"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

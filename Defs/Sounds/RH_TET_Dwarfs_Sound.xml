@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?><Defs>
+
+	<SoundDef>
+		<defName>RH_TET_Dwarfs_BlastWireFailSound</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<maxVoices>3</maxVoices>
+		<maxSimultaneous>4</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Blasting/RH_TET_Dwarf_BlastWireFailSound</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>20</min>
+					<max>25</max>
+				</volumeRange>
+				<pitchRange>
+					<min>1.0</min>
+					<max>1.1</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>RH_TET_Dwarf_CapturedHold</defName>
+		<eventNames/>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Incident/RH_TET_Dwarf_CapturedHold</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>80</min>
+					<max>80</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>RH_TET_Dwarf_Fanfare</defName>
+		<eventNames/>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Faction/RH_TET_Dwarf_Fanfare</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>10.058827</min>
+					<max>10.058827</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9311765</min>
+					<max>1</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+
+	<SoundDef>
+		<defName>RH_TET_Dwarf_Victory</defName>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Faction/RH_TET_Dwarf_Fanfare</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>50</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>RH_TET_Dwarf_Quarreller</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Weapon/RH_TET_Dwarf_Quarreller</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>60.70111</min>
+					<max>77.30627</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.6976015</min>
+					<max>0.7769372</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>RH_TET_Dwarf_Cannon</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Weapon/RH_TET_Dwarf_Cannon</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>60.70111</min>
+					<max>77.30627</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.6976015</min>
+					<max>0.7769372</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>RH_TET_Dwarf_OrganGun</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Weapon/RH_TET_Dwarf_OrganGun</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>60.70111</min>
+					<max>77.30627</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.6976015</min>
+					<max>0.7769372</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>RH_TET_Dwarf_GoblinHewer</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Weapon/RH_TET_Dwarf_GoblinHewer</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>60.70111</min>
+					<max>77.30627</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.6976015</min>
+					<max>0.7769372</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+ 
+	<SoundDef>
+		<defName>RH_TET_Dwarf_GoblinHewerAmbient</defName>
+		<sustain>True</sustain>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<muteWhenPaused>True</muteWhenPaused>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Weapon/RH_TET_Dwarf_GoblinHewer_Ambient</clipPath>
+					</li>
+				</grains>
+				<volumeRange>13.17392~13.17392</volumeRange>
+				<pitchRange>0.95~1.05</pitchRange>
+				<sustainAttack>0.1</sustainAttack>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>RH_TET_Dwarf_GoblinHewerThunk</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Weapon/RH_TET_Dwarf_GoblinHewer_Thunk</clipPath>
+					</li>
+				</grains>
+				<volumeRange>60~70</volumeRange>
+				<pitchRange>0.9152174~1.084783</pitchRange>
+				<repeatMode>Any</repeatMode>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_Dwarf_GoblinHewerWhoosh</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Weapon/RH_TET_Dwarf_GoblinHewer_Whosh</clipPath>
+					</li>
+				</grains>
+				<volumeRange>28.82353~37.05883</volumeRange>
+				<tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_Dwarf_Drakegun</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Weapon/RH_TET_Dwarf_Drakegun</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>60.70111</min>
+					<max>77.30627</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.6976015</min>
+					<max>0.7769372</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_Dwarf_Drakegun_Fire</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Weapon/RH_TET_Dwarf_Drakegun_Fire</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>60.70111</min>
+					<max>77.30627</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.6976015</min>
+					<max>0.7769372</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>RH_TET_Dwarfs_DetonatorLever</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<maxVoices>4</maxVoices>
+		<maxSimultaneous>4</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Blasting/RH_TET_Dwarfs_BlastingPlunger</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>40</min>
+					<max>50</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.8</min>
+					<max>1.2</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>RH_TET_Dwarfs_MountainDrop</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<maxVoices>3</maxVoices>
+		<maxSimultaneous>3</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Blasting/RH_TET_Dwarfs_MountainDrop</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>80</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9</min>
+					<max>1.1</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>RH_TET_Dwarfs_PlayDice</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Misc/PlayDice</clipPath>
+					</li>
+				</grains>
+				<volumeRange>13.46512~15.4651</volumeRange>
+				<pitchRange>0.9~1.1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_Dwarfs_HornPlay</defName>
+		<context>MapOnly</context>
+		<sustain>True</sustain>
+		<sustainFadeoutTime>0.1</sustainFadeoutTime>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Misc/RH_TET_HornPlay</clipPath>
+					</li>
+				</grains>
+				<volumeRange>35~65</volumeRange>
+				<distRange>10~35</distRange>
+				<sustainLoop>True</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>RH_TET_Dwarfs_Thumper_Ambience</defName>
+		<sustain>True</sustain>
+		<context>MapOnly</context>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<maxSimultaneous>1</maxSimultaneous>
+		<maxVoices>1</maxVoices>
+		<subSounds>
+			<li>
+				<muteWhenPaused>True</muteWhenPaused>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Steam/Thumper_Loop</clipPath>
+					</li>
+				</grains>
+				<volumeRange>20</volumeRange>
+				<distRange>5~20</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+</Defs>

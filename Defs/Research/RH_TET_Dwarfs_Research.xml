@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchTabDef>
+		<defName>RH_TET_Dwarf_Tab</defName>
+		<label>Dwarfs</label>
+	</ResearchTabDef>
+
+	<ResearchProjectDef Name="RH_TET_DwarfResearch" Abstract="True">
+		<techLevel>Medieval</techLevel>
+		<tab>RH_TET_Dwarf_Tab</tab>
+		<requiredResearchBuilding>RH_TET_Dwarfs_ResearchBench</requiredResearchBuilding>
+	</ResearchProjectDef>
+
+	<ResearchProjectTagDef>
+		<defName>RH_TET_Dwarf_ProjectTag</defName>
+	</ResearchProjectTagDef>
+
+	<!-- Column 1 -->
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_Furniture_Basic</defName>
+		<label>Furniture</label>
+		<description>Unlocks the ability to make basic dwarfen furniture. Stools, smaller tables, simple chairs, beds, and so on.\n\nDwarfs are a finicky lot, and refuse to make furniture that won't last a very long time. Stone is preferred, but in some cases (such as if it's to be needed in the mines, and weight is a consideration) they will use metal. They're furniture is obviously made to dwarf specifications, not human.</description>
+		<baseCost>200</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>ComplexFurniture</li>
+		</prerequisites>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>0.10</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_FlooringBasic</defName>
+		<label>Flooring</label>
+		<description>Unlocks the ability to make basic dwarfen tile floors. Even the most basic crafted dwarfen floors are equivalent to the best work that humans can do.\n\nDwarfs will take the time to put well made, and reasonably good looking floors in most places; including mine entrance areas, and outside. Their construction is always top notch, and no dwarf would consider doing less than their best work possible.</description>
+		<baseCost>300</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>2.65</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_DoorsBasic</defName>
+		<label>Doors</label>
+		<description>Allows for the building of basic dwarfen doors. Sturdy, and well built doors; as you'd expect of dwarfen craftmanship.\n\nThe doors unlocked here are a rare example of dwarfs willingly using wood as a construction material. While it is far less than ideal, sometimes a situation calls for it; dwarfs are a practical lot, and will do what they need to do in order to accomplish the task at hand.</description>
+		<baseCost>300</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>2.65</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Weapons_MeleeHand_Basic</defName>
+		<label>Melee Hand Weaponry</label>
+		<description>Unlocks the ability to make basic dwarfen hand axes and hammers. Simple, and useful; both for working and cracking heads.\n\nDwarfen blacksmith apprentices study for over one hundred years before they're considered ready to take on the mantle of a true blacksmith. The weapons unlocked here are the types of things that apprentice dwarf blacksmiths must master in order to gain the first inkling of respect from their masters.</description>
+		<baseCost>350</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>Smithing</li>
+		</prerequisites>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>4.15</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Apparel_Basic</defName>
+		<label>Apparel</label>
+		<description>Unlocks the ability to make basic dwarfen apparel. Nothing fancy, but things that will certainly fit a dwarf's stout frame.\n\nA dwarf's short stout frame will not fit in human clothes. No amount of alteration will make them fit right, or be wearable for working, combat, or recreation.</description>
+		<baseCost>450</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>ComplexClothing</li>
+		</prerequisites>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>5.15</researchViewY>
+	</ResearchProjectDef>
+
+	<!-- Column 2 -->
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_Furniture_Recreation</defName>
+		<label>Recreation</label>
+		<description>Unlocks the ability to make dwarfen recration items. Dicing tables, a telescope, a large horn instrument, and so on.\n\nDwarfs are the most industrious people in the world, but they need their downtime. Tossing dice, having a drink and a smoke, studying the stars, and so on are activities that all dwarfs need in order to maintain their industrious nature, and happiness!</description>
+		<baseCost>300</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Basic</li>
+		</prerequisites>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>0.90</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_WallsBasic</defName>
+		<label>Walls &amp; Structure</label>
+		<description>Allows for the building of extrmely sturdy dwarfen walls. Very strong walls, as you'd expect of dwarfen craftmanship. Also allows for artful dwarfen pillars to be made.\n\nThe dawi always scoff at human construction attempts. The sturdiness of their walls shows that have a valid reason for scoffing at a pathetic umgi work.</description>
+		<baseCost>1200</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>Stonecutting</li>
+		</prerequisites>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>2.10</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Stonebread</defName>
+		<label>Cooking</label>
+		<description>Unlocks the secrets of dwarfen cooking. Kuri meals, and Stonebread. Kuri is a fine meal made of meat and berries. Stonebread is everything a dwarf needs for nutrition, in one rather bland food item. Lasts forever, relatively easy to make, and tastes like it's namesake.\n\nDwarfs aren't terribly picky eaters, and stonebread, while not the most tasty, is often preferred for its simplicity and mountain nature. That and the fact that it keeps over the long mountain winters makes it a staple of dwarfen clan life.</description>
+		<baseCost>750</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>3.40</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_Plants</defName>
+		<label>Gardening</label>
+		<description>Unlocks a planter, dwarfen drug lab, so that things can be grown under ground. Note that light is still required for some of the plants, although stoneroot and mushrooms do great without it! Unlocks the first level of dwarfen plants: Stoneroot, tobacco, barley, and so on.\n\nIt doesn't seem as if dwarfs would be known for their gardening skills, the truth is quite the opposite. Supporting large populations underground requires much planning, sophistication, and work. Some plants simply need sunlight, and that requires an entirely different set of plant skills. Despite that, no dawi would want to life a life bereft of their beloved ale or tobacco.</description>
+		<baseCost>500</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>4.05</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Weapons_MeleeGreat_Basic</defName>
+		<label>Melee Great Weaponry</label>
+		<description>Unlocks the ability to make basic dwarfen great axes and hammers. Simple, powerful, and useful; both for working and cracking heads.\n\nApprentice dwarfen blacksmiths move on to great weapons when they've mastered the art of making hand weapons. The larger nature of a great weapon means it packs a significantly higher punch in combat, and it also takes a greater amount of skill and experience to properly create.</description>
+		<baseCost>400</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Weapons_MeleeHand_Basic</li>
+		</prerequisites>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>4.15</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_WarmClothes</defName>
+		<label>Warm Apparel</label>
+		<description>Allows dwarfs to tailor warm clothing: tuques and parkas that fit their unique statures.\n\nMountain life is freqently cold when trips closer to the outside are required. Dawi are more resistant to cold than humans, but they are still sensible enough to have proper cold weather gear when it's necessary.</description>
+		<baseCost>650</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Apparel_Basic</li>
+		</prerequisites>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>4.60</researchViewY>
+	</ResearchProjectDef>
+
+	<!-- Column 3 -->
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_Lighting_Basic</defName>
+		<label>Light &amp; Heat</label>
+		<description>Unlocks the ability to make basic dwarfen lighting and heat buildings. Ceiling lights for mining areas, and large braziers.\n\nWhile dawi are gifted with decent night vision, they prefer lighted spaces. The dark is the haunt of chaos, skaven, and grobi. Dwarfs much prefer a well lighted home, for the warmth and civilized feeling it grants.</description>
+		<baseCost>250</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Basic</li>
+		</prerequisites>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>0.15</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_Furniture_Advanced</defName>
+		<label>Advanced Furniture</label>
+		<description>Unlocks the ability to make advanced dwarfen furniture. Very nice tables, beds, chairs, and a basic throne.\n\nSimple dwarfen furniture is just fine to live by, but when a dwarf reaches a certain age level, why wouldn't they deserve something more? Comfort isn't overly required for dwarfs, but it is preferred. A long industrious life leads to achy joints, and the wealth accumulated over such a life leads to the ability to have and enjoy nice comfortable furniture.</description>
+		<baseCost>800</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Basic</li>
+		</prerequisites>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>0.75</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Ranged_Basic</defName>
+		<label>Ranged Weaponry</label>
+		<description>Unlocks the ability to make basic dwarfen crossbows. Powerful weapons, with great range.\n\nWhile some dwarfs prefer solid steel for defense, all still recognize that taking down a grudged foe at a distance without loss of life or limb to any dawi is a positive thing. Dawi crossbows are coveted by other races, as are most dawi weapons for their quality and durability.</description>
+		<baseCost>600</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>1.50</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_AleOne</defName>
+		<label>Brewing</label>
+		<description>Unlocks the ability to turn hops and barley into wort, which you can then ferment into Dwarfen Ale.\n\nThe dawi thrive on ale. A teetotaler of a dwarf could drink an alcoholic under the table in short order, due to their higher constitutions. Many an umgi has lost many a gold coin making this bet.</description>
+		<baseCost>300</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>Brewing</li>
+		</prerequisites>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>4.65</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Weapons_Miner_Basic</defName>
+		<label>Mining Pick Axe</label>
+		<description>Unlocks the ability to make basic dwarfen miner pick axes. These do very good damage in combat, and also increase mining speed.\n\nMining is almost an innate skill in many dwarfs. Even if they for some odd reason don't like to do it, they still have an understanding of natural stone, mineral veins, and how to extract them. It only follows that dwarfs would invent tools to make mining more efficient.</description>
+		<baseCost>550</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Weapons_MeleeHand_Basic</li>
+		</prerequisites>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>3.75</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Armor_Basic</defName>
+		<label>Armor</label>
+		<description>Unlocks the ability to make basic dwarfen armor. It fits a dwarf, and protects better than most manling armor could hope to.\n\nThe dawi are a dying race. Protecting each individual is one of the most crucial tasks of any high blood. Armor is one of the best ways to do that when battle or other physical harm is possible. Unlocking this bit of research is the first step in that direction.</description>
+		<baseCost>550</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>Smithing</li>
+			<li>RH_TET_Dwarf_Apparel_Basic</li>
+		</prerequisites>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>5.2</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Burial</defName>
+		<label>Burial</label>
+		<description>Dwarfs can be buried in plain sarcophagi, but only the lowest clan would allow one of their own to be treated posthumously thusly. This allows for construction of ornate dwarfen sarcophagi.\n\nThe dwarfs have a long tradition of honoring their dead. Any dwarf would construct a custom sarcophagus for their worst dawi enemy before allowing them to rot in the open.</description>
+		<baseCost>350</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>3.10</researchViewY>
+	</ResearchProjectDef>
+
+	<!-- Column 4 -->
+
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_DoorsAdvanced</defName>
+		<label>Sturdier Doors</label>
+		<description>Allows for the building of strong dwarfen doors. They're well built, and will stand up to much abuse.\n\nGiven a dwarf's strong ability at constructing, and how much they detest construction using soft materials such as wood, it's only right that proper doors should be built of stone or metal.</description>
+		<baseCost>700</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_DoorsBasic</li>
+		</prerequisites>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>2.45</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_GatesBasic</defName>
+		<label>Gates</label>
+		<description>Allows for the building of dwarfen gates. Reasonably strong, made of wood and iron.\n\nAs dawi learn to build larger structure, it's easier to start out with soft material (such as the much disapproved of wood). In a pinch, a dwarf will do must they must, but it certainly isn't the preferred approach. Wooden gates are fine for humans, and keep many enemies at bay, but it's just a start in terms of what dwarfs can accomplish.</description>
+		<baseCost>450</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_DoorsBasic</li>
+		</prerequisites>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>3.10</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Weapons_MeleeHand_Advanced</defName>
+		<label>Improved Melee Hand Weaponry</label>
+		<description>Unlocks the ability to make fine dwarfen hand weaponry. Weapons that not only look impressive, but do a relatively impressive job as well.\n\nApprentice dwarfs are not allowed to work on improved hand weapons. Considering the high standards of the dawi in the things they turn out, and how much they value and love gold, no mere apprentice would be acceptable for the creation of this level of weapon. Accomplished dwarfen smiths take pride in every weapon they turn out. Proper dwarfen hand weapons are not only meant to slay the enemies of the dawi, they're also works of art.</description>
+		<baseCost>1750</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Weapons_MeleeGreat_Basic</li>
+		</prerequisites>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>4.30</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Apparel_Advanced</defName>
+		<label>Fine Apparel</label>
+		<description>Unlocks the ability to make fine dwarfen apparel. Clothing fit for any wealthy dwarf.\n\nDwarfs of a certain social stature deserve clothing that reflects that. Skilled laborers, merchants and traders, and so the like deserve to be outfitted appropriately.</description>
+		<baseCost>1000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Apparel_Basic</li>
+		</prerequisites>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>5.70</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Apparel_Engineer</defName>
+		<label>Engineer Gear</label>
+		<description>Unlocks the ability to make dwarfen apparel worn by engineers. This apparel will improve the work efficiency of the wearer.\n\nEngineers are held in high esteem among dwarfen society. They push the technology of the dwarfs forward, although not too fast. It wouldn't be proper not to test a new invention for a least a few centuries before deeming is functional.</description>
+		<baseCost>500</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Apparel_Advanced</li>
+		</prerequisites>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>5.05</researchViewY>
+	</ResearchProjectDef>
+
+	<!-- Column 5 -->
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_Lighting_Advanced</defName>
+		<label>Advanced Light &amp; Heat</label>
+		<description>Unlocks the ability to make advanced dwarfen lighting and heat buildings. Better ceiling lights and hearths; as well as wall mounted mini braziers.\n\nMost family homes in any proper dwarfen home have a hearth, and most respectable rooms will have appropriately nice ceiling and wall lights. Pushing back the darkness under the mountain is considered a sign of civilization, and even the most uncouth of dawi won't attempt to refute that logic.</description>
+		<baseCost>500</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_Lighting_Basic</li>
+		</prerequisites>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>0.15</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Ranged_Advanced</defName>
+		<label>Improved Ranged Weaponry</label>
+		<description>Allows for making fine dwarfen crossbows. Powerful weapons that look great, and have great range.\n\nDwarfen ranged weapons are renowned for a reason, and the fine crossbow is a solid example of that. Short of black powder weapons, a fine dwarfen crossbow is as good as it gets in terms of ranged weaponry.</description>
+		<baseCost>650</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Ranged_Basic</li>
+		</prerequisites>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>1.50</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_StructureArt</defName>
+		<label>Art</label>
+		<description>Allows for sculpting of dwarfen themed statues at a dwarfen sculpting spot.\n\nNo dwarf would accent their home or workshop with a human themed sculpture. Dawi theme their artwork after their gods, battle, heroes, and the glory of the dawi themselves.</description>
+		<baseCost>250</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>0.90</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_WallsAdvanced</defName>
+		<label>Advanced Walls &amp; Structure</label>
+		<description>Allows for buttressed wall embrasures (for shooting through), and the artistic decoration of smoothed stone walls. Also allows for lighted dwarfen pillars to be made.\n\nAlthough the dawi typically live under the mountains, they recognize that most the rest of the world don't. They also see the benefit of being able to shoot through those walls at enemies attempting to kill them.\n\nSmooth stone walls are very nice, and presentable to any guest a dwarf may host. However, well decorated walls that honor the ancestors truly show the worth of a dwarf.\n\nPillars are great as center pieces for a room, and keeping the mountain up, but lighted pillars have the added benefit of pushing back the darkness as well. Grobi, raki, and dumal lurk in the dark, and a lighted space comforts all dawi.</description>
+		<baseCost>1000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_WallsBasic</li>
+		</prerequisites>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>2.15</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_Plants_Advanced</defName>
+		<label>Advanced Gardening</label>
+		<description>Unlocks the ability to grow dwarfen plants for purposes other than food consumables. Including medicinal mushrooms, and mushrooms that produce wood.\n\nDespite their dislike of wood as a construction material, all dwarfs recognize its usefulness as a fuel for burning and keeping things lighted and warm. Fungal plank meets that need.\n\nDwarfs are more resilient than humans, but medicine is always better when treating wounds. Fungal medicine improves treatment quality, and kills infections faster. Fungal medicine facilitates a high blood's main goal of keeping every individual healthy and whole.</description>
+		<baseCost>1100</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_Plants</li>
+		</prerequisites>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>4.05</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Weapons_MeleeGreat_Advanced</defName>
+		<label>Improved Melee Great Weaponry</label>
+		<description>Unlocks the ability to make very fine dwarfen great weapons. Weapons that not only look impressive, but do a very impressive job as well.\n\nDwarfen smiths truly enjoy their work, and making fancy great weapons is one of their most performed tasks. Such weapons are the strength of the clans, and the pride of the smiths.</description>
+		<baseCost>1750</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Weapons_MeleeHand_Advanced</li>
+		</prerequisites>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>4.80</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_SteamPower</defName>
+		<label>Steam Power</label>
+		<description>Unlocks the ability for dwarfs to build basic structures that create or capture steam power, use steam power, and pipes to move the steam power around to buildings that use it.\n\nLarge underground holds are frequently heated by capturing natural sources of heat from the mountains themselves.</description>
+		<baseCost>1000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>4.10</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_SteamPowerImroved</defName>
+		<label>Improved Steam Power</label>
+		<description>Unlocks the ability for dwarfs to build improved structures that create or capture steam power, and use steam power.\n\nDwarfen engineers are always coming up with improvements to existing things, and the steam power buildings are major focus for many an engineer.</description>
+		<baseCost>2000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_SteamPower</li>
+		</prerequisites>
+		<researchViewX>7.00</researchViewX>
+		<researchViewY>4.10</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_SteamPowerAdvanced</defName>
+		<label>Advanced Steam Power</label>
+		<description>Unlocks the ability for dwarfs to build advanced structures that leverage steam power.\n\nLarge underground holds are frequently heated by capturing natural sources of heat from the ground itself.</description>
+		<baseCost>2500</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_SteamPowerImroved</li>
+		</prerequisites>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>3.95</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_RepairBasic</defName>
+		<label>Apparel Repair</label>
+		<description>Unlocks the ability for dwarfs to repair apparel at a dwarfen tailor bench.\n\nDwarves don't waste much, and have no problem repairing worn clothing to make it nice again.</description>
+		<baseCost>500</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<researchViewX>7.00</researchViewX>
+		<researchViewY>4.80</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_RepairAdvanced</defName>
+		<label>Armor &amp; Weapon Repair</label>
+		<description>Unlocks the ability for dwarfs to repair armor, shields, and weapons at a forge. Also firearms at a dwarfen blasing bench.\n\nDwarfen weaponry and armor is valuable, and dwarfs will do what they need to do to keep things in great condition.</description>
+		<baseCost>1250</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_RepairBasic</li>
+		</prerequisites>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>4.80</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Apparel_Miner</defName>
+		<label>Mining Gear</label>
+		<description>Unlocks the ability to make lighted mining helms.\n\nThe love of mining coupled with the desire to push back the darkness under the mountain means that mining helmets were an inevitable invention. They also have the benefit of increasing the amount of mining work a dwarf can do in the otherwise complete darkness of the mines.</description>
+		<baseCost>800</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Armor_Basic</li>
+		</prerequisites>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>4.9</researchViewY>
+	</ResearchProjectDef>
+  
+	<!-- Column 6 -->
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_BlackPowder</defName>
+		<label>Black Powder</label>
+		<description>Allows colonists to make black powder. Mineable saltpeter and sulfur can then be combined with wood for charcoal at a munitions bench, to be turned into black powder. Black powder is used to make rounds for black powder warmachines.\n\nGiven how common the required ingredients were, and their intuitive investigative nature, it was inevitable that dwarfs would discover black powder. Defense of the clan and hold being of primary defense, it was only a matter of time until that discovery was put to good use.</description>
+		<baseCost>1500</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>1.90</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_FlooringAdvanced</defName>
+		<label>Elaborate Flooring</label>
+		<description>Unlocks the ability to make elaborate dwarfen tile floors. Stunningly beautiful floors that far exceed the craftmanship of any other race.\n\nDwarfs prefer to make everything they create as artistic and intricate as possible. That doesn't exclude the very floors they walk upon.</description>
+		<baseCost>250</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_FlooringBasic</li>
+		</prerequisites>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>2.75</researchViewY>
+	</ResearchProjectDef>
+  
+	<!-- Column 7 -->
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Gunsmithing_Basic</defName>
+		<label>Firearms</label>
+		<description>Allows for construction of basic Dwarfen flint lock rifles.\n\nOnce black powder was discovered, it was only a matter of time that the engineers combined the concept with the quarreller. The result was more deadly, and excelled at taking enemies down from a distance. Some persnickety older dawi refuse to see the light on the subject, but the younger members of the clans all crave a proper thunderer rifle for hunting or warfare.</description>
+		<baseCost>750</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>Smithing</li>
+			<li>RH_TET_Dwarf_Ranged_Advanced</li>
+			<li>RH_TET_Dwarf_BlackPowder</li>
+		</prerequisites>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>1.35</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_WarmachinesBasic</defName>
+		<label>Warmachines</label>
+		<description>Allows for the building of Dwarfen warmachines. This first level will unlock bolt throwers, and grudge throwers.\n\nConsidering the sheer number of enemies that were assulting the dawi, it's no surprise that they invented large weapons that were very effective at taking them down from a distance en masse. Bolt throwers were great at dropping enemies in a single shot, if the dwarfen aim was true. The grudge thrower is a work of love, and is one of the dawi's most effective weapons.</description>
+		<baseCost>1200</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>Smithing</li>
+		</prerequisites>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>0.90</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_WarmachinesBasicPlus</defName>
+		<label>Advanced Warmachines</label>
+		<description>Allows for the building of advanced mechanical based Dwarfen warmachines, as well as improved rounds for the Grudge Thrower. This will unlock the much feared Goblin Hewer.\n\nConsidering the sheer number of enemies that were assulting the dawi, it's no surprise that they invented large weapons that were very effective at taking them down from a distance en masse. The Goblin Hewer is the invention of the mad slayer engineer Malakai Makaisson. It's truly a work of engineering genius, and just hearing it's name strikes fear into the hearts of goblins!</description>
+		<baseCost>800</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_WarmachinesBasic</li>
+		</prerequisites>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>0.60</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_GatesAdvanced</defName>
+		<label>Strong Gates</label>
+		<description>Allows for the building of strong dwarfen gates. Solid metal or stone gates that can stand up to some real abuse.\n\nSince wood construction never pleased a dawi, it isn't surprising that stronger gates made of metal or stone were researched and discovered not long after. Many enemies of the dwarfs would rather try and tunnel through a stone wall than attempt to bring down a well destructed dwarfen gate.</description>
+		<baseCost>1150</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_DoorsAdvanced</li>
+			<li>RH_TET_Dwarf_GatesBasic</li>
+		</prerequisites>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>3.25</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Weapons_Miner_Advanced</defName>
+		<label>Improved Pick Axe</label>
+		<description>Unlocks the ability to make fine dwarfen miner pick axes. These do great damage in combat, and also increase mining speed.\n\nA dwarfen weaponsmith prides themselve on the tiny improvements they make to each weapon they construct. Especially if that weapon fulfills the supplemental role of making a miner's job more effective. The work of such a weaponsmith can echo down through the years, helping the clans to expand and better themselves in the current dark times the dawi face.</description>
+		<baseCost>950</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Weapons_Miner_Basic</li>
+		</prerequisites>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>3.75</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Armor_Advanced</defName>
+		<label>Improved Armor</label>
+		<description>Unlocks the ability to make fine dwarfen armor. Armor that looks good, and protects well. Includes iron breaker armor and helm, and crested slayer helms.\n\nDwarfs are renowned for being difficult to take down, and a large part of that reputation comes from their armor. Fine dwarfen armor is a treat for a dwarfen smith to make, as they know it's value in keeping their fellow dawi alive.</description>
+		<baseCost>2000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Armor_Basic</li>
+			<li>RH_TET_Dwarf_Apparel_Advanced</li>
+		</prerequisites>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>5.45</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Medicine</defName>
+		<label>Medicine</label>
+		<description>Unlocks the ability for dwarfs to make high quality medicine, much more effective than basic fungal or herbal medicine.\n\nCombining certain key ingredients can make the efficacy of natural medicines much more effictive. The dawi focus on keeping each other (even a disliked member of the clan) alive means that such a discovered was just a matter of time.</description>
+		<baseCost>750</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>5.40</researchViewY>
+	</ResearchProjectDef>
+
+	<!-- Column 8 -->
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Gunsmithing_Advanced</defName>
+		<label>Improved Firearms</label>
+		<description>Unlocks construction of fine dwarfen firearms. Accurate rifles, and grudge-rakers.\n\nThe first dwarfen smith that discovered how to rifle a barrel is still honored by all the clans. Despite the potential wealth that could have been accumulated by keeping such a discovery secret, it was shared throughout the clans both far and wide, since it made the firearms of the dawi much more accurate and therefore effective.</description>
+		<baseCost>2000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Gunsmithing_Basic</li>
+		</prerequisites>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_WarmachinesAdvanced</defName>
+		<label>Black Powder Warmachines</label>
+		<description>Unlocks black powder dwarfen warmachines. This research level opens up construction of a dwarfen cannon, and cannonballs and shells.\n\nUmgi cannons are sad in terms of usability and effectiveness compares to those of the dawi. Dwarfen warmachines crewmen are highly trained, and naturally skilled individuals; that's one of the things that makes them superior to the humans.</description>
+		<baseCost>1250</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Gunsmithing_Basic</li>
+			<li>RH_TET_Dwarf_WarmachinesBasic</li>
+			<li>RH_TET_Dwarf_BlackPowder</li>
+		</prerequisites>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>1.15</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Blasting</defName>
+		<label>Blasting</label>
+		<description>Unlocks dwarfen blasting technology. Pawns can build basic blasting devices for clearing large areas of mineable stuff and rock. Also unlocks the ability to build blasting wire, and detonators. Very useful for mining, and security.\n\nBe sure the blasting wire is built underneath both the detonator box, and the blast explosive.\n\nA life under the mountain means that finding ways to make excavation of such more efficient was inevitable. Young dwarfs study for decades with their elders in order to learn all the secrets of proper blasting. It's been generations since a dwarf was lost to a blasting mistake.</description>
+		<baseCost>2250</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_BlackPowder</li>
+		</prerequisites>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>2.45</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_GatesMassive</defName>
+		<label>Massive Gates</label>
+		<description>Allows for the building of massively sized, and very strong dwarfen gates. They are solid metal and stone constructed gates, they look great, and they can stand up to much abuse.\n\nAs the hold grows, so too does the need for an entrace that impresses visitors, and keeps enemies at bay.</description>
+		<baseCost>2000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_GatesAdvanced</li>
+		</prerequisites>
+		<researchViewX>7.00</researchViewX>
+		<researchViewY>3.60</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_GatesMining</defName>
+		<label>Mining Gates</label>
+		<description>Allows for the building of extremely strong mining doors and gates. They are very solid and reinforced, and they include a constructed solid surrounding structure to attach them securely to the nearby structures.\n\nThese are the very strongest of doors available.\n\nThese are used to block mining tunnels that are deep under the hold, and where threats are likely to come from. These gates are intended to keep grobi and raki from penetrating into the hold from the under-mines. Sadly, they're usually much stronger than the surrounding bedrock.</description>
+		<baseCost>1000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_GatesAdvanced</li>
+		</prerequisites>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>3.10</researchViewY>
+	</ResearchProjectDef>
+
+	<!-- Column 9 -->
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Gunsmithing_WayAdvanced</defName>
+		<label>Flame Guns</label>
+		<description>Allows for construction of the dreaded dwarfen drake gun.\n\nWhen the iron breakers need to clear a tunnel of invading grobi or raki, few weapons do as well as the grudge raker. Broad fire patterns mean a wide spread of damage, and an almost guaranteed hit. It turns out that they're equally as effective during surface battles at bringing down packed enemies, although the range leaves something to be desired.</description>
+		<baseCost>550</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Gunsmithing_Advanced</li>
+		</prerequisites>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>1.20</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_WarmachinesFinal</defName>
+		<label>Advanced Black Powder Warmachines</label>
+		<description>Unlocks construction of an organ gun, and a flame cannon.\n\nThe flame cannon strikes fear in the hearts of the enemies of the dawi. A few of them make the defense of the hold a much easier task. The organ gun is also feared for it's effictiveness, and ability to bring down foes.</description>
+		<baseCost>3000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Gunsmithing_Advanced</li>
+			<li>RH_TET_Dwarf_WarmachinesAdvanced</li>
+		</prerequisites>
+		<researchViewX>7.00</researchViewX>
+		<researchViewY>1.15</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_AdvancedBlasting</defName>
+		<label>Advanced Blasting</label>
+		<description>Unlocks advanced blasting charges that cause large incendiary blasts, or remove overhead mountain. They can also be made into explosive weapons that are carried by dwarfs.\n\nIn order to work, focused charges must be placed adjacent to the edge of an existing overhead mountain roof.\n\nBlasting charges that create large fires or bring part of the mountain down are occasionally very useful to the dawi. Being masters of stone and of the mountains themselves, dwarfs do what needs to be done to accomplish what's best for the clans.</description>
+		<baseCost>2000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Blasting</li>
+		</prerequisites>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>2.50</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_AleTwo</defName>
+		<label>Bugman's XXX Brewing</label>
+		<description>Unlocks the ability to make Bugman's XXX wort, which can then be fermented into Bugman's XXX Ale in a unique Bugman's XXX fermenting barrel.\n\nBugman's is not only an alcoholic drink, but is also very filling and nutritious. A dwarf could survive on nothing but Bugman's if they were so inclined. The drink is also much renowned for it's deliciousness, and ability to put non-dawi on their backsides!</description>
+		<baseCost>15000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_AleOne</li>
+		</prerequisites>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>4.65</researchViewY>
+	</ResearchProjectDef>
+
+	<!-- Column 10 -->
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_HighBlood</defName>
+		<label>High Bloods</label>
+		<description>Unlocks a dwarfen thane's throne. This is the first step in the high blood line.\n\nBuilding a throne and assigning a pawn to it will make that pawn a high blood. They will get improved stats, and will be gifted a set of magical armor and weapons by the dwarf clans. Slayers and non-slayers receive unique items. There are two sets of unique armor and weapons for non-slayers, and one set for slayers. The magic weapons and armor are the best available short of a king or queen's armor and weapons. These magic armor items also provide unique bonuses, based upon the dwarfen god that they were crafted with the blessings of.\n\nWhen a clan becomes large enough, a leader is only natural. Someone to hear disputes, inspire the clans, and generally be responsible for the goings on of the hold is a natural step of growth and prosperity.</description>
+		<baseCost>5000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<researchViewX>9.00</researchViewX>
+		<researchViewY>3.15</researchViewY>
+	</ResearchProjectDef>
+  
+	<!-- Column 11 -->
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_Lighting_HighBlood</defName>
+		<label>High Blood Lighting</label>
+		<description>Unlocks the ability to make elaborate dwarfen ceiling lights.\n\nA dwarfen thane or king expects a well lighted place, and a proper device to be providing that light. The engineers jumped all over the request to make such a thing a reality.</description>
+		<baseCost>500</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_Lighting_Advanced</li>
+			<li>RH_TET_Dwarfs_HighBlood</li>
+		</prerequisites>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>0.15</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Gunsmithing_HighBlood</defName>
+		<label>High Blood Ranged Weaponry</label>
+		<description>Unlocks dwarfen pistols. Powerful weapons that look great, pack a punch, are relatively accurate, and are fast to fire.\n\nDwarfen thanes, kings, and queens are the most well armed of all the dawi. The dwarfen pistol is a staple of their equipment.</description>
+		<baseCost>350</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Gunsmithing_Advanced</li>
+			<li>RH_TET_Dwarfs_HighBlood</li>
+		</prerequisites>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>1.50</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_WallsHighBlood</defName>
+		<label>High Blood Structure</label>
+		<description>Unlocks the ability to build massive pillars; both lighted and unlighted. They will truly grace the throne room of any high blood.\n\nUnder the theory that bigger is better, dwarfen high bloods required a bigger and better support pillar. It was a simple matter for engineers to approve of the idea as sound, and a more time-consuming matter for artisans to construct such a wonder.</description>
+		<baseCost>1500</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_WallsAdvanced</li>
+			<li>RH_TET_Dwarfs_HighBlood</li>
+		</prerequisites>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>2.20</researchViewY>
+	</ResearchProjectDef>
+ 
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Weapons_MeleeHand_HighBlood</defName>
+		<label>High Blood Melee Weaponry</label>
+		<description>Unlocks the ability to make high blood melee weapons. These weapons are light, effective, very well made, and do solid damage.\n\nGiven a high blood's other concerns, a worthy weapon shouldn't be a concern. Fast, effective, and reliable weapons are a must. High bloods are required to lead from the front, and require weapons that facilitate that function.</description>
+		<baseCost>500</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Weapons_MeleeHand_Advanced</li>
+			<li>RH_TET_Dwarfs_HighBlood</li>
+		</prerequisites>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>4.25</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Apparel_HighBlood</defName>
+		<label>High Blood Apparel</label>
+		<description>Unlocks the ability to make the ultimate in dwarfen apparel. Clothing fit for any high born dwarf, or the richest of merchants. This includes pants, and shirts.\n\nDwarfs typically combine great appearance and solid function. Apparel intended for a high blood meets these requirements, by allowing for ruling, work, meeting foreign diplomats, and battle.</description>
+		<baseCost>600</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Apparel_Advanced</li>
+			<li>RH_TET_Dwarfs_HighBlood</li>
+		</prerequisites>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>5.65</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Burial_HighBlood</defName>
+		<label>High Blood Burial</label>
+		<description>Unlocks high blood worthy final resting places.\n\nWhile a high blood doesn't concern themselves with being deserving of much more than any other member of the clans, the clans themselves insist upon properly honoring those that have served them well. Even a queen would insist upon being laid to rest similarly to any other dwarf, but the clans would never allow that to happen.</description>
+		<baseCost>350</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Burial</li>
+			<li>RH_TET_Dwarfs_HighBlood</li>
+		</prerequisites>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>3.55</researchViewY>
+	</ResearchProjectDef>
+  
+	<!-- Column 12 -->
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_Furniture_HighBlood</defName>
+		<label>High Blood Furniture</label>
+		<description>Unlocks the ability to make very elaborate dwarfen chairs.\n\nHigh bloods generally insist on maintaining a level of life equal to that of the rest of the clans. Despite that, if a more comfortable and elaborate chair is provided, why not sit in it?</description>
+		<baseCost>250</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Advanced</li>
+			<li>RH_TET_Dwarfs_HighBlood</li>
+		</prerequisites>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>0.80</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_FlooringHighBlood</defName>
+		<label>High Blood Flooring</label>
+		<description>Unlocks the ability to make the ultimate in elaborate dwarfen tile floors. Insanely beautiful floors that far exceed the craftmanship or capability of any other race.\n\nThe feet of the dawi tread upon all surfaces, but there are times when it's necessary to make a visual impact. The potential beauty of a dwarfen throne room are beyond the comprehension of other races.</description>
+		<baseCost>500</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_FlooringAdvanced</li>
+			<li>RH_TET_Dwarfs_HighBlood</li>
+		</prerequisites>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>2.85</researchViewY>
+	</ResearchProjectDef>
+ 
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_Armor_HighBlood</defName>
+		<label>High Blood Armor</label>
+		<description>Unlocks the ability to make dwarfen armor fit for a high blood. Beautiful looking armor that protects as well as possible. Includes full plate armor, and winged helmets.\n\nThe lives of all dawi are sacred, and that of the high bloods is considered tantamount to all the clans. The effort put into the construction of the best of dwarfen armor is second to none in the world.</description>
+		<baseCost>1000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Armor_Advanced</li>
+			<li>RH_TET_Dwarfs_HighBlood</li>
+		</prerequisites>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>5.05</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_Bionics</defName>
+		<label>Replacement Body Parts</label>
+		<description>Unlocks the ability for extremely skilled dwarfs to make replacement mechanical bodyparts. An extreme level of skill is required to make them, but once done, any dwarf missing an arm or leg will be able to have a functional replacement installed that is an improvement over a natural limb.\n\nThese body parts are crafted at a smithy, or dwarfen munitions bench.\n\nIt took years of study, research, trial, and error for the engineers to figure out how to replace a bad or lost limb. It's believed that some of the natural innate magic of the dwarfs is imbued in these prosthetics as they're constructed, as no other race has been able to reproduce them.</description>
+		<baseCost>2000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_Medicine</li>
+		</prerequisites>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>5.40</researchViewY>
+	</ResearchProjectDef>
+
+	<!-- Column 12 -->
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_HighBlood_King</defName>
+		<label>Kings &amp; Queens</label>
+		<description>Unlocks a dwarfen kings or queen's throne. This is the final step in the high blood line.\n\nBuilding a kings throne and assigning a pawn to it will make that pawn a high blood king or queen. They will get improved stats, and will be gifted a set of magical armor and weapons by the dwarf clans. Slayers and non-slayers receive unique items. The magic weapons and armor are the best available. These magic armor items also provide unique bonuses, based upon the dwarfen god that they were crafted with the blessings of.\n\nAssigning an exising thane as king/queen will provide the added benefit of allowing their magical thane armor and weapons to be given to another.\n\nThe largest of dwarf holds, or groups of holds, are led by a queen or king. The thanes of the various clans report to them, and it's their job to provide for the safety and well-being of every single member of all the holds under their domain.</description>
+		<baseCost>3000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_HighBlood</li>
+		</prerequisites>
+		<researchViewX>11.00</researchViewX>
+		<researchViewY>3.15</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_GatesKing</defName>
+		<label>King's Gate</label>
+		<description>Unlocks the largest, strongest, and best looking of all dwarfen gates: the king's gate.\n\nSomehow the presence of a dwarf king or queen attracts foes. Because of that, it was deemed necessary to devise a gate suitably strong enough to keep enemies at bay.</description>
+		<baseCost>1000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_HighBlood_King</li>
+			<li>RH_TET_Dwarf_GatesMassive</li>
+		</prerequisites>
+		<researchViewX>12.00</researchViewX>
+		<researchViewY>4.05</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

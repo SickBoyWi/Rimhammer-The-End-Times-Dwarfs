@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_DoBillsCook</defName>
+		<label>Prepare food at cooking location</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Cooking</workType>
+		<priorityInType>110</priorityInType>
+		<fixedBillGiverDefs>
+			<li>RH_TET_Dwarfs_Hearth</li>
+		</fixedBillGiverDefs>
+		<verb>Cook</verb>
+		<gerund>Cooking</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_DetonateBlast</defName>
+		<label>detonate blast</label>
+		<giverClass>TheEndTimes_Dwarfs.WorkGiver_IPawnDetonateable</giverClass>
+		<workType>BasicWorker</workType>
+		<priorityInType>10</priorityInType>
+		<verb>detonate</verb>
+		<gerund>detonating</gerund>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_DryBlastingWire</defName>
+		<label>dry out blasting wire</label>
+		<giverClass>TheEndTimes_Dwarfs.WorkGiver_BlastingWire</giverClass>
+		<workType>Cleaning</workType>
+		<priorityInType>50</priorityInType>
+		<verb>dry out</verb>
+		<gerund>drying out</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_DecorateWall</defName>
+		<label>decorate walls</label>
+		<giverClass>TheEndTimes_Dwarfs.WorkGiver_DecorateWall</giverClass>
+		<workType>Crafting</workType>
+		<priorityInType>75</priorityInType>
+		<verb>decorate</verb>
+		<gerund>decorating</gerund>
+		<scanThings>false</scanThings>
+		<scanCells>true</scanCells>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>RH_TET_DoSmithing</defName>
+		<label>work</label>
+		<giverClass>TheEndTimes_Dwarfs.WorkGiver_DoBillDwarfs</giverClass>
+		<workType>Smithing</workType>
+		<priorityInType>95</priorityInType>
+		<fixedBillGiverDefs>
+			<li>RH_TET_TableSmithy</li>
+		</fixedBillGiverDefs>
+		<verb>smith</verb>
+		<gerund>smithing</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_DoBillsRepair_Smith</defName>
+		<label>work</label>
+		<giverClass>TheEndTimes_Dwarfs.WorkGiver_DoBillDwarfs</giverClass>
+		<workType>Smithing</workType>
+		<priorityInType>95</priorityInType>
+		<fixedBillGiverDefs>
+			<li>RH_TET_Dwarfs_BlastingBench</li>
+		</fixedBillGiverDefs>
+		<verb>smith</verb>
+		<gerund>smithing</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_DoBillsRepair_Tailor</defName>
+		<label>work</label>
+		<giverClass>TheEndTimes_Dwarfs.WorkGiver_DoBillDwarfs</giverClass>
+		<workType>Tailoring</workType>
+		<priorityInType>95</priorityInType>
+		<fixedBillGiverDefs>
+			<li>RH_TET_Dwarfs_HandTailoringBench</li>
+		</fixedBillGiverDefs>
+		<verb>tailor</verb>
+		<gerund>tailoring</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+</Defs>

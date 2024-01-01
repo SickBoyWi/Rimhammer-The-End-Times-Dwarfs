@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<RH_TET_Dwarfs>Rimhammer - The End Times - Dwarfs</RH_TET_Dwarfs>
+	
+	<!-- Furniture / General Building stuff. -->
+	<RH_TET_Dwarfs_ContainsWortAle>Contains {0} / {1} ale wort.</RH_TET_Dwarfs_ContainsWortAle>
+	<RH_TET_Dwarfs_ContainsAle>Contains {0} / {1} dwarfen ale.</RH_TET_Dwarfs_ContainsAle>
+	<RH_TET_Dwarfs_NoWortAle>need ale wort</RH_TET_Dwarfs_NoWortAle>
+	
+	<RH_TET_Dwarfs_ContainsBugmansWortAle>Contains {0} / {1} Bugman's XXX ale wort.</RH_TET_Dwarfs_ContainsBugmansWortAle>
+	<RH_TET_Dwarfs_ContainsBugmansAle>Contains {0} / {1} Bugman's XXX ale.</RH_TET_Dwarfs_ContainsBugmansAle>
+	<RH_TET_Dwarfs_NoBugmansWortAle>need Bugman's ale wort</RH_TET_Dwarfs_NoBugmansWortAle>
+	
+	<RH_TET_Dwarfs_PlaceWorker_UnderCeiling>Must be placed under a roof.</RH_TET_Dwarfs_PlaceWorker_UnderCeiling>
+	<RH_TET_Dwarfs_PlaceWorker_OverheadMountain>Must be placed under overhead mountain.</RH_TET_Dwarfs_PlaceWorker_OverheadMountain>
+	
+	<RH_TET_Dwarfs_Designator_DecorateWallLabel>Decorate wall</RH_TET_Dwarfs_Designator_DecorateWallLabel>
+	<RH_TET_Dwarfs_Designator_DecorateWallDesc>Designate smooth walls to be decorated. This requires artistic skill rather than construction skill.</RH_TET_Dwarfs_Designator_DecorateWallDesc>
+	<RH_TET_Dwarfs_AlreadyBeingDecorated>The wall is already marked for decorating.</RH_TET_Dwarfs_AlreadyBeingDecorated>
+	<RH_TET_Dwarfs_NotDecoratable>Must designate a smooth stone wall.</RH_TET_Dwarfs_NotDecoratable>
+	<RH_TET_Dwarfs_ThingLabel>decorated</RH_TET_Dwarfs_ThingLabel>
+	<RH_TET_Dwarfs_ThingDesc>A natural stone wall that's been smoothed, and then decorated by a dwarfen artisan (or someone trained by a dwarfen artisan).</RH_TET_Dwarfs_ThingDesc>
+	<RH_TET_Dwarfs_OnlyADawi>Only a dwarf can perform this work.</RH_TET_Dwarfs_OnlyADawi>
+	<RH_TET_Dwarfs_ResearchIncomplete>Research must be completed: {0}</RH_TET_Dwarfs_ResearchIncomplete><RH_TET_WarnBoth>Must be placed on a wall, facing an open tile.</RH_TET_WarnBoth>
+	<RH_TET_WarnNeedWall>Must be placed on a wall.</RH_TET_WarnNeedWall>
+	<RH_TET_WarnBlocked>Must be facing an open tile.</RH_TET_WarnBlocked>
+	<RH_TET_DestroyedBlocked>Light destroyed because it was blocked.</RH_TET_DestroyedBlocked>
+	<RH_TET_DestroyedWall>Light destroyed because wall was destroyed.</RH_TET_DestroyedWall>
+	
+	<RH_TET_Dwarfs_WallNeeded>Must be placed on walls.</RH_TET_Dwarfs_WallNeeded>
+	<RH_TET_Dwarfs_OpenSpaceNeeded>Must have open space in front.</RH_TET_Dwarfs_OpenSpaceNeeded>
+	
+	<!-- Impassable map related stuff. -->
+	<RH_TET_Dwarfs_ImpassableMap>Impassable Map Generation Settings</RH_TET_Dwarfs_ImpassableMap>
+	<RH_TET_Dwarfs_Default>Default</RH_TET_Dwarfs_Default>
+	<RH_TET_Dwarfs_CreateCenterArea>Create Center Open Area</RH_TET_Dwarfs_CreateCenterArea>
+	<RH_TET_Dwarfs_CenterAreaSize>Center Area Size</RH_TET_Dwarfs_CenterAreaSize>
+	<RH_TET_Dwarfs_UseVanillaMapGen>Use vanilla style impassible map geneartion.</RH_TET_Dwarfs_UseVanillaMapGen>
+	<RH_TET_Dwarfs_UseVanillaMapGenDesc>If you want a more vanilla experience, then leave this checked. It creates a map that is more like a vanilla mountainous map, but that has more mountain. Unchecking this will cause the impassible tiles to generate in a more consistent, and almost entirely filled in manner. Note that open sections of the map will be undiscovered when you first arrive at the map, so you'll have to expolore to find them. Also, it's possible that you can get maps with no way to enter them or exit them due to mountains. The game is still very playble, it will make caravans impossible until you mine to the edge of the map, and it'll cause raids to fail.</RH_TET_Dwarfs_UseVanillaMapGenDesc>
+	<RH_TET_Dwarfs_VanillaMountainDensity>Density of mountains for vanilla style impassible map generation.\n(Note: Higher settings here may cause a few errors when the map generates, as certain things (animals) cannot be placed, but everything will work just fine.)</RH_TET_Dwarfs_VanillaMountainDensity>
+	<RH_TET_Dwarfs_ImpassibleMapForAll>Allow all factions to settle impassible mountain maps?</RH_TET_Dwarfs_ImpassibleMapForAll>
+	
+	<!-- Infestation Related -->
+	<RH_TET_Dwarfs_InfestLure_Fail_OneAllowed>Only one lure allowed per map.</RH_TET_Dwarfs_InfestLure_Fail_OneAllowed>
+	<RH_TET_Dwarfs_InfestLure_Fail_SettingsChance>Chance of success for infestation lure.</RH_TET_Dwarfs_InfestLure_Fail_SettingsChance>
+	<RH_TET_Dwarfs_SkavenTunnelNew>The skaven have opened a new tunnel.</RH_TET_Dwarfs_SkavenTunnelNew>
+	<RH_TET_Dwarfs_SkavenTunnel_Inactive>Inactive: There don't seem to be new skaven showing up here.</RH_TET_Dwarfs_SkavenTunnel_Inactive>
+	<RH_TET_Dwarfs_SkavenTunnel_NewIn>New tunnel will spawn in</RH_TET_Dwarfs_SkavenTunnel_NewIn>
+  
+	<!-- Blasting Related -->
+	<RH_TET_Dwarfs_WireFailureTitle>The blasting wire has failed.</RH_TET_Dwarfs_WireFailureTitle>
+	<RH_TET_Dwarfs_WireFailure>The blasting wire has failed. Either it's damaged, or it's wet. Repair it, dry it out, and try again.</RH_TET_Dwarfs_WireFailure>
+	<RH_TET_Dwarfs_BlastNow>Perform Blast Now</RH_TET_Dwarfs_BlastNow>
+	<RH_TET_Dwarfs_Blast>Blast</RH_TET_Dwarfs_Blast>
+	<RH_TET_Dwarfs_BlastDesc>Detonates all blasts connected to the same blasting wire.</RH_TET_Dwarfs_BlastDesc>
+	<RH_TET_Dwarfs_BlasterReserved>(reserved by {0})</RH_TET_Dwarfs_BlasterReserved>
+	<RH_TET_Dwarfs_BlastingCharge>(reserved by {0})</RH_TET_Dwarfs_BlastingCharge>
+	<RH_TET_Dwarfs_BlastingWireDryOff>Dry out</RH_TET_Dwarfs_BlastingWireDryOff>
+	<RH_TET_Dwarfs_BlastingWireDryOffDesc>To avoid potential blasting wire failure, this will have a pawn dry out the blasting wire.</RH_TET_Dwarfs_BlastingWireDryOffDesc>
+	<RH_TET_Dwarfs_BlastingWireWet>{0}% wet</RH_TET_Dwarfs_BlastingWireWet>
+	<RH_TET_Dwarfs_BlastingWireDry>Dry</RH_TET_Dwarfs_BlastingWireDry>
+	<RH_TET_Dwarfs_BlastingWireCovered>covered</RH_TET_Dwarfs_BlastingWireCovered>
+	<RH_TET_Dwarfs_BlastingWireExposed>exposed</RH_TET_Dwarfs_BlastingWireExposed>
+	<RH_TET_Dwarfs_BlastingWireDesigLabel>Blasting wire select</RH_TET_Dwarfs_BlastingWireDesigLabel>
+	<RH_TET_Dwarfs_BlastingWireDesig>Selects blasting wire in an area. Useful for maintenance and deconstruction. Hold Shift to add to current selection.</RH_TET_Dwarfs_BlastingWireDesig>
+	
+	<!--Captured Hold Stuff -->
+	<RH_TET_Dwarfs_CapturedHoldHelp>You've reached the old dwarfen hold that is held by your enemies. Defeat your foes, and claim it as your home!</RH_TET_Dwarfs_CapturedHoldHelp>
+	<RH_TET_Dwarf_HostileReasonCapturedHold>They live in your captured hold, and refuse to leave. They will fight for it!</RH_TET_Dwarf_HostileReasonCapturedHold>
+	<RH_TET_Dwarf_CaravanArrivedAt/>
+	<RH_TET_Dwarf_LeaveCommand>Leave</RH_TET_Dwarf_LeaveCommand>
+	<RH_TET_Dwarf_LeaveCommandDesc>Form a caravan and leave.</RH_TET_Dwarf_LeaveCommandDesc>
+	<RH_TET_Dwarf_FailedToReclaimCapturedHoldLabel>Your Attack Was Repelled</RH_TET_Dwarf_FailedToReclaimCapturedHoldLabel>
+	<RH_TET_Dwarf_FailedToReclaimCapturedHoldDesc>Your attempt to recapture the dwarfen hold failed. Any of your attackers that survived are probably slaves, dying in agony, or being eaten by cannibals.\n\nPerhaps you can try again later, although your enemies would certainly have rebuilt their defenses by then.</RH_TET_Dwarf_FailedToReclaimCapturedHoldDesc>
+	<RH_TET_Dwarf_ReclaimedAncientHoldLabel>Hold Reclaimed</RH_TET_Dwarf_ReclaimedAncientHoldLabel>
+	<RH_TET_Dwarf_ReclaimedAncientHoldDesc>The enemy at the {0} has been destroyed.\n\nIt was a glorious day for your dwarfs! Claim the hold as your own, and prosper there if you will.</RH_TET_Dwarf_ReclaimedAncientHoldDesc>
+	<RH_TET_AncientDwarvenHoldReclaimed>Congratulations! You've succeeded in reclaiming the dwarfen hold that had been captured and held by your enemies for generations.\n\nWell done! The dwarfs of your hold have avenged a mighty grudge, and it was well earned with such an intense battle.\n\nThis mod was developed by Johnny Hastings (@SickBoyWI). Special thanks to @Dino's Bar and Grill for the fantastic artwork he generously donated his time and skills for that went into this mod; it made up for my lack of graphics skills, and made the Rimhammer - The End Times mod series that much more great.\n\nThank you for playing.\n\nYou're free to call it a win for now, or keep playing and see what else happens in the world. If that's the case, hit the escape key to return to the game.\n\nPlease look me up on Patreon, or Ko-Fi and donate what you feel this was worth! I'm one guy who spends a whole lot of time on these mods. If you enjoyed it, then please show your love! I'll be encouraged to finish the other factions/races that much quicker if everyone contributes.</RH_TET_AncientDwarvenHoldReclaimed>
+	
+	<!--High Blood Stuff -->
+	<RH_TET_Dwarfs_ThaneThroneRequired>A king or queen cannot be declared unless a thane has been established on the map.</RH_TET_Dwarfs_ThaneThroneRequired>
+	<RH_TET_Dwarfs_DisabledWorkTypes>Disabled work types</RH_TET_Dwarfs_DisabledWorkTypes>
+	<RH_TET_Dwarfs_LeaderMustBeDwarf>Only a dwarf can be made king, queen, or thane.</RH_TET_Dwarfs_LeaderMustBeDwarf>
+	<RH_TET_Dwarfs_ThaneKingThroneNotDead>Unless the current thane or king is dead, the throne cannot be reassigned.</RH_TET_Dwarfs_ThaneKingThroneNotDead>
+	<RH_TET_Dwarfs_ThaneKingThroneSpecific>Kings and queens can only be assigned to king's throne, and thanes can only be assigned to thane's throne.</RH_TET_Dwarfs_ThaneKingThroneSpecific>
+	<RH_TET_Dwarfs_ThaneSwapThrone>You can only remove a thane from a throne if they have another throne on the same map.</RH_TET_Dwarfs_ThaneSwapThrone>
+	<RH_TET_Dwarfs_KingNoSwapThrone>A king or queen will not sit upon a thane's throne.</RH_TET_Dwarfs_KingNoSwapThrone>
+	<RH_TET_Dwarfs_ThanePromotedToKing>The thane has been promoted to king / queen of the dwarfen clans!</RH_TET_Dwarfs_ThanePromotedToKing>
+	<RH_TET_Dwarfs_ThaneKingWithNoHighSeat>An existing thane has no throne, you cannot designate a new thane until all existing high bloods have thrones.</RH_TET_Dwarfs_ThaneKingWithNoHighSeat>
+	<RH_TET_Dwarfs_ThroneDestroyed>The throne beloning to {0} has been destroyed. As a high blood, that person may be upset until a new throne is built for them.</RH_TET_Dwarfs_ThroneDestroyed>
+	<RH_TET_Dwarfs_NewKingLabel>Dwarf {0}</RH_TET_Dwarfs_NewKingLabel>
+	<RH_TET_Dwarfs_King>King</RH_TET_Dwarfs_King>
+	<RH_TET_Dwarfs_Queen>Queen</RH_TET_Dwarfs_Queen>
+	<RH_TET_Dwarfs_NewKingStart>The clans rejoice! A new dwarfen {1} has been named.\n\n{0} has been made {1} of your dwarfen clans.</RH_TET_Dwarfs_NewKingStart>
+	<RH_TET_Dwarfs_NewKingPromotedStart>The clans rejoice! A new dwarfen {1} has been named.\n\n{0} has been promoted to {1} of the clans, and is no longer a thane.</RH_TET_Dwarfs_NewKingPromotedStart>
+	<RH_TET_Dwarfs_NewKingEnd>\n\n{0}s are the head high bloods of your entire faction, and a faction can only have a single king or queen, regardless of how many holds they control. {0}s have special needs, as they won't do certain kinds of work. They're busy ruling the faction, and don't have time or inclination to perform menial tasks.</RH_TET_Dwarfs_NewKingEnd>
+	<RH_TET_Dwarfs_NewHighBlood_Gift>
+	\n\nThe clans have awarded the new high blood a set of magic armor, and a magic weapon. These master crafted magic items will offer benefits beyond just protection. It is also immune to burning, and won't deteriorate. These items can be found by the throne.	</RH_TET_Dwarfs_NewHighBlood_Gift>
+	<RH_TET_Dwarfs_NewThaneLabel>Dwarf Thane</RH_TET_Dwarfs_NewThaneLabel>
+	<RH_TET_Dwarfs_NewThane>Glory to the dwarfs! A new thane has been named.\n\n{0} has been made a thane.\n\nThanes are dwarfen high bloods, and as such will have additional needs that they didn't have before. They also don't do certain kinds of labor any more, as they're busy helping to rule the hold, and some tasks are simply beneath them.</RH_TET_Dwarfs_NewThane>
+	<RH_TET_Dwarfs_NeedsHighBloodSeat>A high blood pawn has no ruling seat. Build and assign a dwarf throne appropriate for the high blood, lest they be unhappy.</RH_TET_Dwarfs_NeedsHighBloodSeat>
+	<RH_TET_Dwarfs_NeedsHighBloodSeatLabel>High Blood Seat Needed</RH_TET_Dwarfs_NeedsHighBloodSeatLabel>
+	<RH_TET_Dwarfs_InsufficientThroneroomLabel>Inappropriate Throneroom</RH_TET_Dwarfs_InsufficientThroneroomLabel>
+	<RH_TET_Dwarfs_InsufficientThroneroomDesc>One of your high bloods has a throneroom that isn't sufficient for their high blood status. They will become unhappy if this isn't corrected.</RH_TET_Dwarfs_InsufficientThroneroomDesc>
+	<RH_TET_Dwarfs_RoomRequirementGracePeriodDesc>{0} days until requirement begins</RH_TET_Dwarfs_RoomRequirementGracePeriodDesc>
+	<RH_TET_Dwarfs_RoomRequirementSize>room area: {0} tiles</RH_TET_Dwarfs_RoomRequirementSize>
+	<RH_TET_Dwarfs_RoomRequirementQuality>room quality</RH_TET_Dwarfs_RoomRequirementQuality>
+	<RH_TET_Dwarfs_RoomRequirementFloors_Basic>all floored (dawi basic min req)</RH_TET_Dwarfs_RoomRequirementFloors_Basic>
+	<RH_TET_Dwarfs_RoomRequirementFloors_Fine>all floored (dawi fine min req)</RH_TET_Dwarfs_RoomRequirementFloors_Fine>
+	<RH_TET_Dwarfs_RoomRequirementFloors_Elab>all floored (dawi elaborate min req)</RH_TET_Dwarfs_RoomRequirementFloors_Elab>
+	<RH_TET_Dwarfs_RoomRequirementFloors_Exquis>all floored (dawi exquisite min req)</RH_TET_Dwarfs_RoomRequirementFloors_Exquis>
+	<RH_TET_Dwarfs_RoomRequirementAllBraziersMustBeLit>all braziers must be lit</RH_TET_Dwarfs_RoomRequirementAllBraziersMustBeLit>
+	<RH_TET_Dwarfs_RoomRequirementAllColumnsMustBeLit>all columns must be lit</RH_TET_Dwarfs_RoomRequirementAllColumnsMustBeLit>
+	<RH_TET_Dwarfs_RoomRequirementAllFineFloored>all fine floored</RH_TET_Dwarfs_RoomRequirementAllFineFloored>
+	<RH_TET_Dwarfs_HighBloodSeatInside>Throne must be placed indoors.</RH_TET_Dwarfs_HighBloodSeatInside>
+	<RH_TET_Dwarfs_HighBloodNeedBedroomAssigned>High blood requires bedroom</RH_TET_Dwarfs_HighBloodNeedBedroomAssigned>
+	<RH_TET_Dwarfs_HighBloodNeedBedroomAssignedDesc>One of your dwarfs is a high blood and requires a personal bedroom, but no bedroom is assigned.\n\nAssign them a personal bedroom. The bedroom should be appropriately sized and decorated to satisfy the high blood's specific requirements.</RH_TET_Dwarfs_HighBloodNeedBedroomAssignedDesc>
+	<RH_TET_Dwarfs_InappropriateBedroom>Inappropriate bedroom</RH_TET_Dwarfs_InappropriateBedroom>
+	<RH_TET_Dwarfs_InappropriateBedroomDesc>One of your dwarfs is a high blood that requires a bedroom with specific features. Either no bedroom is assigned, or the assigned bedroom doesn't meet the high blood's requirements.</RH_TET_Dwarfs_InappropriateBedroomDesc>
+	<RH_TET_Dwarfs_HighBloodSeatInvalidConfiguration>Throne not usable</RH_TET_Dwarfs_HighBloodSeatInvalidConfiguration>
+	<RH_TET_Dwarfs_HighBloodSeatInvalidConfigurationDesc>A throne is not usable because of how it is set up:</RH_TET_Dwarfs_HighBloodSeatInvalidConfigurationDesc>
+	<RH_TET_Dwarfs_HighBloodNoAcceptableFood>No acceptable food</RH_TET_Dwarfs_HighBloodNoAcceptableFood>
+	<RH_TET_Dwarfs_HighBloodNoAcceptableFoodDesc>One of your dwarfs is a high blood with specific food requirements. There's no food available that satisfies their requirements.</RH_TET_Dwarfs_HighBloodNoAcceptableFoodDesc>
+	<RH_TET_Dwarfs_AssignHighBloodConf>Assigning a pawn to a dwarfen throne will make them a high blood. High blood dwarfs have special needs in terms of high blood ruling rooms, bedrooms, and food requirements. They also have work restrictions, and won't do plant work or dumb labor.\n\nOnce a pawn has been made a high blood, they cannot lose that status.\n\nYou'll have to deal with their requirements for a ruling room, bedroom, food, apparel, and so on until they die. Their death will upset the dwarfs greatly.\n\nAre you sure that you want to do this?</RH_TET_Dwarfs_AssignHighBloodConf>
+	<RH_TET_Dwarfs_HighBloodRequiredMeals>Allowed foods</RH_TET_Dwarfs_HighBloodRequiredMeals>
+	<RH_TET_Dwarfs_HighBloodTooltipRequiredApparel>Required apparel</RH_TET_Dwarfs_HighBloodTooltipRequiredApparel>
+	<RH_TET_Dwarfs_HighBloodTooltipRequiredApparelQuality>Minimum apparel quality</RH_TET_Dwarfs_HighBloodTooltipRequiredApparelQuality>
+	<RH_TET_Dwarfs_HighBloodTooltipBedroomRequirements>Bedroom requirements</RH_TET_Dwarfs_HighBloodTooltipBedroomRequirements>
+	<RH_TET_Dwarfs_HighBloodTooltipRoomRequirements>Throneroom requirements</RH_TET_Dwarfs_HighBloodTooltipRoomRequirements>
+	<RH_TET_Dwarfs_HighBloodRequirementAnyPowerArmor>Any powered armor</RH_TET_Dwarfs_HighBloodRequirementAnyPowerArmor>
+	<RH_TET_Dwarfs_HighBloodRequiredMealsDesc>A high blood will only eat these foods, unless they are starving or on a caravan.</RH_TET_Dwarfs_HighBloodRequiredMealsDesc>
+	<RH_TET_Dwarfs_HighBloodRequiredApparelStatDescription>These high bloods must wear some combination of</RH_TET_Dwarfs_HighBloodRequiredApparelStatDescription>
+	<RH_TET_Dwarfs_HighBloodSeatDesc>Appropriate for high blood: {0}</RH_TET_Dwarfs_HighBloodSeatDesc>
+	<RH_TET_Dwarfs_HighBloodRulingRoomQuality>({0} impressiveness)</RH_TET_Dwarfs_HighBloodRulingRoomQuality>
+	<RH_TET_Dwarfs_HighBloodFoodBad>high blood {0} won't eat this</RH_TET_Dwarfs_HighBloodFoodBad>
+	<RH_TET_Dwarfs_AbilityHoldCourtTooltip>Have the high blood hold court from the dwarfen throne. {ORGANIZER_labelShort} will go to {ORGANIZER_possessive} dwarfen throne, and call all colonists to listen. If all goes well, the clans will feel inspired, and {ORGANIZER_labelShort} will rise higher in their respects. If it goes poorly, the opposite may happen. The outcome depends on {ORGANIZER_labelShort}'s social abilities.</RH_TET_Dwarfs_AbilityHoldCourtTooltip>
+	<RH_TET_Dwarfs_AbilityHoldCourtCoolDown>Court can be held again in</RH_TET_Dwarfs_AbilityHoldCourtCoolDown>
+	<RH_TET_Dwarfs_LordReportObservingCourt>Watching as {ORGANIZER_labelShort} holds high blood court</RH_TET_Dwarfs_LordReportObservingCourt>
+	<RH_TET_Dwarfs_LordReportHoldingCourt>Holding court</RH_TET_Dwarfs_LordReportHoldingCourt>
+	<RH_TET_Dwarfs_CourtCancelLabel>Court cancelled</RH_TET_Dwarfs_CourtCancelLabel>
+	<RH_TET_Dwarfs_CourtCancel>{ORGANIZER_labelShort} had the high blood court session cancelled too early. It will have no effect.</RH_TET_Dwarfs_CourtCancel>
+	<RH_TET_Dwarfs_FinishedCourt>{ORGANIZER_labelShort} has finished holding high blood court.</RH_TET_Dwarfs_FinishedCourt>
+	<RH_TET_Dwarfs_AwfulHeldCourtLetter>It was very bad - just recounting the many grudges we've written, but offering no plan for vengeance.</RH_TET_Dwarfs_AwfulHeldCourtLetter>
+	<RH_TET_Dwarfs_BoringHeldCourtLetter>It was boring - a few grudges were mentioned, but the proposed responses to them lacked passion.</RH_TET_Dwarfs_BoringHeldCourtLetter>
+	<RH_TET_Dwarfs_DecentHeldCourtLetter>It was good. Plans were discussed for avenging some of the major grudges we've suffered, and the high blood was passionate.</RH_TET_Dwarfs_DecentHeldCourtLetter>
+	<RH_TET_Dwarfs_GreatHeldCourtLetter>It was great! Avenged grudges were spoken of, and the high bloods have solid plans to avenge others. Such passion, and ferocity!</RH_TET_Dwarfs_GreatHeldCourtLetter>
+	<RH_TET_Dwarfs_CourtInterrupted>Because high blood court was interrupted when only {0} completed, it wasn't very effective.</RH_TET_Dwarfs_CourtInterrupted>
+	<RH_TET_Dwarfs_AbilityCourtDisabledAlreadyHolding>already holding court.</RH_TET_Dwarfs_AbilityCourtDisabledAlreadyHolding>
+	<RH_TET_Dwarfs_AbilityCourtDisabledNoHighSeat>no throne assigned.</RH_TET_Dwarfs_AbilityCourtDisabledNoHighSeat>
+	<RH_TET_Dwarfs_AbilityCourtDisabledNoSeatAvailable>throne is not accessible.</RH_TET_Dwarfs_AbilityCourtDisabledNoSeatAvailable>
+	<RH_TET_Dwarfs_AbilityCourtDisabledInvalidHighRoom>throne not usable because high seat room requirements are not met.</RH_TET_Dwarfs_AbilityCourtDisabledInvalidHighRoom>
+	<RH_TET_Dwarfs_AbilityCourtPossibleOutcomes>Outcome chances</RH_TET_Dwarfs_AbilityCourtPossibleOutcomes>
+	<RH_TET_Dwarfs_AbilityCourtStatInfo>{ORGANIZER_labelShort}'s {1} stat</RH_TET_Dwarfs_AbilityCourtStatInfo>
+	
+	<!-- Steam related -->
+	<RH_TET_Dwarfs_CommandOnOffSteamValveLabel>Toggle steam valve</RH_TET_Dwarfs_CommandOnOffSteamValveLabel>
+	<RH_TET_Dwarfs_CommandOnOffSteamValveDesc>Toggle the open or closed status of the steam valve.</RH_TET_Dwarfs_CommandOnOffSteamValveDesc>
+	<RH_TET_Dwarfs_SteamValveClosed>Steam valve closed</RH_TET_Dwarfs_SteamValveClosed>
+	
+</LanguageData>

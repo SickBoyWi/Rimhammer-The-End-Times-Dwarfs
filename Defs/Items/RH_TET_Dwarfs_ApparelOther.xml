@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="HatMakeableBase">
+		<defName>RH_TET_Dwarf_Tuque</defName>
+		<label>dawi fur lined hat</label>
+		<description>A warm dwarfen hat. Keeps the head and ears toasty warm during even the deepest freezes.\n\nLife in the mountains can be very cold, and it only makes sense that the dawi would have the gear to survive and prosper there.</description>
+		<techLevel>Medieval</techLevel>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_WarmClothes</researchPrerequisite>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/RH_TET_Dwarf_Tuque</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>25</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Dwarfs_Headgear</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>1200</WorkToMake>
+			<Mass>0.07</Mass>
+			<StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.50</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>0.8</EquipDelay>
+		</statBases>
+		<generateCommonality>.5</generateCommonality>
+		<apparel>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Other/RH_TET_Dwarf_Tuque</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>RH_TET_Dwarf_Apparel_Warm</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>RH_TET_DwarfTrader</li>
+			</defaultOutfitTags>
+		</apparel>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Apparel_Mid</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ApparelMakeableBase">
+		<defName>RH_TET_Dwarf_Parka</defName>
+		<label>dawi warm cloak</label>
+		<description>A very warm dwarfen cloak for going outside in the coldest of temperatures.\n\nLife in the mountains can be very cold, and it only makes sense that the dawi would have the gear to survive and prosper there.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/RH_TET_Dwarf_Parka</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.90</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_WarmClothes</researchPrerequisite>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<techLevel>Neolithic</techLevel>
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>180</MaxHitPoints>
+			<WorkToMake>8000</WorkToMake>
+			<Mass>3.8</Mass>
+			<StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>2.00</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.00</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>2.5</EquipDelay>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Other/RH_TET_Dwarf_Parka</wornGraphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>RH_TET_DwarfTrader</li>
+			</defaultOutfitTags>
+			<tags>
+				<li>RH_TET_Dwarf_Apparel_Warm</li>
+				<li>IndustrialBasic</li>
+				<li>Neolithic</li>
+			</tags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.4,0.3,0.15)</only>
+				</li>
+				<li>
+					<weight>15</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.5,0.5,0.5)</min>
+					<max>(1,1,1)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Apparel_Mid</li>
+		</tradeTags>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<StatCategoryDef>
+		<defName>RH_TET_Dwarfs_BlastingStats</defName>
+		<label>Mining Blasts</label>
+		<displayOrder>20</displayOrder>
+		<displayAllByDefault>true</displayAllByDefault>
+	</StatCategoryDef>
+
+</Defs>

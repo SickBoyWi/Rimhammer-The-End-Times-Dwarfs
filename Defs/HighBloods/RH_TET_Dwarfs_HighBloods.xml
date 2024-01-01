@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TheEndTimes_Dwarfs.HighBloodDef Abstract="True" Name="RH_TET_Dwarfs_BaseHighBlood">
+		<tags>
+			<li>RH_TET_Dwarfs_HighBlood</li>
+		</tags>
+		<awardThought>RH_TET_Dwarfs_GainedHighBlood</awardThought>
+		<recruitmentDifficultyOffset>0.2</recruitmentDifficultyOffset>
+		<recruitmentResistanceOffset>0.2</recruitmentResistanceOffset>
+	</TheEndTimes_Dwarfs.HighBloodDef>
+
+	<TheEndTimes_Dwarfs.HighBloodDef ParentName="RH_TET_Dwarfs_BaseHighBlood">
+		<defName>RH_TET_Dwarfs_HighBloodThane</defName>
+		<label>thane</label>
+		<description>A dwarf thane is the lower level of dwarfen high bloods. They lead individual holds, or parts of holds if the hold is really large.\n\nEach Thane has within him vast experience in combating the enemies of their race, often built up over several centuries of constant warfare and strict studies. Dwarf leaders are well tutored in the art of war, learning both from the elders of their own clans and the venerable Runesmiths. When the time comes for them to lead, they will have learned more than most commanders ever know, and will have been tried and tested on the battlefield many times over. This experience and wisdom is reflected upon their beards (if they're male), a clear indication that the other Dwarfs in the throng would do well to follow their example.\n\nWhen battle is joined, it is the Thanes, with their finely crafted armour and superior weapons, who seek out the enemy's most powerful combatants, matching bestial fury or dark magic with courage, honour, and honest steel. On several occasions, Dwarf Thanes are known to take command of smaller units of Dwarfs as their own, and lead them personally into combat. Most Thanes are readily identified by the large wings that protrude from their helmets.</description>
+		<seniority>400</seniority>
+		<minExpectation>High</minExpectation>
+		<requiredMinimumApparelQuality>Normal</requiredMinimumApparelQuality>
+		<recruitmentResistanceFactor>1.3</recruitmentResistanceFactor>
+		<commonality>1</commonality>
+		<disabledWorkTags>
+			<li>ManualDumb</li>
+			<li>PlantWork</li>
+		</disabledWorkTags>
+		<highBloodRoomRequirements>
+			<li Class="RoomRequirement_ThingAnyOf">
+				<things>
+					<li>RH_TET_Dwarfs_Throne</li>
+				</things>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.RoomRequirement_Size">
+				<area>64</area>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.RoomRequirement_Quality">
+				<impressiveness>150</impressiveness>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.RoomRequirement_FloorsWithTags">
+				<labelKey>RH_TET_Dwarfs_RoomRequirementFloors_Fine</labelKey>
+				<tags>
+					<li>RH_TET_Dwarfs_MidFloor</li>
+					<li>RH_TET_Dwarfs_FineFloor</li>
+					<li>RH_TET_Dwarfs_SuperiorFloor</li>
+				</tags>
+			</li>
+			<li Class="RoomRequirement_ThingCount">
+				<thingDef>RH_TET_Dwarfs_ColumnSmallA</thingDef>
+				<count>2</count>
+			</li>
+			<li Class="RoomRequirement_ThingCount">
+				<thingDef>RH_TET_Dwarfs_ColumnLitSmallA</thingDef>
+				<count>2</count>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.RoomRequirement_AllLit">
+				<labelKey>RH_TET_Dwarfs_RoomRequirementAllColumnsMustBeLit</labelKey>
+				<thingDef>RH_TET_Dwarfs_ColumnLitSmallA</thingDef>
+			</li>
+			<li Class="RoomRequirement_ThingCount">
+				<thingDef>RH_TET_Dwarfs_OathStone</thingDef>
+				<count>1</count>
+			</li>
+		</highBloodRoomRequirements>
+		<!-- TODO MIGHT - Make this more severe once the Might stuff is added, so it'll be more worth having really needy pawns. Add via hidden HeDiff. -->
+		<bedroomRequirements>
+			<li Class="TheEndTimes_Dwarfs.RoomRequirement_Size">
+				<!-- 49 -->
+				<area>36</area>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.RoomRequirement_Quality">
+				<!-- 100 -->
+				<impressiveness>75</impressiveness>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.RoomRequirement_FloorsWithTags">
+				<labelKey>RH_TET_Dwarfs_RoomRequirementFloors_Basic</labelKey>
+				<tags>
+					<li>FineFloor</li>
+					<li>RH_TET_Dwarfs_FlooringBasic</li>
+					<li>RH_TET_Dwarfs_MidFloor</li>
+					<li>RH_TET_Dwarfs_FineFloor</li>
+					<li>RH_TET_Dwarfs_SuperiorFloor</li>
+				</tags>
+			</li>
+			<li Class="RoomRequirement_ThingAnyOf">
+				<things>
+					<li>RH_TET_Dwarfs_Bed</li>
+					<li>RH_TET_Dwarfs_DoubleBed</li>
+					<li>RH_TET_Dwarfs_RoyalBed</li>
+				</things>
+			</li>
+			<li Class="RoomRequirement_Thing">
+				<thingDef>RH_TET_Dwarfs_EndTable</thingDef>
+			</li>
+			<li Class="RoomRequirement_Thing">
+				<thingDef>RH_TET_Dwarfs_Dresser</thingDef>
+			</li>
+		</bedroomRequirements>
+		<grantedAbilities><li>RH_TET_Dwarfs_HoldCourtAbility</li></grantedAbilities>
+		<foodRequirement>
+			<minQuality>MealSimple</minQuality>
+			<allowedTypes>Processed, Liquor</allowedTypes>
+			<allowedDefs>
+				<li>Ambrosia</li>
+				<li>Milk</li>
+				<li>RawBerries</li>
+				<li>RH_TET_Dwarf_Stonebread</li>
+			</allowedDefs>
+		</foodRequirement>
+		<courtCooldown>600000</courtCooldown>
+	</TheEndTimes_Dwarfs.HighBloodDef>
+  
+	<TheEndTimes_Dwarfs.HighBloodDef ParentName="RH_TET_Dwarfs_BaseHighBlood">
+		<defName>RH_TET_Dwarfs_HighBloodKing</defName>
+		<label>king</label>
+		<description>A king or queen of the dwarfs is first among dwarfs. Leader of the clans, and second only to the High King of all dwarfs.  The king or queen nominally commands the allegiance of all the dwarfs in their realm. In practice, this is normally a matter of cooperation rather than command as dwarfs are proud individuals not accustomed to blind obedience.</description>
+		<seniority>600</seniority>
+		<minExpectation>SkyHigh</minExpectation>
+		<labelFemale>queen</labelFemale>
+		<requiredMinimumApparelQuality>Normal</requiredMinimumApparelQuality>
+		<recruitmentResistanceFactor>1.5</recruitmentResistanceFactor>
+		<commonality>1</commonality>
+		<disabledWorkTags>
+			<li>ManualDumb</li>
+			<li>PlantWork</li>
+			<li>Cooking</li>
+		</disabledWorkTags>
+		<highBloodRoomRequirements>
+			<li Class="RoomRequirement_ThingAnyOf">
+				<things>
+					<li>RH_TET_Dwarfs_KingsThrone</li>
+				</things>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.RoomRequirement_Size">
+				<area>100</area>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.RoomRequirement_Quality">
+				<impressiveness>200</impressiveness>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.RoomRequirement_FloorsWithTags">
+				<labelKey>RH_TET_Dwarfs_RoomRequirementFloors_Elab</labelKey>
+				<tags>
+					<li>RH_TET_Dwarfs_FineFloor</li>
+					<li>RH_TET_Dwarfs_SuperiorFloor</li>
+				</tags>
+			</li>
+			<li Class="RoomRequirement_ThingCount">
+				<thingDef>RH_TET_Dwarfs_ColumnBigA</thingDef>
+				<count>2</count>
+			</li>
+			<li Class="RoomRequirement_ThingCount">
+				<thingDef>RH_TET_Dwarfs_ColumnLitBigA</thingDef>
+				<count>2</count>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.RoomRequirement_AllLit">
+				<labelKey>RH_TET_Dwarfs_RoomRequirementAllColumnsMustBeLit</labelKey>
+				<thingDef>RH_TET_Dwarfs_ColumnLitBigA</thingDef>
+			</li>
+			<li Class="RoomRequirement_ThingCount">
+				<thingDef>RH_TET_Dwarfs_OathStone</thingDef>
+				<count>1</count>
+			</li>
+			<li Class="RoomRequirement_ThingCount">
+				<thingDef>RH_TET_Dwarfs_Banner</thingDef>
+				<count>1</count>
+			</li>
+			<li Class="RoomRequirement_ThingCount">
+				<thingDef>RH_TET_Dwarfs_Horn</thingDef>
+				<count>1</count>
+			</li>
+		</highBloodRoomRequirements>
+		<!-- TODO MIGHT - Make this more severe once the Might stuff is added, so it'll be more worth having really needy pawns. Add via hidden HeDiff. -->
+		<bedroomRequirements>
+			<li Class="TheEndTimes_Dwarfs.RoomRequirement_Size">
+				<!-- 64 -->
+				<area>49</area>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.RoomRequirement_Quality">
+				<!-- 150 -->
+				<impressiveness>100</impressiveness>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.RoomRequirement_FloorsWithTags">
+				<labelKey>RH_TET_Dwarfs_RoomRequirementFloors_Elab</labelKey>
+				<tags>
+					<li>RH_TET_Dwarfs_FineFloor</li>
+					<li>RH_TET_Dwarfs_SuperiorFloor</li>
+				</tags>
+			</li>
+			<li Class="RoomRequirement_ThingAnyOf">
+				<things>
+					<li>RH_TET_Dwarfs_DoubleBed</li>
+					<li>RH_TET_Dwarfs_RoyalBed</li>
+				</things>
+			</li>
+			<li Class="RoomRequirement_Thing">
+				<thingDef>RH_TET_Dwarfs_EndTable</thingDef>
+			</li>
+			<li Class="RoomRequirement_Thing">
+				<thingDef>RH_TET_Dwarfs_Dresser</thingDef>
+			</li>
+			<li Class="RoomRequirement_Thing">
+				<thingDef>RH_TET_Dwarfs_Table1x1c</thingDef>
+			</li>
+			<li Class="RoomRequirement_ThingAnyOf">
+				<things>
+					<li>RH_TET_Dwarfs_DiningChair</li>
+					<li>RH_TET_Dwarfs_FineChair</li>
+				</things>
+			</li>
+		</bedroomRequirements>
+		<grantedAbilities><li>RH_TET_Dwarfs_HoldCourtAbility</li></grantedAbilities>
+		<foodRequirement>
+			<minQuality>MealFine</minQuality>
+			<allowedTypes>Processed, Liquor</allowedTypes>
+			<allowedDefs>
+				<li>Ambrosia</li>
+				<li>Milk</li>
+				<li>RawBerries</li>
+				<li>RH_TET_Dwarf_Stonebread</li>
+			</allowedDefs>
+		</foodRequirement>
+		<courtCooldown>480000</courtCooldown>
+	</TheEndTimes_Dwarfs.HighBloodDef>
+  
+</Defs>

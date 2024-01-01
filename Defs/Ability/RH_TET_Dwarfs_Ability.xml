@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AbilityDef Name="RH_TET_Dwarfs_HoldCourtAbility">
+		<defName>RH_TET_Dwarfs_HoldCourtAbility</defName>
+		<label>hold court</label>
+		<description>Have the high blood hold court from the dwarfen throne. All colonists will gather and listen. If it goes well, listeners will leave feeling good, and will gain respect for the high blood. If it goes poorly, their opinion of the high blood will deteriorate. The outcome depends on the speaker's social abilities.\n\nLeading the clans is one of the most important duties of a high blood. Keeping them well inspired is a portion of the job of leading.</description>
+		<iconPath>Mote/RH_TET_Dwarfs_HoldCourt</iconPath>
+		<hotKey>Misc12</hotKey>
+		<gizmoClass>TheEndTimes_Dwarfs.Command_AbilityHoldCourt</gizmoClass>
+		<displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<targetRequired>False</targetRequired>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+		</verbProperties>
+		<comps>
+			<li Class="TheEndTimes_Dwarfs.CompProperties_AbilityStartHoldCourt"/>
+		</comps>
+	</AbilityDef>
+  
+</Defs>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- =========================== Good ============================-->
+
+	<IncidentDef>
+		<defName>RH_TET_UndergrounderJoin</defName>
+		<label>lost undergrounder appears</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>TheEndTimes_Dwarfs.IncidentWorker_MinerJoin</workerClass>
+		<letterLabel>Lost undergrounder joins</letterLabel>
+		<letterText>A lost dwarf named {PAWN_nameDef} has tunnelled up from an unknown mine, and is joining the colony. [PAWN_pronoun] has been lost underground for some time after having been with a group of miners when a mine shaft collapsed, trapping them all. {PAWN_nameDef} was forced to tunnel out to the surface. [PAWN_pronoun] is pleased to have surfaced among fellow dwarfs. \n\n[PAWN_pronoun] is willing to contribute, but will not leave voluntarily. If you don't want {PAWN_nameDef}, you can banish {PAWN_objective}, sell {PAWN_objective} into slavery, or simply kill {PAWN_objective}. However, your other colonists may find this disturbing.</letterText>
+		<baseChance>0.4</baseChance>
+		<pawnKind>RH_TET_DwarfMiner</pawnKind>
+		<populationEffect>IncreaseEasy</populationEffect>
+		<pawnMustBeCapableOfViolence>true</pawnMustBeCapableOfViolence>
+	</IncidentDef>
+
+</Defs>

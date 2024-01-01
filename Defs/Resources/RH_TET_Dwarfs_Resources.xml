@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="RockBase" Name="MineableGromril">
+		<defName>RH_TET_Dwarf_MineableGromril</defName>
+		<label>mineable gromril</label>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(102,102,105)</color>
+			<colorTwo>(106,135,165)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>15000</MaxHitPoints>
+		</statBases>
+		<description>A natural vein of gromril. The metal most precious to the dawi.</description>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>RH_TET_Dwarf_Gromril</mineableThing>
+			<mineableYield>35</mineableYield>
+			<mineableScatterCommonality>0.05</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>
+				<min>3</min>
+				<max>8</max>
+			</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+  
+	<ThingDef ParentName="RockBase">
+		<defName>RH_TET_MineableSulfur</defName>
+		<label>mineable sulfur</label>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(200,198,122)</color>
+			<colorTwo>(245,244,199)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+		</statBases>
+		<description>A natural vein of sulfur. It's abundance makes it less valuable, but its usefulness cannot be denied.</description>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>RH_TET_Sulfur</mineableThing>
+			<mineableYield>40</mineableYield>
+			<mineableScatterCommonality>.8</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>
+				<min>20</min>
+				<max>30</max>
+			</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+  
+	<ThingDef ParentName="RockBase">
+		<defName>RH_TET_MineableSaltpeter</defName>
+		<label>mineable saltpeter</label>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(243,240,190)</color>
+			<colorTwo>(255,255,255)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1250</MaxHitPoints>
+		</statBases>
+		<description>A natural vein of saltpeter.</description>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>RH_TET_Saltpeter</mineableThing>
+			<mineableYield>40</mineableYield>
+			<mineableScatterCommonality>.4</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>
+				<min>10</min>
+				<max>15</max>
+			</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+  
+	<ThingDef ParentName="ResourceBase" Name="RH_TET_Dwarf_MetalBase" Abstract="True">
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(102,102,105)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>1</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0.2</Flammability>
+				<MeleeWeapon_CooldownMultiplier>1</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+		</stuffProps>
+		<smeltable>true</smeltable>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarf_MetalBase">
+		<defName>RH_TET_Dwarf_Gromril</defName>
+		<label>gromril</label>
+		<description>A silvery metal. It's much stronger than steel. It is the rarest metal in the olde world, and that makes it worth very much. Typically used by dwarfs, as they're the ones that discovered it, and have delved into it's secret properties.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Gromril</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundInteract>Silver_Drop</soundInteract>
+		<soundDrop>Silver_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<MarketValue>32</MarketValue>
+			<Mass>0.15</Mass>
+			<StuffPower_Armor_Sharp>1.51</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.76</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.3</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1.3</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1.1</BluntDamageMultiplier>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.05</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(186,195,211)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statOffsets>
+				<Beauty>6</Beauty>
+			</statOffsets>
+			<statFactors>
+				<MaxHitPoints>2.8</MaxHitPoints>
+				<Beauty>2</Beauty>
+				<Flammability>0.1</Flammability>
+				<WorkToMake>2.2</WorkToMake>
+				<WorkToBuild>2.2</WorkToBuild>
+				<MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+		</stuffProps>
+		<smeltable>true</smeltable>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>RH_TET_Sulfur</defName>
+		<label>sulfur</label>
+		<description>A lump of raw stinky sulfur. Can be used to make black powder.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Sulfur</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<tickerType>Rare</tickerType>
+		<statBases>
+			<MarketValue>.25</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Mass>0.25</Mass>
+			<DeteriorationRate>0.35</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>5</deepCommonality>
+		<deepCountPerPortion>35</deepCountPerPortion>
+		<deepLumpSizeRange>
+			<min>15</min>
+			<max>30</max>
+		</deepLumpSizeRange>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="ResourceBase">
+		<defName>RH_TET_Saltpeter</defName>
+		<label>saltpeter</label>
+		<description>Raw saltpeter. Can be used to make black powder.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Saltpeter</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<tickerType>Rare</tickerType>
+		<statBases>
+			<MarketValue>.5</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Mass>0.45</Mass>
+			<DeteriorationRate>0.35</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>2.5</deepCommonality>
+		<deepCountPerPortion>35</deepCountPerPortion>
+		<deepLumpSizeRange>
+			<min>8</min>
+			<max>12</max>
+		</deepLumpSizeRange>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="ResourceBase">
+		<defName>RH_TET_BlackPowder</defName>
+		<label>black powder</label>
+		<description>Used for warmachine rounds, to make things explode!\n\nOld dwarf scoff at the stuff, but still can't deny how it has helped the clans to defend themselves.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/BlackPowder</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<statBases>
+			<MarketValue>4.5</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Mass>0.45</Mass>
+			<DeteriorationRate>0.35</DeteriorationRate>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.9</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+				<wickTicks>
+					<min>30</min>
+					<max>60</max>
+				</wickTicks>
+			</li>
+		</comps>
+	</ThingDef>
+  
+</Defs>

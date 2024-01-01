@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Rimhammer - The End Times - Dwarfs</name>
+	<author>SickBoyWI</author>
+	<supportedVersions><li>1.2</li><li>1.3</li><li>1.4</li></supportedVersions>
+	<packageId>SickBoyWi.TheEndTimes.Dwarfs</packageId>
+	<description>
+IF YOU HAVE ISSUES, YOU'LL GET A MUCH FASTER RESPONSE BY POSTING ON MY DISCORD ISSUES-AND-BUGS CHANNEL: https://discord.gg/UCmQbCT
+
+This mod adds Warhammer Dwarfs into Rimworld. In Warhammer it is dwarfs, not dwarves!
+
+This is the first extension of the base 'Rimhammer - The End Times' mod, and is intended to be used with the base mod; however, that isn't required. This mod will work without the base Rimhammer - The End Times mod.
+
+Required mods (all must be loaded before this mod):
+Harmony
+Jec's Tools
+Jec's Doors Expanded
+HugsLib
+Humanoid Alien Races 2.0
+
+If you're using the base Rimhammer - The End Times mod, you should load that immediately after the previously mentioned required mods, and before this one. The Rimhammer mods should be placed at the bottom of your mod list. Place the base Rimhammer - The End Times mod at the bottom, then the Rimhammer - Then End Times - Magic mod, then the race/faction mods under those.
+  
+Recommended Mods:
+Storage Extended (NOTE: The dwarfen shelf will behave like an Extended Storage shelf that can hold most anything if you have this mod active.)
+Better Walls &amp; Floors
+Quarry 1.1
+Respect the Scars
+Veinminer 1.1
+
+Mod Settings: 
+The mod settings for this mod control the way impassible mountain maps generate. Read the detailed information in the mod settings in game.
+
+Here's a list of some of what it includes, all Dwarf themed:
+	-Research, ale, tobacco, impassible map settling, furniture, floors, workbenches, statues, doors, gates, wall lights, ceiling lights, braziers, hearth, walls, decorated walls, columns, embrasures, Slayers, backstories, beards, hair dos, warmachines (grudge thrower, flame cannon, organ gun, ...), black powder, apparel (armor, shirts, pants, helmets, ...), magic weapons and armor, shields, recreation, indoor planter box, plants (barley, stoneroot, tobacco, dwarf bile mushrooms, stonesalve, ...), fermenting barrels, unique food types, gromril, names, sarcophagi, weapons (thunderer rifles, grudge raker, axes, hammers, ...), medicine and mechanical limbs, repair of weapons and apparel, reskinned work and research benches, a unique end game quest, blasting items, high bloods, thrones, and more!
+
+This mod series will not be released fast. I'm one person, and the amount of work involved is significant. This mod took hundreds hours of work to make, and many more to upkeep and update, no joke.
+
+Super special thanks to Discord users "Dino's Bar and Grill" for the forge/anvil texture, and leugimimi for patching several popular mods to work with this mod!!
+
+If you'd like to speed up the process of release, please consider supporting me on Patreon. The more support I get, the more motivated I will be to create more races/factions. https://www.patreon.com/SickBoyWI	
+
+Buy me a coffee if you'd prefer to support me that way: https://ko-fi.com/sickboywi
+
+========================
+Changelog
+========================
+
+1.0.0.0 2019-06-02
+========================
+Release date.
+
+...
+
+0.0.0.1 2018-12-28
+========================
+Development started. 
+	</description>
+</ModMetaData>

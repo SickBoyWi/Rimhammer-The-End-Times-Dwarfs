@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<LetterDef>
+		<defName>RH_TET_Dwarfs_CapturedHold</defName>
+		<color>(7, 156, 0)</color>
+		<flashColor>(215, 255, 213)</flashColor>
+		<flashInterval>32</flashInterval>
+		<arriveSound>RH_TET_Dwarf_CapturedHold</arriveSound>
+	</LetterDef>
+
+</Defs>

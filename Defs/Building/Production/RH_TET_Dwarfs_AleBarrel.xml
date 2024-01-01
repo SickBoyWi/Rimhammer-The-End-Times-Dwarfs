@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_TakeAleOutOfFermentingBarrel</defName>
+		<label>take dwarfen ale out of fermenting barrel</label>
+		<giverClass>TheEndTimes_Dwarfs.WorkGiver_TakeAleOutOfFermentingBarrel</giverClass>
+		<workType>Hauling</workType>
+		<verb>take dwarfen ale</verb>
+		<gerund>taking dwarfen ale from</gerund>
+		<priorityInType>20</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_FillFermentingBarrel</defName>
+		<label>fill fermenting barrel</label>
+		<giverClass>TheEndTimes_Dwarfs.WorkGiver_FillFermentingBarrel</giverClass>
+		<workType>Hauling</workType>
+		<verb>fill</verb>
+		<gerund>filling</gerund>
+		<priorityInType>19</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<JobDef>
+		<defName>RH_TET_Dwarfs_FillFermentingBarrel</defName>
+		<driverClass>TheEndTimes_Dwarfs.JobDriver_FillFermentingBarrel</driverClass>
+		<reportString>filling TargetA.</reportString>
+		<suspendable>false</suspendable>
+	</JobDef>
+  
+	<JobDef>
+		<defName>RH_TET_Dwarfs_TakeAleOutOfFermentingBarrel</defName>
+		<driverClass>TheEndTimes_Dwarfs.JobDriver_TakeAleOutOfFermentingBarrel</driverClass>
+		<reportString>taking dwarfen ale out of TargetA.</reportString>
+	</JobDef>
+  
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarfs_FermentingBarrel</defName>
+		<label>dawi fermenting barrel</label>
+		<description>A barrel for fermenting raw ale wort into dwarfen ale.\n\nProper dwarfen ale requires unique perfecting construction, and a special dawi touch in order for the precious ale to turn out properly. Dwarfen ale is renowned the world over, and it starts to become ale in a well made fermenting barrel.</description>
+		<category>Building</category>
+		<thingClass>TheEndTimes_Dwarfs.Building_FermentingAleBarrel</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Production/RH_TET_Dwarf_AleBarrel</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<damageData>
+				<rect>(0.05,0.1,0.9,0.9)</rect>
+			</damageData>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsProduction</li>
+		</thingCategories>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.45</fillPercent>
+		<pathCost>60</pathCost>
+		<statBases>
+			<WorkToBuild>600</WorkToBuild>
+			<Mass>10</Mass>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<costList>
+			<Steel>10</Steel>
+			<WoodLog>30</WoodLog>
+		</costList>
+		<comps>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-1</minSafeTemperature>
+				<maxSafeTemperature>32</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+			</li>
+		</comps>
+		<tickerType>Rare</tickerType>
+		<rotatable>true</rotatable>
+		<designationCategory>Production</designationCategory>
+		<constructEffect>ConstructWood</constructEffect>
+		<researchPrerequisites><li>RH_TET_Dwarf_AleOne</li></researchPrerequisites>
+	</ThingDef>
+
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_TakeAleOutOfBugmansFermentingBarrel</defName>
+		<label>take Bugmans XXX ale out of fermenting barrel</label>
+		<giverClass>TheEndTimes_Dwarfs.WorkGiver_TakeAleOutOfBugmansFermentingBarrel</giverClass>
+		<workType>Hauling</workType>
+		<verb>take Bugman's ale</verb>
+		<gerund>taking Bugman's ale from</gerund>
+		<priorityInType>20</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_FillBugmansFermentingBarrel</defName>
+		<label>fill Bugman's fermenting barrel</label>
+		<giverClass>TheEndTimes_Dwarfs.WorkGiver_FillBugmansFermentingBarrel</giverClass>
+		<workType>Hauling</workType>
+		<verb>fill</verb>
+		<gerund>filling</gerund>
+		<priorityInType>19</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<JobDef>
+		<defName>RH_TET_Dwarfs_FillBugmansFermentingBarrel</defName>
+		<driverClass>TheEndTimes_Dwarfs.JobDriver_FillBugmansFermentingBarrel</driverClass>
+		<reportString>filling TargetA.</reportString>
+		<suspendable>false</suspendable>
+	</JobDef>
+  
+	<JobDef>
+		<defName>RH_TET_Dwarfs_TakeAleOutOfBugmansFermentingBarrel</defName>
+		<driverClass>TheEndTimes_Dwarfs.JobDriver_TakeAleOutOfBugmansFermentingBarrel</driverClass>
+		<reportString>taking Bugman's ale out of TargetA.</reportString>
+	</JobDef>
+  
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarfs_BugmansFermentingBarrel</defName>
+		<label>Bugman's XXX fermenting barrel</label>
+		<description>A barrel for fermenting raw Bugman's XXX wort into dwarfen ale.\n\nBugman's is ultimate dwarfen ale recipe. Making such an epic drink requires a very unique fermenting barrel. No dwarfen brewmaster lucky enough to have one of Bugman's secret recipes would ever consider fermenting it in any sub par barrel.</description>
+		<category>Building</category>
+		<thingClass>TheEndTimes_Dwarfs.Building_BugmansFermentingAleBarrel</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Production/RH_TET_Dwarf_AleBarrelBugmans</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<damageData>
+				<rect>(0.05,0.1,0.9,0.9)</rect>
+			</damageData>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsProduction</li>
+		</thingCategories>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.45</fillPercent>
+		<pathCost>60</pathCost>
+		<statBases>
+			<WorkToBuild>600</WorkToBuild>
+			<Mass>10</Mass>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<costList>
+			<Steel>15</Steel>
+			<WoodLog>40</WoodLog>
+		</costList>
+		<comps>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-1</minSafeTemperature>
+				<maxSafeTemperature>32</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+			</li>
+		</comps>
+		<tickerType>Rare</tickerType>
+		<rotatable>true</rotatable>
+		<designationCategory>Production</designationCategory>
+		<constructEffect>ConstructWood</constructEffect>
+		<researchPrerequisites><li>RH_TET_Dwarf_AleTwo</li></researchPrerequisites>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef>
+		<defName>RH_TET_Dwarf_Stonebread</defName>
+		<label>stonebread</label>
+		<description>A hearty bread made from stoneroot. Tastes bland, but not offensive. It lasts a long time without refrigeration. Great for traveling.\n\nEven a high blood won't scoff at a morself of dwarfen stonebread. It's a true staple of dwarfen life. If it isn't spoiled, then it won't get a person sick.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<thingCategories>
+			<li>FoodMeals</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Item/Resource/Stonebread</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>.8</Flammability>
+			<Beauty>0</Beauty>
+			<MarketValue>16</MarketValue>
+			<Mass>0.4</Mass>
+			<DeteriorationRate>2</DeteriorationRate>
+			<Nutrition>0.8</Nutrition>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>true</alwaysHaulable>
+		<tickerType>Rare</tickerType>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stackLimit>15</stackLimit>
+		<pathCost>15</pathCost>
+		<resourceReadoutPriority>Last</resourceReadoutPriority>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<uiIconForStackCount>1</uiIconForStackCount>
+		<ingestible>
+			<foodType>Meal</foodType>
+			<preferability>MealAwful</preferability>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<tasteThought>RH_TET_AteBlandMeal</tasteThought>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+			<optimalityOffsetHumanlikes>15</optimalityOffsetHumanlikes>
+		</ingestible>
+		<tradeability>Buyable</tradeability>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>70</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Ingredients"/>
+		</comps>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>RH_TET_Dwarf_KuriMeal</defName>
+		<label>kuri meal</label>
+		<description>Meat stew boiled up by travelling Dwarfs from whatever ingredients are at hand. Traditionally spiced with wild berries. Delicious, and nutritious.\n\nTypically eaten by dwarfs when they're traveling, but it can be made any time for a delicious meal.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<thingCategories>
+			<li>FoodMeals</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Item/Resource/KuriMeal</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>0</Beauty>
+			<MarketValue>18</MarketValue>
+			<Mass>0.44</Mass>
+			<DeteriorationRate>10</DeteriorationRate>
+			<Nutrition>1.0</Nutrition>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>true</alwaysHaulable>
+		<tickerType>Rare</tickerType>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stackLimit>10</stackLimit>
+		<pathCost>15</pathCost>
+		<resourceReadoutPriority>Last</resourceReadoutPriority>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<uiIconForStackCount>1</uiIconForStackCount>
+		<ingestible>
+			<foodType>Meal</foodType>
+			<preferability>MealFine</preferability>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<tasteThought>AteFineMeal</tasteThought>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+			<optimalityOffsetHumanlikes>17</optimalityOffsetHumanlikes>
+		</ingestible>
+		<tradeability>Buyable</tradeability>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>4</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Ingredients"/>
+		</comps>
+	</ThingDef>
+
+</Defs>

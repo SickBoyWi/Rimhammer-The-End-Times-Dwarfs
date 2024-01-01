@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ApparelBase" Name="RH_TET_Dwarfs_MagicArmorBase" Abstract="True">
+		<tradeability>Sellable</tradeability>
+		<techLevel>Medieval</techLevel>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>.8</drawSize>
+		</graphicData>
+		<statBases>
+			<Mass>12</Mass>
+			<EquipDelay>4</EquipDelay>
+			<Flammability>0</Flammability>
+		</statBases>
+		<thingCategories>
+			<li>ApparelArmor</li>
+			<li>RH_TET_Dwarfs_Armor</li>
+			<li>RH_TET_DwarfsMagicArmor</li>
+		</thingCategories>
+		<apparel>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>0</wearPerDay>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+				<li>Hands</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Magic_Thane</li>
+			</tags>
+		</apparel>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Armor_Magic</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_MagicArmorBase">
+		<defName>RH_TET_Dwarf_Armor_MagicGrungi</defName>
+		<label>dawi Grungni's armor</label>
+		<description>Very protective magical dwarfen armor. Provides great protection from sharp attacks, and blunt attacks. Tough, won't deteriorate, insulated, and great looking. Master crafted with the proper runes and blessings to Grungni, and it's been imbued with some of his magic.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Grungi</texPath>
+		</graphicData>
+		<costStuffCount>150</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<Gold>5</Gold>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<StuffEffectMultiplierArmor>0.90</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>1.2</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.35</StuffEffectMultiplierInsulation_Heat>
+			<ArmorRating_Sharp>1.1</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.35</ArmorRating_Heat>
+			<MarketValue>3500</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.25</MoveSpeed>
+			<WorkSpeedGlobal>0</WorkSpeedGlobal>
+		</equippedStatOffsets>
+		<generateCommonality>.9</generateCommonality>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Grungi</wornGraphicPath>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_MagicArmorBase">
+		<defName>RH_TET_Dwarf_Armor_MagicSmednir</defName>
+		<label>dawi Smednir's armor</label>
+		<description>Very protective magical dwarfen armor. Provides great protection from sharp attacks, and blunt attacks. Tough, won't deteriorate, insulated, and great looking. Master crafted with the proper runes and blessings to Smednir, and it's been imbued with some of his magic.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Smednir</texPath>
+		</graphicData>
+		<costStuffCount>150</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<Gold>5</Gold>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<StuffEffectMultiplierArmor>0.90</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>1.2</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.35</StuffEffectMultiplierInsulation_Heat>
+			<ArmorRating_Sharp>1.1</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.35</ArmorRating_Heat>
+			<MarketValue>3500</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.25</MoveSpeed>
+			<WorkSpeedGlobal>0</WorkSpeedGlobal>
+		</equippedStatOffsets>
+		<generateCommonality>.9</generateCommonality>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Smednir</wornGraphicPath>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_MagicArmorBase">
+		<defName>RH_TET_Dwarf_Armor_MagicGazul</defName>
+		<label>dawi Gazul's armor</label>
+		<description>Very protective magical dwarfen armor. Provides great protection from sharp attacks, and blunt attacks. Tough, won't deteriorate, insulated, and great looking. Master crafted with the proper runes and blessings to Gazul, and it's been imbued with some of his magic.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Gazul</texPath>
+		</graphicData>
+		<costStuffCount>150</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<Gold>5</Gold>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<StuffEffectMultiplierArmor>0.90</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>1.2</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.35</StuffEffectMultiplierInsulation_Heat>
+			<ArmorRating_Sharp>1.1</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.35</ArmorRating_Heat>
+			<MarketValue>3500</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.25</MoveSpeed>
+			<WorkSpeedGlobal>0</WorkSpeedGlobal>
+		</equippedStatOffsets>
+		<generateCommonality>.9</generateCommonality>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Gazul</wornGraphicPath>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_MagicArmorBase">
+		<defName>RH_TET_Dwarf_Armor_MagicValaya</defName>
+		<label>dawi Valaya's armor</label>
+		<description>Very protective magical dwarfen armor. Fit for a king. Provides great protection from sharp attacks, and blunt attacks. Tough, won't deteriorate, insulated, and great looking. Master crafted with the proper runes and blessings to Valaya, and it's been imbued with some of her magic.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Valaya</texPath>
+		</graphicData>
+		<costStuffCount>175</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<Gold>10</Gold>
+			<ComponentIndustrial>10</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<StuffEffectMultiplierArmor>1.0</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>1.3</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.50</StuffEffectMultiplierInsulation_Heat>
+			<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.50</ArmorRating_Heat>
+			<MarketValue>4000</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.25</MoveSpeed>
+			<WorkSpeedGlobal>0</WorkSpeedGlobal>
+		</equippedStatOffsets>
+		<generateCommonality>.9</generateCommonality>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Valaya</wornGraphicPath>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_MagicArmorBase">
+		<defName>RH_TET_Dwarf_Armor_MagicGrimnir</defName>
+		<label>dawi Grimnir's armor</label>
+		<description>Very protective magical dwarfen armor. Fit for a king. Provides great protection from sharp attacks, and blunt attacks. Tough, won't deteriorate, insulated, and great looking. Master crafted with the proper runes and blessings to Grimnir, and it's been imbued with some of her magic.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Grimnir</texPath>
+		</graphicData>
+		<costStuffCount>175</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<Gold>10</Gold>
+			<ComponentIndustrial>10</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<StuffEffectMultiplierArmor>1.0</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>1.3</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.50</StuffEffectMultiplierInsulation_Heat>
+			<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.50</ArmorRating_Heat>
+			<MarketValue>4000</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.25</MoveSpeed>
+			<WorkSpeedGlobal>0</WorkSpeedGlobal>
+		</equippedStatOffsets>
+		<generateCommonality>.9</generateCommonality>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Grimnir</wornGraphicPath>
+		</apparel>
+	</ThingDef>
+  
+</Defs>

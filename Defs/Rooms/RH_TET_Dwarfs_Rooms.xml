@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RoomRoleDef>
+		<defName>RH_TET_Dwarfs_RulingRoom</defName>
+		<label>ruling room</label>
+		<workerClass>TheEndTimes_Dwarfs.RoomRoleWorker_DwarfRulingRoom</workerClass>
+		<relatedStats>
+			<li>Impressiveness</li>
+		</relatedStats>
+	</RoomRoleDef>
+  
+</Defs>

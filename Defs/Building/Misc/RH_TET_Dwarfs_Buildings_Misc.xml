@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarf_Sarcophagus</defName>
+		<label>dawi sarcophagus</label>
+		<description>An ornamental burial receptacle for the honored dwarfen dead.\n\nNo dwarf in any clan would let a dawi lie dead exposed to the elements. Many would refuse even to put a dead fellow into a human final resting place. Love and art are poured into these final resting places for a dwarf's earthly vessel. The living continue to visit them when the mood strikes them.</description>
+		<thingClass>Building_Sarcophagus</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Misc/RH_TET_Dwarf_Sarcophagus</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3.1,3.6)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<size>(1,2)</size>
+		<pathCost>70</pathCost>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.5</fillPercent>
+		<tickerType>Rare</tickerType>
+		<canOverlapZones>false</canOverlapZones>
+		<constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<preventDeteriorationInside>true</preventDeteriorationInside>
+			<haulToContainerDuration>500</haulToContainerDuration>
+			<fullGraveGraphicData>
+				<texPath>Things/Building/Misc/RH_TET_Dwarf_SarcophagusFull</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>(3.1,3.6)</drawSize>
+			</fullGraveGraphicData>
+			<fixedStorageSettings>
+				<filter>
+					<categories>
+						<li>Corpses</li>
+					</categories>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<priority>Important</priority>
+				<filter>
+					<categories>
+						<li>CorpsesHumanlike</li>
+					</categories>
+					<specialFiltersToDisallow>
+						<li>AllowCorpsesStranger</li>
+					</specialFiltersToDisallow>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<statBases>
+			<WorkToBuild>2500</WorkToBuild>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>25</Beauty>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtSarcophagusPlate</nameMaker>
+				<descriptionMaker>ArtDescription_SarcophagusPlate</descriptionMaker>
+				<mustBeFullGrave>true</mustBeFullGrave>
+			</li>
+			<li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>CompAssignableToPawn_Grave</compClass>
+			</li>
+		</comps>
+		<costStuffCount>70</costStuffCount>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<blockWind>true</blockWind>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<staticSunShadowHeight>0.3</staticSunShadowHeight>
+		<designationCategory>Misc</designationCategory>
+		<designationHotKey>Misc9</designationHotKey>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_Burial</li>
+		</researchPrerequisites>
+	</ThingDef>
+  
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarf_Sarcophagus_HB</defName>
+		<label>dawi high blood sarcophagus</label>
+		<description>A very ornamental burial receptacle for the honored dwarfen high blood deceased.\n\nAfter death a high blood must be laid to rest in a fitting place, so say the clans.</description>
+		<thingClass>Building_Sarcophagus</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Misc/RH_TET_Dwarf_SarcophagusHB</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5.5,6.3)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<size>(2,4)</size>
+		<pathCost>70</pathCost>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.5</fillPercent>
+		<tickerType>Rare</tickerType>
+		<canOverlapZones>false</canOverlapZones>
+		<constructionSkillPrerequisite>14</constructionSkillPrerequisite>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<preventDeteriorationInside>true</preventDeteriorationInside>
+			<haulToContainerDuration>500</haulToContainerDuration>
+			<fullGraveGraphicData>
+				<texPath>Things/Building/Misc/RH_TET_Dwarf_SarcophagusHBFull</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>(5.5,6.3)</drawSize>
+			</fullGraveGraphicData>
+			<fixedStorageSettings>
+				<filter>
+					<categories>
+						<li>Corpses</li>
+					</categories>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<priority>Important</priority>
+				<filter>
+					<categories>
+						<li>CorpsesHumanlike</li>
+					</categories>
+					<specialFiltersToDisallow>
+						<li>AllowCorpsesStranger</li>
+					</specialFiltersToDisallow>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<statBases>
+			<WorkToBuild>10000</WorkToBuild>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>50</Beauty>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>130</costStuffCount>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtSarcophagusPlate</nameMaker>
+				<descriptionMaker>ArtDescription_SarcophagusPlate</descriptionMaker>
+				<mustBeFullGrave>true</mustBeFullGrave>
+			</li>
+			<li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>CompAssignableToPawn_Grave</compClass>
+			</li>
+		</comps>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<blockWind>true</blockWind>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<staticSunShadowHeight>0.3</staticSunShadowHeight>
+		<designationCategory>Misc</designationCategory>
+		<designationHotKey>Misc9</designationHotKey>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_Burial_HighBlood</li>
+		</researchPrerequisites>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase">
+		<defName>RH_TET_Dwarfs_OathStone</defName>
+		<label>oath stone</label>
+		<description>A dawi oath stone. Used to inscribe oaths on, both to the living, and the dead. Appropriate for high blood rooms.</description>
+		<designationCategory>RH_TET_Dwarfs_Buildings</designationCategory>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Standable</passability>
+		<fillPercent>0.40</fillPercent>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>2000</WorkToBuild>
+			<Mass>15</Mass>
+			<Flammability>0.0</Flammability>
+			<Beauty>12</Beauty>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>150</costStuffCount>
+		<canOverlapZones>false</canOverlapZones>
+		<pathCost>10</pathCost>
+		<rotatable>false</rotatable>
+		<size>(1,1)</size>
+		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_HighBlood</li>
+		</researchPrerequisites>
+		<graphicData>
+			<drawSize>(1.4,1.4)</drawSize>
+			<texPath>Things/Building/Misc/RH_TET_Dwarfs_OathStone</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(2,0.5,0.3)</volume>
+				<offset>(0,0,-0.2</offset>
+			</shadowData>
+			<damageData>
+				<rectN>(0.1, 0.1, 1.8, 1.5)</rectN>
+				<rectS>(0.1, 0.1, 1.8, 1.5)</rectS>
+				<rectE>(0.25, 0.5, 0.5, 1.5)</rectE>
+				<rectW>(0.25, 0.5, 0.5, 1.5)</rectW>
+			</damageData>
+		</graphicData>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtFurniture</nameMaker>
+				<descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase">
+		<defName>RH_TET_Dwarfs_Banner</defName>
+		<label>dawi banner</label>
+		<description>A dwarfen war banner. Carried to battle when the clans march to war. Kept safe when in the hold, and has the benefit of adding beauty to a room.</description>
+		<designationCategory>RH_TET_Dwarfs_Buildings</designationCategory>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.40</fillPercent>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>2000</WorkToBuild>
+			<Mass>15</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>15</Beauty>
+		</statBases>
+		<costList>
+			<Cloth>100</Cloth>
+			<WoodLog>50</WoodLog>
+			<Gold>10</Gold>
+		</costList>
+		<canOverlapZones>true</canOverlapZones>
+		<pathCost>10</pathCost>
+		<rotatable>true</rotatable>
+		<size>(2,1)</size>
+		<uiIconOffset>(0, 0.15)</uiIconOffset>
+		<filthLeaving>Filth_Trash</filthLeaving>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_HighBlood</li>
+		</researchPrerequisites>
+		<uiIconScale>0.7</uiIconScale>
+		<graphicData>
+			<drawSize>(4.2,4.2)</drawSize>
+			<texPath>Things/Building/Misc/RH_TET_Dwarfs_Banner</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shadowData>
+				<volume>(2,0.5,0.3)</volume>
+				<offset>(0,0,-0.2</offset>
+			</shadowData>
+			<damageData>
+				<rectN>(0.1, 0.1, 1.8, 1.5)</rectN>
+				<rectS>(0.1, 0.1, 1.8, 1.5)</rectS>
+				<rectE>(0.25, 0.5, 0.5, 1.5)</rectE>
+				<rectW>(0.25, 0.5, 0.5, 1.5)</rectW>
+			</damageData>
+		</graphicData>
+	</ThingDef>
+  
+</Defs>

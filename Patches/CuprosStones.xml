@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Cupro's Stones</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorFineBase">
+							<defName>RH_TET_Dwarfs_FancyFloorClayStone</defName>
+							<label>claystone exquisite tile</label>
+							<color>(228, 188, 147)</color>
+							<costList>
+								<BlocksClaystone>15</BlocksClaystone>
+								<Gold>3</Gold>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorFineBase">
+							<defName>RH_TET_Dwarfs_FancyFloorAndesite</defName>
+							<label>andesite exquisite tile</label>
+							<color>(155, 164, 166)</color>
+							<costList>
+								<BlocksAndesite>15</BlocksAndesite>
+								<Gold>3</Gold>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorFineBase">
+							<defName>RH_TET_Dwarfs_FancyFloorSyenite</defName>
+							<label>syenite exquisite tile</label>
+							<color>(186, 126, 121)</color>
+							<costList>
+								<BlocksSyenite>15</BlocksSyenite>
+								<Gold>3</Gold>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorFineBase">
+							<defName>RH_TET_Dwarfs_FancyFloorGneiss</defName>
+							<label>gneiss exquisite tile</label>
+							<color>(146, 138, 104)</color>
+							<costList>
+								<BlocksGneiss>15</BlocksGneiss>
+								<Gold>3</Gold>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorFineBase">
+							<defName>RH_TET_Dwarfs_FancyFloorQuartzite</defName>
+							<label>quartzite exquisite tile</label>
+							<color>(155, 156, 160)</color>
+							<costList>
+								<BlocksQuartzite>15</BlocksQuartzite>
+								<Gold>3</Gold>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorFineBase">
+							<defName>RH_TET_Dwarfs_FancyFloorSchist</defName>
+							<label>schist exquisite tile</label>
+							<color>(105, 124, 102)</color>
+							<costList>
+								<BlocksSchist>15</BlocksSchist>
+								<Gold>3</Gold>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorFineBase">
+							<defName>RH_TET_Dwarfs_FancyFloorGabbro</defName>
+							<label>gabbro exquisite tile</label>
+							<color>(122, 122, 122)</color>
+							<costList>
+								<BlocksGabbro>15</BlocksGabbro>
+								<Gold>3</Gold>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorFineBase">
+							<defName>RH_TET_Dwarfs_FancyFloorDiorite</defName>
+							<label>diorite exquisite tile</label>
+							<color>(204, 204, 204)</color>
+							<costList>
+								<BlocksDiorite>15</BlocksDiorite>
+								<Gold>3</Gold>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorFineBase">
+							<defName>RH_TET_Dwarfs_FancyFloorDunite</defName>
+							<label>dunite exquisite tile</label>
+							<color>(154, 162, 126)</color>
+							<costList>
+								<BlocksDunite>15</BlocksDunite>
+								<Gold>3</Gold>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorFineBase">
+							<defName>RH_TET_Dwarfs_FancyFloorPegmatite</defName>
+							<label>pegmatite exquisite tile</label>
+							<color>(201, 150, 115)</color>
+							<costList>
+								<BlocksPegmatite>15</BlocksPegmatite>
+								<Gold>3</Gold>
+							</costList>
+						</TerrainDef>
+						
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMedFineBase">
+							<defName>RH_TET_Dwarfs_FineFloorClayStone</defName>
+							<label>claystone elaborate floor tile</label>
+							<color>(228, 188, 147)</color>
+							<costList>
+								<BlocksClaystone>10</BlocksClaystone>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMedFineBase">
+							<defName>RH_TET_Dwarfs_FineFloorAndesite</defName>
+							<label>andesite elaborate floor tile</label>
+							<color>(155, 164, 166)</color>
+							<costList>
+								<BlocksAndesite>10</BlocksAndesite>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMedFineBase">
+							<defName>RH_TET_Dwarfs_FineFloorSyenite</defName>
+							<label>syenite elaborate floor tile</label>
+							<color>(186, 126, 121)</color>
+							<costList>
+								<BlocksSyenite>10</BlocksSyenite>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMedFineBase">
+							<defName>RH_TET_Dwarfs_FineFloorGneiss</defName>
+							<label>gneiss elaborate floor tile</label>
+							<color>(146, 138, 104)</color>
+							<costList>
+								<BlocksGneiss>10</BlocksGneiss>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMedFineBase">
+							<defName>RH_TET_Dwarfs_FineFloorQuartzite</defName>
+							<label>quartzite elaborate floor tile</label>
+							<color>(155, 156, 160)</color>
+							<costList>
+								<BlocksQuartzite>10</BlocksQuartzite>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMedFineBase">
+							<defName>RH_TET_Dwarfs_FineFloorSchist</defName>
+							<label>schist elaborate floor tile</label>
+							<color>(105, 124, 102)</color>
+							<costList>
+								<BlocksSchist>10</BlocksSchist>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMedFineBase">
+							<defName>RH_TET_Dwarfs_FineFloorGabbro</defName>
+							<label>gabbro elaborate floor tile</label>
+							<color>(122, 122, 122)</color>
+							<costList>
+								<BlocksGabbro>10</BlocksGabbro>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMedFineBase">
+							<defName>RH_TET_Dwarfs_FineFloorDiorite</defName>
+							<label>diorite elaborate floor tile</label>
+							<color>(204, 204, 204)</color>
+							<costList>
+								<BlocksDiorite>10</BlocksDiorite>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMedFineBase">
+							<defName>RH_TET_Dwarfs_FineFloorDunite</defName>
+							<label>dunite elaborate floor tile</label>
+							<color>(154, 162, 126)</color>
+							<costList>
+								<BlocksDunite>10</BlocksDunite>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMedFineBase">
+							<defName>RH_TET_Dwarfs_FineFloorPegmatite</defName>
+							<label>pegmatite elaborate floor tile</label>
+							<color>(201, 150, 115)</color>
+							<costList>
+								<BlocksPegmatite>10</BlocksPegmatite>
+							</costList>
+						</TerrainDef>
+						
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMidBase">
+							<defName>RH_TET_Dwarfs_MidFloorClayStone</defName>
+							<label>claystone fine floor tile</label>
+							<color>(228, 188, 147)</color>
+							<costList>
+								<BlocksClaystone>5</BlocksClaystone>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMidBase">
+							<defName>RH_TET_Dwarfs_MidFloorAndesite</defName>
+							<label>andesite fine floor tile</label>
+							<color>(155, 164, 166)</color>
+							<costList>
+								<BlocksAndesite>5</BlocksAndesite>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMidBase">
+							<defName>RH_TET_Dwarfs_MidFloorSyenite</defName>
+							<label>syenite fine floor tile</label>
+							<color>(186, 126, 121)</color>
+							<costList>
+								<BlocksSyenite>5</BlocksSyenite>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMidBase">
+							<defName>RH_TET_Dwarfs_MidFloorGneiss</defName>
+							<label>gneiss fine floor tile</label>
+							<color>(146, 138, 104)</color>
+							<costList>
+								<BlocksGneiss>5</BlocksGneiss>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMidBase">
+							<defName>RH_TET_Dwarfs_MidFloorQuartzite</defName>
+							<label>quartzite fine floor tile</label>
+							<color>(155, 156, 160)</color>
+							<costList>
+								<BlocksQuartzite>5</BlocksQuartzite>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMidBase">
+							<defName>RH_TET_Dwarfs_MidFloorSchist</defName>
+							<label>schist fine floor tile</label>
+							<color>(105, 124, 102)</color>
+							<costList>
+								<BlocksSchist>5</BlocksSchist>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMidBase">
+							<defName>RH_TET_Dwarfs_MidFloorGabbro</defName>
+							<label>gabbro fine floor tile</label>
+							<color>(122, 122, 122)</color>
+							<costList>
+								<BlocksGabbro>5</BlocksGabbro>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMidBase">
+							<defName>RH_TET_Dwarfs_MidFloorDiorite</defName>
+							<label>diorite fine floor tile</label>
+							<color>(204, 204, 204)</color>
+							<costList>
+								<BlocksDiorite>5</BlocksDiorite>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMidBase">
+							<defName>RH_TET_Dwarfs_MidFloorDunite</defName>
+							<label>dunite fine floor tile</label>
+							<color>(154, 162, 126)</color>
+							<costList>
+								<BlocksDunite>5</BlocksDunite>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorMidBase">
+							<defName>RH_TET_Dwarfs_MidFloorPegmatite</defName>
+							<label>pegmatite fine floor tile</label>
+							<color>(201, 150, 115)</color>
+							<costList>
+								<BlocksPegmatite>5</BlocksPegmatite>
+							</costList>
+						</TerrainDef>
+						
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorLowBase">
+							<defName>RH_TET_Dwarfs_BasicFloorClayStone</defName>
+							<label>claystone basic floor tile</label>
+							<color>(228, 188, 147)</color>
+							<costList>
+								<BlocksClaystone>3</BlocksClaystone>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorLowBase">
+							<defName>RH_TET_Dwarfs_BasicFloorAndesite</defName>
+							<label>andesite basic floor tile</label>
+							<color>(155, 164, 166)</color>
+							<costList>
+								<BlocksAndesite>3</BlocksAndesite>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorLowBase">
+							<defName>RH_TET_Dwarfs_BasicFloorSyenite</defName>
+							<label>syenite basic floor tile</label>
+							<color>(186, 126, 121)</color>
+							<costList>
+								<BlocksSyenite>3</BlocksSyenite>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorLowBase">
+							<defName>RH_TET_Dwarfs_BasicFloorGneiss</defName>
+							<label>gneiss basic floor tile</label>
+							<color>(146, 138, 104)</color>
+							<costList>
+								<BlocksGneiss>3</BlocksGneiss>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorLowBase">
+							<defName>RH_TET_Dwarfs_BasicFloorQuartzite</defName>
+							<label>quartzite basic floor tile</label>
+							<color>(155, 156, 160)</color>
+							<costList>
+								<BlocksQuartzite>3</BlocksQuartzite>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorLowBase">
+							<defName>RH_TET_Dwarfs_BasicFloorSchist</defName>
+							<label>schist basic floor tile</label>
+							<color>(105, 124, 102)</color>
+							<costList>
+								<BlocksSchist>3</BlocksSchist>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorLowBase">
+							<defName>RH_TET_Dwarfs_BasicFloorGabbro</defName>
+							<label>gabbro basic floor tile</label>
+							<color>(122, 122, 122)</color>
+							<costList>
+								<BlocksGabbro>3</BlocksGabbro>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorLowBase">
+							<defName>RH_TET_Dwarfs_BasicFloorDiorite</defName>
+							<label>diorite basic floor tile</label>
+							<color>(204, 204, 204)</color>
+							<costList>
+								<BlocksDiorite>3</BlocksDiorite>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorLowBase">
+							<defName>RH_TET_Dwarfs_BasicFloorDunite</defName>
+							<label>dunite basic floor tile</label>
+							<color>(154, 162, 126)</color>
+							<costList>
+								<BlocksDunite>3</BlocksDunite>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="RH_TET_Dwarf_FloorLowBase">
+							<defName>RH_TET_Dwarfs_BasicFloorPegmatite</defName>
+							<label>pegmatite basic floor tile</label>
+							<color>(201, 150, 115)</color>
+							<costList>
+								<BlocksPegmatite>3</BlocksPegmatite>
+							</costList>
+						</TerrainDef>
+						
+						<ThingDef ParentName="TWC_SmoothedRockBase">
+							<defName>RH_TET_Dwarfs_SmoothedClaystone_Decorated</defName>
+							<label>smooth decorative claystone</label>
+							<description>A soft, fine-grained sedimentary rock made mostly of compacted clay particles. Polished to a smooth matte finish, and then beautifully decorated.\n\nThe dawi take all craftsmanship to the highest level, and smooth stone walls simply don't please them. Dawi artisans see such walls as a blank canvas; one to be used for honoring the clans and the ancestors.</description>
+							<graphicData>
+								<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_DecoratedWall/RH_TET_DwarfWall_Atlas_Bricks</texPath>
+								<color>(228, 188, 147)</color>
+							</graphicData>
+							<statBases>
+								<Beauty>4</Beauty>
+								<MarketValue>35</MarketValue>
+								<MaxHitPoints>450</MaxHitPoints>
+							</statBases>
+							<building>
+								<isNaturalRock>false</isNaturalRock>
+								<canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+								<smoothedThing/>
+								<mineableThing>ChunkClaystone</mineableThing>
+								<mineableDropChance>0.25</mineableDropChance>
+								<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+								<paintable>true</paintable>
+							</building>
+							<saveCompressible>false</saveCompressible>
+							<repairEffect>Repair</repairEffect>
+						</ThingDef>
+						
+						<ThingDef ParentName="TWC_SmoothedRockBase">
+							<defName>RH_TET_Dwarfs_SmoothedAndesite_Decorated</defName>
+							<label>smooth decorative andesite</label>
+							<description>A fine-grained igneous rock found in mountainous regions where it was brought to the surface by continental collisions. Polished to a glossy finish, and then beautifully decorated.\n\nThe dawi take all craftsmanship to the highest level, and smooth stone walls simply don't please them. Dawi artisans see such walls as a blank canvas; one to be used for honoring the clans and the ancestors.</description>
+							<graphicData>
+								<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_DecoratedWall/RH_TET_DwarfWall_Atlas_Bricks</texPath>
+								<color>(155, 164, 166)</color>
+							</graphicData>
+							<statBases>
+								<Beauty>4</Beauty>
+								<MarketValue>35</MarketValue>
+								<MaxHitPoints>450</MaxHitPoints>
+							</statBases>
+							<building>
+								<isNaturalRock>false</isNaturalRock>
+								<canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+								<smoothedThing/>
+								<mineableThing>ChunkAndesite</mineableThing>
+								<mineableDropChance>0.25</mineableDropChance>
+								<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+								<paintable>true</paintable>
+							</building>
+							<saveCompressible>false</saveCompressible>
+							<repairEffect>Repair</repairEffect>
+						</ThingDef>
+						
+						<ThingDef ParentName="TWC_SmoothedRockBase">
+							<defName>RH_TET_Dwarfs_SmoothedSyenite_Decorated</defName>
+							<label>smooth decorative syenite</label>
+							<description>A coarse-grained igneous rock closely related to granite, but with little or no quartz. Smoothed to a dull sheen, and then beautifully decorated.\n\nThe dawi take all craftsmanship to the highest level, and smooth stone walls simply don't please them. Dawi artisans see such walls as a blank canvas; one to be used for honoring the clans and the ancestors.</description>
+							<graphicData>
+								<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_DecoratedWall/RH_TET_DwarfWall_Atlas_Bricks</texPath>
+								<color>(186, 126, 121)</color>
+							</graphicData>
+							<statBases>
+								<Beauty>4</Beauty>
+								<MarketValue>35</MarketValue>
+								<MaxHitPoints>850</MaxHitPoints>
+							</statBases>
+							<building>
+								<isNaturalRock>false</isNaturalRock>
+								<canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+								<smoothedThing/>
+								<mineableThing>ChunkSyenite</mineableThing>
+								<mineableDropChance>0.25</mineableDropChance>
+								<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+								<paintable>true</paintable>
+							</building>
+							<saveCompressible>false</saveCompressible>
+							<repairEffect>Repair</repairEffect>
+						</ThingDef>
+						
+						<ThingDef ParentName="TWC_SmoothedRockBase">
+							<defName>RH_TET_Dwarfs_SmoothedGneiss_Decorated</defName>
+							<label>smooth decorative gneiss</label>
+							<description>A hard metamorphic rock with a banded texture. Beautiful to look at when polished. This section has been polished, and then beautifully decorated.\n\nThe dawi take all craftsmanship to the highest level, and smooth stone walls simply don't please them. Dawi artisans see such walls as a blank canvas; one to be used for honoring the clans and the ancestors.</description>
+							<graphicData>
+								<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_DecoratedWall/RH_TET_DwarfWall_Atlas_Bricks</texPath>
+								<color>(146, 138, 104)</color>
+							</graphicData>
+							<statBases>
+								<Beauty>5</Beauty>
+								<MarketValue>35</MarketValue>
+								<MaxHitPoints>725</MaxHitPoints>
+							</statBases>
+							<building>
+								<isNaturalRock>false</isNaturalRock>
+								<canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+								<smoothedThing/>
+								<mineableThing>ChunkGneiss</mineableThing>
+								<mineableDropChance>0.25</mineableDropChance>
+								<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+								<paintable>true</paintable>
+							</building>
+							<saveCompressible>false</saveCompressible>
+							<repairEffect>Repair</repairEffect>
+						</ThingDef>
+						
+						<ThingDef ParentName="TWC_SmoothedRockBase">
+							<defName>RH_TET_Dwarfs_SmoothedQuartzite_Decorated</defName>
+							<label>smooth decorative quartzite</label>
+							<description>A metamorphic rock that was originally pure quartz sandstone. This section has been polished, and then beautifully decorated.\n\nThe dawi take all craftsmanship to the highest level, and smooth stone walls simply don't please them. Dawi artisans see such walls as a blank canvas; one to be used for honoring the clans and the ancestors.</description>
+							<graphicData>
+								<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_DecoratedWall/RH_TET_DwarfWall_Atlas_Bricks</texPath>
+								<color>(155, 156, 160)</color>
+							</graphicData>
+							<statBases>
+								<Beauty>4</Beauty>
+								<MarketValue>35</MarketValue>
+								<MaxHitPoints>450</MaxHitPoints>
+							</statBases>
+							<building>
+								<isNaturalRock>false</isNaturalRock>
+								<canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+								<smoothedThing/>
+								<mineableThing>ChunkQuartzite</mineableThing>
+								<mineableDropChance>0.25</mineableDropChance>
+								<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+								<paintable>true</paintable>
+							</building>
+							<saveCompressible>false</saveCompressible>
+							<repairEffect>Repair</repairEffect>
+						</ThingDef>
+						
+						<ThingDef ParentName="TWC_SmoothedRockBase">
+							<defName>RH_TET_Dwarfs_SmoothedSchist_Decorated</defName>
+							<label>smooth decorative schist</label>
+							<description>A metamorphic rock colored by the minerals actinolite and epidote. Polished to a smooth matte finish, and then beautifully decorated.\n\nThe dawi take all craftsmanship to the highest level, and smooth stone walls simply don't please them. Dawi artisans see such walls as a blank canvas; one to be used for honoring the clans and the ancestors.</description>
+							<graphicData>
+								<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_DecoratedWall/RH_TET_DwarfWall_Atlas_Bricks</texPath>
+								<color>(105, 124, 102)</color>
+							</graphicData>
+							<statBases>
+								<Beauty>4</Beauty>
+								<MarketValue>35</MarketValue>
+								<MaxHitPoints>500</MaxHitPoints>
+							</statBases>
+							<building>
+								<isNaturalRock>false</isNaturalRock>
+								<canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+								<smoothedThing/>
+								<mineableThing>ChunkSchist</mineableThing>
+								<mineableDropChance>0.25</mineableDropChance>
+								<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+								<paintable>true</paintable>
+							</building>
+							<saveCompressible>false</saveCompressible>
+							<repairEffect>Repair</repairEffect>
+						</ThingDef>
+						
+						<ThingDef ParentName="TWC_SmoothedRockBase">
+							<defName>RH_TET_Dwarfs_SmoothedGabbro_Decorated</defName>
+							<label>smooth decorative gabbro</label>
+							<description>A dense igneous rock formed by the slow cooling of magma, typically found on the ocean floor. Polished to a smooth shiny finish, and then beautifully decorated.\n\nThe dawi take all craftsmanship to the highest level, and smooth stone walls simply don't please them. Dawi artisans see such walls as a blank canvas; one to be used for honoring the clans and the ancestors.</description>
+							<graphicData>
+								<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_DecoratedWall/RH_TET_DwarfWall_Atlas_Bricks</texPath>
+								<color>(122, 122, 122)</color>
+							</graphicData>
+							<statBases>
+								<Beauty>4</Beauty>
+								<MarketValue>35</MarketValue>
+								<MaxHitPoints>850</MaxHitPoints>
+							</statBases>
+							<building>
+								<isNaturalRock>false</isNaturalRock>
+								<canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+								<smoothedThing/>
+								<mineableThing>ChunkGabbro</mineableThing>
+								<mineableDropChance>0.25</mineableDropChance>
+								<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+								<paintable>true</paintable>
+							</building>
+							<saveCompressible>false</saveCompressible>
+							<repairEffect>Repair</repairEffect>
+						</ThingDef>
+						
+						<ThingDef ParentName="TWC_SmoothedRockBase">
+							<defName>RH_TET_Dwarfs_SmoothedDiorite_Decorated</defName>
+							<label>smooth decorative diorite</label>
+							<description>An extremely hard igneous rock able to hold a high polish. Diorite is compositionally equivalent to andesite. It is intermediate in composition between granite and gabbro. Polished to a smooth shiny finish, and then beautifully decorated.\n\nThe dawi take all craftsmanship to the highest level, and smooth stone walls simply don't please them. Dawi artisans see such walls as a blank canvas; one to be used for honoring the clans and the ancestors.</description>
+							<graphicData>
+								<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_DecoratedWall/RH_TET_DwarfWall_Atlas_Bricks</texPath>
+								<color>(204, 204, 204)</color>
+							</graphicData>
+							<statBases>
+								<Beauty>5</Beauty>
+								<MarketValue>35</MarketValue>
+								<MaxHitPoints>1000</MaxHitPoints>
+							</statBases>
+							<building>
+								<isNaturalRock>false</isNaturalRock>
+								<canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+								<smoothedThing/>
+								<mineableThing>ChunkDiorite</mineableThing>
+								<mineableDropChance>0.25</mineableDropChance>
+								<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+								<paintable>true</paintable>
+							</building>
+							<saveCompressible>false</saveCompressible>
+							<repairEffect>Repair</repairEffect>
+						</ThingDef>
+						
+						<ThingDef ParentName="TWC_SmoothedRockBase">
+							<defName>RH_TET_Dwarfs_SmoothedDunite_Decorated</defName>
+							<label>smooth decorative dunite</label>
+							<description>An igneous rock consisting of over 90% olivine, which leads to its distinct green color. Beautiful and hard. Polished to a smooth shiny finish, and then beautifully decorated.\n\nThe dawi take all craftsmanship to the highest level, and smooth stone walls simply don't please them. Dawi artisans see such walls as a blank canvas; one to be used for honoring the clans and the ancestors.</description>
+							<graphicData>
+								<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_DecoratedWall/RH_TET_DwarfWall_Atlas_Bricks</texPath>
+								<color>(154, 162, 126)</color>
+							</graphicData>
+							<statBases>
+								<Beauty>5</Beauty>
+								<MarketValue>35</MarketValue>
+								<MaxHitPoints>800</MaxHitPoints>
+							</statBases>
+							<building>
+								<isNaturalRock>false</isNaturalRock>
+								<canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+								<smoothedThing/>
+								<mineableThing>ChunkDunite</mineableThing>
+								<mineableDropChance>0.25</mineableDropChance>
+								<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+								<paintable>true</paintable>
+							</building>
+							<saveCompressible>false</saveCompressible>
+							<repairEffect>Repair</repairEffect>
+						</ThingDef>
+						
+						<ThingDef ParentName="TWC_SmoothedRockBase">
+							<defName>RH_TET_Dwarfs_SmoothedPegmatite_Decorated</defName>
+							<label>smooth decorative pegmatite</label>
+							<description>A hard igneous rock composed of large interlocking crystals. Polished to a smooth shiny finish, and then beautifully decorated.\n\nThe dawi take all craftsmanship to the highest level, and smooth stone walls simply don't please them. Dawi artisans see such walls as a blank canvas; one to be used for honoring the clans and the ancestors.</description>
+							<graphicData>
+								<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_DecoratedWall/RH_TET_DwarfWall_Atlas_Bricks</texPath>
+								<color>(201, 150, 115)</color>
+							</graphicData>
+							<statBases>
+								<Beauty>5</Beauty>
+								<MarketValue>35</MarketValue>
+								<MaxHitPoints>850</MaxHitPoints>
+							</statBases>
+							<building>
+								<isNaturalRock>false</isNaturalRock>
+								<canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+								<smoothedThing/>
+								<mineableThing>ChunkPegmatite</mineableThing>
+								<mineableDropChance>0.25</mineableDropChance>
+								<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+								<paintable>true</paintable>
+							</building>
+							<saveCompressible>false</saveCompressible>
+							<repairEffect>Repair</repairEffect>
+						</ThingDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

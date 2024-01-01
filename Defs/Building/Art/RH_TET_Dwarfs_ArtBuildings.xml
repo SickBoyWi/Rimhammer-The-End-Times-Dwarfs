@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase" Name="RH_TET_DwarfSculptureBase" Abstract="True">
+		<thingClass>Building_Art</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<castEdgeShadows>true</castEdgeShadows>
+		<useHitPoints>true</useHitPoints>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsArt</li>
+		</thingCategories>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<statBases>
+			<Flammability>1.0</Flammability>
+			<SellPriceFactor>1.10</SellPriceFactor>
+			<MeditationFocusStrength>0.0</MeditationFocusStrength>
+		</statBases>
+		<tradeTags>
+			<li>Art</li>
+		</tradeTags>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtSculpture</nameMaker>
+				<descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+			</li>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Artistic</li>
+				</focusTypes>
+				<offsets>
+					<li Class="FocusStrengthOffset_Quality">
+						<curve>
+							<points>
+								<li>(0,0.12)</li><!-- awful -->
+								<li>(1,0.16)</li><!-- poor -->
+								<li>(2,0.20)</li><!-- normal -->
+								<li>(3,0.22)</li><!-- good -->
+								<li>(4,0.24)</li><!-- excellent -->
+								<li>(5,0.26)</li><!-- masterwork -->
+								<li>(6,0.28)</li><!-- legendary -->
+							</points>
+						</curve>
+					</li>
+				</offsets>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Artistic</workSkill>
+			<unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+			<effectWorking>Sculpt</effectWorking>
+			<soundWorking>Recipe_Sculpt</soundWorking>
+			<recipeUsers>
+				<li>TableSculpting</li>
+				<li>RH_TET_DwarfPillarSculptingSpot</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>Gold</li>
+					<li>Silver</li>
+					<li>Plasteel</li>
+					<li>Jade</li>
+					<li>Uranium</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+			<researchPrerequisite>RH_TET_Dwarf_StructureArt</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<!--================================ Sculptures ======================================-->
+
+	<ThingDef ParentName="RH_TET_DwarfSculptureBase">
+		<defName>RH_TET_Dwarfs_SculptureSmall</defName>
+		<label>small dawi sculpture</label>
+		<description>A torso-sized piece of material sculpted into a dwarfish artistic form.\n\nDwarfs theme their art after their gods, the things that are important to them (weapons and armor), and their honored heroes.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/Art/RH_TET_Dwarf_SculptureSmall</texPath>
+		</graphicData>
+		<fillPercent>0.35</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<Mass>3</Mass>
+			<Beauty>50</Beauty>
+			<WorkToMake>18000</WorkToMake>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_DwarfSculptureBase">
+		<defName>RH_TET_Dwarfs_SculptureLarge</defName>
+		<label>large dawi sculpture</label>
+		<description>A person-sized piece of material sculpted into a dwarfish artistic form.\n\nDwarfs theme their art after their gods, the things that are important to them (weapons and armor), and their honored heroes.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/Art/RH_TET_Dwarf_SculptureLarge</texPath>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<fillPercent>0.5</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>7</Mass>
+			<Beauty>100</Beauty>
+			<WorkToMake>30000</WorkToMake>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_DwarfSculptureBase">
+		<defName>RH_TET_Dwarfs_SculptureGrand</defName>
+		<label>grand dawi sculpture</label>
+		<description>A huge dwarfen sculpture sized to dominate a room.\n\nDwarfs theme their art after their gods, the things that are important to them (weapons and armor), and their honored heroes.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/Art/RH_TET_Dwarf_SculptureGrand</texPath>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<fillPercent>0.5</fillPercent>
+		<rotatable>false</rotatable>
+		<size>(2,2)</size>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Beauty>240</Beauty>
+			<Mass>25</Mass>
+			<WorkToMake>65000</WorkToMake>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>220</costStuffCount>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase" Name="RH_TET_Dwarfs_PillarBase" Abstract="True">
+		<thingClass>Building_Art</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<castEdgeShadows>false</castEdgeShadows>
+		<useHitPoints>true</useHitPoints>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_Buildings</li>
+		</thingCategories>
+		<statBases>
+			<Flammability>0</Flammability>
+			<SellPriceFactor>1.5</SellPriceFactor>
+		</statBases>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtSculpture</nameMaker>
+				<descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_PillarBase">
+		<defName>RH_TET_Dwarfs_PillarSmall</defName>
+		<label>dawi pillar</label>
+		<description>A large artistic pillar capable of holding roofs.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/Art/RH_TET_Dwarfs_PillarSmall</texPath>
+			<drawSize>(2.6)</drawSize>
+			<drawRotated>false</drawRotated>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<fillPercent>1</fillPercent>
+		<passability>Impassable</passability>
+		<holdsRoof>true</holdsRoof>
+		<specialDisplayRadius>6.9</specialDisplayRadius><!-- must be kept in sync with roof hold-up radius -->
+		<tradeability>None</tradeability>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Mass>30</Mass>
+			<Beauty>100</Beauty>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_PillarBase">
+		<defName>RH_TET_Dwarfs_PillarLit</defName>
+		<label>lighted dawi pillar</label>
+		<description>A large artistic pillar capable of holding roofs, that has built in fire bays for lighting. Makes light, but does not generate any meaningful amount of heat.</description>
+   
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/Art/RH_TET_Dwarfs_PillarLit</texPath>
+			<drawSize>(2.6)</drawSize>
+			<drawRotated>false</drawRotated>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<fillPercent>1</fillPercent>
+		<passability>Impassable</passability>
+		<holdsRoof>true</holdsRoof>
+		<specialDisplayRadius>6.9</specialDisplayRadius><!-- must be kept in sync with roof hold-up radius -->
+		<tradeability>None</tradeability>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Mass>30</Mass>
+			<Beauty>100</Beauty>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>1.75</fuelConsumptionRate>
+				<fuelCapacity>40.0</fuelCapacity>
+				<fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>RH_TET_Coal</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15</glowRadius>
+				<glowColor>(252,187,113,0)</glowColor>
+			</li>
+			<li Class="CompProperties_FireOverlay">
+				<fireSize>0.35</fireSize>
+				<offset>(0,0,.46)</offset>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>RH_TET_Dwarf_UnfinishedPillar</defName>
+		<label>unfinished dawi pillar</label>
+		<graphicData>
+			<texPath>Things/Item/Unfinished/UnfinishedSculpture</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+	</ThingDef>
+  
+</Defs>

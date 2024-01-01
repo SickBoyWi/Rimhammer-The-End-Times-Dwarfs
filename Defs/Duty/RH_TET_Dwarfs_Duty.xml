@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DutyDef>
+		<defName>RH_TET_Dwarfs_HoldCourtDuty</defName>
+		<socialModeMax>Off</socialModeMax>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="JobGiver_GotoTravelDestination">
+					<exactCell>true</exactCell>
+					<locomotionUrgency>Jog</locomotionUrgency>
+				</li>
+
+				<li Class="ThinkNode_ConditionalAtDutyLocation">
+					<subNodes>
+						<li Class="TheEndTimes_Dwarfs.JobGiver_HoldCourt"/>
+					</subNodes>
+				</li>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
+
+	<DutyDef>
+		<defName>RH_TET_Dwarfs_ObserveCourtDuty</defName>
+		<hook>MediumPriority</hook>
+		<socialModeMax>Off</socialModeMax>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="JobGiver_SpectateDutySpectateRect"/>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
+
+</Defs>

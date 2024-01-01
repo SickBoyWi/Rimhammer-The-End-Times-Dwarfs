@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>RH_TET_AteBlandMeal</defName>
+		<stackLimit>1</stackLimit>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate bland meal</label>
+				<description>I had to eat a rather bland meal. I know it keeps you alive, but it also bores you silly.</description>
+				<baseMoodEffect>-1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_FailedToReclaimCapturedHold</defName>
+		<stackLimit>1</stackLimit>
+		<durationDays>60</durationDays>
+		<stages>
+			<li>
+				<label>failed to reclaim hold</label>
+				<description>We failed to reclaim our captured hold. It's a real shame to have not succeeded.</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_ReclaimingCapturedHold</defName>
+		<stackLimit>1</stackLimit>
+		<durationDays>3</durationDays>
+		<stages>
+			<li>
+				<label>fighting for lost hold</label>
+				<description>We are fighting to reclaim our lost hold!</description>
+				<baseMoodEffect>35</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_ReclaimedCapturedHold</defName>
+		<stackLimit>1</stackLimit>
+		<durationDays>60</durationDays>
+		<stages>
+			<li>
+				<label>reclaimed lost hold</label>
+				<description>We reclaimed our captured hold. A great grudge has been removed, and we have our ancestral hall back.</description>
+				<baseMoodEffect>24</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_GainedHighBlood</defName>
+		<durationDays>7</durationDays>
+		<thoughtClass>TheEndTimes_Dwarfs.Thought_MemoryHighBlood</thoughtClass>
+		<stages>
+			<li>
+				<label>Became {HIGHBLOOD}</label>
+				<description>I was crowned {HIGHBLOOD}. The clans have recognized me as worthy of ruling.</description>
+				<baseMoodEffect>8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_DeadThane</defName>
+		<icon>Mote/RH_TET_Dwarfs_SkullCrown</icon>
+		<showBubble>true</showBubble>
+		<durationDays>30</durationDays>
+		<stages>
+			<li>
+				<label>Thane died</label>
+				<description>A thane died. What a horrible day for the clans.</description>
+				<baseMoodEffect>-8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_DeadKing</defName>
+		<icon>Mote/RH_TET_Dwarfs_SkullCrown</icon>
+		<showBubble>true</showBubble>
+		<durationDays>60</durationDays>
+		<stages>
+			<li>
+				<label>King or Queen died</label>
+				<description>Our great leader has died. There must be a grudge that we can create and avenge from this. Great woe for all the clans.</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_AteFoodInappropriateForHighBlood</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate commoner food</label>
+				<description>That meal was below me. My high blood requirements should always be respected.</description>
+				<baseMoodEffect>-4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_HighBloodSeatRequirementsNotMet</defName>
+		<workerClass>TheEndTimes_Dwarfs.ThoughtWorker_HighBloodSeatRequirementsNotMet</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>undignified high blood seat</label>
+				<description>I am a {HIGHBLOOD}, and it's only appropriate that my high blood seat has the following:\n\n{0}</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_HighBloodBedroomRequirementsNotMet</defName>
+		<workerClass>TheEndTimes_Dwarfs.ThoughtWorker_HighBloodBedroomRequirementsNotMet</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>undignified bedroom</label>
+				<description>A {HIGHBLOOD} should have appropriate sleeping quarters. My bedroom should have these:\n\n{0}</description>
+				<baseMoodEffect>-4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_NoHighBloodRoom</defName>
+		<workerClass>TheEndTimes_Dwarfs.ThoughtWorker_NoHighBloodRoom</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>no high blood room</label>
+				<description>What is a high blood with no appropriate room to rule from?</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_HighBloodNoPersonalBedroom</defName>
+		<workerClass>TheEndTimes_Dwarfs.ThoughtWorker_HighBloodNoPersonalBedroom</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>need my own bedroom</label>
+				<description>A {HIGHBLOOD} should not be sharing a sleeping space with the clans.</description>
+				<baseMoodEffect>-7</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_ThaneOnMap</defName>
+		<workerClass>TheEndTimes_Dwarfs.ThoughtWorker_ThaneOnMap</workerClass>
+		<validWhileDespawned>false</validWhileDespawned>
+		<stages>
+			<li>
+				<label>thane on map</label>
+				<description>There's a thane here, it's great to be well led, and confident that things are being properly taken care of.</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_KingOnMap</defName>
+		<workerClass>TheEndTimes_Dwarfs.ThoughtWorker_KingOnMap</workerClass>
+		<validWhileDespawned>false</validWhileDespawned>
+		<stages>
+			<li>
+				<label>king on map</label>
+				<description>There's a king here. Everything is in well in order, and being handled in a proper dwarfen fashion.</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_AThaneWasCrowned</defName>
+		<stackLimit>1</stackLimit>
+		<durationDays>5</durationDays>
+		<stages>
+			<li>
+				<label>we have a new thane</label>
+				<description>We have a new thane! Glory to the clans.</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_AKingWasCrowned</defName>
+		<stackLimit>1</stackLimit>
+		<durationDays>5</durationDays>
+		<stages>
+			<li>
+				<label>we have a new king</label>
+				<description>A new dwarfen king has been crowned! Glory to the clans.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_Ruled</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>ruled from awful room</label>
+				<description>I ruled from an awful room. It's unbecoming of us as dwarfs</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+			<li>
+				<label>ruled from lackluster room</label>
+				<description>I ruled from a dull room. As dwarfs, we can do better.</description>
+				<baseMoodEffect>-4</baseMoodEffect>
+			</li>
+			<li>
+				<label>ruled from mediocre room</label>
+				<description>I ruled from a mediocre room. It makes us look bad as a people.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+			<li IsNull="True"/><!-- decent -->
+			<li IsNull="True"/><!-- slightly impressive -->
+			<li IsNull="True"/><!-- impressive -->
+			<li>
+				<label>ruled from very impressive room</label>
+				<description>I ruled from a very impressive room. As dwarfs, we've done well to make it very presentable.</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+			<li>
+				<label>ruled from extremely impressive room</label>
+				<description>I ruled from an extremely impressive room. It shines, and all the clans should be proud.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+			<li>
+				<label>ruled from unbelievably impressive room</label>
+				<description>I ruled from an unbelievably impressive room. The clans have out done themselves in making it thus.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+			<li>
+				<label>ruled from wondrously impressive room</label>
+				<description>I ruled from a heavenly room. It is a source of pride for all the clans I rule.</description>
+				<baseMoodEffect>6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_AwfulHeldCourt</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>8</durationDays>
+		<stackLimit>10</stackLimit>
+		<stages>
+			<li>
+				<label>high blood court awful</label>
+				<description>That high blood court was terrible. They have no plan on where we're going as a people, and they don't seem likely to figure one out any time soon.</description>
+				<baseMoodEffect>-12</baseMoodEffect>
+				<baseOpinionOffset>-30</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_BoringHeldCourt</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>8</durationDays>
+		<stackLimit>10</stackLimit>
+		<stages>
+			<li>
+				<label>high blood court boring</label>
+				<description>The high blood court was just boring. The high bloods really should step it up a bit.</description>
+				<baseMoodEffect>-4</baseMoodEffect>
+				<baseOpinionOffset>-15</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_DecentHeldCourt</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>8</durationDays>
+		<stackLimit>10</stackLimit>
+		<stages>
+			<li>
+				<label>high blood court ok</label>
+				<description>The high blood court was good. I feel good about the high bloods that rule here.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+				<baseOpinionOffset>20</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_GreatHeldCourt</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>8</durationDays>
+		<stackLimit>10</stackLimit>
+		<stages>
+			<li>
+				<label>high blood court great</label>
+				<description>The high blood court was great. Many grudges were laid out, and plans are being made on how to handle them. The high bloods are great here!</description>
+				<baseMoodEffect>8</baseMoodEffect>
+				<baseOpinionOffset>40</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+	<ThoughtDef>
+		<defName>RH_TET_Dawi_ListeningToHorn</defName>
+		<workerClass>TheEndTimes_Dwarfs.ThoughtWorker_ListeningToHorn</workerClass>
+		<stages>
+			<li>
+				<label>listening to horn</label>
+				<description>The horn gives me comfort, and faith in dawi-kind.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+</Defs>

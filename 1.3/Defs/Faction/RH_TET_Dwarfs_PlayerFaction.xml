@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ <FactionDef ParentName="PlayerFactionBase">
+    <defName>RH_TET_Dwarf_PlayerColony</defName>
+    <label>Dwarf Settlement</label>
+    <description>Your village.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>RH_TET_DwarfVillager</basicMemberKind>
+    <pawnsPlural>dwarfs</pawnsPlural>
+    <techLevel>Medieval</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>RH_TET_Dwarf_Backstory</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/PlayerKarak</factionIconPath>
+	<settlementNameMaker>RH_TET_NamerFactionDwarfKarak</settlementNameMaker>
+	<playerInitialSettlementNameMaker>NamerSettlementOutlander</playerInitialSettlementNameMaker>
+	<factionNameMaker>NamerSettlementOutlander</factionNameMaker>
+	<geneticVariance>1</geneticVariance>
+	<apparelStuffFilter>
+		<thingDefs>
+			<li>Cloth</li>
+		</thingDefs>
+	</apparelStuffFilter>
+    <allowedCultures><li>RH_TET_DwarfsCulture</li></allowedCultures>
+</FactionDef>
+
+ <FactionDef ParentName="PlayerFactionBase">
+    <defName>RH_TET_Dwarf_Slayer_PlayerColony</defName>
+    <label>Dwarf Slayer Settlement</label>
+    <description>Your village.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>RH_TET_DwarfSlayerVillager</basicMemberKind>
+    <pawnsPlural>slayers</pawnsPlural>
+    <techLevel>Medieval</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>RH_TET_Dwarf_Slayer_Backstory</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/PlayerKarak</factionIconPath>
+	<settlementNameMaker>RH_TET_NamerFactionDwarfKarak</settlementNameMaker>
+	<playerInitialSettlementNameMaker>NamerSettlementOutlander</playerInitialSettlementNameMaker>
+	<factionNameMaker>NamerSettlementOutlander</factionNameMaker>
+	<geneticVariance>1</geneticVariance>
+	<apparelStuffFilter>
+		<thingDefs>
+			<li>Cloth</li>
+		</thingDefs>
+	</apparelStuffFilter>
+    <allowedCultures><li>RH_TET_DwarfsSlayerCulture</li></allowedCultures>
+</FactionDef>
+
+</Defs>

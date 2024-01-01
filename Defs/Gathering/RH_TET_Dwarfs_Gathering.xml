@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<GatheringDef>
+		<defName>RH_TET_Dwarf_HighBloodCourt</defName>
+		<label>high blood court</label>
+		<randomSelectionWeight>0</randomSelectionWeight>
+		<letterTitle>High blood court</letterTitle>
+		<letterText>{ORGANIZER_labelShort} is holding court from the throne.
+\nIf all goes well, the clans will be satsified, and gain respect for {ORGANIZER_labelShort}. If it goes poorly, holding court could harm the standing of the high blood in the eyes of the clans. The outcome depends on {ORGANIZER_labelShort}'s social abilities.\n\nThe clans love to gather to hear the high blood speech. It gives them something to talk about, and they learn about the current state of things from the high blood's perspective.		</letterText>
+		<workerClass>TheEndTimes_Dwarfs.GatheringWorker_HighBloodCourt</workerClass>
+		<duty>Spectate</duty>
+		<respectTimetable>False</respectTimetable>
+		<gatherSpotDefs>
+			<li>RH_TET_Dwarfs_Throne</li>
+			<li>RH_TET_Dwarfs_KingsThrone</li>
+		</gatherSpotDefs>
+	</GatheringDef>
+
+</Defs>

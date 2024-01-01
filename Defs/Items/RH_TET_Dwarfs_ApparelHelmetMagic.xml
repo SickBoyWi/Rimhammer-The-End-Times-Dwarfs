@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="RH_TET_Dwarfs_ArmorHelmetMagicBase" ParentName="ApparelBase" Abstract="True">
+		<thingCategories>
+			<li>ArmorHeadgear</li>
+			<li>RH_TET_Dwarfs_ArmorHeadgear</li>
+			<li>RH_TET_DwarfsMagicHelms</li>
+		</thingCategories>
+		<tradeability>Sellable</tradeability>
+		<techLevel>Medieval</techLevel>
+		<apparel>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>0</wearPerDay>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+		</apparel>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Armor_Magic</li>
+		</tradeTags>
+		<statBases>
+			<Mass>3</Mass>
+			<EquipDelay>2</EquipDelay>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<generateCommonality>1</generateCommonality>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ArmorHelmetMagicBase">
+		<defName>RH_TET_Dwarf_Helmet_MagicGrungi</defName>
+		<thingClass>TheEndTimes_Dwarfs.Apparel_MinersHelmet</thingClass>
+		<label>dawi Grungni's helmet</label>
+		<description>A highly protective, and nice looking dwarfen magic helmet. Master crafted by runesmiths in the name of Grungni. It has a magic light that can be turned on and off.</description>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Grungi</texPath>
+		</graphicData>
+		<costStuffCount>100</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<Gold>5</Gold>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<StuffEffectMultiplierArmor>0.90</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.45</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.40</StuffEffectMultiplierInsulation_Heat>
+			<MarketValue>2000</MarketValue>
+		</statBases>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Grungi</wornGraphicPath>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Magic_Thane</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ArmorHelmetMagicBase">
+		<defName>RH_TET_Dwarf_Helmet_MagicSmednir</defName>
+		<label>dawi Smednir's helmet</label>
+		<description>A highly protective, and nice looking dwarfen magic helmet. Master crafted by runesmiths in the name of Smednir. The magic imbued in the helm makes a dwarf capable of carrying more weight than normal.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Smednir</texPath>
+		</graphicData>
+		<costStuffCount>100</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<Gold>5</Gold>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<StuffEffectMultiplierArmor>0.90</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.45</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.40</StuffEffectMultiplierInsulation_Heat>
+			<MarketValue>2000</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<CarryingCapacity>25</CarryingCapacity>
+		</equippedStatOffsets>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Smednir</wornGraphicPath>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Magic_Thane</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ArmorHelmetMagicBase">
+		<defName>RH_TET_Dwarf_Helmet_MagicGazul</defName>
+		<label>dawi Gazul's helmet</label>
+		<description>A highly protective, and nice looking dwarfen magic helmet. Master crafted by runesmiths in the name of Gazul. The magic imbued in the helm makes a dwarf more likely to dodge enemy attacks than normal.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Gazul</texPath>
+		</graphicData>
+		<costStuffCount>100</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<Gold>5</Gold>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<StuffEffectMultiplierArmor>0.90</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.45</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.40</StuffEffectMultiplierInsulation_Heat>
+			<MarketValue>2000</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<MeleeDodgeChance>0.25</MeleeDodgeChance>
+		</equippedStatOffsets>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Gazul</wornGraphicPath>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Magic_Thane</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ArmorHelmetMagicBase">
+		<defName>RH_TET_Dwarf_Helmet_MagicValaya</defName>
+		<label>dawi Valaya's helmet</label>
+		<description>A highly protective, and great looking dwarfen magic helmet. Fit for a king. Master crafted by runesmiths in the name of Valaya. The healing magic of Valaya makes the wearer of this helm perform much better when tending the wounded.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Valaya</texPath>
+		</graphicData>
+		<costStuffCount>150</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<Gold>10</Gold>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<StuffEffectMultiplierArmor>1.0</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.6</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+			<MarketValue>2500</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<MedicalTendQuality>0.25</MedicalTendQuality>
+			<MedicalTendSpeed>0.25</MedicalTendSpeed>
+		</equippedStatOffsets>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Valaya</wornGraphicPath>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Magic_King</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ArmorHelmetMagicBase">
+		<defName>RH_TET_Dwarf_Helmet_MagicGrimnir</defName>
+		<label>dawi Grimnir's helmet</label>
+		<description>A highly protective, and great looking dwarfen magic helmet. Fit for a king. Master crafted by runesmiths in the name of Valaya. The magic imbued in the helm makes a dwarf more likely to dodge enemy attacks than normal. The war magic of Grimnir makes the wearer of this helm more likely to hit in melee combat, and penetrate armor better.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Grimnir</texPath>
+		</graphicData>
+		<costStuffCount>150</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<Gold>10</Gold>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<StuffEffectMultiplierArmor>1.0</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.6</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+			<MarketValue>2500</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<MeleeHitChance>0.25</MeleeHitChance>
+			<MeleeArmorPenetration>0.25</MeleeArmorPenetration>
+		</equippedStatOffsets>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Grimnir</wornGraphicPath>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Magic_King</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+  
+</Defs>

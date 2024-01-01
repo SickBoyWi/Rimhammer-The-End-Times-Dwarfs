@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<JobDef>
+		<defName>RH_TET_Dwarfs_DryBlastingWire</defName>
+		<driverClass>TheEndTimes_Dwarfs.JobDriver_DryBlastingWire</driverClass>
+		<reportString>Drying off blasting wire.</reportString>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Dwarfs_DetonateBlast</defName>
+		<driverClass>TheEndTimes_Dwarfs.JobDriver_DetonateBlast</driverClass>
+		<reportString>Detonating mining blast.</reportString>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Dwarfs_Rule</defName>
+		<driverClass>TheEndTimes_Dwarfs.JobDriver_Rule</driverClass>
+		<reportString>ruling.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+		<neverShowWeapon>true</neverShowWeapon>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Dwarfs_HoldCourt</defName>
+		<driverClass>TheEndTimes_Dwarfs.JobDriver_HoldCourt</driverClass>
+		<reportString>holding court.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+		<neverShowWeapon>true</neverShowWeapon>
+		<casualInterruptible>false</casualInterruptible>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Dwarfs_AttendFire</defName>
+		<driverClass>JobDriver_WatchBuilding</driverClass>
+		<reportString>Tending to and stoking fire.</reportString>
+		<joyDuration>3000</joyDuration>
+		<joyMaxParticipants>1</joyMaxParticipants>
+		<joyGainRate>0.8</joyGainRate>
+		<joyKind>Meditative</joyKind>
+	</JobDef>
+  
+	<JobDef>
+		<defName>RH_TET_Dwarfs_WatchFire</defName>
+		<driverClass>JobDriver_WatchTelevision</driverClass>
+		<reportString>Watching fire.</reportString>
+		<joyDuration>3000</joyDuration>
+		<joyMaxParticipants>2</joyMaxParticipants>
+		<joyGainRate>0.5</joyGainRate>
+		<joyKind>Meditative</joyKind>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Dwarfs_DecorateWallJob</defName>
+		<driverClass>TheEndTimes_Dwarfs.JobDriver_DecorateWall</driverClass>
+		<reportString>decorating wall.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	
+</Defs>

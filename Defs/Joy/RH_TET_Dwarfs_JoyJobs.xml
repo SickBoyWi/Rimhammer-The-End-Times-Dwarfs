@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<JobDef>
+		<defName>RH_TET_Dwarf_AdmireGold</defName>
+		<driverClass>TheEndTimes_Dwarfs.JobDriver_WatchGold</driverClass>
+		<reportString>admiring gold.</reportString>
+		<joyDuration>4000</joyDuration>
+		<joyKind>Meditative</joyKind>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Dwarf_PlayDice</defName>
+		<driverClass>TheEndTimes_Dwarfs.JobDriver_PlayDice</driverClass>
+		<reportString>playing dice.</reportString>
+		<joyDuration>4000</joyDuration>
+		<joyMaxParticipants>4</joyMaxParticipants>
+		<joySkill>Crafting</joySkill>
+		<joyXpPerTick>0.004</joyXpPerTick>
+		<joyKind>RH_TET_Dwarfs_Gaming_Random</joyKind>
+		<taleOnCompletion>PlayedGame</taleOnCompletion>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Dwarfs_PlayHorn</defName>
+		<driverClass>TheEndTimes_Dwarfs.JobDriver_PlayHorn</driverClass>
+		<reportString>playing TargetA.</reportString>
+		<joyDuration>4000</joyDuration>
+		<joyMaxParticipants>1</joyMaxParticipants>
+		<joySkill>Artistic</joySkill>
+		<joyXpPerTick>0.0015</joyXpPerTick>
+		<joyKind>RH_TET_Music</joyKind>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+  
+</Defs>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/StorytellerDef[defName = "Cassandra"]/comps</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_SingleOnceFixed">
+				<fireAfterDaysPassed>120</fireAfterDaysPassed>
+				<incident>RH_TET_Dwarfs_CapturedHold</incident>
+				<allowedTargetTags>
+					<li>World</li>
+				</allowedTargetTags>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/StorytellerDef[defName = "Phoebe"]/comps</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_SingleOnceFixed">
+				<fireAfterDaysPassed>120</fireAfterDaysPassed>
+				<incident>RH_TET_Dwarfs_CapturedHold</incident>
+				<allowedTargetTags>
+					<li>World</li>
+				</allowedTargetTags>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/StorytellerDef[defName = "Randy"]/comps</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_SingleOnceFixed">
+				<fireAfterDaysPassed>120</fireAfterDaysPassed>
+				<incident>RH_TET_Dwarfs_CapturedHold</incident>
+				<allowedTargetTags>
+					<li>World</li>
+				</allowedTargetTags>
+			</li>
+		</value>
+	</Operation>
+	
+</Patch>

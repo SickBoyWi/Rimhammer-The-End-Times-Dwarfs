@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TaleDef>
+		<defName>RH_TET_Dwarf_AdmiredGold</defName>
+		<label>admired gold</label>
+		<taleClass>Tale_SinglePawnAndThing</taleClass>
+		<type>Volatile</type>
+		<baseInterest>1</baseInterest>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->[PAWN_nameDef] admiring gold</li>
+				<li>tale_noun->[PAWN_nameDef] enjoying sight of gold</li>
+				<li>image->[PAWN_nameFull] looking at gold [circumstance_group]</li>
+				<li>image->[PAWN_nameFull] lost in the joy of gold [circumstance_group]</li>
+				<li>circumstance_phrase->with the glint of gold in [PAWN_possessive] eye</li>
+				<li>circumstance_phrase->while [PAWN_possessive] friends look on in envy</li>
+				<li>desc_sentence->A [Color] aurora shines in the background.</li>
+				<li>desc_sentence->In the distance, a [Community] is covered with eyes of envy.</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+  
+	<TaleDef>
+		<defName>RH_TET_Dwarf_ReclaimedHold</defName>
+		<label>recaptured ancient hold</label>
+		<taleClass>Tale_SinglePawn</taleClass>
+		<type>Volatile</type>
+		<baseInterest>50</baseInterest>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->[PAWN_nameDef]'s caravan defeating an enemy in a dwarfen stronghold</li>
+				<li>image->[PAWN_nameFull] running towards a [Enemy], [circumstance_group]</li>
+				<li>image->[PAWN_nameFull] wielding a [Weapon], [circumstance_group]</li>
+				<li>image->[PAWN_nameFull] swinging a [Weapon], [circumstance_group]</li>
+				<li>image->[PAWN_nameFull] standing as tall as a building, [circumstance_group]</li>
+				<li>circumstance_phrase->wearing a [AdjectiveBadass] look in [PAWN_possessive] eyes</li>
+				<li>circumstance_phrase->wearing a [AdjectiveAngsty] look in [PAWN_possessive] eyes</li>
+				<li>circumstance_phrase->roaring in victory</li>
+				<li>circumstance_phrase->covered in [Gore]</li>
+				<li>desc_sentence->[Quantity_adjphrase] [Enemy]s cower from the assault.</li>
+				<li>desc_sentence->[Quantity_adjphrase] [Enemy]s flee the area.</li>
+				<li>desc_sentence->[Quantity_adjphrase] [Enemy]s are visibly wounded.</li>
+				<li>desc_sentence->A [Community] burns in the distance.</li>
+				<li>desc_sentence->A [Community] smokes in the distance.</li>
+				<li>desc_sentence->The ground is coated in [Gore].</li>
+				<li>desc_sentence->[Quantity_adjphrase] [PersonJob]s flee the area.</li>
+				<li>desc_sentence->[Quantity_adjphrase] [Animal]s flee the area.</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+  
+</Defs>

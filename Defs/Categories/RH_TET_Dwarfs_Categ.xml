@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_BuildingsArt</defName>
+		<label>dwarfen</label>
+		<parent>BuildingsArt</parent>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_BuildingsJoy</defName>
+		<label>dwarfen</label>
+		<parent>BuildingsJoy</parent>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_BuildingsFurniture</defName>
+		<label>dwarfen</label>
+		<parent>BuildingsFurniture</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_BuildingsProduction</defName>
+		<label>dwarfen</label>
+		<parent>BuildingsProduction</parent>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_Artillery</defName>
+		<label>dwarfen artillery ammo</label>
+		<parent>Manufactured</parent>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_Buildings</defName>
+		<label>dwarfen</label>
+		<parent>Buildings</parent>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_BuildingsMisc</defName>
+		<label>dwarfen</label>
+		<parent>BuildingsMisc</parent>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_BuildingsBlasting</defName>
+		<label>blasting</label>
+		<parent>RH_TET_Dwarfs_Buildings</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_BuildingsSecurity</defName>
+		<label>dwarfen</label>
+		<parent>BuildingsSecurity</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_BuildingsDoors</defName>
+		<label>doors and gates</label>
+		<parent>RH_TET_Dwarfs_Buildings</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_Apparel</defName>
+		<label>dwarfen</label>
+		<parent>Apparel</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_Headgear</defName>
+		<label>dwarfen</label>
+		<parent>Headgear</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_ArmorHeadgear</defName>
+		<label>dwarfen</label>
+		<parent>ArmorHeadgear</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_Armor</defName>
+		<label>dwarfen</label>
+		<parent>ApparelArmor</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_WeaponsMelee</defName>
+		<label>dwarfen</label>
+		<parent>WeaponsMelee</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_Shields</defName>
+		<label>shields</label>
+		<parent>RH_TET_Dwarfs_WeaponsMelee</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_WeaponsRanged</defName>
+		<label>dwarfen</label>
+		<parent>WeaponsRanged</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_BodyPartsBionic</defName>
+		<label>dwarfen</label>
+		<parent>BodyPartsBionic</parent>
+	</ThingCategoryDef>
+
+	<!-- copied from magic mod -->
+	<ThingCategoryDef>
+		<defName>RH_TET_MagicArmor</defName>
+		<label>magic armor</label>
+		<parent>ApparelArmor</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_MagicHelms</defName>
+		<label>magic helms</label>
+		<parent>ArmorHeadgear</parent>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>RH_TET_DwarfsMagicArmor</defName>
+		<label>dwarfen</label>
+		<parent>RH_TET_MagicArmor</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_DwarfsMagicHelms</defName>
+		<label>dwarfen</label>
+		<parent>RH_TET_MagicHelms</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_WeaponsMagic</defName>
+		<label>magic weapons</label>
+		<parent>Weapons</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_DwarfsWeaponsMagic</defName>
+		<label>dwarfen</label>
+		<parent>RH_TET_WeaponsMagic</parent>
+	</ThingCategoryDef>
+
+</Defs>

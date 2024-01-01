@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RulePackDef>
+		<defName>RH_TET_GlobalUtility</defName>
+		<include>
+			<li>TalkTopicsUtility</li>
+		</include>
+		<rulePack>
+			<rulesFiles>
+				<li>RH_TET_DwarfMaleName->NameBanks/RH_TET_Dwarf_Names</li>
+				<li>RH_TET_DwarfFemaleName->NameBanks/RH_TET_Dwarf_Female_Names</li>
+				<li>RH_TET_DwarfSurname->NameBanks/RH_TET_Dwarf_Surnames</li>
+			</rulesFiles>
+			<rulesRaw>
+				<li Class="Rule_NamePerson">
+					<keyword>RH_TET_NamePerson</keyword>
+				</li>
+				<li Class="Rule_NamePerson">
+					<keyword>RH_TET_NamePersonMale</keyword>
+					<gender>Male</gender>
+				</li>
+				<li Class="Rule_NamePerson">
+					<keyword>RH_TET_NamePersonFemale</keyword>
+					<gender>Female</gender>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+
+</Defs>

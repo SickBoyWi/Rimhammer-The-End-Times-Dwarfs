@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Steam Pipes -->
+	<ThingDef ParentName="RH_TET_BaseSteamHeatingPipe">
+		<defName>RH_TET_Dwarfs_SteamPipe</defName>
+		<label>Steam Pipe</label>
+		<description>Stone or metal pipes for connecting steam from a steam generator to something that uses steam power to function.</description>
+		<uiIconPath>UI/Steam/SteamPipes</uiIconPath>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>2</costStuffCount>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_SteamPipe">
+				<stuffed>true</stuffed>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_SteamPower</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef Name="RH_TET_Dwarfs_BaseSteamHeatingBuilding" ParentName="RH_TET_BaseSteamHeatingBuilding" Abstract="True">
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsMisc</li>
+		</thingCategories>
+		<canOverlapZones>false</canOverlapZones>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_BaseSteamHeatingBuilding">
+		<defName>RH_TET_Dwarfs_FueledBoiler</defName>
+		<label>fueled dwarf boiler</label>
+		<description>A boiler that burns fuel, and produces steam. Fueled by wood or coal. Built and operated by the stout dawi, whose master engineers designed and built the first of these.\n\nWill produce 1,850 steam units that can be captured by dwarfen steam pipes, and fed to radiators for heat or workstations to increase the efficiency of them.\n\nWill produce heat as a heat source for the room that it occupies.</description>
+		<graphicData>
+			<texPath>Things/Building/Steam/dwarfs_fueledBoiler</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,2)</drawSize>
+			<damageData>
+				<rect>(0.05,0.05,0.95,0.95)</rect>
+			</damageData>
+		</graphicData>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>false</castEdgeShadows>
+		<pathCost>150</pathCost>
+		<size>(2,2)</size>
+		<costList>
+			<Steel>125</Steel>
+			<Gold>5</Gold>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<costStuffCount>100</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>325</MaxHitPoints>
+			<WorkToBuild>1150</WorkToBuild>
+			<Mass>50</Mass>
+			<Beauty>5</Beauty>
+		</statBases>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_SteamPipe"/>
+			<li Class="TheEndTimes_Magic.CompProperties_CompBoiler">
+				<BaseCapacity>1,200</BaseCapacity>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Refuelable">
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<fuelConsumptionRate>10.0</fuelConsumptionRate>
+				<fuelCapacity>75.0</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>RH_TET_Coal</li>
+					</thingDefs>
+				</fuelFilter>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>5</glowRadius>
+				<glowColor>(215,110,35,0)</glowColor>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>6</heatPerSecond>
+				<heatPushMaxTemperature>30</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_Breakdownable"/>
+		</comps>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_SteamPower</li>
+		</researchPrerequisites>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_BaseSteamHeatingBuilding">
+		<defName>RH_TET_Dwarfs_GeothermalBoiler</defName>
+		<label>geothermal steam capture</label>
+		<description>A dwarfen device that captures steam output from a geothermal vent. Built and operated by the stout dawi, whose master engineers designed and built the first of these.\n\nWill produce 3,850 steam units that can be captured by dwarfen steam pipes, and fed to radiators for heat or workstations to increase the efficiency of them.\n\nWill produce heat as a heat source for the room that it occupies. Be wary, as it produces a massive amount of heat.\n\nIn true dwarfen fashion, even such a device is crafted to be aesthetically appealing.</description>
+		<graphicData>
+			<texPath>Things/Building/Steam/dwarfs_geoBoiler</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(7,7)</drawSize>
+			<damageData>
+				<rect>(0.05,0.05,0.95,0.95)</rect>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<blockWind>false</blockWind>
+		<size>(6,6)</size>
+		<passability>Impassable</passability>
+		<costList>
+			<Steel>300</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<Gold>10</Gold>
+		</costList>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>450</MaxHitPoints>
+			<WorkToBuild>5000</WorkToBuild>
+			<Beauty>10</Beauty>
+			<Mass>250</Mass>
+		</statBases>
+		<placeWorkers>
+			<li>PlaceWorker_OnSteamGeyser</li>
+		</placeWorkers>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_SteamPipe"/>
+			<li Class="TheEndTimes_Magic.CompProperties_CompBoiler">
+				<compClass>TheEndTimes_Magic.CompGeothermalBoiler</compClass>
+				<BaseCapacity>3600</BaseCapacity>
+			</li>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusher</compClass>
+				<heatPerSecond>25</heatPerSecond>
+				<heatPushMaxTemperature>75</heatPushMaxTemperature>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_SteamPowerAdvanced</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef Name="RH_TET_Dwarfs_BaseSteamHeatingRadiator" ParentName="RH_TET_Dwarfs_BaseSteamHeatingBuilding" Abstract="True">
+		<passability>PassThroughOnly</passability>
+		<blockWind>false</blockWind>
+		<rotatable>true</rotatable>
+		<castEdgeShadows>false</castEdgeShadows>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_SteamPipe"/>
+			<li Class="CompProperties_Flickable">
+				<commandTexture>UI/Commands/DwarfsValve</commandTexture>
+				<commandLabelKey>RH_TET_Dwarfs_CommandOnOffSteamValveLabel</commandLabelKey>
+				<commandDescKey>RH_TET_Dwarfs_CommandOnOffSteamValveDesc</commandDescKey>
+			</li>
+			<li Class="CompProperties_TempControl">
+				<compClass>TheEndTimes_Magic.CompTemperatureControl</compClass>
+				<maxTargetTemperature>38</maxTargetTemperature>
+				<minTargetTemperature>5</minTargetTemperature>
+				<defaultTargetTemperature>21</defaultTargetTemperature>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_Heater</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_BaseSteamHeatingRadiator">
+		<defName>RH_TET_Dwarfs_SteamRadiator</defName>
+		<label>dwarf steam radiator</label>
+		<description>Heats space via steam power created at steam boilers and delivered via steam pipes.\n\nContains a built in valve to set the temperature as desired. Consumes 90 steam points from the system that it is attached to.\n\nBears the mask of a dwarfen ancestor, and its appealing construction adds beauty to the room it occupies.</description>
+		<uiIconPath>UI/Steam/Radiator</uiIconPath>
+		<graphicData>
+			<texPath>Things/Building/Steam/dwarfs_radiator</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.5,1.5)</drawSize>
+			<damageData>
+				<rect>(0.05,0.05,0.95,0.95)</rect>
+			</damageData>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>175</MaxHitPoints>
+			<WorkToBuild>850</WorkToBuild>
+			<Mass>55</Mass>
+			<Beauty>6</Beauty>
+		</statBases>
+		<costList>
+			<Steel>10</Steel>
+			<Gold>3</Gold>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<size>(1,1)</size>
+		<costStuffCount>15</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_Radiator">
+				<SteamConsumptionAmt>90</SteamConsumptionAmt>
+				<PowerRate>21</PowerRate>
+				<HeatRate>230</HeatRate>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_SteamPower</li>
+		</researchPrerequisites>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_BaseSteamHeatingRadiator">
+		<defName>RH_TET_Dwarfs_SteamRadiatorBig</defName>
+		<label>large dwarf steam radiator</label>
+		<description>Heats a large space via steam power created at steam boilers and delivered via steam pipes. Over three times as effective as a standard sized dwarfen radiator\n\nContains a built in valve to set the temperature as desired. Consumes 300 steam points from the system that it is attached to.\n\nBears the masks of dwarfen ancestors, and its appealing construction adds beauty to the room it occupies.</description>
+		<uiIconPath>UI/Steam/RadiatorLarge</uiIconPath>
+		<graphicData>
+			<texPath>Things/Building/Steam/dwarfs_radiatorLarge</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2.25,1.5)</drawSize>
+			<damageData>
+				<rect>(0.05,0.05,0.95,0.95)</rect>
+			</damageData>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<WorkToBuild>1900</WorkToBuild>
+			<Mass>110</Mass>
+			<Beauty>10</Beauty>
+		</statBases>
+		<size>(2,1)</size>
+		<costList>
+			<Steel>20</Steel>
+			<Gold>5</Gold>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<costStuffCount>50</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_Radiator">
+				<SteamConsumptionAmt>290</SteamConsumptionAmt>
+				<PowerRate>60</PowerRate>
+				<HeatRate>255</HeatRate>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_SteamPowerImroved</li>
+		</researchPrerequisites>
+	</ThingDef>
+  
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarfs_SteamInfestationLure</defName>
+		<label>infestation thumper</label>
+		<description>A dwarfen infestation lure. Will cause infestaions to happen at its location. Must be powered by a steam grid, as it will not operate without steam power.\n\nNote: Mod settings are available to control the chance of success this has for each infestation. Default success chance is 100 percent. Perhaps consider turning that down if you'd like some more excitement and challenge in your game.</description>
+		<thingClass>TheEndTimes_Dwarfs.Building_InfestationLure</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Steam/RH_TET_Dwarfs_InfestationLure</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+			</shadowData>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<size>(2,2)</size>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>35</pathCost>
+		<blockWind>false</blockWind>
+		<rotatable>false</rotatable>
+		<fillPercent>0.35</fillPercent>
+		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<statBases>
+			<WorkToBuild>5000</WorkToBuild>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Mass>10</Mass>
+			<Flammability>0.1</Flammability>
+		</statBases>
+		<costList>
+			<Steel>100</Steel>
+			<Gold>10</Gold>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_SteamPipe"/>
+			<li Class="CompProperties_Flickable">
+				<commandTexture>UI/Commands/DwarfsValve</commandTexture>
+				<commandLabelKey>RH_TET_Dwarfs_CommandOnOffSteamValveLabel</commandLabelKey>
+				<commandDescKey>RH_TET_Dwarfs_CommandOnOffSteamValveDesc</commandDescKey>
+			</li>
+			<li Class="TheEndTimes_Magic.CompProperties_SteamUser">
+				<SteamConsumptionAmt>3000</SteamConsumptionAmt>
+				<soundAmbientOn>RH_TET_Dwarfs_Thumper_Ambience</soundAmbientOn>
+			</li>
+			<li Class="CompProperties_Breakdownable"/>
+		</comps>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<placeWorkers>
+			<li>TheEndTimes_Dwarfs.PlaceWorker_OverheadMountain</li>
+		</placeWorkers>
+		<designationCategory>Misc</designationCategory>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_SteamPowerAdvanced</li>
+		</researchPrerequisites>
+		<building>
+			<ai_combatDangerous>true</ai_combatDangerous>
+		</building>
+	</ThingDef>
+
+</Defs>

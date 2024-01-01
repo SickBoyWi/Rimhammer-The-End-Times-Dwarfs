@@ -1,0 +1,1604 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="RH_TET_Dwarfs_FurnitureBase" ParentName="BuildingBase" Abstract="True">
+		<designationCategory>Furniture</designationCategory>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsFurniture</li>
+		</thingCategories>
+	</ThingDef>
+  
+	<ThingDef Name="RH_TET_Dwarfs_FurnitureWithQualityBase" ParentName="RH_TET_Dwarfs_FurnitureBase" Abstract="True">
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Dwarfs_FurnitureBase" Name="RH_TET_Dwarfs_BedBase" Abstract="True">
+		<thingClass>Building_Bed</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<comps>
+			<li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>CompAssignableToPawn_Bed</compClass>
+			</li>
+		</comps>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<canOverlapZones>false</canOverlapZones>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<passability>PassThroughOnly</passability>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<building>
+			<buildingTags>
+				<li>Bed</li>
+			</buildingTags>
+		</building>
+	</ThingDef>
+ 
+	<ThingDef Name="RH_TET_Dwarfs_BedWithQualityBase" ParentName="RH_TET_Dwarfs_BedBase" Abstract="True">
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef Name="RH_TET_Dwarfs_ArtableBedBase" ParentName="RH_TET_Dwarfs_BedWithQualityBase" Abstract="True">
+		<comps>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtFurniture</nameMaker>
+				<descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+	</ThingDef>
+  
+	<ThingDef Name="RH_TET_Dwarfs_ArtableFurnitureBase" ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase" Abstract="True">
+		<comps>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtFurniture</nameMaker>
+				<descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+	</ThingDef>
+
+	<ThingDef Abstract="True" ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase" Name="RH_TET_Dwarfs_TableNoGatherBase">
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<pathCost>60</pathCost>
+		<fillPercent>0.4</fillPercent>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<canOverlapZones>false</canOverlapZones>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<surfaceType>Item</surfaceType>
+		<designationCategory>Furniture</designationCategory>
+	</ThingDef>
+  
+	<ThingDef Abstract="True" ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase" Name="RH_TET_Dwarfs_TableBase">
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<pathCost>60</pathCost>
+		<fillPercent>0.4</fillPercent>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<canOverlapZones>false</canOverlapZones>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<surfaceType>Eat</surfaceType>
+		<comps>
+			<li>
+				<compClass>CompGatherSpot</compClass>
+			</li>
+		</comps>
+		<designationCategory>Furniture</designationCategory>
+	</ThingDef>
+  
+	<ThingDef Name="RH_TET_Dwarfs_CeilingLightBase" ParentName="RH_TET_Dwarfs_FurnitureBase" Abstract="True">
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<building>
+			<isEdifice>false</isEdifice>
+		</building>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fillPercent>0</fillPercent>
+		<passability>Standable</passability>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<tickerType>Normal</tickerType>
+		<rotatable>false</rotatable>
+		<clearBuildingArea>false</clearBuildingArea>
+		<placeWorkers>
+			<li>TheEndTimes_Dwarfs.PlaceWorker_UnderCeiling</li>
+		</placeWorkers>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_CeilingLightBase">
+		<defName>RH_TET_Dwarfs_CeilingLight_Low</defName>
+		<label>mining ceiling light</label>
+		<description>A dwarfen ceiling light. Rather crude for dwarfen construction, but still artistic by the standards of any other race. Used in mines, and perhaps work rooms.\n\nEven though dwarfs can see well in the dark, they prefer not to. The dark is the domain of chaos, raki, and grobi; therefore pushing it back, and bringing in civilization is seen as a positive thing by all the clans. Even lighted mines are considered a good thing, and this light was intended for that purpose; as well as other low traffic places that don&apos;t need to be kept terribly nice.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_CeilingLightLow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<uiIconPath>UI/Menu/RH_TET_Dwarfs_CeilingLightLow_MenuIcon</uiIconPath>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>55</WorkToBuild>
+			<Flammability>0.0</Flammability>
+			<Beauty>0.5</Beauty>
+			<Mass>1</Mass>
+		</statBases>
+		<costList>
+			<WoodLog>10</WoodLog>
+		</costList>
+		<costStuffCount>25</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<comps>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>1.7</fuelConsumptionRate>
+				<fuelCapacity>15.0</fuelCapacity>
+				<fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+				<destroyOnNoFuel>false</destroyOnNoFuel>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>RH_TET_AnimalFat</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>9</glowRadius>
+				<glowColor>(252,187,113,0)</glowColor>
+			</li>
+			<li Class="CompProperties_FireOverlay">
+				<fireSize>0.20</fireSize>
+				<offset>(0,0,0.08)</offset>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Lighting_Basic</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture_Light</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_CeilingLightBase">
+		<defName>RH_TET_Dwarfs_CeilingLight_Mid</defName>
+		<label>dawi ceiling light</label>
+		<description>A dwarfen lantern to hang from the ceiling. Visually appealing, and functional. Used in bedrooms, dining areas, and perhaps work rooms.\n\nWhile dwarfs aren&apos;t big fans of the dark, they do favor fine construction. This light is a step up from the lights typically used in the mines and such, and it&apos;s appearance represents that. Whether hosting the extended clan, or sitting down to craft, this is a commonly preferred ceiling light in dawi spaces.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_CeilingLantern</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>.75</drawSize>
+		</graphicData>
+		<uiIconPath>UI/Menu/RH_TET_Dwarfs_CeilingLightMid_MenuIcon</uiIconPath>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>250</WorkToBuild>
+			<Flammability>0.0</Flammability>
+			<Beauty>2</Beauty>
+			<Mass>1</Mass>
+		</statBases>
+		<costList>
+			<WoodLog>10</WoodLog>
+			<Steel>45</Steel>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>1.5</fuelConsumptionRate>
+				<fuelCapacity>15.0</fuelCapacity>
+				<fuelConsumptionPerTickInRain>0.0005</fuelConsumptionPerTickInRain>
+				<destroyOnNoFuel>false</destroyOnNoFuel>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>RH_TET_AnimalFat</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>12</glowRadius>
+				<glowColor>(252,187,113,0)</glowColor>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Lighting_Advanced</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture_Light</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_CeilingLightBase">
+		<defName>RH_TET_Dwarfs_CeilingLight_High</defName>
+		<label>dawi chandelier</label>
+		<description>An elaborate dwarfen ceiling light. Intricate dwarfen construction. Intended to be used in the most honored rooms.\n\nHigh bloods, and the wealthy alike aren&apos;t ashamed to show off their wealth. Using a ceiling light such as this is one way they do that. These ceiling chandeliers provide much brightness, and beauty to a room. This pleases all the dwarfen eyes that look upon them.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_CeilingLightHigh</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<uiIconPath>UI/Menu/RH_TET_Dwarfs_CeilingLightHigh_MenuIcon</uiIconPath>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>500</WorkToBuild>
+			<Flammability>0.0</Flammability>
+			<Beauty>5</Beauty>
+			<Mass>1</Mass>
+		</statBases>
+		<costList>
+			<WoodLog>10</WoodLog>
+		</costList>
+		<costStuffCount>100</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<comps>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>1.7</fuelConsumptionRate>
+				<fuelCapacity>15.0</fuelCapacity>
+				<fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+				<destroyOnNoFuel>false</destroyOnNoFuel>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>RH_TET_AnimalFat</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15</glowRadius>
+				<glowColor>(252,187,113,0)</glowColor>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Lighting_HighBlood</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Dwarfs_Furniture_HighBlood</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase">
+		<defName>RH_TET_Dwarfs_Stool</defName>
+		<label>dawi stool</label>
+		<description>A stool for sitting on. Not very comfortable, but much better than nothing. It is dwarfen craftsmanship, so it&apos;s nicer than most. Not meant for dining or relaxing; it is more of an item you&apos;d find in a mine or a workroom. Can be used at tables, work stations, and elsewhere.\n\nA good place to rest while working is important, no dwarf would argue with that logic.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarf_Stool</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<damageData>
+				<rectN>(0.125,0.296875,0.734375,0.421875)</rectN>
+				<rectS>(0.125,0.296875,0.734375,0.421875)</rectS>
+				<rectE>(0.234375,0.296875,0.5,0.546875)</rectE>
+				<rectW>(0.234375,0.296875,0.5,0.546875)</rectW>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+			<shadowData>
+				<volume>(0.18, 0.23, 0.18)</volume>
+			</shadowData>
+			<drawSize>.9</drawSize>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>500</WorkToBuild>
+			<Mass>3</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>0.5</Beauty>
+			<Comfort>0.5</Comfort>
+		</statBases>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>25</costStuffCount>
+		<pathCost>30</pathCost>
+		<designationHotKey>Misc6</designationHotKey>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Basic</li>
+		</researchPrerequisites>
+		<fillPercent>0.20</fillPercent>
+		<building>
+			<isSittable>true</isSittable>
+		</building>
+		<uiIconOffset>(0, -0.05)</uiIconOffset>
+		<designationCategory>Furniture</designationCategory>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase">
+		<defName>RH_TET_Dwarfs_Bench1x2c</defName>
+		<label>dawi bench (1x2)</label>
+		<description>A bench for sitting on. Two seats wide. Not very comfortable, but much better than nothing. It is dwarfen craftsmanship, so it&apos;s nicer than most.\n\nThe clans need places to sit, and they're not opposed to sitting next to each other.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_Bench1x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<damageData>
+				<rectN>(0.125,0.296875,0.734375,0.421875)</rectN>
+				<rectS>(0.125,0.296875,0.734375,0.421875)</rectS>
+				<rectE>(0.234375,0.296875,0.5,0.546875)</rectE>
+				<rectW>(0.234375,0.296875,0.5,0.546875)</rectW>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+			<shadowData>
+				<volume>(0.18, 0.23, 0.18)</volume>
+			</shadowData>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>600</WorkToBuild>
+			<Mass>5</Mass>
+			<Flammability>0.0</Flammability>
+			<Beauty>1.0</Beauty>
+			<Comfort>1.0</Comfort>
+		</statBases>
+		<size>(1,2)</size>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>35</costStuffCount>
+		<pathCost>30</pathCost>
+		<designationHotKey>Misc6</designationHotKey>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Basic</li>
+		</researchPrerequisites>
+		<fillPercent>0.20</fillPercent>
+		<building>
+			<isSittable>true</isSittable>
+			<multiSittable>true</multiSittable>
+		</building>
+		<uiIconOffset>(0, -0.05)</uiIconOffset>
+		<designationCategory>Furniture</designationCategory>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase">
+		<defName>RH_TET_Dwarfs_Bench1x3c</defName>
+		<label>dawi bench (1x3)</label>
+		<description>A bench for sitting on. Three seats wide. Not very comfortable, but much better than nothing. It is dwarfen craftsmanship, so it's nicer than most.\n\nBigger tables meant that bigger benches were required. Dwarf put a bit of artistic flare into even the simplest thing, and a bench is no exception.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_Bench1x3</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<damageData>
+				<rectN>(0.125,0.296875,0.734375,0.421875)</rectN>
+				<rectS>(0.125,0.296875,0.734375,0.421875)</rectS>
+				<rectE>(0.234375,0.296875,0.5,0.546875)</rectE>
+				<rectW>(0.234375,0.296875,0.5,0.546875)</rectW>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+			<shadowData>
+				<volume>(0.18, 0.23, 0.18)</volume>
+			</shadowData>
+			<drawSize>(1,3)</drawSize>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>110</MaxHitPoints>
+			<WorkToBuild>700</WorkToBuild>
+			<Mass>8</Mass>
+			<Flammability>0.0</Flammability>
+			<Beauty>1.0</Beauty>
+			<Comfort>1.0</Comfort>
+		</statBases>
+		<size>(1,3)</size>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+		<pathCost>30</pathCost>
+		<designationHotKey>Misc6</designationHotKey>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Advanced</li>
+		</researchPrerequisites>
+		<fillPercent>0.20</fillPercent>
+		<building>
+			<isSittable>true</isSittable>
+			<multiSittable>true</multiSittable>
+		</building>
+		<uiIconOffset>(0, -0.05)</uiIconOffset>
+		<designationCategory>Furniture</designationCategory>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase">
+		<defName>RH_TET_Dwarfs_Bench1x4c</defName>
+		<label>dawi bench (1x4)</label>
+		<description>A bench for sitting on. Four seats wide. Not very comfortable, but much better than nothing. It is dwarfen craftsmanship, so it's nicer than most.\n\nBigger tables meant that bigger benches were required. Dwarf put a bit of artistic flare into even the simplest thing, and a bench is no exception.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_Bench1x4</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<damageData>
+				<rectN>(0.125,0.296875,0.734375,0.421875)</rectN>
+				<rectS>(0.125,0.296875,0.734375,0.421875)</rectS>
+				<rectE>(0.234375,0.296875,0.5,0.546875)</rectE>
+				<rectW>(0.234375,0.296875,0.5,0.546875)</rectW>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+			<shadowData>
+				<volume>(0.18, 0.23, 0.18)</volume>
+			</shadowData>
+			<drawSize>(1,4)</drawSize>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>110</MaxHitPoints>
+			<WorkToBuild>800</WorkToBuild>
+			<Mass>10</Mass>
+			<Flammability>0.0</Flammability>
+			<Beauty>1.0</Beauty>
+			<Comfort>1.0</Comfort>
+		</statBases>
+		<size>(1,4)</size>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>70</costStuffCount>
+		<pathCost>30</pathCost>
+		<designationHotKey>Misc6</designationHotKey>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Advanced</li>
+		</researchPrerequisites>
+		<fillPercent>0.20</fillPercent>
+		<building>
+			<isSittable>true</isSittable>
+			<multiSittable>true</multiSittable>
+		</building>
+		<uiIconOffset>(0, -0.05)</uiIconOffset>
+		<designationCategory>Furniture</designationCategory>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_TableBase">
+		<defName>RH_TET_Dwarfs_Table1x2c</defName>
+		<label>dawi table (1x2)</label>
+		<description>A beautiful dwarfen table for eating at.\n\nEating is important to dwarfs, as it's one of their joys. Tables get more love than most things dwarfs build in terms of the quality and effort they like to put into them.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_Table1x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,4)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.8</uiIconScale>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+			<WorkToBuild>850</WorkToBuild>
+			<Mass>6</Mass>
+			<Flammability>0.0</Flammability>
+			<Beauty>3</Beauty>
+		</statBases>
+		<size>(1,2)</size>
+		<costStuffCount>35</costStuffCount>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Basic</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_TableBase">
+		<defName>RH_TET_Dwarfs_Table1x1c</defName>
+		<label>dawi table (1x1)</label>
+		<description>A small, but nice, dwarfen table for eating at. Metal versions are typically used in the mines, or perhaps workrooms. Stone versions will frequently be found in bedrooms or even study rooms.\n\nSmall tables are very useful underground. They give the dawi a place to eat in the privacy of their own bedroom, and can be placed in hallway alcoves or work rooms in order to grant the dwarfs more options on where to rest. Don't forget to place a chair or stool nearby.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarf_Tabe1x1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.8</uiIconScale>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>900</WorkToBuild>
+			<Mass>5</Mass>
+			<Flammability>0</Flammability>
+			<Beauty>2</Beauty>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>30</costStuffCount>
+		<rotatable>false</rotatable>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Basic</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_TableBase">
+		<defName>RH_TET_Dwarfs_Table2x2c</defName>
+		<label>dwarfen table (2x2)</label>
+		<description>A beautiful dwarfen table for eating at.\n\nAs clans expand and have more space to build, larger tables are an item that gets built sooner rather than later. The dawi love to eat together, and socialize while doing so. There's also the drinking that typically ensues after a proper meal.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarf_Tabe2x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.8</uiIconScale>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToBuild>1750</WorkToBuild>
+			<Mass>10</Mass>
+			<Flammability>0</Flammability>
+			<Beauty>5</Beauty>
+		</statBases>
+		<size>(2,2)</size>
+		<costStuffCount>70</costStuffCount>
+		<rotatable>false</rotatable>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Advanced</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_TableBase">
+		<defName>RH_TET_Dwarfs_Table2x4c</defName>
+		<label>dawi table (2x4)</label>
+		<description>A huge beautiful dwarfen table for eating at.\n\nFeast halls in holds everywhere are graced by large dwarfen tables. They're artistic, and functional. Built for a dwarf's stature, they're always popular in gathering places around the holds.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarf_Tabe2x4</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,6)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>175</MaxHitPoints>
+			<WorkToBuild>3500</WorkToBuild>
+			<Mass>25</Mass>
+			<Flammability>0.0</Flammability>
+			<Beauty>8</Beauty>
+		</statBases>
+		<size>(2,4)</size>
+		<costStuffCount>105</costStuffCount>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Advanced</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_TableBase">
+		<defName>RH_TET_Dwarfs_Table3x3c</defName>
+		<label>dawi table (3x3)</label>
+		<description>A huge beautiful dwarfen table for eating at.\n\nFeast halls in holds everywhere are graced by large dwarfen tables. They're artistic, and functional. Built for a dwarf's stature, they're always popular in gathering places around the holds.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarf_Tabe2x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5.8,5.8)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.8</uiIconScale>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>2250</WorkToBuild>
+			<Mass>13</Mass>
+			<Flammability>0</Flammability>
+			<Beauty>8</Beauty>
+		</statBases>
+		<size>(3,3)</size>
+		<costStuffCount>105</costStuffCount>
+		<rotatable>false</rotatable>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Advanced</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_BedWithQualityBase">
+		<defName>RH_TET_Dwarfs_Bed</defName>
+		<label>dawi bed</label>
+		<description>A cozy mattress and sheets on a stone frame for dwarfs to rest on.\n\nSmaller and more stout than a human bed, a dwarf bed is perfect for the smaller dawi frame. They rest well in a bed intended for them, and that means they're capable of working and fighting harder when necessary.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarf_Bed</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.8,1.8)</drawSize>
+			<damageData>
+				<rect>(0,0.05,1,1.95)</rect>
+			</damageData>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>EndTable</li>
+					<li>Dresser</li>
+					<li>RH_TET_Dwarfs_EndTable</li>
+					<li>RH_TET_Dwarfs_Dresser</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>.25</Flammability>
+			<Beauty>2.5</Beauty>
+			<WorkToBuild>1000</WorkToBuild>
+			<Mass>35</Mass>
+			<BedRestEffectiveness>1.1</BedRestEffectiveness>
+			<Comfort>0.75</Comfort>
+			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+		</statBases>
+		<size>(1,2)</size>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>55</costStuffCount>
+		<building>
+			<bed_showSleeperBody>False</bed_showSleeperBody>
+			<bed_healPerDay>4</bed_healPerDay>
+		</building>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>60</pathCost>
+		<staticSunShadowHeight>0.13</staticSunShadowHeight>
+		<castEdgeShadows>True</castEdgeShadows>
+		<designationHotKey>Misc2</designationHotKey>
+		<techLevel>Medieval</techLevel>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Basic</li>
+		</researchPrerequisites>
+		<uiIconScale>0.90</uiIconScale>
+		<designationCategory>Furniture</designationCategory>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ArtableBedBase">
+		<defName>RH_TET_Dwarfs_DoubleBed</defName>
+		<label>dawi double bed</label>
+		<description>A cozy mattress and sheets on a stone frame for dwarfs to rest on. Double wide, so two can sleep.\n\nShorter and more stout than a human bed, a dwarf bed is perfect for the smaller dawi frame. They rest well in a bed intended for them, and that means they're capable of working and fighting harder when necessary. When dwarfs couple up, they do so for life, and this sized bed allows them to sleep together. The solid construction means that these beds will last a dawi's lifetime as well.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarf_BedDouble</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2.0,2.0)</drawSize>
+			<damageData>
+				<rect>(0,0.05,2,1.95)</rect>
+			</damageData>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>EndTable</li>
+					<li>Dresser</li>
+					<li>RH_TET_Dwarfs_EndTable</li>
+					<li>RH_TET_Dwarfs_Dresser</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<statBases>
+			<MaxHitPoints>220</MaxHitPoints>
+			<Flammability>.25</Flammability>
+			<WorkToBuild>2500</WorkToBuild>
+			<Mass>55</Mass>
+			<Comfort>0.75</Comfort>
+			<Beauty>4.5</Beauty>
+			<BedRestEffectiveness>1.1</BedRestEffectiveness>
+			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+		</statBases>
+		<size>(2,2)</size>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>105</costStuffCount>
+		<building>
+			<bed_showSleeperBody>False</bed_showSleeperBody>
+			<bed_healPerDay>4</bed_healPerDay>
+		</building>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>60</pathCost>
+		<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+		<staticSunShadowHeight>0.13</staticSunShadowHeight>
+		<castEdgeShadows>True</castEdgeShadows>
+		<designationHotKey>Misc3</designationHotKey>
+		<techLevel>Medieval</techLevel>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Basic</li>
+		</researchPrerequisites>
+		<uiIconScale>0.90</uiIconScale>
+		<designationCategory>Furniture</designationCategory>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ArtableBedBase">
+		<defName>RH_TET_Dwarfs_RoyalBed</defName>
+		<label>dawi high blood bed</label>
+		<description>A luxurious gold-inlaid bed fit for the dwarfen royalty. Very comfortable and beautiful, it is a work of fine art. Sleeps two.\n\nDwarf high bloods require an appropriate place to rest. Being very elaborate, and comfortable, these beds meet those needs. Many wealthy dwarfs that aren't high bloods will have such a bed as well, since wealth spent on such a thing can always be reclaimed if necessary.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarf_BedRoyal</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2.02,2.02)</drawSize>
+			<damageData>
+				<rect>(0,0.05,2,1.95)</rect>
+			</damageData>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>RH_TET_Dwarfs_EndTable</li>
+					<li>RH_TET_Dwarfs_Dresser</li>
+					<li>EndTable</li>
+					<li>Dresser</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<!--<thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>-->
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>.25</Flammability>
+			<WorkToBuild>75000</WorkToBuild>
+			<Mass>70</Mass>
+			<Beauty>95</Beauty>
+			<BedRestEffectiveness>1.15</BedRestEffectiveness>
+			<Comfort>0.90</Comfort>
+			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+		</statBases>
+		<size>(2,2)</size>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>120</costStuffCount>
+		<costList>
+			<Gold>50</Gold>
+		</costList>
+		<building>
+			<bed_showSleeperBody>False</bed_showSleeperBody>
+			<bed_healPerDay>4</bed_healPerDay>
+		</building>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>60</pathCost>
+		<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+		<staticSunShadowHeight>0.13</staticSunShadowHeight>
+		<castEdgeShadows>True</castEdgeShadows>
+		<designationHotKey>Misc4</designationHotKey>
+		<techLevel>Medieval</techLevel>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_HighBlood</li>
+		</researchPrerequisites>
+		<uiIconScale>0.90</uiIconScale>
+		<designationCategory>Furniture</designationCategory>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_TableNoGatherBase">
+		<defName>RH_TET_Dwarfs_EndTable</defName>
+		<label>dawi end table</label>
+		<description>A small artistic bedside table which makes nearby beds a little bit more comfortable. Must be placed directly adjacent to the head of the bed. Placing more than one end table near the same bed has no effect.\n\nA place to keep their most needed items at night is necessary for everyone, dawi not excluded. Dwarfs put much love and effort into the construction of these end tables, and it is reflected in their appearance.</description>
+		<surfaceType>Item</surfaceType>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_EndTable</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+			</shadowData>
+			<drawSize>(.9,.9)</drawSize>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+			<WorkToBuild>1100</WorkToBuild>
+			<Mass>6</Mass>
+			<Flammability>0.0</Flammability>
+			<Beauty>5</Beauty>
+		</statBases>
+		<pathCost>60</pathCost>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<costStuffCount>30</costStuffCount>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Basic</li>
+		</researchPrerequisites>
+		<comps>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<Comfort>0.1</Comfort>
+				</statOffsets>
+				<maxSimultaneous>1</maxSimultaneous>
+				<mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead>
+			</li>
+		</comps>
+		<staticSunShadowHeight>0</staticSunShadowHeight>
+		<castEdgeShadows>false</castEdgeShadows>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<designationCategory>Furniture</designationCategory>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ArtableFurnitureBase">
+		<defName>RH_TET_Dwarfs_Dresser</defName>
+		<label>dawi dresser</label>
+		<description>An artistic dresser of dwarfen make. Gives a small comfort bonus to all nearby beds. Placing more than one dresser near the same bed has no effect.\n\nMost dwarfs don't own a ton of clothes, but will have a dresser nontheless. The artistic work that goes into them makes a room more pleasing, and the storage space can be used by the dwarfs for more than their clothes.</description>
+		<size>(2,1)</size>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_Dresser</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1.8,.9)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.4</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<pathCost>60</pathCost>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<costStuffCount>60</costStuffCount>
+		<statBases>
+			<MaxHitPoints>135</MaxHitPoints>
+			<Mass>17</Mass>
+			<WorkToBuild>2500</WorkToBuild>
+			<Flammability>0.0</Flammability>
+			<Beauty>8</Beauty>
+		</statBases>
+		<designationHotKey>Misc12</designationHotKey>
+		<staticSunShadowHeight>0.3</staticSunShadowHeight>
+		<surfaceType>Item</surfaceType>
+		<canOverlapZones>false</canOverlapZones>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Basic</li>
+		</researchPrerequisites>
+		<comps>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<Comfort>0.1</Comfort>
+				</statOffsets>
+				<maxSimultaneous>1</maxSimultaneous>
+				<maxDistance>6</maxDistance>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<designationCategory>Furniture</designationCategory>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ArtableFurnitureBase">
+		<defName>RH_TET_Dwarfs_DiningChair</defName>
+		<label>dawi dining chair</label>
+		<description>A comfortable and attractive dwarf chair. Can be used at tables, work stations, and elsewhere.\n\nEven a simple dwarfen dining chair gets an immense level of attention when it comes to construction and decoration. Given the importance of eating and drinking to the dawi, and their penchant for crafting and construction, there's no surpirse that they put much love into these chairs.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_DiningChair</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.5)</drawSize>
+			<damageData>
+				<rectN>(0.25,0.234375,0.5,0.28125)</rectN>
+				<rectS>(0.25,0.234375,0.5,0.28125)</rectS>
+				<rectE>(0.28125,0.25,0.453125,0.25)</rectE>
+				<rectW>(0.28125,0.25,0.453125,0.25)</rectW>
+			</damageData>
+			<shadowData>
+				<volume>(0.23, 0.26, 0.23)</volume>
+			</shadowData>
+		</graphicData>
+		<uiIconScale>0.7</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>180</MaxHitPoints>
+			<WorkToBuild>8500</WorkToBuild>
+			<Mass>6</Mass>
+			<Flammability>0.0</Flammability>
+			<Beauty>8</Beauty>
+			<Comfort>1.0</Comfort>
+		</statBases>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+		<pathCost>30</pathCost>
+		<designationHotKey>Misc7</designationHotKey>
+		<fillPercent>0.35</fillPercent>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<building>
+			<isSittable>true</isSittable>
+		</building>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Advanced</li>
+		</researchPrerequisites>
+		<designationCategory>Furniture</designationCategory>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ArtableFurnitureBase">
+		<defName>RH_TET_Dwarfs_FineChair</defName>
+		<label>dawi fine chair</label>
+		<description>A very comfortable and attractive dwarf chair. Fit for any high blood to eat or work at.\n\nHigh bloods and wealthy dwarfs alike always demand the ultimate in appearance from their items. These chairs absolutely shine in that regard, and none of them would have a second thought about resting in such a place.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_FineChair</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.5)</drawSize>
+			<damageData>
+				<rectN>(0.25,0.234375,0.5,0.28125)</rectN>
+				<rectS>(0.25,0.234375,0.5,0.28125)</rectS>
+				<rectE>(0.28125,0.25,0.453125,0.25)</rectE>
+				<rectW>(0.28125,0.25,0.453125,0.25)</rectW>
+			</damageData>
+			<shadowData>
+				<volume>(0.23, 0.26, 0.23)</volume>
+			</shadowData>
+		</graphicData>
+		<uiIconScale>0.7</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>175</MaxHitPoints>
+			<WorkToBuild>12000</WorkToBuild>
+			<Mass>6</Mass>
+			<Flammability>0.0</Flammability>
+			<Beauty>10</Beauty>
+			<Comfort>1.0</Comfort>
+		</statBases>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+		<costList>
+			<Cloth>25</Cloth>
+			<Gold>2</Gold>
+		</costList>
+		<pathCost>30</pathCost>
+		<designationHotKey>Misc7</designationHotKey>
+		<fillPercent>0.35</fillPercent>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<building>
+			<isSittable>true</isSittable>
+		</building>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_HighBlood</li>
+		</researchPrerequisites>
+		<designationCategory>Furniture</designationCategory>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarfs_WallLight</defName>
+		<label>dawi wall light</label>
+		<description>A small metal brazier, attached to the wall for lighting an area. People need light to move and work at full speed. Can be automatically refueled with wood. Produces a tiny amount of heat.\n\nGiven the importance of light to the dawi,and its significance in keeping the grobi, raki, and chaos creatures at bay, these wall lights are popular throughout the holds. The fact that they take up no precious floor space makes them doubly so.</description>
+		<thingClass>TheEndTimes_Dwarfs.Building_WallLight</thingClass>
+		<category>Building</category>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsFurniture</li>
+		</thingCategories>
+		<building>
+			<isEdifice>false</isEdifice>
+		</building>
+		<clearBuildingArea>false</clearBuildingArea>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_Wall_Light</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawRotated>true</drawRotated>
+			<damageData>
+				<rect>(0.35,0.35,0.3,0.3)</rect>
+			</damageData>
+			<drawSize>.8</drawSize>
+		</graphicData>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Lighting_Advanced</li>
+		</researchPrerequisites>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<uiIconPath>UI/Menu/RH_TET_Dwarfs_Wall_Light_MenuIcon</uiIconPath>
+		<uiIconScale>0.85</uiIconScale>
+		<rotatable>true</rotatable>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>8</pathCost>
+		<constructEffect>ConstructMetal</constructEffect>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<fillPercent>0.15</fillPercent>
+		<statBases>
+			<Mass>10</Mass>
+			<MaxHitPoints>90</MaxHitPoints>
+			<WorkToBuild>250</WorkToBuild>
+			<Flammability>0</Flammability>
+			<Beauty>.5</Beauty>
+		</statBases>
+		<selectable>true</selectable>
+		<costList>
+			<WoodLog>10</WoodLog>
+			<Steel>20</Steel>
+		</costList>
+		<soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<resourcesFractionWhenDeconstructed>.5</resourcesFractionWhenDeconstructed>
+		<placeWorkers>
+			<li>PlaceWorker_Heater</li>
+			<li>TheEndTimes_Dwarfs.PlaceWorker_OnWalls</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<comps>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>1.6</fuelConsumptionRate>
+				<fuelCapacity>15.0</fuelCapacity>
+				<fuelConsumptionPerTickInRain>0.0005</fuelConsumptionPerTickInRain>
+				<destroyOnNoFuel>false</destroyOnNoFuel>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>RH_TET_Coal</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>3.0</heatPerSecond>
+				<heatPushMaxTemperature>15</heatPushMaxTemperature>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.CompProperties_FireOverlayRotatable">
+				<fireSize>0.4</fireSize>
+				<offset_south>(0,0,0.17)</offset_south>
+				<offset_west>(-0.26,0,0.26)</offset_west>
+				<offset_north>(0,0,0.50)</offset_north>
+				<offset_east>(0.26,0,0.26)</offset_east>
+				<dependency>Fuel</dependency>
+				<ticks>10</ticks>
+				<aboveThing>true</aboveThing>
+			</li>
+		</comps>
+		<designationCategory>Furniture</designationCategory>
+		<designationHotKey>Misc10</designationHotKey>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture_Light</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef Name="RH_TET_Dwarfs_WallLight_On" ParentName="BuildingBase">
+		<defName>RH_TET_Dwarfs_WallLight_On</defName>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_Wall_Light</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>.8, .8</drawSize>
+		</graphicData>
+		<thingClass>TheEndTimes_Dwarfs.Building_WallLight</thingClass>
+		<label>Wall light (On)</label>
+		<description>None.</description>
+		<category>Mote</category>
+		<building>
+			<isEdifice>false</isEdifice>
+		</building>
+		<statBases>
+			<Flammability>0</Flammability>
+		</statBases>
+		<altitudeLayer>ItemImportant</altitudeLayer>
+		<passability>Standable</passability>
+		<destroyable>false</destroyable>
+		<rotatable>false</rotatable>
+		<clearBuildingArea>false</clearBuildingArea>
+		<selectable>false</selectable>
+		<coversFloor>false</coversFloor>
+		<useHitPoints>false</useHitPoints>
+		<tradeability>None</tradeability>
+		<isAutoAttackableMapObject>false</isAutoAttackableMapObject>
+	</ThingDef>
+  
+	<ThingDef Name="RH_TET_Dwarfs_WallLightGlower">
+		<defName>RH_TET_Dwarfs_WallLightGlower</defName>
+		<thingClass>TheEndTimes_Dwarfs.WallLightGlower</thingClass>
+		<label>wall light</label>
+		<description>A metal brazier attached to the wall for lighting an area. Dwarfs need light to move and work at full speed. Can be automatically refueled with wood. Produces a tiny amount of heat.</description>
+		<category>Attachment</category>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Sconce_Blank</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>.8,.8</drawSize>
+		</graphicData>
+		<building>
+			<isEdifice>false</isEdifice>
+		</building>
+		<statBases>
+			<Flammability>0</Flammability>
+		</statBases>
+		<altitudeLayer>Floor</altitudeLayer>
+		<passability>Standable</passability>
+		<destroyable>false</destroyable>
+		<rotatable>false</rotatable>
+		<clearBuildingArea>false</clearBuildingArea>
+		<selectable>false</selectable>
+		<coversFloor>false</coversFloor>
+		<useHitPoints>false</useHitPoints>
+		<tradeability>None</tradeability>
+		<isAutoAttackableMapObject>false</isAutoAttackableMapObject>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Glower">
+				<glowRadius>10</glowRadius>
+				<glowColor>(252,187,113,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase">
+		<defName>RH_TET_Dwarfs_Throne</defName>
+		<label>thane&apos;s throne</label>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<drawGUIOverlayQuality>false</drawGUIOverlayQuality>
+		<description>A large, ornate chair on a raised dais, designed for a high blood dwarfen backside to rest upon.\n\nAssigning a dwarf to a dwarfen throne will make the dwarf a high blood. High blood dwarfs have their own special needs, and requirements.\n\nOnce a dwarf is made a high blood, it cannot be undone unless they die. Their death will greatly upset the clans.\n\nThese thrones exemplify the ability of a dwarf to create something beautiful. High bloods are as proud of the quality of their thrones as they are of their own offspring, sometimes more so.\n\nThane Throneroom Requirements are as follows: \n\nMinimum 64 cells, and 150 impressiveness.\n\nFully floored by dwarf fine, elaborate, or exquisite flooring.\n\nMust have two dwarf column thins, and two dwarf lighted column thins. The lighted columns must be lit.\n\nMust have a dwarf oath stone.</description>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<tickerType>Normal</tickerType>
+		<category>Building</category>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,1)</interactionCellOffset>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>10000</WorkToBuild>
+			<Mass>40</Mass>
+			<Flammability>0</Flammability>
+			<Beauty>10</Beauty>
+			<Comfort>1.0</Comfort>
+		</statBases>
+		<thingClass>TheEndTimes_Dwarfs.Building_DwarfThrone</thingClass>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>150</costStuffCount>
+		<pathCost>30</pathCost>
+		<rotatable>true</rotatable>
+		<fillPercent>0.6</fillPercent>
+		<building>
+			<isSittable>true</isSittable>
+		</building>
+		<size>(3,2)</size>
+		<uiIconOffset>(0, 0)</uiIconOffset>
+		<uiIconScale>0.8</uiIconScale>
+		<comps>
+			<li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>true</drawAssignmentOverlay>
+				<compClass>TheEndTimes_Dwarfs.CompAssignableToPawn_Throne</compClass>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_HighBlood</li>
+		</researchPrerequisites>
+		<graphicData>
+			<drawSize>(3.0,3.0)</drawSize>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_Throne</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shadowData>
+				<volume>(0.5,0.35,0.4)</volume>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0,2, 0.6, 0.6)</rect>
+			</damageData>
+		</graphicData>
+		<designationCategory>RH_TET_Dwarfs_Buildings</designationCategory>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase">
+		<defName>RH_TET_Dwarfs_KingsThrone</defName>
+		<label>king&apos;s throne</label>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<drawGUIOverlayQuality>false</drawGUIOverlayQuality>
+		<description>A large, extremely ornate chair on a raised dais, designed for a dwarfen king to rest upon.\n\nAssigning a dwarf to a dwarfen throne will make the dwarf a high blood. High blood dwarfs have their own special needs, and requirements.\n\nOnce a dwarf is made a high blood, it cannot be undone unless they die. Their death will greatly upset the clans.\n\nA king&apos;s throne is the ultimate in dwarfen furniture craftsmanship. They&apos;re extremely beautiful, and only enhance the respect given to the person that sits upon them; from both dawi and non-dawi alike.\n\nKing/Queen Throneroom Requirements are as follows: \n\nMinimum 100 cells, and 200 impressiveness.\n\nFully floored by dwarf elaborate or exquisite flooring.\n\nMust have two dwarf massive column thinners, and two dwarf massive lighted column thinners. The lighted columns must be lit.\n\nMust have a dwarf oath stone, a dwarfen banner, and a dwarfen horn.</description>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<tickerType>Normal</tickerType>
+		<category>Building</category>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,1)</interactionCellOffset>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>15000</WorkToBuild>
+			<Mass>40</Mass>
+			<Flammability>0</Flammability>
+			<Beauty>25</Beauty>
+			<Comfort>1.5</Comfort>
+		</statBases>
+		<thingClass>TheEndTimes_Dwarfs.Building_DwarfThrone</thingClass>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<placeWorkers>
+			<li>TheEndTimes_Dwarfs.PlaceWorker_ThaneThroneRequired</li>
+		</placeWorkers>
+		<costStuffCount>200</costStuffCount>
+		<costList>
+			<RH_TET_Dwarf_Gromril>25</RH_TET_Dwarf_Gromril>
+			<Gold>50</Gold>
+			<Silver>100</Silver>
+		</costList>
+		<pathCost>30</pathCost>
+		<rotatable>true</rotatable>
+		<fillPercent>0.6</fillPercent>
+		<building>
+			<isSittable>true</isSittable>
+		</building>
+		<size>(3,2)</size>
+		<uiIconOffset>(0, 0)</uiIconOffset>
+		<uiIconScale>0.8</uiIconScale>
+		<comps>
+			<li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>true</drawAssignmentOverlay>
+				<compClass>TheEndTimes_Dwarfs.CompAssignableToPawn_Throne</compClass>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_HighBlood_King</li>
+		</researchPrerequisites>
+		<graphicData>
+			<drawSize>(3.0,3.0)</drawSize>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_ThroneKing</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shadowData>
+				<volume>(0.5,0.35,0.4)</volume>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0,2, 0.6, 0.6)</rect>
+			</damageData>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<designationCategory>RH_TET_Dwarfs_Buildings</designationCategory>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_FurnitureBase">
+		<defName>RH_TET_Dwarfs_Brazier</defName>
+		<label>dawi brazier</label>
+		<description>A bowl-shaped furnishing used to hold a fire. Will light the surroundings and create heat. Crafted from stone by dwarfs, very functional, and good looking.\n\nLarge braziers are popular amoung the dawi as gathering places, and as a place to rest for solo enjoyment. The light and heat is always welcome as well.</description>
+		<category>Building</category>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<fillPercent>0.15</fillPercent>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<WorkToBuild>150</WorkToBuild>
+			<Flammability>0</Flammability>
+			<Mass>20</Mass>
+			<Beauty>3</Beauty>
+		</statBases>
+		<selectable>true</selectable>
+		<designationCategory>Furniture</designationCategory>
+		<uiIconOffset>(0, 0)</uiIconOffset>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+		<placeWorkers>
+			<li>PlaceWorker_Heater</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<uiIconPath>UI/Menu/RH_TET_Dwarfs_Brazier_MenuIcon</uiIconPath>
+		<comps>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>2.0</fuelConsumptionRate>
+				<fuelCapacity>30.0</fuelCapacity>
+				<fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>RH_TET_Coal</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>.1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>10</glowRadius>
+				<glowColor>(252,187,113,0)</glowColor>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>16</heatPerSecond>
+				<heatPushMaxTemperature>25</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_FireOverlay">
+				<fireSize>1</fireSize>
+				<offset>(0,0,0.40)</offset>
+			</li>
+		</comps>
+		<canOverlapZones>false</canOverlapZones>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<rotatable>false</rotatable>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Lighting_Basic</li>
+		</researchPrerequisites>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_Brazier</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<shadowData>
+				<volume>(0.55, 0.35, 0.3)</volume>
+				<offset>(0, 0, -0.28)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.3,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Furniture_Light</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase">
+		<defName>RH_TET_Dwarfs_PlantPot</defName>
+		<label>dawi plant pot</label>
+		<description>Plant decorative flowers in this beautiful dwarfen planter to improve the mood of people nearby.\n\nEven dwarfs appreciate the beauty that plants can bring to a room. The fresh air they produce is also uplifting. Many dawi will have these pots around to show off their craftsmanship and industriousness, and to improve a room.</description>
+		<thingClass>Building_PlantGrower</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarf_PlantPot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<shadowData>
+				<volume>(0.55, 0.35, 0.3)</volume>
+				<offset>(0, 0, -0.28)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.20</fillPercent>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<WorkToBuild>300</WorkToBuild>
+			<Mass>2.5</Mass>
+			<Flammability>.5</Flammability>
+			<Beauty>2</Beauty>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>25</costStuffCount>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<fertility>1.0</fertility>
+		<designationHotKey>Misc9</designationHotKey>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<building>
+			<defaultPlantToGrow>Plant_Daylily</defaultPlantToGrow>
+			<sowTag>Decorative</sowTag>
+		</building>
+		<rotatable>false</rotatable>
+		<uiIconOffset>(0, -0.05)</uiIconOffset>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Basic</li>
+		</researchPrerequisites>
+		<designationCategory>Furniture</designationCategory>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase">
+		<defName>RH_TET_Dwarfs_Shelf</defName>
+		<label>dawi shelf</label>
+		<description>A shelf for storing things. Items stored in this will not affect room beauty and they won&apos;t deteriorate, even if outside.\n\nDwarfs excel at making the most of their often limited undermountain space. Large shelves are a must have for the clans, since having things laying around on the floor is unsightly.\n\nEXTENDED STORAGE NOTE: If you&apos;re using the Extended Storage mod, this shelf will automatically have the ability to store six times more than a normal shelf can store. It can hold anything you&apos;d like, except buildings. Make sure you set what you want it to hold, as it defaults to Raw Resources. If you are not using the Extended Storage mod, this will function like a normal shelf.</description>
+		<thingClass>Building_Storage</thingClass>
+		<size>(2,1)</size>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_Shelf</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>3</drawSize>
+		</graphicData>
+		<uiIconScale>0.75</uiIconScale>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.9</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>0.75</staticSunShadowHeight>
+		<pathCost>90</pathCost>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>40</costStuffCount>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Mass>20</Mass>
+			<WorkToBuild>800</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Beauty>10</Beauty>
+		</statBases>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<building>
+			<preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+			<ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+	  
+			<!-- new for 1.4 -->
+			<maxItemsInCell>4</maxItemsInCell>
+			<storageGroupTag>Shelf</storageGroupTag>
+			<blueprintClass>Blueprint_Storage</blueprintClass>
+			<defaultStorageSettings>
+				<priority>Preferred</priority>
+				<filter>
+					<categories>
+						<li>Foods</li>
+						<li>Manufactured</li>
+						<li>ResourcesRaw</li>
+						<li>Items</li>
+						<li>Weapons</li>
+						<li>Apparel</li>
+						<li>BodyParts</li>
+					</categories>
+				</filter>
+			</defaultStorageSettings>
+			<paintable>true</paintable>
+			<fixedStorageSettings>
+				<filter>
+					<disallowNotEverStorable>true</disallowNotEverStorable>
+					<categories>
+						<li>Root</li>
+					</categories>
+					<disallowedCategories>
+						<li>Plants</li>
+						<li>Buildings</li>
+					</disallowedCategories>
+					<disallowedThingDefs MayRequire="Ludeon.RimWorld.Biotech">
+						<li MayRequire="Ludeon.RimWorld.Biotech">Wastepack</li>
+					</disallowedThingDefs>
+					<specialFiltersToDisallow>
+						<li>AllowLargeCorpses</li>
+					</specialFiltersToDisallow>
+				</filter>
+			</fixedStorageSettings>
+		</building>
+		<tickerType>Normal</tickerType>
+		<drawGUIOverlay>False</drawGUIOverlay>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+		</inspectorTabs>
+		<designationHotKey>Misc12</designationHotKey>
+		<surfaceType>Item</surfaceType>
+		<canOverlapZones>false</canOverlapZones>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Basic</li>
+		</researchPrerequisites>
+		<designationCategory>Furniture</designationCategory>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tradeTags>
+			<li>Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+</Defs>

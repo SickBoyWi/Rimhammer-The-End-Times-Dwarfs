@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<MentalBreakDef>
+		<defName>RH_TET_Dwarfs_LonelyGrumbling</defName>
+		<mentalState>RH_TET_Dwarfs_LonelyGrumbling</mentalState>
+		<baseCommonality>0.5</baseCommonality>
+		<intensity>Minor</intensity>
+	</MentalBreakDef>
+  
+	<MentalStateDef ParentName="BaseMentalState">
+		<defName>RH_TET_Dwarfs_LonelyGrumbling</defName>
+		<stateClass>MentalState_WanderOwnRoom</stateClass>
+		<workerClass>TheEndTimes_Dwarfs.MentalStateWorker_LonelyGrumbling</workerClass>
+		<label>grumbling alone</label>
+		<category>Misc</category>
+		<colonistsOnly>true</colonistsOnly>
+		<minTicksBeforeRecovery>30000</minTicksBeforeRecovery>
+		<recoveryMtbDays>0.6</recoveryMtbDays>
+		<maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
+		<recoverFromSleep>true</recoverFromSleep>
+		<moodRecoveryThought>Catharsis</moodRecoveryThought>
+		<blockNormalThoughts>true</blockNormalThoughts>
+		<nameColor>(0.65, 0.9, 0.93)</nameColor>
+		<recoveryMessage>{0} is no longer grumbling alone in [PAWN_possessive] room.</recoveryMessage>
+		<beginLetterLabel>lonely grumbling</beginLetterLabel>
+		<beginLetter>{0} is grumbling alone in [PAWN_possessive] room.</beginLetter>
+		<beginLetterDef>NegativeEvent</beginLetterDef>
+		<baseInspectLine>Mental state: Lonely grumbling</baseInspectLine>
+		<allowBeatfire>true</allowBeatfire>
+		<escapingPrisonersIgnore>true</escapingPrisonersIgnore>
+	</MentalStateDef>
+
+</Defs>

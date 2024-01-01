@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- dicing -->
+	<JoyKindDef>
+		<defName>RH_TET_Dwarfs_Gaming_Random</defName>
+		<label>gaming</label>
+	</JoyKindDef>
+  
+	<JoyKindDef>
+		<defName>RH_TET_Music</defName>
+		<label>music</label>
+	</JoyKindDef>
+  
+</Defs>

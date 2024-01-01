@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality" Name="RH_TET_Dwarf_ShieldBase">
+		<defName>RH_TET_Dwarf_Shield_Low</defName>
+		<label>dawi shield</label>
+		<description>A common Dwarfen shield. Easy to make, but only provides minimal protection.\n\nDwarfen clansmen carry these shields in droves. They're affordable, easy to construct, and effective.</description>
+		<equipmentType>None</equipmentType>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Armor_Basic</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Shields/RH_TET_ShieldLow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<costStuffCount>25</costStuffCount>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Dwarfs_Shields</li>
+		</thingCategories>
+		<costList>
+			<WoodLog>25</WoodLog>
+		</costList>
+		<statBases>
+			<WorkToMake>6000</WorkToMake>
+			<MaxHitPoints>160</MaxHitPoints>
+			<Mass>2.0</Mass>
+		</statBases>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+		</equippedStatOffsets>
+		<equippedAngleOffset>-25</equippedAngleOffset>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<weaponTags>
+			<li>RH_TET_Dwarf_Shield_Low</li>
+		</weaponTags>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Armor_Low</li>
+		</tradeTags>
+		<comps>
+			<li Class="PawnShields.CompProperties_Shield">
+				<!-- Rendering systems -->
+				<wieldedGraphic>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<texPath>Things/Pawn/Dwarf/Apparel/Shields/RH_TET_ShieldLow</texPath>
+					<drawSize>(1.2, 1.2)</drawSize>
+				</wieldedGraphic>
+				<renderProperties>
+					<!-- Same as defaults in C# -->
+					<northOffset>(-0.3, -0.017, -0.3)</northOffset>
+					<southOffset>(0.3, 0.033, -0.3)</southOffset>
+					<westOffset>(-0.3, 0.053, -0.3)</westOffset>
+					<eastOffset>(0.3, -0.017, -0.3)</eastOffset>
+					<flipRotation>true</flipRotation>
+					<renderWhenPeaceful>false</renderWhenPeaceful>
+				</renderProperties>
+				<!-- Blocking system (Optional???) -->
+				<canBlockRanged>true</canBlockRanged>
+				<canBlockMelee>true</canBlockMelee>
+				<meleeBlockChanceFactor>0.4</meleeBlockChanceFactor>
+				<rangedBlockChanceFactor>0.25</rangedBlockChanceFactor>
+				<!-- Shield damage system (Optional) -->
+				<shieldTakeDamage>true</shieldTakeDamage>
+				<shieldTakeDamageFactor>1.2</shieldTakeDamageFactor>
+				<!-- Auto discard system (Optional) -->
+				<canBeAutoDiscarded>true</canBeAutoDiscarded>
+				<healthAutoDiscardThreshold>0.1</healthAutoDiscardThreshold>
+				<!-- Shield fatigue system (Optional) -->
+				<useFatigue>true</useFatigue>
+				<damageToFatigueFactor>0.005</damageToFatigueFactor>
+			</li>
+		</comps>
+		<tools>
+			<li>
+				<label>edge</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10.0</power>
+				<cooldownTime>2.0</cooldownTime>
+			</li>
+			<li>
+				<label>buckle</label>
+				<labelUsedInLogging>false</labelUsedInLogging>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10.0</power>
+				<cooldownTime>2.0</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+		<defName>RH_TET_Dwarf_ShieldMid</defName>
+		<label>dawi improved shield</label>
+		<description>A sturdy Dwarfen shield. Made all of metal, and provides good protection.\n\nChampions and even iron breakers carry this shield. It's protection is suberb, and as is usual for dwarfen constction, it's made with an artistic touch.</description>
+		<equipmentType>None</equipmentType>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Armor_Advanced</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Shields/RH_TET_ShieldMid</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<costStuffCount>75</costStuffCount>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Dwarfs_Shields</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>6500</WorkToMake>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Mass>3.0</Mass>
+		</statBases>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+		</equippedStatOffsets>
+		<equippedAngleOffset>-25</equippedAngleOffset>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<Gold>1</Gold>
+		</costList>
+		<weaponTags>
+			<li>RH_TET_Dwarf_Shield_Mid</li>
+			<li>RH_TET_Dwarf_Shield_IronBreaker</li>
+		</weaponTags>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Armor_Mid</li>
+		</tradeTags>
+		<comps>
+			<li Class="PawnShields.CompProperties_Shield">
+				<!-- Rendering systems -->
+				<wieldedGraphic>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<texPath>Things/Pawn/Dwarf/Apparel/Shields/RH_TET_ShieldMid</texPath>
+					<drawSize>(1.2, 1.2)</drawSize>
+				</wieldedGraphic>
+				<renderProperties>
+					<!-- Same as defaults in C# -->
+					<northOffset>(-0.3, -0.017, -0.3)</northOffset>
+					<southOffset>(0.3, 0.033, -0.3)</southOffset>
+					<westOffset>(-0.3, 0.053, -0.3)</westOffset>
+					<eastOffset>(0.3, -0.017, -0.3)</eastOffset>
+					<flipRotation>true</flipRotation>
+					<renderWhenPeaceful>false</renderWhenPeaceful>
+				</renderProperties>
+				<!-- Blocking system (Optional???) -->
+				<canBlockRanged>true</canBlockRanged>
+				<canBlockMelee>true</canBlockMelee>
+				<meleeBlockChanceFactor>0.4</meleeBlockChanceFactor>
+				<rangedBlockChanceFactor>0.25</rangedBlockChanceFactor>
+				<!-- Shield damage system (Optional) -->
+				<shieldTakeDamage>true</shieldTakeDamage>
+				<shieldTakeDamageFactor>1.2</shieldTakeDamageFactor>
+				<!-- Auto discard system (Optional) -->
+				<canBeAutoDiscarded>true</canBeAutoDiscarded>
+				<healthAutoDiscardThreshold>0.1</healthAutoDiscardThreshold>
+				<!-- Shield fatigue system (Optional) -->
+				<useFatigue>true</useFatigue>
+				<damageToFatigueFactor>0.005</damageToFatigueFactor>
+			</li>
+		</comps>
+		<tools>
+			<li>
+				<label>edge</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11.0</power>
+				<cooldownTime>2.0</cooldownTime>
+			</li>
+			<li>
+				<label>buckle</label>
+				<labelUsedInLogging>false</labelUsedInLogging>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11.0</power>
+				<cooldownTime>2.0</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+		<defName>RH_TET_Dwarf_ShieldHigh</defName>
+		<label>dawi lordly shield</label>
+		<description>An elaborate Dwarfen shield. Made all of metal, looks great, and provides superior protection.\n\nThe wealthiest and highest standing socially of dwarfs carry these as a point of pride. They're not cheap to acquire, and the amount of protection they offer reflects that.</description>
+		<equipmentType>None</equipmentType>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Armor_HighBlood</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Shields/RH_TET_ShieldHigh</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<costStuffCount>100</costStuffCount>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Dwarfs_Shields</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>7000</WorkToMake>
+			<MaxHitPoints>240</MaxHitPoints>
+			<Mass>3.5</Mass>
+		</statBases>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+		</equippedStatOffsets>
+		<equippedAngleOffset>-25</equippedAngleOffset>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<Gold>2</Gold>
+		</costList>
+		<weaponTags>
+			<li>RH_TET_Dwarf_Shield_High</li>
+			<li>RH_TET_Dwarf_Shield_IronBreaker</li>
+		</weaponTags>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Armor_High</li>
+		</tradeTags>
+		<comps>
+			<li Class="PawnShields.CompProperties_Shield">
+				<!-- Rendering systems -->
+				<wieldedGraphic>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<texPath>Things/Pawn/Dwarf/Apparel/Shields/RH_TET_ShieldHigh</texPath>
+					<drawSize>(1.2, 1.2)</drawSize>
+				</wieldedGraphic>
+				<renderProperties>
+					<!-- Same as defaults in C# -->
+					<northOffset>(-0.3, -0.017, -0.3)</northOffset>
+					<southOffset>(0.3, 0.033, -0.3)</southOffset>
+					<westOffset>(-0.3, 0.053, -0.3)</westOffset>
+					<eastOffset>(0.3, -0.017, -0.3)</eastOffset>
+					<flipRotation>true</flipRotation>
+					<renderWhenPeaceful>false</renderWhenPeaceful>
+				</renderProperties>
+				<!-- Blocking system (Optional???) -->
+				<canBlockRanged>true</canBlockRanged>
+				<canBlockMelee>true</canBlockMelee>
+				<meleeBlockChanceFactor>0.5</meleeBlockChanceFactor>
+				<rangedBlockChanceFactor>0.3</rangedBlockChanceFactor>
+				<!-- Shield damage system (Optional) -->
+				<shieldTakeDamage>true</shieldTakeDamage>
+				<shieldTakeDamageFactor>1.2</shieldTakeDamageFactor>
+				<!-- Auto discard system (Optional) -->
+				<canBeAutoDiscarded>true</canBeAutoDiscarded>
+				<healthAutoDiscardThreshold>0.1</healthAutoDiscardThreshold>
+				<!-- Shield fatigue system (Optional) -->
+				<useFatigue>true</useFatigue>
+				<damageToFatigueFactor>0.005</damageToFatigueFactor>
+			</li>
+		</comps>
+		<tools>
+			<li>
+				<label>edge</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2.0</cooldownTime>
+			</li>
+			<li>
+				<label>buckle</label>
+				<labelUsedInLogging>false</labelUsedInLogging>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2.0</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+	
+</Defs>

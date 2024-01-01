@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<JoyGiverDef>
+		<defName>RH_TET_Dwarf_AdmireGold</defName>
+		<giverClass>TheEndTimes_Dwarfs.JoyGiver_InteractGold</giverClass>
+		<baseChance>1</baseChance>
+		<pctPawnsEverDo>1</pctPawnsEverDo>
+		<jobDef>RH_TET_Dwarf_AdmireGold</jobDef>
+		<joyKind>Meditative</joyKind>
+		<canDoWhileInBed>false</canDoWhileInBed>
+		<thingDefs>
+			<li>Gold</li>
+		</thingDefs>
+		<requiredCapacities>
+			<li>Sight</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+
+	<JoyGiverDef>
+		<defName>RH_TET_Dwarfs_AttendFire</defName>
+		<giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
+		<baseChance>0.25</baseChance>
+		<thingDefs>
+			<li>RH_TET_Dwarfs_Hearth</li>
+		</thingDefs>
+		<jobDef>RH_TET_Dwarfs_AttendFire</jobDef>
+		<joyKind>Meditative</joyKind>
+		<requiredCapacities>
+			<li>Sight</li>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+  
+	<JoyGiverDef>
+		<defName>RH_TET_Dwarfs_WatchFire</defName>
+		<giverClass>JoyGiver_WatchBuilding</giverClass>
+		<baseChance>1</baseChance>
+		<canDoWhileInBed>true</canDoWhileInBed>
+		<thingDefs>
+			<li>RH_TET_Dwarfs_Hearth</li>
+		</thingDefs>
+		<jobDef>RH_TET_Dwarfs_WatchFire</jobDef>
+		<joyKind>Meditative</joyKind>
+		<requiredCapacities>
+			<li>Sight</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+
+	<JoyGiverDef>
+		<defName>RH_TET_Dwarf_PlayDice</defName>
+		<giverClass>TheEndTimes_Dwarfs.JoyGiver_PlayDice</giverClass>
+		<baseChance>4</baseChance>
+		<thingDefs>
+			<li>RH_TET_Dwarfs_DicingTable</li>
+		</thingDefs>
+		<jobDef>RH_TET_Dwarf_PlayDice</jobDef>
+		<joyKind>RH_TET_Dwarfs_Gaming_Random</joyKind>
+		<requiredCapacities>
+			<li>Sight</li>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+ 
+	<JoyGiverDef>
+		<defName>RH_TET_Dwarfs_PlayHorn</defName>
+		<giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
+		<baseChance>2</baseChance>
+		<requireChair>false</requireChair>
+		<thingDefs>
+			<li>RH_TET_Dwarfs_Horn</li>
+		</thingDefs>
+		<jobDef>RH_TET_Dwarfs_PlayHorn</jobDef>
+		<joyKind>RH_TET_Music</joyKind>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+ 
+</Defs>

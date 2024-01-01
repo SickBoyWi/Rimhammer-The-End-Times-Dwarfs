@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DesignatorDropdownGroupDef>
+		<defName>RH_TET_Dwarfs_Floor_Tile_Basic</defName>
+	</DesignatorDropdownGroupDef>
+  
+	<DesignatorDropdownGroupDef>
+		<defName>RH_TET_Dwarfs_Floor_Tile_Mid</defName>
+	</DesignatorDropdownGroupDef>
+
+	<DesignatorDropdownGroupDef>
+		<defName>RH_TET_Dwarfs_Floor_Tile_MedFine</defName>
+	</DesignatorDropdownGroupDef>
+
+	<DesignatorDropdownGroupDef>
+		<defName>RH_TET_Dwarfs_Floor_Tile_Fine</defName>
+	</DesignatorDropdownGroupDef>
+  
+	<TerrainDef Name="RH_TET_Dwarf_FloorBase" Abstract="True">
+		<layerable>true</layerable>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+		</affordances>
+		<tags>
+			<li>Floor</li>
+			<li>RH_TET_Dwarfs_Floor</li>
+		</tags>
+		<designationCategory>Floors</designationCategory>
+		<fertility>0</fertility>
+		<constructEffect>ConstructDirt</constructEffect>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+	</TerrainDef>
+  
+	<TerrainDef Abstract="True" ParentName="RH_TET_Dwarf_FloorBase" Name="RH_TET_Dwarf_FloorFineBase">
+		<renderPrecedence>220</renderPrecedence>
+		<description>Artfully crafted dwarfen stone floor tiles with inlaid gold. True dwarfen craftsmanship. Significantly more well-cut and better fitted floor tiles than you will see in any human construction. They are stunningly beautiful to look at, but they take a long while to lay. Fit for any lord's private or public audience chambers.</description>
+		<texturePath>Terrain/Surfaces/RH_TET_Dwarf_ElaborateFloors</texturePath>
+		<statBases>
+			<WorkToBuild>5500</WorkToBuild>
+			<Beauty>8</Beauty>
+		</statBases>
+		<tags>
+			<li>FineFloor</li>
+			<li>RH_TET_Dwarfs_SuperiorFloor</li>
+		</tags>
+		<designatorDropdown>RH_TET_Dwarfs_Floor_Tile_Fine</designatorDropdown>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_FlooringHighBlood</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</TerrainDef>
+
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorFineBase">
+		<defName>RH_TET_Dwarfs_FancyFloorGranite</defName>
+		<label>granite exquisite tile</label>
+		<color>(105,95,97)</color>
+		<costList>
+			<BlocksGranite>15</BlocksGranite>
+			<Gold>3</Gold>
+		</costList>
+	</TerrainDef>
+  
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorFineBase">
+		<defName>RH_TET_Dwarfs_FancyFloorSandstone</defName>
+		<label>sandstone exquisite tile</label>
+		<color>(126,104,94)</color>
+		<costList>
+			<BlocksSandstone>15</BlocksSandstone>
+			<Gold>3</Gold>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorFineBase">
+		<defName>RH_TET_Dwarfs_FancyFloorLimestone</defName>
+		<label>limestone exquisite tile</label>
+		<color>(158,153,135)</color>
+		<costList>
+			<BlocksLimestone>15</BlocksLimestone>
+			<Gold>3</Gold>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorFineBase">
+		<defName>RH_TET_Dwarfs_FancyFloorSlate</defName>
+		<label>slate exquisite tile</label>
+		<color>(100,100,100)</color>
+		<costList>
+			<BlocksSlate>15</BlocksSlate>
+			<Gold>3</Gold>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorFineBase">
+		<defName>RH_TET_Dwarfs_FancyFloorMarble</defName>
+		<label>marble exquisite tile</label>
+		<color>(132,135,132)</color>
+		<costList>
+			<BlocksMarble>15</BlocksMarble>
+			<Gold>3</Gold>
+		</costList>
+	</TerrainDef>
+	<!--TODO Figure out jade.
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorFineBase">
+		<defName>RH_TET_Dwarfs_FancyFloorJade</defName>
+		<label>jade exquisite tile</label>
+		<color>(132,135,132)</color>
+		<costList>
+			<Jade>15</Jade>
+			<Gold>3</Gold>
+		</costList>
+	</TerrainDef>
+	-->
+	<TerrainDef Abstract="True" ParentName="RH_TET_Dwarf_FloorBase" Name="RH_TET_Dwarf_FloorMedFineBase">
+		<renderPrecedence>220</renderPrecedence>
+		<description>Finely crafted dwarfen stone floor tiles. True dwarfen craftsmanship, but made of just stone. Significantly more well-cut and better fitted floor tiles than you will see in any human construction. They are very beautiful to look at, but they take a long while to lay. Fit for any thane's private or public audience chambers.</description>
+		<texturePath>Terrain/Surfaces/RH_TET_Dwarf_FineFloors</texturePath>
+		<statBases>
+			<WorkToBuild>2000</WorkToBuild>
+			<Beauty>3</Beauty>
+		</statBases>
+		<tags>
+			<li>FineFloor</li>
+			<li>RH_TET_Dwarfs_FineFloor</li>
+		</tags>
+		<designatorDropdown>RH_TET_Dwarfs_Floor_Tile_MedFine</designatorDropdown>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_FlooringAdvanced</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</TerrainDef>
+
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorMedFineBase">
+		<defName>RH_TET_Dwarfs_FineFloorGranite</defName>
+		<label>granite elaborate floor tile</label>
+		<color>(105,95,97)</color>
+		<costList>
+			<BlocksGranite>10</BlocksGranite>
+		</costList>
+	</TerrainDef>
+  
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorMedFineBase">
+		<defName>RH_TET_Dwarfs_FineFloorSandstone</defName>
+		<label>sandstone elaborate floor tile</label>
+		<color>(126,104,94)</color>
+		<costList>
+			<BlocksSandstone>10</BlocksSandstone>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorMedFineBase">
+		<defName>RH_TET_Dwarfs_FineFloorLimestone</defName>
+		<label>limestone elaborate floor tile</label>
+		<color>(158,153,135)</color>
+		<costList>
+			<BlocksLimestone>10</BlocksLimestone>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorMedFineBase">
+		<defName>RH_TET_Dwarfs_FineFloorSlate</defName>
+		<label>slate elaborate floor tile</label>
+		<color>(100,100,100)</color>
+		<costList>
+			<BlocksSlate>10</BlocksSlate>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorMedFineBase">
+		<defName>RH_TET_Dwarfs_FineFloorMarble</defName>
+		<label>marble elaborate floor tile</label>
+		<color>(132,135,132)</color>
+		<costList>
+			<BlocksMarble>10</BlocksMarble>
+		</costList>
+	</TerrainDef>
+	<!--TODO Figure out jade.
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorMedFineBase">
+		<defName>RH_TET_Dwarfs_FineFloorJade</defName>
+		<label>jade elaborate floor tile</label>
+		<color>(132,135,132)</color>
+		<costList>
+			<Jade>10</Jade>
+		</costList>
+	</TerrainDef>
+	-->
+	<TerrainDef Abstract="True" ParentName="RH_TET_Dwarf_FloorBase" Name="RH_TET_Dwarf_FloorMidBase">
+		<renderPrecedence>220</renderPrecedence>
+		<description>Very nice dwarfen stone floor tiles. An improvement on the most basic work that a dwarf will do in good conscious. More well-cut and better fitted floor tiles than you will see in any human construction. They are beautiful to look at, but they take a while to lay. Fit for most common to thane level places of a dwarfen hold.</description>
+		<texturePath>Terrain/Surfaces/RH_TET_Dwarf_MidFloors</texturePath>
+		<statBases>
+			<WorkToBuild>1400</WorkToBuild>
+			<Beauty>2</Beauty>
+		</statBases>
+		<tags>
+			<li>FineFloor</li>
+			<li>RH_TET_Dwarfs_MidFloor</li>
+		</tags>
+		<designatorDropdown>RH_TET_Dwarfs_Floor_Tile_Mid</designatorDropdown>
+		<researchPrerequisites>
+			<li>Stonecutting</li>
+			<li>RH_TET_Dwarfs_FlooringBasic</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+	</TerrainDef>
+
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorMidBase">
+		<defName>RH_TET_Dwarfs_MidFloorGranite</defName>
+		<label>granite fine floor tile</label>
+		<color>(105,95,97)</color>
+		<costList>
+			<BlocksGranite>5</BlocksGranite>
+		</costList>
+	</TerrainDef>
+  
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorMidBase">
+		<defName>RH_TET_Dwarfs_MidFloorSandstone</defName>
+		<label>sandstone fine floor tile</label>
+		<color>(126,104,94)</color>
+		<costList>
+			<BlocksSandstone>5</BlocksSandstone>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorMidBase">
+		<defName>RH_TET_Dwarfs_MidFloorLimestone</defName>
+		<label>limestone fine floor tile</label>
+		<color>(158,153,135)</color>
+		<costList>
+			<BlocksLimestone>5</BlocksLimestone>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorMidBase">
+		<defName>RH_TET_Dwarfs_MidFloorSlate</defName>
+		<label>slate fine floor tile</label>
+		<color>(100,100,100)</color>
+		<costList>
+			<BlocksSlate>5</BlocksSlate>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorMidBase">
+		<defName>RH_TET_Dwarfs_MidFloorMarble</defName>
+		<label>marble fine floor tile</label>
+		<color>(132,135,132)</color>
+		<costList>
+			<BlocksMarble>5</BlocksMarble>
+		</costList>
+	</TerrainDef>
+
+	<!-- TODO Jade
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorMidBase">
+		<defName>RH_TET_Dwarfs_MidFloorJade</defName>
+		<label>jade fine floor tile</label>
+		<color>(132,135,132)</color>
+		<costList>
+			<Jade>5</Jade>
+		</costList>
+	</TerrainDef>
+	-->
+	<TerrainDef Abstract="True" ParentName="RH_TET_Dwarf_FloorBase" Name="RH_TET_Dwarf_FloorLowBase">
+		<renderPrecedence>220</renderPrecedence>
+		<description>Dwarfen stone floor tiles. The most basic work that a dwarf will do in good conscious. As well-cut and fitted floor tiles as you will see in any human construction. They are pretty to look at, but they take a while to lay. Fit for most low to common places of a dwarfen hold, and frequently used in mining tunnels.</description>
+		<texturePath>Terrain/Surfaces/RH_TET_Dwarf_MineFloors</texturePath>
+		<statBases>
+			<WorkToBuild>900</WorkToBuild>
+			<Beauty>1</Beauty>
+		</statBases>
+		<tags>
+			<li>RH_TET_Dwarfs_FlooringBasic</li>
+		</tags>
+		<designatorDropdown>RH_TET_Dwarfs_Floor_Tile_Basic</designatorDropdown>
+		<researchPrerequisites>
+			<li>Stonecutting</li>
+			<li>RH_TET_Dwarfs_FlooringBasic</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	</TerrainDef>
+
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorLowBase">
+		<defName>RH_TET_Dwarfs_BasicFloorGranite</defName>
+		<label>granite basic floor tile</label>
+		<color>(105,95,97)</color>
+		<costList>
+			<BlocksGranite>3</BlocksGranite>
+		</costList>
+	</TerrainDef>
+  
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorLowBase">
+		<defName>RH_TET_Dwarfs_BasicFloorSandstone</defName>
+		<label>sandstone basic floor tile</label>
+		<color>(126,104,94)</color>
+		<costList>
+			<BlocksSandstone>3</BlocksSandstone>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorLowBase">
+		<defName>RH_TET_Dwarfs_BasicFloorLimestone</defName>
+		<label>limestone basic floor tile</label>
+		<color>(158,153,135)</color>
+		<costList>
+			<BlocksLimestone>3</BlocksLimestone>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorLowBase">
+		<defName>RH_TET_Dwarfs_BasicFloorSlate</defName>
+		<label>slate basic floor tile</label>
+		<color>(100,100,100)</color>
+		<costList>
+			<BlocksSlate>3</BlocksSlate>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorLowBase">
+		<defName>RH_TET_Dwarfs_BasicFloorMarble</defName>
+		<label>marble basic floor tile</label>
+		<color>(132,135,132)</color>
+		<costList>
+			<BlocksMarble>3</BlocksMarble>
+		</costList>
+	</TerrainDef>
+
+	<!--TODO Jade
+	<TerrainDef ParentName="RH_TET_Dwarf_FloorLowBase">
+		<defName>RH_TET_Dwarfs_BasicFloorJade</defName>
+		<label>jade basic floor tile</label>
+		<color>(132,135,132)</color>
+		<costList>
+			<Jade>3</Jade>
+		</costList>
+	</TerrainDef>
+	-->
+</Defs>

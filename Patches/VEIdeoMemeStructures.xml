@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Ideology Expanded - Memes and Structures</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/VanillaMemesExpanded.SupportedDrinksForPreceptDefs[defName = "VME_SupportedDrinksForPreceptDef"]/supportedDrinksForPrecept</xpath>
+					<value>
+						<li>RH_TET_Dwarf_BugmansXXX</li>
+						<li>RH_TET_Dwarf_Ale</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

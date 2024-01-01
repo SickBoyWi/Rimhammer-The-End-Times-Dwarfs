@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase">
+		<defName>RH_TET_Dwarfs_DicingTable</defName>
+		<label>dawi dicing table</label>
+		<description>A soft-topped bounded table for shooting dice at. Grants a bit of dexterity skill to users, as they learn to flick the dice about in the hopes of controllig the result.\n\nDwarfs love gaming, because it goes well with drinking. Many a grudge has begun at the dwarfen dicing table, as too many drinks flow, and emotions run high over the precious gold being wagered.</description>
+		<graphicData>
+			<texPath>Things/Building/Misc/RH_TET_Dwarfs_DicingTable</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,4)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<staticSunShadowHeight>0.2</staticSunShadowHeight>
+		<castEdgeShadows>True</castEdgeShadows>
+		<altitudeLayer>Building</altitudeLayer>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsJoy</li>
+		</thingCategories>
+		<fillPercent>0.40</fillPercent>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<building>
+			<joyKind>RH_TET_Dwarfs_Gaming_Random</joyKind>
+		</building>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>12000</WorkToBuild>
+			<Mass>60</Mass>
+			<Flammability>.5</Flammability>
+			<Beauty>3</Beauty>
+			<JoyGainFactor>1.3</JoyGainFactor>
+		</statBases>
+		<size>(2,3)</size>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<costList>
+			<Cloth>80</Cloth>
+			<WoodLog>30</WoodLog>
+		</costList>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<designationCategory>Joy</designationCategory>
+		<designationHotKey>Misc3</designationHotKey>
+		<canOverlapZones>false</canOverlapZones>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Recreation</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase">
+		<defName>RH_TET_Dwarf_Telescope</defName>
+		<label>dawi telescope</label>
+		<description>A telescope for doing astronomy. It's a relaxing hobby for a certain kind of person. Can only be used outdoors. Requires the finest of dwarfen craftsmen to construct.\n\nDespite living underground, dwarfs have a strong urge to discover how things work. Observing the skies is one such way that dwarfs study the ways of the universe and the gods.</description>
+		<graphicData>
+			<texPath>Things/Building/Misc/RH_TET_Dwarfs_Telescope</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawRotated>false</drawRotated>
+			<shadowData>
+				<volume>(0.3, 0.7, 0.3)</volume>
+				<offset>(-0.03,0,-0.35)</offset>
+			</shadowData>
+			<drawSize>(1.5)</drawSize>
+		</graphicData>
+		<uiIconScale>0.7</uiIconScale>
+		<canBeUsedUnderRoof>false</canBeUsedUnderRoof>
+		<fillPercent>0.15</fillPercent>
+		<altitudeLayer>Building</altitudeLayer>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,1)</interactionCellOffset>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsJoy</li>
+		</thingCategories>
+		<building>
+			<joyKind>Telescope</joyKind>
+		</building>
+		<costList>
+			<Steel>50</Steel>
+			<Gold>5</Gold>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToBuild>10000</WorkToBuild>
+			<Beauty>4</Beauty>
+			<MaxHitPoints>110</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<MarketValue>550</MarketValue>
+			<Mass>7.5</Mass>
+			<JoyGainFactor>1.2</JoyGainFactor>
+		</statBases>
+		<placeWorkers>
+			<li>PlaceWorker_NotUnderRoof</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<techLevel>Medieval</techLevel>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Recreation</li>
+		</researchPrerequisites>
+		<designationCategory>Joy</designationCategory>
+	</ThingDef>
+
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>RH_TET_UnfinishedHorn</defName>
+		<label>unfinished horn</label>
+		<description>An unfinished horn.</description>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<graphicData>
+			<texPath>Things/Item/Misc/RH_TET_UnfinishedInstrument</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingDef>
+ 
+	<ThingDef Name="RH_TET_Dwarfs_MusicalInstrumentBase" ParentName="BuildingBase" Abstract="True">
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>true</rotatable>
+		<thingClass>TheEndTimes_Dwarfs.Building_Horn</thingClass>
+		<tickerType>Normal</tickerType>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<hasInteractionCell>true</hasInteractionCell>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsJoy</li>
+		</thingCategories>
+		<tradeTags>
+			<li>RH_TET_Instrument</li>
+		</tradeTags>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Sculpt</soundWorking>
+			<unfinishedThingDef>RH_TET_UnfinishedHorn</unfinishedThingDef>
+		</recipeMaker>
+		<building>
+			<joyKind>RH_TET_Music</joyKind>
+		</building>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li>
+				<compClass>CompGatherSpot</compClass>
+			</li>
+			<li Class="TheEndTimes_Dwarfs.CompProperties_MoteThrower">
+				<mote>RH_TET_MoteMusic</mote>
+				<offsetMin>(-0.6,0,0.3)</offsetMin>
+				<offsetMax>(0.6,0,0.5)</offsetMax>
+				<emissionInterval>150</emissionInterval>
+				<scale>0.4~0.8</scale>
+				<rotationRate>-15~15</rotationRate>
+				<velocityX>0.3~0.7</velocityX>
+				<velocityY>0.3~0.8</velocityY>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowInstrumentAoE</li><!--CREATURE UNIQUE? I think not.-->
+		</placeWorkers>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_MusicalInstrumentBase">
+		<defName>RH_TET_Dwarfs_Horn</defName>
+		<label>Dawi Horn</label>
+		<description>A large horn with a wide flat base. It is a musical instrument that can be played.\n\nThe beautiful noise reverberates throughout the dawi hold. It offers recreation to the player, as well as the listeners.</description>
+		<size>(1,1)</size>
+		<pathCost>30</pathCost>
+		<minTechLevelToBuild>Medieval</minTechLevelToBuild>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<soundPlayInstrument>RH_TET_Dwarfs_HornPlay</soundPlayInstrument>
+		<researchPrerequisites><li>RH_TET_Dwarfs_Furniture_Recreation</li></researchPrerequisites>
+		<thingSetMakerTags><li>RH_TET_Dwarfs_RewardStandardQualitySuper</li></thingSetMakerTags>
+		<statBases>
+			<MaxHitPoints>110</MaxHitPoints>
+			<WorkToMake>18000</WorkToMake>
+			<Mass>4</Mass>
+			<JoyGainFactor>1</JoyGainFactor>
+			<Beauty>15</Beauty>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>RH_TET_Dwarfs_Furniture_Recreation</researchPrerequisite>
+			<recipeUsers>
+				<li>FueledSmithy</li>
+				<li>ElectricSmithy</li>
+				<li>RH_TET_TableSmithy</li>
+			</recipeUsers>
+		</recipeMaker>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<costList>
+			<Gold>1</Gold>
+		</costList>
+		<building>
+			<instrumentRange>18</instrumentRange>
+		</building>
+		<uiIconOffset>(0, 0.08)</uiIconOffset>
+		<uiIconScale>0.9</uiIconScale>
+		<graphicData>
+			<texPath>Things/Building/Recreation/RH_TET_Dwarfs_Horn</texPath>
+			<drawSize>(2,2)</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawRotated>false</drawRotated>
+			<allowFlip>false</allowFlip>
+			<shadowData>
+				<volume>(0.08, 0.2, 0.08)</volume>
+				<offset>(0, 0, -0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.3,0.3,0.4,0.4)</rect>
+			</damageData>
+		</graphicData>
+	</ThingDef>
+  
+</Defs>

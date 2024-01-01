@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3A4FB893-1148-4E16-B548-867647DF1724}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheEndTimes_Dwarfs</RootNamespace>
+    <AssemblyName>RH_TET_Dwarfs</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\1.4\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DoorsExpanded">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\1316188771\1.3\Assemblies\DoorsExpanded.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HugsLib">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\818773962\v1.3\Assemblies\HugsLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RH_TET_Magic">
+      <HintPath>..\..\..\Rimhammer-The-End-Times-Magic\1.4\Assemblies\RH_TET_Magic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blasting\Alert_BlastingWireFailure.cs" />
+    <Compile Include="Blasting\Building_AdvancedBlastingExplosive.cs" />
+    <Compile Include="Blasting\Building_BlastingCharge.cs" />
+    <Compile Include="Blasting\Building_BlastingChargeSquare.cs" />
+    <Compile Include="Blasting\Designator_SelectBlastingWire.cs" />
+    <Compile Include="Blasting\CompMountainBreakerExplosive.cs" />
+    <Compile Include="Blasting\CompBlastingExplosive.cs" />
+    <Compile Include="Blasting\CompProperties_BlastingExplosive.cs" />
+    <Compile Include="Blasting\JobDriver_DetonateBlast.cs" />
+    <Compile Include="Blasting\WorkGiver_BlastingWire.cs" />
+    <Compile Include="Blasting\WorkGiver_IPawnDetonateable.cs" />
+    <Compile Include="Blasting\PlaceWorker_MountainBreakerExplosive.cs" />
+    <Compile Include="Blasting\PlaceWorker_BlastingExplosiveSquare.cs" />
+    <Compile Include="Blasting\PlaceWorker_BlastingWire.cs" />
+    <Compile Include="Blasting\Graphic_Variants.cs" />
+    <Compile Include="Blasting\IPawnDetonateable.cs" />
+    <Compile Include="Blasting\IGraphicVariantProvider.cs" />
+    <Compile Include="Blasting\Building_DetonatorManual.cs" />
+    <Compile Include="Blasting\Building_BlastingWire.cs" />
+    <Compile Include="Blasting\BuildingProperties_BlastingWire.cs" />
+    <Compile Include="Blasting\CompCustomBlast.cs" />
+    <Compile Include="Blasting\CompBlastingGridNode.cs" />
+    <Compile Include="Blasting\BlastingUtility.cs" />
+    <Compile Include="Blasting\CompWiredBlasterSender.cs" />
+    <Compile Include="Blasting\CompWiredBlasterTransmitter.cs" />
+    <Compile Include="Blasting\CompWiredBlasterReceiver.cs" />
+    <Compile Include="Blasting\CompProperties_WiredBlasterSender.cs" />
+    <Compile Include="Blasting\CompProperties_WiredBlasterReceiver.cs" />
+    <Compile Include="Blasting\CompProperties_WiredBlasterTransmitter.cs" />
+    <Compile Include="Blasting\JobDriver_DryBlastingWire.cs" />
+    <Compile Include="Buildings\Building_Horn.cs" />
+    <Compile Include="CapturedHold\CapturedHoldComp.cs" />
+    <Compile Include="CapturedHold\CapturedHoldCompMain.cs" />
+    <Compile Include="CapturedHold\CaravanArrivalAction_CapturedHold.cs" />
+    <Compile Include="CapturedHold\CaravanArrivalAction_EnterMap.cs" />
+    <Compile Include="CapturedHold\GameVictoryUtility.cs" />
+    <Compile Include="CapturedHold\StorytellerCompProperties_CapturedHold.cs" />
+    <Compile Include="CapturedHold\StorytellerComp_CapturedHold.cs" />
+    <Compile Include="CapturedHold\QuestNode_GetSiteTileImpassible.cs" />
+    <Compile Include="CapturedHold\VisitableSite.cs" />
+    <Compile Include="CapturedHold\CapturedHoldSite.cs" />
+    <Compile Include="Comps\CompMoteThrower.cs" />
+    <Compile Include="Comps\CompProperties_MoteThrower.cs" />
+    <Compile Include="EventsMap\IncidentWorker_WildDwarfWandersIn.cs" />
+    <Compile Include="EventsMap\IncidentWorker_MinerJoin.cs" />
+    <Compile Include="Furniture\Building_DwarfThrone.cs" />
+    <Compile Include="Furniture\GraphicRotatable.cs" />
+    <Compile Include="Furniture\CompFireOverlayRotatable.cs" />
+    <Compile Include="Furniture\CompProperties_FireOverlayRotatable.cs" />
+    <Compile Include="Furniture\CompAssignableToPawn_Throne.cs" />
+    <Compile Include="Furniture\PlaceWorker_OnWallVent.cs" />
+    <Compile Include="Furniture\PlaceWorker_OnWalls.cs" />
+    <Compile Include="Furniture\PlaceWorker_UnderCeiling.cs" />
+    <Compile Include="Furniture\Building_WallLight.cs" />
+    <Compile Include="Furniture\WallLightGlower.cs" />
+    <Compile Include="Furniture\StaticWallLightStuff.cs" />
+    <Compile Include="Harmony\OnStartup.cs" />
+    <Compile Include="HighBloodStuff\PlaceWorker_ThaneThroneRequired.cs" />
+    <Compile Include="HighBloodStuff\Command_AbilityHoldCourt.cs" />
+    <Compile Include="HighBloodStuff\CompAbilityEffect_HoldCourt.cs" />
+    <Compile Include="HighBloodStuff\CompProperties_AbilityStartHoldCourt.cs" />
+    <Compile Include="HighBloodStuff\JobDriver_HoldCourt.cs" />
+    <Compile Include="HighBloodStuff\JobGiver_HoldCourt.cs" />
+    <Compile Include="HighBloodStuff\JobGiver_Rule.cs" />
+    <Compile Include="HighBloodStuff\JobDriver_Rule.cs" />
+    <Compile Include="HighBloodStuff\HighBloodFoodRequirement.cs" />
+    <Compile Include="HighBloodStuff\GatheringWorker_HighBloodCourt.cs" />
+    <Compile Include="HighBloodStuff\LordToilData_HoldCourt.cs" />
+    <Compile Include="HighBloodStuff\LordToil_HoldCourt.cs" />
+    <Compile Include="HighBloodStuff\LordJob_Joinable_Court.cs" />
+    <Compile Include="Infestation\JobGiver_MaintainTunnels.cs" />
+    <Compile Include="Infestation\LordToil_DefendTunnelAggressively.cs" />
+    <Compile Include="Infestation\LordToil_TunnelRelatedData.cs" />
+    <Compile Include="Infestation\LordToil_TunnelRelated.cs" />
+    <Compile Include="Infestation\LordToil_DefendAndExpandTunnel.cs" />
+    <Compile Include="Infestation\LordJob_DefendAndExpandTunnel.cs" />
+    <Compile Include="Infestation\JobGiver_WanderTunnel.cs" />
+    <Compile Include="Infestation\JobGiver_TunnelDefense.cs" />
+    <Compile Include="Infestation\ThinkNode_ConditionalTunnelCanReproduce.cs" />
+    <Compile Include="Infestation\CompSpawnerTunnels.cs" />
+    <Compile Include="Infestation\CompProperties_SpawnerTunnels.cs" />
+    <Compile Include="Infestation\TunnelUtility.cs" />
+    <Compile Include="Infestation\SkavenTunnel.cs" />
+    <Compile Include="Infestation\SkavenTunnelSpawner.cs" />
+    <Compile Include="Infestation\InfestationUtility.cs" />
+    <Compile Include="Infestation\IncidentWorker_Infestation.cs" />
+    <Compile Include="Infestation\Building_InfestationLure.cs" />
+    <Compile Include="Infestation\PlaceWorker_OverheadMountain.cs" />
+    <Compile Include="Jobs\JobDriver_PlayHorn.cs" />
+    <Compile Include="MapGen\MapGenHandler.cs" />
+    <Compile Include="MapGen\ThingData.cs" />
+    <Compile Include="MapGen\MapObject.cs" />
+    <Compile Include="MapGen\RoofObject.cs" />
+    <Compile Include="MapGen\MapGenDef.cs" />
+    <Compile Include="MentalAndJoy\JobDriver_PlayDice.cs" />
+    <Compile Include="MentalAndJoy\JoyGiver_PlayDice.cs" />
+    <Compile Include="MentalAndJoy\JobDriver_WatchGold.cs" />
+    <Compile Include="MentalAndJoy\JoyGiver_InteractGold.cs" />
+    <Compile Include="MentalAndJoy\MentalStateWorker_LonelyGrumbling.cs" />
+    <Compile Include="MentalAndJoy\WatchThingUtility.cs" />
+    <Compile Include="Ale\Building_FermentingAleBarrel.cs" />
+    <Compile Include="Ale\JobDriver_FillFermentingBarrel.cs" />
+    <Compile Include="Ale\JobDriver_TakeAleOutOfFermentingBarrel.cs" />
+    <Compile Include="Ale\WorkGiver_FillFermentingBarrel.cs" />
+    <Compile Include="Ale\WorkGiver_TakeAleOutOfFermentingBarrel.cs" />
+    <Compile Include="Ale\JoyGiver_InteractAle.cs" />
+    <Compile Include="BugmansAle\Building_BugmansFermentingAleBarrel.cs" />
+    <Compile Include="BugmansAle\JobDriver_FillBugmansFermentingBarrel.cs" />
+    <Compile Include="BugmansAle\JobDriver_TakeAleOutOfBugmansFermentingBarrel.cs" />
+    <Compile Include="BugmansAle\JoyGiver_InteractBugmansAle.cs" />
+    <Compile Include="BugmansAle\WorkGiver_FillBugmansFermentingBarrel.cs" />
+    <Compile Include="BugmansAle\WorkGiver_TakeAleOutOfBugmansFermentingBarrel.cs" />
+    <Compile Include="Settings\Settings.cs" />
+    <Compile Include="ImpassableMapMaker\HarmonyPatches_WorldPathGrid.cs" />
+    <Compile Include="ImpassableMapMaker\HarmonyPatches_MapGenerator.cs" />
+    <Compile Include="MinersHelmet\Apparel_MinersHelmet.cs" />
+    <Compile Include="Planter\Building_PlanterGrower.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Harmony\HarmonyPatches_OtherStuff.cs" />
+    <Compile Include="Harmony\Harmony_Patch_Plant.cs" />
+    <Compile Include="DwarfsUtil.cs" />
+    <Compile Include="RepairStuff\WorkGiver_DoBillDwarfs.cs" />
+    <Compile Include="RH_TET_DwarfsMod.cs" />
+    <Compile Include="RH_TET_DwarfDefOf.cs" />
+    <Compile Include="HighBloodStuff\HighBlood.cs" />
+    <Compile Include="HighBloodStuff\HighBloodDef.cs" />
+    <Compile Include="HighBloodStuff\Thought_MemoryHighBloodTitle.cs" />
+    <Compile Include="HighBloodStuff\ThoughtWorker_KingOnMap.cs" />
+    <Compile Include="HighBloodStuff\ThoughtWorker_ThaneOnMap.cs" />
+    <Compile Include="HighBloodStuff\ThoughtWorker_NoHighBloodRoom.cs" />
+    <Compile Include="HighBloodStuff\ThoughtWorker_HighBloodBedroomRequirementsNotMet.cs" />
+    <Compile Include="HighBloodStuff\ThoughtWorker_HighBloodSeatRequirementsNotMet.cs" />
+    <Compile Include="HighBloodStuff\ThoughtWorker_HighBloodNoPersonalBedroom.cs" />
+    <Compile Include="HighBloodStuff\Alert_HighBloodNoAcceptableFood.cs" />
+    <Compile Include="HighBloodStuff\Alert_HighBloodRoomInvalidConfiguration.cs" />
+    <Compile Include="HighBloodStuff\Alert_HighBloodRequiresBedroom.cs" />
+    <Compile Include="HighBloodStuff\Alert_InsufficientdBedroom.cs" />
+    <Compile Include="HighBloodStuff\Alert_InsufficientDwarfHighBloodRoom.cs" />
+    <Compile Include="HighBloodStuff\RoomRequirement_TerrainWithTags.cs" />
+    <Compile Include="HighBloodStuff\RoomRequirement_Impressiveness.cs" />
+    <Compile Include="HighBloodStuff\RoomRequirement_Area.cs" />
+    <Compile Include="HighBloodStuff\RoomRequirement_AllThingsAreGlowing.cs" />
+    <Compile Include="HighBloodStuff\CompProperties_DwarfHighBlood.cs" />
+    <Compile Include="HighBloodStuff\CompDwarfHighBlood.cs" />
+    <Compile Include="HighBloodStuff\Alert_HighBloodNoThroneAssigned.cs" />
+    <Compile Include="HighBloodStuff\DwarfsHighBloodGetTogetherUtility.cs" />
+    <Compile Include="HighBloodStuff\DwarfPawn_HighBloodTracker.cs" />
+    <Compile Include="HighBloodStuff\RoomRoleWorker_DwarfRulingRoom.cs" />
+    <Compile Include="Structure\JobDriver_DecorateWall.cs" />
+    <Compile Include="Structure\WorkGiver_DecorateWall.cs" />
+    <Compile Include="Structure\Designator_DecorateWall.cs" />
+    <Compile Include="Thoughts\ThoughtWorker_ListeningToHorn.cs" />
+    <Compile Include="Warmachines\HarmonyPatches_Warmachines.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\" />
+    <Folder Include="obj\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
