@@ -768,6 +768,13 @@
 		<thingCategories Inherit="False">
 			<li>RH_TET_Dwarfs_WeaponsRanged</li>
 		</thingCategories>
+		<comps>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<ConsiderMelee>true</ConsiderMelee>
+				<verbProps />
+			</li>
+		</comps>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseProjectileNeolithic">
