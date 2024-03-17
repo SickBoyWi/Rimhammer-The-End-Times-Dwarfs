@@ -149,6 +149,7 @@
 				<categoryDef>Textiles</categoryDef>
 			</li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>RH_TET_Dwarfs_MortarShell</tag></li>
 			<li Class="StockGenerator_BuyExpensiveSimple"/>
 			<li Class="StockGenerator_MultiDef">
 				<thingDefs>
@@ -285,6 +286,7 @@
 				<countRange>0~1</countRange>
 			</li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>RH_TET_Dwarfs_MortarShell</tag></li>
 			<li Class="StockGenerator_BuyExpensiveSimple"/>
 		</stockGenerators>
 	</TraderKindDef>
@@ -432,6 +434,7 @@
 			<!-- Buying -->
 			<li Class="StockGenerator_BuyExpensiveSimple"/>
 			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>RH_TET_Dwarfs_MortarShell</tag></li>
       
 		</stockGenerators>
 	</TraderKindDef>

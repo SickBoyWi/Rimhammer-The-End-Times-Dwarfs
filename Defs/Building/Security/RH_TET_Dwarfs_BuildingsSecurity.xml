@@ -339,6 +339,9 @@
 			<li>RH_TET_Dwarfs_Artillery</li>
 		</thingCategories>
 		<projectileWhenLoaded>RH_TET_Dwarfs_BoltThrower_Bolt_Round</projectileWhenLoaded>
+		<tradeTags>
+		  <li>RH_TET_Dwarfs_MortarShell</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef>
@@ -375,6 +378,9 @@
 			<li>RH_TET_Dwarfs_Artillery</li>
 		</thingCategories>
 		<projectileWhenLoaded>RH_TET_Dwarfs_GrudgeThrower_GrudgeWrit_Round</projectileWhenLoaded>
+		<tradeTags>
+		  <li>RH_TET_Dwarfs_MortarShell</li>
+		</tradeTags>
 	</ThingDef>
 	
 	<ThingDef>
@@ -421,6 +427,9 @@
 			<li>RH_TET_Dwarfs_Artillery</li>
 		</thingCategories>
 		<projectileWhenLoaded>RH_TET_Dwarfs_Cannon_Ball_Round</projectileWhenLoaded>
+		<tradeTags>
+		  <li>RH_TET_Dwarfs_MortarShell</li>
+		</tradeTags>
 	</ThingDef>
 	
 	<ThingDef>
@@ -467,6 +476,9 @@
 			<li>RH_TET_Dwarfs_Artillery</li>
 		</thingCategories>
 		<projectileWhenLoaded>RH_TET_Dwarfs_Cannon_Shell_Round</projectileWhenLoaded>
+		<tradeTags>
+		  <li>RH_TET_Dwarfs_MortarShell</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef>
@@ -513,6 +525,9 @@
 			<li>RH_TET_Dwarfs_Artillery</li>
 		</thingCategories>
 		<projectileWhenLoaded>RH_TET_Dwarfs_OrganGun_Round_Shot</projectileWhenLoaded>
+		<tradeTags>
+		  <li>RH_TET_Dwarfs_MortarShell</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef>
@@ -549,6 +564,9 @@
 			<li>RH_TET_Dwarfs_Artillery</li>
 		</thingCategories>
 		<projectileWhenLoaded>RH_TET_Dwarfs_GoblinHewer_Round_Shot</projectileWhenLoaded>
+		<tradeTags>
+		  <li>RH_TET_Dwarfs_MortarShell</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef>
@@ -595,6 +613,9 @@
 			<li>RH_TET_Dwarfs_Artillery</li>
 		</thingCategories>
 		<projectileWhenLoaded>RH_TET_Dwarfs_FlameCannon_Round_Shot</projectileWhenLoaded>
+		<tradeTags>
+		  <li>RH_TET_Dwarfs_MortarShell</li>
+		</tradeTags>
 	</ThingDef>
 
 	<!-- Warmachine Turrets -->
