@@ -46,7 +46,7 @@
 			<li>Visitor_Outlander_Standard</li>
 		</visitorTraderKinds>
 		<baseTraderKinds>
-			<li>Base_Outlander_Standard</li>
+			<li>RH_TET_Dwarf_Caravan_BulkGoods</li>
 		</baseTraderKinds>
 		<allowedArrivalTemperatureRange>
 			<min>-40</min>
