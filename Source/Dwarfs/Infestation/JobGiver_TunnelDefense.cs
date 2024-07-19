@@ -19,9 +19,9 @@ namespace TheEndTimes_Dwarfs
             return pawn.mindState.duty.radius;
         }
 
-        protected override Job MeleeAttackJob(Thing enemyTarget)
+        protected override Job MeleeAttackJob(Pawn pawn, Thing enemyTarget)
         {
-            Job job = base.MeleeAttackJob(enemyTarget);
+            Job job = base.MeleeAttackJob(pawn, enemyTarget);
             job.attackDoorIfTargetLost = true;
             return job;
         }

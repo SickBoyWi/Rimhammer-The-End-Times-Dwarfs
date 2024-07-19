@@ -144,6 +144,7 @@
 		<researchPrerequisites>
 			<li>RH_TET_Dwarfs_SteamPowerAdvanced</li>
 		</researchPrerequisites>
+		<disableImpassableShotOverConfigError>True</disableImpassableShotOverConfigError>
 	</ThingDef>
 
 	<ThingDef Name="RH_TET_Dwarfs_BaseSteamHeatingRadiator" ParentName="RH_TET_Dwarfs_BaseSteamHeatingBuilding" Abstract="True">

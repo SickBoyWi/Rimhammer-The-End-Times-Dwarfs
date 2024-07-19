@@ -57,8 +57,12 @@ namespace TheEndTimes_Dwarfs
             map.regionAndRoomUpdater.RebuildAllRegionsAndRooms();
             if (createRoof && mapGenerator.RoofData != null)
                 MapGenHandler.CreateRoof(mapGenerator.RoofData, map);
+            // 1.4
+            //if (fog)
+            //    MapGenHandler.RefogMap(mapGenerator.defogPosition, map);
+            // 1.5
             if (fog)
-                MapGenHandler.RefogMap(mapGenerator.defogPosition, map);
+                map.fogGrid.FloodUnfogAdjacent(mapGenerator.defogPosition, false);
             if (!unFogRoom)
                 return;
             foreach (IntVec3 allCell in map.AllCells)
@@ -68,8 +72,9 @@ namespace TheEndTimes_Dwarfs
                     map.fogGrid.Unfog(allCell);
             }
 
-            if (fog)
-                MapGenHandler.RefogMap(mapGenerator.defogPosition, map);
+            // 1.4
+            //if (fog)
+            //    MapGenHandler.RefogMap(mapGenerator.defogPosition, map);
         }
 
         private static void ClearCells(List<MapObject> mapObjects, Map map)
@@ -113,38 +118,38 @@ namespace TheEndTimes_Dwarfs
                 rootsToUnfog.Add(allRooms[index].Cells.RandomElement<IntVec3>());
         }
 
-        public static void RefogMap(IntVec3 defogPosition, Map map)
-        {
-            CellIndices cellIndices = map.cellIndices;
-            if (map.fogGrid == null)
-                map.fogGrid.fogGrid = new bool[cellIndices.NumGridCells];
-            foreach (IntVec3 allCell in map.AllCells)
-                map.fogGrid.fogGrid[cellIndices.CellToIndex(allCell)] = true;
-            if (Current.ProgramState == ProgramState.Playing)
-                map.roofGrid.Drawer.SetDirty();
-            foreach (IntVec3 allCell in map.AllCells)
-                map.mapDrawer.MapMeshDirty(allCell, MapMeshFlag.FogOfWar);
-            if (defogPosition == null)
-                FloodFillerFog.FloodUnfog(CellFinder.RandomEdgeCell(map), map);
-            else
-                FloodFillerFog.FloodUnfog(defogPosition, map);
-        }
+        //public static void RefogMap(IntVec3 defogPosition, Map map)
+        //{
+        //    CellIndices cellIndices = map.cellIndices;
+        //    if (map.fogGrid == null)
+        //        map.fogGrid.fogGrid = new bool[cellIndices.NumGridCells];
+        //    foreach (IntVec3 allCell in map.AllCells)
+        //        map.fogGrid.fogGrid[cellIndices.CellToIndex(allCell)] = true;
+        //    if (Current.ProgramState == ProgramState.Playing)
+        //        map.roofGrid.Drawer.SetDirty();
+        //    foreach (IntVec3 allCell in map.AllCells)
+        //        map.mapDrawer.MapMeshDirty(allCell, MapMeshFlagDefOf.FogOfWar);
+        //    if (defogPosition == null)
+        //        FloodFillerFog.FloodUnfog(CellFinder.RandomEdgeCell(map), map);
+        //    else
+        //        FloodFillerFog.FloodUnfog(defogPosition, map);
+        //}
 
-        private static void AddRoomsToFog(List<Room> allRooms, Map map, bool fogDoors = false)
-        {
-            CellIndices cellIndices = map.cellIndices;
-            foreach (Room allRoom in allRooms)
-            {
-                foreach (IntVec3 cell in allRoom.Cells)
-                {
-                    if (cell.GetDoor(map) == null || fogDoors)
-                    {
-                        map.fogGrid.fogGrid[cellIndices.CellToIndex(cell)] = true;
-                        map.mapDrawer.MapMeshDirty(cell, MapMeshFlag.FogOfWar);
-                    }
-                }
-            }
-        }
+        //private static void AddRoomsToFog(List<Room> allRooms, Map map, bool fogDoors = false)
+        //{
+        //    CellIndices cellIndices = map.cellIndices;
+        //    foreach (Room allRoom in allRooms)
+        //    {
+        //        foreach (IntVec3 cell in allRoom.Cells)
+        //        {
+        //            if (cell.GetDoor(map) == null || fogDoors)
+        //            {
+        //                map.fogGrid.fogGrid[cellIndices.CellToIndex(cell)] = true;
+        //                map.mapDrawer.MapMeshDirty(cell, MapMeshFlagDefOf.FogOfWar);
+        //            }
+        //        }
+        //    }
+        //}
 
         public static void CreateRoof(List<RoofObject> roofData, Map map)
         {

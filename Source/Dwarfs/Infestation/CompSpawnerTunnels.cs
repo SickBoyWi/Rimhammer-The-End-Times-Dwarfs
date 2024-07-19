@@ -123,7 +123,7 @@ namespace TheEndTimes_Dwarfs
                 {
                     if (index == 1)
                         minDist = 0.0f;
-                    flag = CellFinder.TryFindRandomReachableCellNear(pos, map, props.TunnelSpawnRadius, TraverseParms.For(TraverseMode.NoPassClosedDoors, Danger.Deadly, false), (Predicate<IntVec3>)(c => CompSpawnerTunnels.CanSpawnTunnelAt(c, map, pos, parentDef, minDist, ignoreRoofedRequirement)), (Predicate<Region>)null, out result, 999999);
+                    flag = CellFinder.TryFindRandomReachableCellNearPosition(pos, pos, map, props.TunnelSpawnRadius, TraverseParms.For(TraverseMode.NoPassClosedDoors, Danger.Deadly, false), (Predicate<IntVec3>)(c => CompSpawnerTunnels.CanSpawnTunnelAt(c, map, pos, parentDef, minDist, ignoreRoofedRequirement)), (Predicate<Region>)null, out result, 999999);
                 }
                 else
                     flag = allowUnreachable && CellFinder.TryFindRandomCellNear(pos, map, (int)props.TunnelSpawnRadius, (Predicate<IntVec3>)(c => CompSpawnerTunnels.CanSpawnTunnelAt(c, map, pos, parentDef, minDist, ignoreRoofedRequirement)), out result, -1);

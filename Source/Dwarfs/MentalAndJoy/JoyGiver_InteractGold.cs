@@ -27,7 +27,7 @@ namespace TheEndTimes_Dwarfs
                 return null;
             }
 
-            Predicate<Thing> predicate = (Thing t) => (this.CanInteractWith(pawn, t, inBed) && t.Map.glowGrid.GameGlowAt(t.Position) > .49f);
+            Predicate<Thing> predicate = (Thing t) => (this.CanInteractWith(pawn, t, inBed) && t.Map.glowGrid.GroundGlowAt(t.Position) > .49f);
             if (partySpot.IsValid)
             {
                 Predicate<Thing> oldValidator = predicate;

@@ -45,7 +45,7 @@ namespace TheEndTimes_Dwarfs
             }
             if (building == null || !building.def.defName.Contains("Smoothed"))
             {
-                Verse.Log.ErrorOnce("Failed to find valid smoothed wall when trying to decorate a wall", 58988176, false);
+                Verse.Log.ErrorOnce("Failed to find valid smoothed wall when trying to decorate a wall", 58988176);
                 pawn.Map.designationManager.TryRemoveDesignationOn(building, RH_TET_DwarfDefOf.RH_TET_Dwarfs_DecorateWallDes);
                 return false;
             }

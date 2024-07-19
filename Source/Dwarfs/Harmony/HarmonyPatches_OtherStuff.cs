@@ -545,10 +545,10 @@ namespace TheEndTimes_Dwarfs
             }
         }
 
-        [HarmonyPatch(typeof(Mineable), "TrySpawnYield")]
+        [HarmonyPatch(typeof(Mineable), "TrySpawnYield", new Type[] { typeof(Map), typeof(bool), typeof(Pawn)})]
         static class Patch_Mineable_TrySpawnYield
         {
-            static void Postfix(Mineable __instance, Map map, float yieldChance, bool moteOnWaste, Pawn pawn)
+            static void Postfix(Mineable __instance, Map map, bool moteOnWaste, Pawn pawn)
             {
                 if (DwarfsUtil.IsDwarf(pawn))
                 {

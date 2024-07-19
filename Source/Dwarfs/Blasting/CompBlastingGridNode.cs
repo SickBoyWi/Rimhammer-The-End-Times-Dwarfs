@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using RimWorld;
+using Verse;
 
 namespace TheEndTimes_Dwarfs
 {
@@ -12,7 +13,7 @@ namespace TheEndTimes_Dwarfs
             if (!(this.parent is Building))
                 return;
             this.cachedPosition = this.parent.Position;
-            this.parent.Map.mapDrawer.MapMeshDirty(this.parent.Position, MapMeshFlag.Buildings);
+            this.parent.Map.mapDrawer.MapMeshDirty(this.parent.Position, MapMeshFlagDefOf.Buildings);
         }
 
         public override void PostDeSpawn(Map map)
@@ -20,7 +21,7 @@ namespace TheEndTimes_Dwarfs
             base.PostDeSpawn(map);
             if (!this.cachedPosition.IsValid)
                 return;
-            map.mapDrawer.MapMeshDirty(this.cachedPosition, MapMeshFlag.Buildings);
+            map.mapDrawer.MapMeshDirty(this.cachedPosition, MapMeshFlagDefOf.Buildings);
         }
 
         public abstract void PrintForDetonationGrid(SectionLayer layer);

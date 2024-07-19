@@ -88,14 +88,14 @@ namespace TheEndTimes_Dwarfs
             }
         }
 
-        public override void Draw()
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             if ((double)this.plungerExpireTime < (double)Time.realtimeSinceStartup)
             {
                 this.currentVariant = Building_DetonatorManual.VisualVariant.PlungerUp;
                 this.plungerExpireTime = 0.0f;
             }
-            base.Draw();
+            base.DrawAt(drawLoc, flip);
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(

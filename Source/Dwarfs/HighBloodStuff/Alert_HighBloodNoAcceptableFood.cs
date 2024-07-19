@@ -45,7 +45,7 @@ namespace TheEndTimes_Dwarfs
                                 HighBlood highBlood = comp.highBloodComp.HighBloodInEffectForReading.First();
                                 Thing foodSource;
                                 ThingDef foodDef;
-                                if (highBlood != null && highBlood.highMaintenance && (highBlood.def.foodRequirement.Defined && !FoodUtility.TryFindBestFoodSourceFor(freeColonist, freeColonist, false, out foodSource, out foodDef, true, true, false, false, false, false, false, true, true, false, FoodPreferability.DesperateOnly)))
+                                if (highBlood != null && highBlood.highMaintenance && (highBlood.def.foodRequirement.Defined && !FoodUtility.TryFindBestFoodSourceFor(freeColonist, freeColonist, false, out foodSource, out foodDef, true, true, false, false, false, false, false, false, false, true, false, FoodPreferability.DesperateOnly)))
                                     this.targetsResult.Add(freeColonist);
                             }
                         }

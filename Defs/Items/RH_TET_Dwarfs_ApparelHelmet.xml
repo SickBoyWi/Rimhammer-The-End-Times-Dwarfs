@@ -53,7 +53,6 @@
 		</equippedStatOffsets>
 		<generateCommonality>.5</generateCommonality>
 		<apparel>
-			<forceRenderUnderHair>true</forceRenderUnderHair>
 			<countsAsClothingForNudity>false</countsAsClothingForNudity>
 			<bodyPartGroups>
 				<li>Eyes</li>
@@ -66,6 +65,15 @@
 				<li>RH_TET_Dwarf_Armor_Low</li>
 			</tags>
 			<canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+			<canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>     
+			<drawData>
+				<defaultData>
+					<layer>61</layer>
+				</defaultData>
+			</drawData>
+			<renderSkipFlags>
+				<li>None</li>
+			</renderSkipFlags>			
 		</apparel>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Apparel_High</li>

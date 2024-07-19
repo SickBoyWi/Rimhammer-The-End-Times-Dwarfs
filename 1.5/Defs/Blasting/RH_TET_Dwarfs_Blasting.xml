@@ -371,81 +371,6 @@
 		<modExtensions/>
 	</ThingDef>
 
-	<ThingDef ParentName="RH_TET_Dwarfs_ExposionThingBase">
-		<defName>RH_TET_Dwarfs_BlastingBench</defName>
-		<label>dawi munitions bench</label>
-		<thingClass>Building_WorkTable</thingClass>
-		<description>A workbench dedicated to making black powder, firearms, and things that require black powder in their construction. This includes warmachine ammo, thunderer rifles, and so on.\n\nA dedicated and safe spot to work with explosives is necessary. All dwarfs see the sound logic in that, and all honor it. In the early days, there were a handful of engineers that didn't consider the danger of what they were working with; that left them either dead or mained. The rest of those responsible for such crafting quickly devised the blasting bench as a solution.</description>
-		<graphicData>
-			<texPath>Things/Building/Production/Blasting/RH_TET_Dwarfs_BlastingBench</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
-			<drawSize>(3.1,1.4)</drawSize>
-			<damageData>
-				<cornerTL>Damage/Corner</cornerTL>
-				<cornerTR>Damage/Corner</cornerTR>
-				<cornerBL>Damage/Corner</cornerBL>
-				<cornerBR>Damage/Corner</cornerBR>
-			</damageData>
-		</graphicData>
-		<statBases>
-			<Cleanliness>-1</Cleanliness>
-			<Flammability>.75</Flammability>
-			<Mass>50</Mass>
-			<MaxHitPoints>200</MaxHitPoints>
-			<WorkTableWorkSpeedFactor>0.75</WorkTableWorkSpeedFactor>
-			<WorkToBuild>3500</WorkToBuild>
-		</statBases>
-		<castEdgeShadows>true</castEdgeShadows>
-		<costList>
-			<Steel>50</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
-		</costList>
-		<costStuffCount>75</costStuffCount>
-		<stuffCategories>
-			<li>Stony</li>
-		</stuffCategories>
-		<thingCategories>
-			<li>RH_TET_Dwarfs_BuildingsProduction</li>
-		</thingCategories>
-		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
-		<altitudeLayer>BuildingOnTop</altitudeLayer>
-		<fillPercent>0.5</fillPercent>
-		<useHitPoints>True</useHitPoints>
-		<size>(3,1)</size>
-		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-		<passability>PassThroughOnly</passability>
-		<pathCost>75</pathCost>
-		<hasInteractionCell>True</hasInteractionCell>
-		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
-		<surfaceType>Item</surfaceType>
-		<minifiedDef>MinifiedThing</minifiedDef>
-		<inspectorTabs>
-			<li>ITab_Bills</li>
-		</inspectorTabs>
-		<building>
-		</building>
-		<tickerType>Normal</tickerType>
-		<comps>
-			<li>
-				<compClass>CompReportWorkSpeed</compClass>
-			</li>
-			<li Class="CompProperties_AffectedByFacilities">
-				<linkableFacilities>
-					<li>ToolCabinet</li>
-				</linkableFacilities>
-			</li>
-		</comps>
-		<placeWorkers>
-			<li>PlaceWorker_ShowFacilitiesConnections</li>
-			<li>PlaceWorker_ReportWorkSpeedPenalties</li>
-		</placeWorkers>
-		<researchPrerequisites>
-			<li>RH_TET_Dwarf_BlackPowder</li>
-		</researchPrerequisites>
-		<designationCategory>Production</designationCategory>
-	</ThingDef>
-
 	<ThingDef>
 		<defName>RH_TET_Dwarfs_CollapsedMountainRocks</defName>
 		<graphicData>
@@ -560,7 +485,7 @@
 				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
 			</li>
 			<li>
-				<compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+				<compClass>SickCompOversizedWeapon.CompOversizedWeapon</compClass>
 			</li>
 		</comps>
 	</ThingDef>

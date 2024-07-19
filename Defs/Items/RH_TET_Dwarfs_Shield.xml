@@ -44,7 +44,7 @@
 			<li>RH_TET_Dwarf_Armor_Low</li>
 		</tradeTags>
 		<comps>
-			<li Class="PawnShields.CompProperties_Shield">
+			<li Class="SickPawnShields.CompProperties_Shield">
 				<!-- Rendering systems -->
 				<wieldedGraphic>
 					<graphicClass>Graphic_Multi</graphicClass>
@@ -141,7 +141,7 @@
 			<li>RH_TET_Dwarf_Armor_Mid</li>
 		</tradeTags>
 		<comps>
-			<li Class="PawnShields.CompProperties_Shield">
+			<li Class="SickPawnShields.CompProperties_Shield">
 				<!-- Rendering systems -->
 				<wieldedGraphic>
 					<graphicClass>Graphic_Multi</graphicClass>
@@ -238,7 +238,7 @@
 			<li>RH_TET_Dwarf_Armor_High</li>
 		</tradeTags>
 		<comps>
-			<li Class="PawnShields.CompProperties_Shield">
+			<li Class="SickPawnShields.CompProperties_Shield">
 				<!-- Rendering systems -->
 				<wieldedGraphic>
 					<graphicClass>Graphic_Multi</graphicClass>

@@ -386,7 +386,7 @@ namespace TheEndTimes_Dwarfs
                 { 
                     if (highBlood.def == null)
                     { 
-                        Log.Error("Some High Bloods had null defs after loading.", false);
+                        Log.Error("Some High Bloods had null defs after loading.");
                         break;
                     }
 

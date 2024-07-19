@@ -158,7 +158,7 @@ namespace TheEndTimes_Dwarfs
             foreach (IntVec3 intVec3 in list)
             {
                 IntVec3 c = intVec3 + this.Position;
-                FireUtility.TryStartFireIn(c, map, Rand.Range(0.4f, 0.6f));
+                FireUtility.TryStartFireIn(c, map, Rand.Range(0.4f, 0.6f), this);
                 createdFire = map.thingGrid.ThingAt<Fire>(c);
                 if (createdFire != null)
                     break;

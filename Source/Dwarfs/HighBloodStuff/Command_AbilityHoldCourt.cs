@@ -16,8 +16,8 @@ namespace TheEndTimes_Dwarfs
             }
         }
 
-        public Command_AbilityHoldCourt(Ability ability)
-          : base(ability)
+        public Command_AbilityHoldCourt(Ability ability, Pawn pawn)
+          : base(ability, pawn)
         {
         }
     }

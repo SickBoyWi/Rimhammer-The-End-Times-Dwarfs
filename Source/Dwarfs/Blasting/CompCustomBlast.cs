@@ -95,7 +95,7 @@ namespace TheEndTimes_Dwarfs
             this.parent.Map.overlayDrawer.DrawOverlay((Verse.Thing)this.parent, OverlayTypes.BurningWick);
         }
 
-        public override void PostPreApplyDamage(DamageInfo dInfo, out bool absorbed)
+        public override void PostPreApplyDamage(ref DamageInfo dInfo, out bool absorbed)
         {
             absorbed = false;
             if (dInfo.Def.ExternalViolenceFor((Verse.Thing)this.parent) && (double)dInfo.Amount >= (double)this.parent.HitPoints)

@@ -239,7 +239,7 @@ namespace TheEndTimes_Dwarfs
                 return;
 
             Find.LetterStack.ReceiveLetter((Letter)LetterMaker.MakeLetter("RH_TET_Dwarf_FailedToReclaimCapturedHoldLabel".Translate(), "RH_TET_Dwarf_FailedToReclaimCapturedHoldDesc".Translate(), LetterDefOf.NegativeEvent), (string)null);
-            Current.Game.DeinitAndRemoveMap_NewTemp(this.Map, false);
+            Current.Game.DeinitAndRemoveMap(this.Map, false);
 
             DwarfsUtil.GiveMoodToPawns(RH_TET_DwarfDefOf.RH_TET_Dwarfs_FailedToReclaimCapturedHold, PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists);
         }

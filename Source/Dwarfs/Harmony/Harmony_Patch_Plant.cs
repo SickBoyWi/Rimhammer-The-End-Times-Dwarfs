@@ -30,7 +30,7 @@ namespace TheEndTimes_Dwarfs.RandomHarmonyStuff
             {
                 if (__instance.def.defName == "RH_TET_Dwarf_Plant_Stoneroot")
                 {
-                    float glowAmount = __instance.Map.glowGrid.GameGlowAt(__instance.Position);
+                    float glowAmount = __instance.Map.glowGrid.GroundGlowAt(__instance.Position);
                     if (__instance.def.plant.growMinGlow == __instance.def.plant.growOptimalGlow && glowAmount == __instance.def.plant.growOptimalGlow)
                     {
                         __result = 1f;

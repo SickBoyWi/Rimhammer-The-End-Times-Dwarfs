@@ -7,10 +7,11 @@
   <loadBefore>
   </loadBefore>
   <loadAfter>
-    <li>JecsTools</li>
+    <li>SickTools</li>
     <li>HumanoidAlienRaces2.0</li>
     <li>DoorsExpanded</li>
     <li>Rimhammer-TheEndTimes</li>
+    <li>Rimhammer-TheEndTimes-Magic</li>
   </loadAfter>
   <manifestUri>http://www.nerdtournament.com/mods/rimworld/Rimhammer-TheEndTimes-Dwarfs/Manifest.xml</manifestUri>
   <downloadUri>http://www.nerdtournament.com/mods/rimworld/Rimhammer-TheEndTimes-Dwarfs/releases</downloadUri>

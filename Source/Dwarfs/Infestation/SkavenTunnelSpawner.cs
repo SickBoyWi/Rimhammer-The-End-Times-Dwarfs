@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using LudeonTK;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -67,7 +68,7 @@ namespace TheEndTimes_Dwarfs
             this.sustainer.Maintain();
             Vector3 vector3Shifted = this.Position.ToVector3Shifted();
             IntVec3 result1;
-            if (Rand.MTBEventOccurs(SkavenTunnelSpawner.FilthSpawnMTB, 1f, 1.TicksToSeconds()) && CellFinder.TryFindRandomReachableCellNear(this.Position, this.Map, SkavenTunnelSpawner.FilthSpawnRadius, TraverseParms.For(TraverseMode.NoPassClosedDoors, Danger.Deadly, false), (Predicate<IntVec3>)null, (Predicate<Region>)null, out result1, 999999))
+            if (Rand.MTBEventOccurs(SkavenTunnelSpawner.FilthSpawnMTB, 1f, 1.TicksToSeconds()) && CellFinder.TryFindRandomReachableCellNearPosition(this.Position, this.Position, this.Map, SkavenTunnelSpawner.FilthSpawnRadius, TraverseParms.For(TraverseMode.NoPassClosedDoors, Danger.Deadly, false), (Predicate<IntVec3>)null, (Predicate<Region>)null, out result1, 999999))
                 FilthMaker.TryMakeFilth(result1, this.Map, SkavenTunnelSpawner.filthTypes.RandomElement<ThingDef>(), 1, FilthSourceFlags.None);
             if (Rand.MTBEventOccurs(SkavenTunnelSpawner.DustMoteSpawnMTB, 1f, 1.TicksToSeconds()))
                 FleckMaker.ThrowDustPuffThick(new Vector3(vector3Shifted.x, 0.0f, vector3Shifted.z)
@@ -106,7 +107,7 @@ namespace TheEndTimes_Dwarfs
                 ++num;
                 if (num > 1000)
                 {
-                    Log.Error("Too many iterations.", false);
+                    Log.Error("Too many iterations for skaven tunnel.");
                     break;
                 }
                 if (SkavenTunnel.spawnablePawnKinds.Where<PawnKindDef>((Func<PawnKindDef, bool>)(x => (double)x.combatPower <= (double)pointsLeft)).TryRandomElement<PawnKindDef>(out result2))
@@ -124,7 +125,7 @@ namespace TheEndTimes_Dwarfs
             LordMaker.MakeNewLord(Faction.OfInsects, (LordJob)new LordJob_AssaultColony(Faction.OfInsects, true, false, false, false, true), map, (IEnumerable<Pawn>)list);
         }
 
-        public override void Draw()
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             Rand.PushState();
             Rand.Seed = this.thingIDNumber;

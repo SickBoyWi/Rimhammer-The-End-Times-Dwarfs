@@ -3,6 +3,7 @@ using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using UnityEngine;
 using Verse;
 using Verse.Sound;
 
@@ -106,9 +107,9 @@ namespace TheEndTimes_Dwarfs
             this.explosiveComp.StopWick();
         }
 
-        public override void Draw()
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
-            base.Draw();
+            base.DrawAt(drawLoc, flip);
             if (!this.isArmed)
                 return;
         }
