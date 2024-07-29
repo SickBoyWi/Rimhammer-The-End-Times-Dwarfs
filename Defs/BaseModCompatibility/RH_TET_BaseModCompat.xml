@@ -270,6 +270,7 @@
 				<filter>
 					<thingDefs>
 						<li>ChunkSlagSteel</li>
+						<li>ChunkMechanoidSlag</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
