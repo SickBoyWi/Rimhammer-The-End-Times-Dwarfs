@@ -24,6 +24,7 @@
 				<min>3</min>
 				<max>8</max>
 			</mineableScatterLumpSizeRange>
+			<veinMineable>true</veinMineable>
 		</building>
 	</ThingDef>
   
@@ -50,6 +51,7 @@
 				<min>20</min>
 				<max>30</max>
 			</mineableScatterLumpSizeRange>
+			<veinMineable>true</veinMineable>
 		</building>
 	</ThingDef>
   
@@ -76,6 +78,7 @@
 				<min>10</min>
 				<max>15</max>
 			</mineableScatterLumpSizeRange>
+			<veinMineable>true</veinMineable>
 		</building>
 	</ThingDef>
   
