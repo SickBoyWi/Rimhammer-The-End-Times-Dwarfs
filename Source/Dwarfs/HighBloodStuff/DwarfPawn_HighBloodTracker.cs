@@ -390,9 +390,9 @@ namespace TheEndTimes_Dwarfs
                         break;
                     }
 
-                    if (highBlood.def.Equals(RH_TET_DwarfDefOf.RH_TET_Dwarfs_HighBloodThane))
+                    if (highBlood.def.Equals(RH_TET_DwarfDefOf.RH_TET_Dwarfs_HighBloodThane) && !pawn.Dead)
                         RH_TET_DwarfsMod.thanes.AddDistinct(pawn);
-                    else if (highBlood.def.Equals(RH_TET_DwarfDefOf.RH_TET_Dwarfs_HighBloodKing))
+                    else if (highBlood.def.Equals(RH_TET_DwarfDefOf.RH_TET_Dwarfs_HighBloodKing) && !pawn.Dead)
                         RH_TET_DwarfsMod.king = pawn;
                 }
             }
