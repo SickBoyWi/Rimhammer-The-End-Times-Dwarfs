@@ -273,7 +273,7 @@
 										<Male_NarrowWide>(0,0)</Male_NarrowWide>
 										<Male_NarrowPointy>(0,0)</Male_NarrowPointy>
 									</headTypes>
-									<layerOffset>-.272</layerOffset>
+									<layerOffset>-.275</layerOffset>
 								</south>
 								<north>
 									<bodyTypes>
@@ -301,7 +301,7 @@
 										<Male_NarrowWide>(0.08,0)</Male_NarrowWide>
 										<Male_NarrowPointy>(0.1,0)</Male_NarrowPointy>
 									</headTypes>
-									<layerOffset>-.272</layerOffset>
+									<layerOffset>-.275</layerOffset>
 								</east>
 								<west>
 									<bodyTypes>
@@ -315,7 +315,7 @@
 										<Male_NarrowWide>(0.08,0)</Male_NarrowWide>
 										<Male_NarrowPointy>(0.1,0)</Male_NarrowPointy>
 									</headTypes>
-									<layerOffset>-.272</layerOffset>
+									<layerOffset>-.275</layerOffset>
 								</west>
 							</offsets>
 							<colorChannel>hair</colorChannel>
@@ -761,7 +761,7 @@
 										<Male_NarrowWide>(0,0)</Male_NarrowWide>
 										<Male_NarrowPointy>(0,0)</Male_NarrowPointy>
 									</headTypes>
-									<layerOffset>-.272</layerOffset>
+									<layerOffset>-.275</layerOffset>
 								</south>
 								<north>
 									<bodyTypes>
@@ -789,7 +789,7 @@
 										<Male_NarrowWide>(0.08,0)</Male_NarrowWide>
 										<Male_NarrowPointy>(0.1,0)</Male_NarrowPointy>
 									</headTypes>
-									<layerOffset>-.272</layerOffset>
+									<layerOffset>-.275</layerOffset>
 								</east>
 								<west>
 									<bodyTypes>
@@ -803,7 +803,7 @@
 										<Male_NarrowWide>(0.08,0)</Male_NarrowWide>
 										<Male_NarrowPointy>(0.1,0)</Male_NarrowPointy>
 									</headTypes>
-									<layerOffset>-.272</layerOffset>
+									<layerOffset>-.275</layerOffset>
 								</west>
 							</offsets>
 							<colorChannel>hair</colorChannel>
