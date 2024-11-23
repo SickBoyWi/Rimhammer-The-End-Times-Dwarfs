@@ -56,6 +56,7 @@
 		<graphicData>
 			<texPath>Things/Item/Weapons/Ranged/RH_TET_Dwarf_ThundererGun_simple</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<statBases>
@@ -112,11 +113,6 @@
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
-		<comps>
-			<li>
-				<compClass>SickCompOversizedWeapon.CompOversizedWeapon</compClass>
-			</li>
-		</comps>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Ranged_Low</li>
 		</tradeTags>
@@ -145,6 +141,7 @@
 		<graphicData>
 			<texPath>Things/Item/Weapons/Ranged/RH_TET_Dwarf_ThundererGun_fancy</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<statBases>
@@ -202,11 +199,6 @@
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
-		<comps>
-			<li>
-				<compClass>SickCompOversizedWeapon.CompOversizedWeapon</compClass>
-			</li>
-		</comps>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Ranged_High</li>
 		</tradeTags>
@@ -292,11 +284,6 @@
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
-		<comps>
-			<li>
-				<compClass>SickCompOversizedWeapon.CompOversizedWeapon</compClass>
-			</li>
-		</comps>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Ranged_Lordly</li>
 		</tradeTags>
@@ -326,7 +313,6 @@
 		<graphicData>
 			<texPath>Things/Item/Weapons/Ranged/RH_TET_Dwarf_QuarrellerBow_simple</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.2</drawSize>
 		</graphicData>
 		<soundInteract>Bow_Recurve</soundInteract>
 		<costList>
@@ -382,11 +368,6 @@
 				<cooldownTime>1.6</cooldownTime>
 			</li>
 		</tools>
-		<comps>
-			<li>
-				<compClass>SickCompOversizedWeapon.CompOversizedWeapon</compClass>
-			</li>
-		</comps>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Ranged_Low</li>
 		</tradeTags>
@@ -416,7 +397,6 @@
 		<graphicData>
 			<texPath>Things/Item/Weapons/Ranged/RH_TET_Dwarf_QuarrellerBow_fancy</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.2</drawSize>
 		</graphicData>
 		<soundInteract>Bow_Recurve</soundInteract>
 		<costList>
@@ -472,11 +452,6 @@
 				<cooldownTime>1.6</cooldownTime>
 			</li>
 		</tools>
-		<comps>
-			<li>
-				<compClass>SickCompOversizedWeapon.CompOversizedWeapon</compClass>
-			</li>
-		</comps>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Ranged_High</li>
 		</tradeTags>
