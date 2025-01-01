@@ -949,7 +949,7 @@ This pampered lifestyle which caused [PAWN_objective] to miss many basic lessons
 		<defName>RH_TET_Dwarf_Slayer_ConstructionEngineer_Backstory</defName>
 		<title>Slayer construction engineer</title>
 		<titleShort>slayer engineer</titleShort>
-		<description>[PAWN_nameDef] was a construction worker, and frequently assisted in the planning process. From roof supports to bridges to homes, [PAWN_pronoun] did it all. Because [PAWN_pronoun] was always around the work crews, [PAWN_pronoun] never had to cook a meal in his life. [PAWN_nameDef] oversaw the construction of a bridge, that collapsed after only seventy-five years. [PAWN_possessive] shame was so great that [PAWN_pronoun] joined the slayer cult thereafter.</description>
+		<description>[PAWN_nameDef] was a construction worker, and frequently assisted in the planning process. From roof supports to bridges to homes, [PAWN_pronoun] did it all. Because [PAWN_pronoun] was always around the work crews, [PAWN_pronoun] never had to cook a meal in [PAWN_possessive] life. [PAWN_nameDef] oversaw the construction of a bridge, that collapsed after only seventy-five years. [PAWN_possessive] shame was so great that [PAWN_pronoun] joined the slayer cult thereafter.</description>
 		<slot>Adulthood</slot>
 		<skillGains>
 			<Plants>-3</Plants>

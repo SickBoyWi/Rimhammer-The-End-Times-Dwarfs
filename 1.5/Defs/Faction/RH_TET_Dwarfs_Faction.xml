@@ -4,8 +4,8 @@
 	<FactionDef ParentName="FactionBase">
 		<defName>RH_TET_Dwarf_KarakMountain</defName>
 		<label>karak dawi</label>
-		<fixedName>Karaks Dawi</fixedName>
-		<description>The leaders of the dawi people, and masters of the mountains. Strong, and ancient; the dawi people live on like the mountains themselves.</description>
+		<fixedName>Karaz Ankor</fixedName>
+		<description>The leaders and bulk of the dawi people, and masters of the mountains. Strong and ancient; the dawi people live on like the mountains themselves.</description>
 		<pawnsPlural>dwarfs</pawnsPlural>
 		<settlementGenerationWeight>0.2</settlementGenerationWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>

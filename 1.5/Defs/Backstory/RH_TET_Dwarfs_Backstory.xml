@@ -1117,7 +1117,7 @@ This pampered lifestyle which caused [PAWN_objective] to miss many basic lessons
 		<defName>RH_TET_Dwarf_ConstructionEngineer_Backstory</defName>
 		<title>Construction engineer</title>
 		<titleShort>engineer</titleShort>
-		<description>[PAWN_nameDef] is a construction worker, and frequently assists in the planning process. From roof supports to bridges to homes, [PAWN_pronoun] does it all. Because [PAWN_pronoun] has always been around the work crews, [PAWN_pronoun]'s never had to cook a meal in his life.</description>
+		<description>[PAWN_nameDef] is a construction worker, and frequently assists in the planning process. From roof supports to bridges to homes, [PAWN_pronoun] does it all. Because [PAWN_pronoun] has always been around the work crews, [PAWN_pronoun]'s never had to cook a meal in [PAWN_possessive] life.</description>
 		<slot>Adulthood</slot>
 		<skillGains>
 			<Plants>-3</Plants>
