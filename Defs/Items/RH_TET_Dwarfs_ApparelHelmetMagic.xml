@@ -19,6 +19,7 @@
 			<layers>
 				<li>Overhead</li>
 			</layers>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
 		</apparel>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>

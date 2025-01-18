@@ -37,6 +37,7 @@
 			<tags>
 				<li>RH_TET_Dwarf_Armor_Magic_Thane</li>
 			</tags>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
 		</apparel>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Armor_Magic</li>
