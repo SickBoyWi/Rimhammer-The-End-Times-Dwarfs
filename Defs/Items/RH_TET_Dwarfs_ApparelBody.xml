@@ -326,6 +326,7 @@
 				<li>Neck</li>
 				<li>Shoulders</li>
 				<li>Arms</li>
+				<li>Legs</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Simple</wornGraphicPath>
 			<layers>
