@@ -14,7 +14,7 @@ namespace TheEndTimes_Dwarfs
 
         public override string SettingsCategory()
         {
-            return "Rimhammer - The End Times - Dwarfs";
+            return "Rimhammer - Dwarfs";
         }
 
         public override void DoSettingsWindowContents(Rect inRect)
