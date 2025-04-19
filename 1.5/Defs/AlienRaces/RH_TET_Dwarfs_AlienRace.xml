@@ -386,6 +386,16 @@
 					<li>RH_TET_Dwarf_Helmet_MagicGrimnir</li>
 					<li>RH_TET_Dwarf_ToolBelt</li>
 					<li>RH_TET_Dwarf_EngineerEye</li>
+					<li>RH_TET_Dwarfs_Boots</li>
+					<li>RH_TET_Dwarfs_PlatedBoots</li>
+					<li>RH_TET_Dwarfs_LordlyBoots</li>
+					<li>RH_TET_Dwarfs_RangerGauntlets</li>
+					<li>RH_TET_Dwarfs_LongBeardGauntlets</li>
+					<li>RH_TET_Dwarfs_IronBreakerGauntlets</li>
+					<li>RH_TET_Dwarfs_LordlyGauntlets</li>
+					<li>RH_TET_Dwarf_Hood</li>
+					<li>RH_TET_Dwarf_Helmet_Hammerer</li>
+					<li>RH_TET_Dwarf_Helmet_LongBeard</li>
 				</apparelList>
 				<onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
 				<recipeList>
@@ -874,6 +884,16 @@
 					<li>RH_TET_Dwarf_Helmet_MagicGrimnir</li>
 					<li>RH_TET_Dwarf_ToolBelt</li>
 					<li>RH_TET_Dwarf_EngineerEye</li>
+					<li>RH_TET_Dwarfs_Boots</li>
+					<li>RH_TET_Dwarfs_PlatedBoots</li>
+					<li>RH_TET_Dwarfs_LordlyBoots</li>
+					<li>RH_TET_Dwarfs_RangerGauntlets</li>
+					<li>RH_TET_Dwarfs_LongBeardGauntlets</li>
+					<li>RH_TET_Dwarfs_IronBreakerGauntlets</li>
+					<li>RH_TET_Dwarfs_LordlyGauntlets</li>
+					<li>RH_TET_Dwarf_Hood</li>
+					<li>RH_TET_Dwarf_Helmet_Hammerer</li>
+					<li>RH_TET_Dwarf_Helmet_LongBeard</li>
 				</apparelList>
 				<onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
 				<recipeList>

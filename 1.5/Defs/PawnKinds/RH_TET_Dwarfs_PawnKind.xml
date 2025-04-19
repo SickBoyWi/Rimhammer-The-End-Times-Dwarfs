@@ -320,7 +320,7 @@
 		<apparelRequired>
 			<li>RH_TET_Dwarf_Armor_IronBreaker</li>
 		</apparelRequired>
-		<apparelMoney>500~4000</apparelMoney>
+		<apparelMoney>500~6000</apparelMoney>
 		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
 		<weaponMoney>
 			<min>500</min>

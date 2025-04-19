@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+ 	<!-- Footwear Armored -->
+	<ThingDef Name="RH_TET_Dwarfs_FootwearArmorBase" ParentName="ApparelBase" Abstract="True">
+		<techLevel>Medieval</techLevel>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_Footwear</li>
+		</thingCategories>
+		<apparel>
+			<bodyPartGroups>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+		</apparel>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>RH_TET_TableSmithy</li>
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>Jade</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+		</recipeMaker>
+		<tradeTags>
+			<li>Armor</li>
+			<li>RH_TET_Armor</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_FootwearArmorBase">
+		<defName>RH_TET_Dwarfs_Boots</defName>
+		<label>dawi boots</label>
+		<description>A pair of armored boots worn by a dwarf clansmen or warrior. Sturdy, functional, and well crafted. Offers foot protection.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_Boots</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Mass>2.0</Mass>
+			<WorkToMake>3500</WorkToMake>
+			<StuffEffectMultiplierArmor>0.65</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>.85</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.25</StuffEffectMultiplierInsulation_Heat>
+			<Flammability>0.6</Flammability>
+			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.25</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Armor_Basic</researchPrerequisite>
+			<displayPriority>208</displayPriority>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<costList>
+			<Steel>10</Steel>
+		</costList>
+		<apparel>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Low</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_FootwearArmorBase">
+		<defName>RH_TET_Dwarfs_PlatedBoots</defName>
+		<label>dawi plated boots</label>
+		<description>A pair of armored boots worn by a dwarf long beard or ironbreaker. Sturdy, functional, very protective for the feet, and well crafted.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_PlatedBoots</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>190</MaxHitPoints>
+			<Mass>2.2</Mass>
+			<WorkToMake>5000</WorkToMake>
+			<StuffEffectMultiplierArmor>0.75</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>1.0</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>1.0</StuffEffectMultiplierInsulation_Heat>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Heat>2.0</ArmorRating_Heat>
+			<EquipDelay>2.2</EquipDelay>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Armor_Advanced</researchPrerequisite>
+			<displayPriority>208</displayPriority>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costStuffCount>45</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<WoodLog>10</WoodLog>
+		</costList>
+		<apparel>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Mid</li>
+				<li>RH_TET_Dwarf_Armor_High</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_FootwearArmorBase">
+		<defName>RH_TET_Dwarfs_LordlyBoots</defName>
+		<label>dawi lordly boots</label>
+		<description>A pair of decorative and highly armored boots worn by a dwarf lord or thane. Sturdy, functional, very protective for the feet, beautiful to look at, and well crafted.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_LordlyBoots</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Mass>2.2</Mass>
+			<WorkToMake>5500</WorkToMake>
+			<StuffEffectMultiplierArmor>0.80</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>1.0</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+			<Flammability>0.6</Flammability>
+			<ArmorRating_Sharp>1.0</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.5</ArmorRating_Heat>
+			<EquipDelay>2.2</EquipDelay>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Armor_HighBlood</researchPrerequisite>
+			<displayPriority>208</displayPriority>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costStuffCount>45</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<Gold>2</Gold>
+		</costList>
+		<apparel>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_High</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+
+</Defs>

@@ -149,6 +149,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Simple</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>55</costStuffCount>
 		<stuffCategories>
@@ -182,6 +183,7 @@
 				<li>RH_TET_DwarfWarrior</li>
 				<li>RH_TET_DwarfRanged</li>
 			</defaultOutfitTags>
+			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Armor_Low</li>
@@ -203,6 +205,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Mid</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>60</costStuffCount>
 		<stuffCategories>
@@ -237,6 +240,7 @@
 				<li>RH_TET_DwarfIronBreaker</li>
 				<li>RH_TET_DwarfShieldBearer</li>
 			</defaultOutfitTags>
+			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Armor_Mid</li>
@@ -282,6 +286,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Miner</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>55</costStuffCount>
 		<stuffCategories>
@@ -312,6 +317,7 @@
 			<tags>
 				<li>RH_TET_Dwarf_Armor_Mid</li>
 			</tags>
+			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
 		<comps>
 		</comps>
@@ -335,6 +341,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Ironbreaker</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>65</costStuffCount>
 		<stuffCategories>
@@ -375,12 +382,143 @@
 			<defaultOutfitTags>
 				<li>RH_TET_DwarfIronBreaker</li>
 			</defaultOutfitTags>
+			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Armor_High</li>
 		</tradeTags>
 	</ThingDef>
-  
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ArmorHelmetMakeableBase">
+		<defName>RH_TET_Dwarf_Helmet_LongBeard</defName>
+		<label>dawi longbeard helmet</label>
+		<description>A very protective, and nice looking dwarfen helmet.\n\nLongbeards are the venerated elders of the dwarf hold. They can afford better equipment than the clansmen, and dwarfs would not make an item that didn't show proper ornamentation in the craftsmanship.</description>
+		<techLevel>Medieval</techLevel>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Armor_Advanced</researchPrerequisite>
+			<unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Longbeard</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<Gold>1</Gold>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>11000</WorkToMake>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>3</Mass>
+			<StuffEffectMultiplierArmor>0.70</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>.20</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>4</EquipDelay>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>.95</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.7</ArmorRating_Heat>
+			<Insulation_Cold>2</Insulation_Cold>
+			<Insulation_Heat>4</Insulation_Heat>
+		</statBases>
+		<generateCommonality>1</generateCommonality>
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Longbeard</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_LongBeard</li>
+				<li>RH_TET_Dwarf_Armor_High</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>RH_TET_DwarfLongBeard</li>
+			</defaultOutfitTags>
+			<useWornGraphicMask>true</useWornGraphicMask>
+		</apparel>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Armor_High</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ArmorHelmetMakeableBase">
+		<defName>RH_TET_Dwarf_Helmet_Hammerer</defName>
+		<label>dawi hammerer helmet</label>
+		<description>A highly protective, and very nice looking dwarfen helmet.\n\nHammerer helmets keep the full head of those protecting the lords and thanes of the holds safe from harm.</description>
+		<techLevel>Medieval</techLevel>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Armor_Advanced</researchPrerequisite>
+			<unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>9</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Hammerer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<costStuffCount>65</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<Gold>3</Gold>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<MaxHitPoints>155</MaxHitPoints>
+			<Mass>3</Mass>
+			<StuffEffectMultiplierArmor>0.75</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.36</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>.25</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>4</EquipDelay>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>1.02</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.8</ArmorRating_Heat>
+			<Insulation_Cold>2</Insulation_Cold>
+			<Insulation_Heat>4</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<ArrestSuccessChance>0.05</ArrestSuccessChance>
+			<SocialImpact>0.1</SocialImpact>
+		</equippedStatOffsets>
+		<generateCommonality>1</generateCommonality>
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Hammerer</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Hammerer</li>
+				<li>RH_TET_Dwarf_Armor_High</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>RH_TET_DwarfHammerer</li>
+			</defaultOutfitTags>
+			<useWornGraphicMask>true</useWornGraphicMask>
+		</apparel>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Armor_High</li>
+		</tradeTags>
+	</ThingDef>
+
 	<ThingDef ParentName="RH_TET_Dwarfs_ArmorHelmetMakeableBase">
 		<defName>RH_TET_Dwarf_Helmet_High</defName>
 		<label>dawi lordly battle helmet</label>
@@ -396,6 +534,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Fancy</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>70</costStuffCount>
 		<stuffCategories>
@@ -437,6 +576,7 @@
 				<li>RH_TET_DwarfThane</li>
 				<li>RH_TET_DwarfLord</li>
 			</defaultOutfitTags>
+			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Armor_High</li>

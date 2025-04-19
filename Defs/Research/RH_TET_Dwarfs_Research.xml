@@ -326,7 +326,7 @@
 	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
 		<defName>RH_TET_Dwarf_Apparel_Advanced</defName>
 		<label>Fine Apparel</label>
-		<description>Unlocks the ability to make fine dwarfen apparel. Clothing fit for any wealthy dwarf.\n\nDwarfs of a certain social stature deserve clothing that reflects that. Skilled laborers, merchants and traders, and so the like deserve to be outfitted appropriately.</description>
+		<description>Unlocks the ability to make fine dwarfen apparel. Clothing fit for any wealthy dwarf or specialist.\n\nDwarfs of a certain social stature deserve clothing that reflects that. Skilled laborers, merchants and traders, and so the like deserve to be outfitted appropriately.</description>
 		<baseCost>1000</baseCost>
 		<tags>
 			<li>RH_TET_Dwarf_ProjectTag</li>

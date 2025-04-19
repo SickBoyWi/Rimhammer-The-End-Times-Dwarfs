@@ -74,7 +74,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Shirts/ShirtMid</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<!--<shaderType>CutoutComplex</shaderType>-->
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>45</costStuffCount>
 		<stuffCategories>
@@ -104,6 +104,7 @@
 			<tags>
 				<li>RH_TET_Dwarf_Apparel_Mid</li>
 			</tags>
+			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Apparel_Mid</li>
@@ -126,7 +127,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Shirts/ShirtGood</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<!--<shaderType>CutoutComplex</shaderType>-->
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>50</costStuffCount>
 		<stuffCategories>
@@ -156,6 +157,7 @@
 			<tags>
 				<li>RH_TET_Dwarf_Apparel_High</li>
 			</tags>
+			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Apparel_High</li>
@@ -178,7 +180,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Shirts/ShirtHighBlood</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<!--<shaderType>CutoutComplex</shaderType>-->
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>75</costStuffCount>
 		<stuffCategories>
@@ -208,6 +210,7 @@
 			<tags>
 				<li>RH_TET_Dwarf_Apparel_High</li>
 			</tags>
+			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Apparel_High</li>
@@ -298,6 +301,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Simple</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>100</costStuffCount>
 		<stuffCategories>
@@ -339,6 +343,7 @@
 				<li>RH_TET_DwarfWarrior</li>
 				<li>RH_TET_DwarfRanged</li>
 			</defaultOutfitTags>
+			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Armor_Low</li>
@@ -360,6 +365,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Mid</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>120</costStuffCount>
 		<stuffCategories>
@@ -404,6 +410,7 @@
 				<li>RH_TET_DwarfIronBreaker</li>
 				<li>RH_TET_DwarfShieldBearer</li>
 			</defaultOutfitTags>
+			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Armor_Mid</li>
@@ -425,8 +432,8 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Ironbreaker</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<!--<shaderType>CutoutComplex</shaderType>-->
-			<drawSize>.8</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+			<!--<drawSize>.8</drawSize>-->
 		</graphicData>
 		<costStuffCount>135</costStuffCount>
 		<stuffCategories>
@@ -461,8 +468,6 @@
 				<li>Shoulders</li>
 				<li>Arms</li>
 				<li>Legs</li>
-				<li>Hands</li>
-				<li>Feet</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Ironbreaker</wornGraphicPath>
 			<layers>
@@ -475,6 +480,7 @@
 			<defaultOutfitTags>
 				<li>RH_TET_DwarfIronBreaker</li>
 			</defaultOutfitTags>
+			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Armor_High</li>
@@ -496,7 +502,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Fancy</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<!--<shaderType>CutoutComplex</shaderType>-->
+			<shaderType>CutoutComplex</shaderType>
 			<drawSize>.8</drawSize>
 		</graphicData>
 		<costStuffCount>140</costStuffCount>
@@ -532,8 +538,6 @@
 				<li>Shoulders</li>
 				<li>Arms</li>
 				<li>Legs</li>
-				<li>Hands</li>
-				<li>Feet</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Fancy</wornGraphicPath>
 			<layers>
@@ -546,6 +550,7 @@
 				<li>RH_TET_DwarfThane</li>
 				<li>RH_TET_DwarfLord</li>
 			</defaultOutfitTags>
+			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Armor_High</li>

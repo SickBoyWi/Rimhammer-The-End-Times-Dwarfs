@@ -53,6 +53,57 @@
 		</tradeTags>
 	</ThingDef>
 
+	<ThingDef ParentName="HatMakeableBase">
+		<defName>RH_TET_Dwarf_Hood</defName>
+		<label>dawi ranger hood</label>
+		<description>A hood worn typically by dwarf rangers. Keeps the head and ears warm, and offers a degree of concealment.\n\nDwarf Rangers are the long-ranged scouts and wilderness warriors who serve as the eyes and ears of most Dwarf settlements. They patrol far from the safety of their hold, often spending long periods out in the wilderness, keeping watch on the activities of the Dwarfs' many enemies and tracking dangerous beasts. These cloaks are a staple of their garb.</description>
+		<techLevel>Medieval</techLevel>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Apparel_Advanced</researchPrerequisite>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/RH_TET_Dwarf_RangerHood</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>25</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Dwarfs_Headgear</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>1200</WorkToMake>
+			<Mass>0.07</Mass>
+			<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.25</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.1</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>0.6</EquipDelay>
+		</statBases>
+		<generateCommonality>.5</generateCommonality>
+		<apparel>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Other/RH_TET_Dwarf_RangerHood</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>RH_TET_Dwarf_Apparel_Mid</li>
+				<li>RH_TET_Dwarf_Apparel_Ranger</li>
+			</tags>
+		</apparel>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Apparel_Mid</li>
+		</tradeTags>
+	</ThingDef>
+
 	<ThingDef ParentName="RH_TET_Dwarfs_ApparelMakeableBase">
 		<defName>RH_TET_Dwarf_Parka</defName>
 		<label>dawi warm cloak</label>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+	<!-- Handwear Armored -->
+	<ThingDef Name="RH_TET_Dwarfs_HandwearArmorBase" ParentName="ApparelBase" Abstract="True">
+		<techLevel>Medieval</techLevel>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_Handwear</li>
+		</thingCategories>
+		<apparel>
+			<bodyPartGroups>
+				<li>Hands</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Shell</li>
+			</layers>
+		</apparel>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>RH_TET_TableSmithy</li>
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>Jade</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+		</recipeMaker>
+		<tradeTags>
+			<li>Armor</li>
+			<li>RH_TET_Armor</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_HandwearArmorBase">
+		<defName>RH_TET_Dwarfs_RangerGauntlets</defName>
+		<label>dawi ranger gauntlets</label>
+		<description>A pair of armored gauntlets worn by dwarfen rangers. Well crafted, and offering decent protection for the hands.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_Ranger_Gauntlets</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>175</MaxHitPoints>
+			<Mass>1.5</Mass>
+			<WorkToMake>4000</WorkToMake>
+			<StuffEffectMultiplierArmor>0.65</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>.85</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.25</StuffEffectMultiplierInsulation_Heat>
+			<Flammability>0.6</Flammability>
+			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.25</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<apparel>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Low</li>
+			</tags>
+		</apparel>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Armor_Basic</researchPrerequisite>
+			<displayPriority>208</displayPriority>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Armor_Low</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_HandwearArmorBase">
+		<defName>RH_TET_Dwarfs_LongBeardGauntlets</defName>
+		<label>dawi long beard gauntlets</label>
+		<description>A pair of armored gauntlets worn by dwarfen long beards. Well crafted, and offering good protection for the hands.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_Longbeard_Gauntlets</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Mass>1.7</Mass>
+			<WorkToMake>4500</WorkToMake>
+			<StuffEffectMultiplierArmor>0.70</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>.92</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.35</StuffEffectMultiplierInsulation_Heat>
+			<Flammability>0.6</Flammability>
+			<ArmorRating_Sharp>0.82</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.43</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.50</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<apparel>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Mid</li>
+			</tags>
+		</apparel>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Armor_Mid</researchPrerequisite>
+			<displayPriority>208</displayPriority>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costStuffCount>40</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>	
+		<costList>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Armor_Mid</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_HandwearArmorBase">
+		<defName>RH_TET_Dwarfs_IronBreakerGauntlets</defName>
+		<label>dawi ironbreaker gauntlets</label>
+		<description>A sturdy and very protective pair of armored gauntlets worn by dwarfen ironbreakers. Well crafted, and offering very good protection for the hands.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_Ironbreaker_Gauntlets</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>190</MaxHitPoints>
+			<Mass>1.75</Mass>
+			<WorkToMake>5000</WorkToMake>
+			<StuffEffectMultiplierArmor>0.75</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>1.0</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>1.0</StuffEffectMultiplierInsulation_Heat>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Heat>2.0</ArmorRating_Heat>
+			<EquipDelay>2.2</EquipDelay>
+		</statBases>
+		<apparel>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_High</li>
+			</tags>
+		</apparel>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Armor_Advanced</researchPrerequisite>
+			<displayPriority>208</displayPriority>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costStuffCount>50</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>	
+		<costList>
+			<Gold>1</Gold>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Armor_High</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_HandwearArmorBase">
+		<defName>RH_TET_Dwarfs_LordlyGauntlets</defName>
+		<label>dawi lordly gauntlets</label>
+		<description>A very sturdy, decorative, and protective pair of armored gauntlets worn by dwarfen thanes and lords. Very well crafted, and offering high protection for the hands.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_Lordly_Gauntlets</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Mass>2.0</Mass>
+			<WorkToMake>5500</WorkToMake>
+			<StuffEffectMultiplierArmor>0.80</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>1.0</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+			<Flammability>0.6</Flammability>
+			<ArmorRating_Sharp>1.0</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.5</ArmorRating_Heat>
+			<EquipDelay>2.5</EquipDelay>
+		</statBases>
+		<apparel>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_High</li>
+			</tags>
+		</apparel>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Armor_HighBlood</researchPrerequisite>
+			<displayPriority>208</displayPriority>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costStuffCount>50</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>		
+		<costList>
+			<Gold>2</Gold>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Armor_High</li>
+		</tradeTags>
+	</ThingDef>
+
+</Defs>
