@@ -44,6 +44,52 @@
 	</ThingDef>
   
 	<ThingDef ParentName="RH_TET_Dwarfs_HandwearArmorBase">
+		<defName>RH_TET_Dwarfs_Gauntlets</defName>
+		<label>dawi gauntlets</label>
+		<description>A pair of armored gauntlets worn by dwarfen clansmen and warriors. Offers protection for the hands.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_Warrior_Bracers</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>175</MaxHitPoints>
+			<Mass>1.7</Mass>
+			<WorkToMake>4500</WorkToMake>
+			<StuffEffectMultiplierArmor>0.60</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>.80</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
+			<Flammability>0.6</Flammability>
+			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.15</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<apparel>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Mid</li>
+			</tags>
+		</apparel>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Armor_Mid</researchPrerequisite>
+			<displayPriority>208</displayPriority>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costStuffCount>40</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>	
+		<costList>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Armor_Low</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_HandwearArmorBase">
 		<defName>RH_TET_Dwarfs_RangerGauntlets</defName>
 		<label>dawi ranger gauntlets</label>
 		<description>A pair of armored gauntlets worn by dwarfen rangers. Well crafted, and offering decent protection for the hands.</description>
@@ -92,6 +138,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_Longbeard_Gauntlets</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>180</MaxHitPoints>
@@ -137,6 +184,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_Ironbreaker_Gauntlets</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>190</MaxHitPoints>
@@ -183,6 +231,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_Lordly_Gauntlets</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>200</MaxHitPoints>

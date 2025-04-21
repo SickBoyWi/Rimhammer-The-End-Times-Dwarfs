@@ -50,6 +50,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_Boots</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>180</MaxHitPoints>
@@ -92,6 +93,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_PlatedBoots</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>190</MaxHitPoints>
@@ -135,6 +137,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_LordlyBoots</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>200</MaxHitPoints>
