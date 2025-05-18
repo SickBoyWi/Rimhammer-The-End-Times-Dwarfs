@@ -9,7 +9,7 @@
 		<graphicData>
 			<texPath>Things/Item/Weapons/Melee/RH_TET_Dwarfs_GrungiPickAxe</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.6</drawSize>
+			<drawSize>1.3</drawSize>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
 		<statBases>
@@ -87,7 +87,7 @@
 		<graphicData>
 			<texPath>Things/Item/Weapons/Melee/RH_TET_Dwarf_SmednirAxe</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.6</drawSize>
+			<drawSize>1.3</drawSize>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
 		<statBases>
@@ -165,7 +165,7 @@
 		<graphicData>
 			<texPath>Things/Item/Weapons/Melee/RH_TET_Dwarf_GazulHammer</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.6</drawSize>
+			<drawSize>1.3</drawSize>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
 		<statBases>
@@ -251,7 +251,7 @@
 		<graphicData>
 			<texPath>Things/Item/Weapons/Melee/RH_TET_Dwarf_ValayaHammer</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.6</drawSize>
+			<drawSize>1.3</drawSize>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
 		<statBases>
@@ -329,7 +329,7 @@
 		<graphicData>
 			<texPath>Things/Item/Weapons/Melee/RH_TET_Dwarf_GrimnirAxe</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.6</drawSize>
+			<drawSize>1.3</drawSize>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
 		<statBases>

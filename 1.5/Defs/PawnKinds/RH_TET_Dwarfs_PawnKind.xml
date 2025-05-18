@@ -39,11 +39,10 @@
 
 	<PawnKindDef ParentName="RH_TET_DwarfPlayerPawnKind">
 		<defName>RH_TET_DwarfVillager</defName>
-		<label>dwarf villager</label>
+		<label>dwarf settler</label>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<chemicalAddictionChance>0.06</chemicalAddictionChance>
 		<apparelTags>
-			<li>IndustrialBasic</li>
 			<li>RH_TET_Dwarf_Apparel_Low</li>
 		</apparelTags>
 		<apparelMoney>350~600</apparelMoney>
@@ -60,15 +59,13 @@
 		<apparelTags>
 			<li>RH_TET_Dwarf_Apparel_Low</li>
 			<li>RH_TET_Dwarf_Armor_Low</li>
-			<li>IndustrialBasic</li>
-			<li>IndustrialAdvanced</li>
 		</apparelTags>
-		<apparelMoney>200~300</apparelMoney>
+		<apparelMoney>500~600</apparelMoney>
 		<weaponMoney>
 			<min>165</min>
 			<max>225</max>
 		</weaponMoney>
-		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
 		<apparelIgnoreSeasons>false</apparelIgnoreSeasons>
 		<weaponTags>
 			<li>RH_TET_Dwarf_Melee_Low</li>
@@ -103,6 +100,18 @@
 			</subOptionsChooseOne>
 		</inventoryOptions>
 		<initialWillRange>1~3</initialWillRange>
+		<modExtensions>
+          <li Class="SickPawnShields.ShieldPawnGeneratorProperties">
+            <shieldMoney>
+              <min>0</min>
+              <max>200</max>
+            </shieldMoney>
+            <shieldTags>
+              <li>RH_TET_Dwarf_Shield_Low</li>
+            </shieldTags>
+			<shieldChance>0.5</shieldChance>
+          </li>
+        </modExtensions>		
 	</PawnKindDef>
  
 	<PawnKindDef Name="RH_TET_DwarfSlave">
@@ -135,10 +144,10 @@
 		<label>dwarf trader</label>
 		<trader>true</trader>
 		<apparelTags>
-			<li>RH_TET_Dwarf_Apparel_Low</li>
-			<li>IndustrialBasic</li>
+			<li>RH_TET_Dwarf_Apparel_High</li>
 			<li>RH_TET_Dwarf_Apparel_Warm</li>
 		</apparelTags>
+		<apparelMoney>1250~1500</apparelMoney>
 		<initialResistanceRange>15~20</initialResistanceRange>
 		<initialWillRange>1~3</initialWillRange>
 	</PawnKindDef>
@@ -152,8 +161,6 @@
 			<li>RH_TET_Dwarf_Apparel_High</li>
 			<li>RH_TET_Dwarf_Armor_High</li>
 			<li>RH_TET_Dwarf_Apparel_Warm</li>
-			<li>IndustrialBasic</li>
-			<li>IndustrialAdvanced</li>
 		</apparelTags>
 		<factionLeader>true</factionLeader>
 		<minGenerationAge>90</minGenerationAge>
@@ -162,11 +169,11 @@
 			<li>RH_TET_Dwarf_Armor_High</li>
 			<!--<li>RH_TET_Dwarf_Crown</li>-->
 		</apparelRequired>
-		<apparelMoney>5000~15000</apparelMoney>
+		<apparelMoney>10000~12500</apparelMoney>
 		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
 		<weaponMoney>
-			<min>5000</min>
-			<max>15000</max>
+			<min>8000</min>
+			<max>10000</max>
 		</weaponMoney>
 		<weaponTags>
 			<li>RH_TET_Dwarf_Melee_High</li>
@@ -195,6 +202,18 @@
 		</inventoryOptions>
 		<initialResistanceRange>35~45</initialResistanceRange>
 		<initialWillRange>4~5</initialWillRange>
+		<modExtensions>
+          <li Class="SickPawnShields.ShieldPawnGeneratorProperties">
+            <shieldMoney>
+              <min>500</min>
+              <max>750</max>
+            </shieldMoney>
+            <shieldTags>
+              <li>RH_TET_Dwarf_Shield_High</li>
+            </shieldTags>
+			<shieldChance>0.5</shieldChance>
+          </li>
+        </modExtensions>
 	</PawnKindDef>
   
 	<PawnKindDef ParentName="RH_TET_DwarfClansman" Name="RH_TET_DwarfThane">
@@ -207,8 +226,6 @@
 			<li>RH_TET_Dwarf_Apparel_High</li>
 			<li>RH_TET_Dwarf_Armor_High</li>
 			<li>RH_TET_Dwarf_Apparel_Warm</li>
-			<li>IndustrialBasic</li>
-			<li>IndustrialAdvanced</li>
 		</apparelTags>
 		<factionLeader>true</factionLeader>
 		<minGenerationAge>75</minGenerationAge>
@@ -216,11 +233,11 @@
 		<apparelRequired>
 			<li>RH_TET_Dwarf_Armor_High</li>
 		</apparelRequired>
-		<apparelMoney>2500~12500</apparelMoney>
+		<apparelMoney>8000~10000</apparelMoney>
 		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
 		<weaponMoney>
-			<min>2500</min>
-			<max>12500</max>
+			<min>6500</min>
+			<max>7500</max>
 		</weaponMoney>
 		<weaponTags>
 			<li>RH_TET_Dwarf_Melee_High</li>
@@ -249,6 +266,49 @@
 		</inventoryOptions>
 		<initialResistanceRange>30~40</initialResistanceRange>
 		<initialWillRange>3~4</initialWillRange>
+		<modExtensions>
+          <li Class="SickPawnShields.ShieldPawnGeneratorProperties">
+            <shieldMoney>
+              <min>250</min>
+              <max>500</max>
+            </shieldMoney>
+            <shieldTags>
+              <li>RH_TET_Dwarf_Shield_High</li>
+            </shieldTags>
+			<shieldChance>0.5</shieldChance>
+          </li>
+        </modExtensions>		
+	</PawnKindDef>
+  
+	<PawnKindDef ParentName="RH_TET_DwarfClansman" Name="RH_TET_DwarfEngineer">
+		<defName>RH_TET_DwarfEngineer</defName>
+		<defaultFactionType>RH_TET_Dwarf_KarakMountain</defaultFactionType>
+		<label>dwarf engineer</label>
+		<isFighter>true</isFighter>
+		<combatPower>80</combatPower>
+		<apparelTags>
+			<li>RH_TET_Dwarf_Apparel_Engineer</li>
+			<li>RH_TET_Dwarf_Apparel_Mid</li>
+			<li>RH_TET_Dwarf_Apparel_Warm</li>
+			<li>RH_TET_Dwarf_Armor_Low</li>
+		</apparelTags>
+		<factionLeader>false</factionLeader>
+		<minGenerationAge>80</minGenerationAge>
+		<maxGenerationAge>110</maxGenerationAge>
+		<apparelRequired>
+			<li>RH_TET_Dwarf_ToolBelt</li>
+		</apparelRequired>
+		<apparelMoney>600~700</apparelMoney>
+		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
+		<weaponMoney>
+			<min>400</min>
+			<max>500</max>
+		</weaponMoney>
+		<weaponTags Inherit="False">
+			<li>RH_TET_Dwarf_Ranged_Engineer</li>
+		</weaponTags>
+		<initialResistanceRange>20~30</initialResistanceRange>
+		<initialWillRange>2~3</initialWillRange>
 	</PawnKindDef>
  
 	<PawnKindDef ParentName="RH_TET_DwarfClansman" Name="RH_TET_DwarfShieldBearer">
@@ -261,22 +321,79 @@
 			<li>RH_TET_Dwarf_Apparel_Mid</li>
 			<li>RH_TET_Dwarf_Armor_Mid</li>
 			<li>RH_TET_Dwarf_Apparel_Warm</li>
-			<li>IndustrialBasic</li>
-			<li>IndustrialAdvanced</li>
 		</apparelTags>
 		<minGenerationAge>70</minGenerationAge>
 		<maxGenerationAge>120</maxGenerationAge>
 		<apparelRequired>
 			<li>RH_TET_Dwarf_Armor_Mid</li>
 		</apparelRequired>
-		<apparelMoney>1000~5000</apparelMoney>
+		<apparelMoney>2000~2500</apparelMoney>
 		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
 		<weaponMoney>
-			<min>1000</min>
-			<max>5000</max>
+			<min>1250</min>
+			<max>1500</max>
 		</weaponMoney>
 		<weaponTags>
 			<li>RH_TET_Dwarf_Melee_High</li>
+		</weaponTags>
+		<inventoryOptions>
+			<skipChance>0.75</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<choiceChance>90</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>50</min>
+						<max>100</max>
+					</countRange>
+				</li>
+				<li>
+					<choiceChance>5</choiceChance>
+					<thingDef>Gold</thingDef>
+					<countRange>
+						<min>1</min>
+						<max>3</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<initialResistanceRange>25~35</initialResistanceRange>
+		<initialWillRange>2~3</initialWillRange>
+		<modExtensions>
+          <li Class="SickPawnShields.ShieldPawnGeneratorProperties">
+            <shieldMoney>
+              <min>200</min>
+              <max>300</max>
+            </shieldMoney>
+            <shieldTags>
+              <li>RH_TET_Dwarf_Shield_Mid</li>
+            </shieldTags>
+			<shieldChance>0.5</shieldChance>
+          </li>
+        </modExtensions>
+	</PawnKindDef>
+ 
+	<PawnKindDef ParentName="RH_TET_DwarfClansman" Name="RH_TET_DwarfHammerer">
+		<defName>RH_TET_DwarfHammerer</defName>
+		<defaultFactionType>RH_TET_Dwarf_KarakMountain</defaultFactionType>
+		<label>dwarf hammerer</label>
+		<isFighter>true</isFighter>
+		<combatPower>150</combatPower>
+		<apparelTags>
+			<li>RH_TET_Dwarf_Apparel_Mid</li>
+			<li>RH_TET_Dwarf_Armor_Hammerer</li>
+			<li>RH_TET_Dwarf_Apparel_Warm</li>
+		</apparelTags>
+		<minGenerationAge>70</minGenerationAge>
+		<maxGenerationAge>120</maxGenerationAge>
+		<apparelMoney>2000~2500</apparelMoney>
+		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
+		<weaponMoney>
+			<min>1250</min>
+			<max>1500</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>RH_TET_Dwarf_Melee_Hammerer</li>
 		</weaponTags>
 		<inventoryOptions>
 			<skipChance>0.75</skipChance>
@@ -312,19 +429,17 @@
 		<apparelTags>
 			<li>RH_TET_Dwarf_Armor_IronBreaker</li>
 			<li>RH_TET_Dwarf_Apparel_Warm</li>
-			<li>IndustrialBasic</li>
-			<li>IndustrialAdvanced</li>
 		</apparelTags>
 		<minGenerationAge>70</minGenerationAge>
 		<maxGenerationAge>120</maxGenerationAge>
 		<apparelRequired>
 			<li>RH_TET_Dwarf_Armor_IronBreaker</li>
 		</apparelRequired>
-		<apparelMoney>500~6000</apparelMoney>
+		<apparelMoney>1250~1500</apparelMoney>
 		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
 		<weaponMoney>
 			<min>500</min>
-			<max>4000</max>
+			<max>800</max>
 		</weaponMoney>
 		<weaponTags>
 			<li>RH_TET_Dwarf_Melee_High</li>
@@ -353,6 +468,64 @@
 		</inventoryOptions>
 		<initialResistanceRange>25~35</initialResistanceRange>
 		<initialWillRange>2~3</initialWillRange>
+		<modExtensions>
+          <li Class="SickPawnShields.ShieldPawnGeneratorProperties">
+            <shieldMoney>
+              <min>250</min>
+              <max>350</max>
+            </shieldMoney>
+            <shieldTags>
+              <li>RH_TET_Dwarf_Shield_IronBreaker</li>
+            </shieldTags>
+			<shieldChance>1.0</shieldChance>
+          </li>
+        </modExtensions>
+	</PawnKindDef>
+ 
+	<PawnKindDef ParentName="RH_TET_DwarfClansman" Name="RH_TET_DwarfLongBeard">
+		<defName>RH_TET_DwarfLongBeard</defName>
+		<defaultFactionType>RH_TET_Dwarf_KarakMountain</defaultFactionType>
+		<label>dwarf longbeard</label>
+		<isFighter>true</isFighter>
+		<combatPower>85</combatPower>
+		<apparelTags>
+			<li>RH_TET_Dwarf_Apparel_Mid</li>
+			<li>RH_TET_Dwarf_Armor_LongBeard</li>
+			<li>RH_TET_Dwarf_Apparel_Warm</li>
+		</apparelTags>
+		<minGenerationAge>70</minGenerationAge>
+		<maxGenerationAge>120</maxGenerationAge>
+		<apparelMoney>700~800</apparelMoney>
+		<apparelAllowHeadgearChance>.75</apparelAllowHeadgearChance>
+		<weaponMoney>
+			<min>350</min>
+			<max>450</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>RH_TET_Dwarf_Melee_High</li>
+		</weaponTags>
+		<inventoryOptions>
+			<skipChance>0.75</skipChance>
+			<thingDef>Silver</thingDef>
+			<countRange>
+				<min>10</min>
+				<max>20</max>
+			</countRange>
+		</inventoryOptions>
+		<initialResistanceRange>20~30</initialResistanceRange>
+		<initialWillRange>1~3</initialWillRange>
+		<modExtensions>
+          <li Class="SickPawnShields.ShieldPawnGeneratorProperties">
+            <shieldMoney>
+              <min>150</min>
+              <max>250</max>
+            </shieldMoney>
+            <shieldTags>
+              <li>RH_TET_Dwarf_Shield_Mid</li>
+            </shieldTags>
+			<shieldChance>0.75</shieldChance>
+          </li>
+        </modExtensions>
 	</PawnKindDef>
  
 	<PawnKindDef ParentName="RH_TET_DwarfClansman" Name="RH_TET_DwarfWarrior">
@@ -365,12 +538,10 @@
 			<li>RH_TET_Dwarf_Apparel_Low</li>
 			<li>RH_TET_Dwarf_Armor_Low</li>
 			<li>RH_TET_Dwarf_Apparel_Warm</li>
-			<li>IndustrialBasic</li>
-			<li>IndustrialAdvanced</li>
 		</apparelTags>
 		<minGenerationAge>70</minGenerationAge>
 		<maxGenerationAge>120</maxGenerationAge>
-		<apparelMoney>250~500</apparelMoney>
+		<apparelMoney>400~500</apparelMoney>
 		<apparelAllowHeadgearChance>.75</apparelAllowHeadgearChance>
 		<weaponMoney>
 			<min>250</min>
@@ -389,6 +560,18 @@
 		</inventoryOptions>
 		<initialResistanceRange>20~30</initialResistanceRange>
 		<initialWillRange>1~3</initialWillRange>
+		<modExtensions>
+          <li Class="SickPawnShields.ShieldPawnGeneratorProperties">
+            <shieldMoney>
+              <min>200</min>
+              <max>250</max>
+            </shieldMoney>
+            <shieldTags>
+              <li>RH_TET_Dwarf_Shield_Low</li>
+            </shieldTags>
+			<shieldChance>0.65</shieldChance>
+          </li>
+        </modExtensions>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="RH_TET_DwarfPlayerPawnKind" Name="RH_TET_DwarfMiner">
@@ -399,12 +582,8 @@
 		<combatPower>90</combatPower>
 		<apparelTags>
 			<li>RH_TET_Dwarf_Apparel_Low</li>
+			<li>RH_TET_Dwarf_Armor_Miner</li>
 			<li>RH_TET_Dwarf_Apparel_Warm</li>
-			<li>RH_TET_Dwarf_Armor_Low</li>
-			<li>RH_TET_Dwarf_Armor_Mid</li>
-			<li>RH_TET_Dwarf_Armor_Mid</li>
-			<li>IndustrialBasic</li>
-			<li>IndustrialAdvanced</li>
 		</apparelTags>
 		<minGenerationAge>70</minGenerationAge>
 		<maxGenerationAge>120</maxGenerationAge>
@@ -420,7 +599,7 @@
 			<li>Mining</li>
 			<li>Violent</li>
 		</requiredWorkTags>
-		<apparelMoney>250~500</apparelMoney>
+		<apparelMoney>400~500</apparelMoney>
 		<techHediffsMoney>
 			<min>405</min>
 			<max>600</max>
@@ -458,12 +637,8 @@
 		<combatPower>90</combatPower>
 		<apparelTags>
 			<li>RH_TET_Dwarf_Apparel_Low</li>
+			<li>RH_TET_Dwarf_Armor_Miner</li>
 			<li>RH_TET_Dwarf_Apparel_Warm</li>
-			<li>RH_TET_Dwarf_Armor_Low</li>
-			<li>RH_TET_Dwarf_Armor_Mid</li>
-			<li>RH_TET_Dwarf_Armor_Mid</li>
-			<li>IndustrialBasic</li>
-			<li>IndustrialAdvanced</li>
 		</apparelTags>
 		<minGenerationAge>70</minGenerationAge>
 		<maxGenerationAge>120</maxGenerationAge>
@@ -479,7 +654,7 @@
 			<li>Mining</li>
 			<li>Violent</li>
 		</requiredWorkTags>
-		<apparelMoney>250~750</apparelMoney>
+		<apparelMoney>400~500</apparelMoney>
 		<techHediffsMoney>
 			<min>405</min>
 			<max>600</max>
@@ -511,18 +686,17 @@
 	<PawnKindDef ParentName="RH_TET_DwarfWarrior" Name="RH_TET_DwarfRanged">
 		<defName>RH_TET_DwarfRanged</defName>
 		<defaultFactionType>RH_TET_Dwarf_KarakMountain</defaultFactionType>
-		<label>dwarf shooter</label>
+		<label>dwarf quarreler</label>
 		<combatPower>90</combatPower>
 		<apparelTags>
 			<li>RH_TET_Dwarf_Apparel_Low</li>
 			<li>RH_TET_Dwarf_Armor_Low</li>
 			<li>RH_TET_Dwarf_Apparel_Warm</li>
-			<li>IndustrialBasic</li>
-			<li>IndustrialAdvanced</li>
 		</apparelTags>
+		<apparelMoney>400~500</apparelMoney>
 		<apparelAllowHeadgearChance>.5</apparelAllowHeadgearChance>
 		<weaponMoney>
-			<min>250</min>
+			<min>400</min>
 			<max>500</max>
 		</weaponMoney>
 		<weaponTags>
@@ -537,12 +711,11 @@
 		<label>dwarf shooter</label>
 		<combatPower>100</combatPower>
 		<apparelTags>
-			<li>RH_TET_Dwarf_Apparel_Mid</li>
-			<li>RH_TET_Dwarf_Armor_Mid</li>
+			<li>RH_TET_Dwarf_Apparel_Low</li>
+			<li>RH_TET_Dwarf_Armor_Low</li>
 			<li>RH_TET_Dwarf_Apparel_Warm</li>
-			<li>IndustrialBasic</li>
-			<li>IndustrialAdvanced</li>
 		</apparelTags>
+		<apparelMoney>450~550</apparelMoney>
 		<apparelAllowHeadgearChance>.75</apparelAllowHeadgearChance>
 		<weaponMoney>
 			<min>400</min>
@@ -575,9 +748,6 @@
 		<maxGenerationAge>150</maxGenerationAge>
 		<apparelIgnoreSeasons>false</apparelIgnoreSeasons>
 		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
-		<apparelTags>
-			<li>RH_TET_Dwarf_Apparel_Warm</li>
-		</apparelTags>
 		<weaponMoney>
 			<min>405</min>
 			<max>475</max>
@@ -602,13 +772,6 @@
 		<isFighter>true</isFighter>
 		<gearHealthRange>1~1</gearHealthRange>
 		<combatPower>80</combatPower>
-		<apparelTags>
-			<li>RH_TET_Dwarf_Apparel_Low</li>
-			<li>RH_TET_Dwarf_Armor_Low</li>
-			<li>RH_TET_Dwarf_Apparel_Warm</li>
-			<li>IndustrialBasic</li>
-			<li>IndustrialAdvanced</li>
-		</apparelTags>
 		<minGenerationAge>70</minGenerationAge>
 		<maxGenerationAge>200</maxGenerationAge>
 		<apparelIgnoreSeasons>false</apparelIgnoreSeasons>
@@ -631,10 +794,10 @@
 		</weaponTags>
 		<inventoryOptions>
 			<skipChance>0.75</skipChance>
-			<thingDef>Silver</thingDef>
+			<thingDef>Gold</thingDef>
 			<countRange>
-				<min>10</min>
-				<max>20</max>
+				<min>5</min>
+				<max>10</max>
 			</countRange>
 		</inventoryOptions>
 		<invNutrition>2.55</invNutrition>
@@ -653,17 +816,13 @@
 		<gearHealthRange>1~1</gearHealthRange>
 		<combatPower>80</combatPower>
 		<apparelTags>
-			<li>RH_TET_Dwarf_Apparel_Low</li>
-			<li>RH_TET_Dwarf_Armor_Low</li>
-			<li>RH_TET_Dwarf_Apparel_Warm</li>
-			<li>IndustrialBasic</li>
-			<li>IndustrialAdvanced</li>
+			<li>RH_TET_Dwarf_Armor_Slayer</li>
 		</apparelTags>
 		<minGenerationAge>70</minGenerationAge>
 		<maxGenerationAge>200</maxGenerationAge>
 		<apparelIgnoreSeasons>false</apparelIgnoreSeasons>
 		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
-		<apparelMoney>0~0</apparelMoney>
+		<apparelMoney>200~250</apparelMoney>
 		<weaponMoney>
 			<min>450</min>
 			<max>1000</max>
@@ -681,7 +840,7 @@
 		</weaponTags>
 		<inventoryOptions>
 			<skipChance>0.75</skipChance>
-			<thingDef>Silver</thingDef>
+			<thingDef>Gold</thingDef>
 			<countRange>
 				<min>10</min>
 				<max>20</max>
@@ -703,17 +862,13 @@
 		<gearHealthRange>1~1</gearHealthRange>
 		<combatPower>90</combatPower>
 		<apparelTags>
-			<li>RH_TET_Dwarf_Apparel_Low</li>
-			<li>RH_TET_Dwarf_Armor_Low</li>
-			<li>RH_TET_Dwarf_Apparel_Warm</li>
-			<li>IndustrialBasic</li>
-			<li>IndustrialAdvanced</li>
+			<li>RH_TET_Dwarf_Armor_Slayer</li>
 		</apparelTags>
 		<minGenerationAge>70</minGenerationAge>
 		<maxGenerationAge>150</maxGenerationAge>
 		<apparelIgnoreSeasons>false</apparelIgnoreSeasons>
 		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
-		<apparelMoney>0~0</apparelMoney>
+		<apparelMoney>1000~1250</apparelMoney>
 		<weaponMoney>
 			<min>900</min>
 			<max>2500</max>
@@ -731,7 +886,7 @@
 		</weaponTags>
 		<inventoryOptions>
 			<skipChance>0.75</skipChance>
-			<thingDef>Silver</thingDef>
+			<thingDef>Gold</thingDef>
 			<countRange>
 				<min>10</min>
 				<max>20</max>
@@ -743,7 +898,35 @@
 		<initialWillRange>3~5</initialWillRange>
 		<forcedHair>RH_TET_Dwarf_Hair_Slayer5</forcedHair>
 	</PawnKindDef>
-  
+
+	<PawnKindDef ParentName="RH_TET_DwarfSlayerPlayerPawnKind" Name="RH_TET_DwarfSlayerEngineer">
+		<defName>RH_TET_DwarfSlayerEngineer</defName>
+		<defaultFactionType>RH_TET_Dwarf_KarakMountain</defaultFactionType>
+		<label>slayer engineer</label>
+		<isFighter>true</isFighter>
+		<combatPower>80</combatPower>
+		<apparelTags>
+			<li>RH_TET_Dwarf_Apparel_Engineer</li>
+		</apparelTags>
+		<factionLeader>false</factionLeader>
+		<minGenerationAge>80</minGenerationAge>
+		<maxGenerationAge>110</maxGenerationAge>
+		<apparelRequired>
+			<li>RH_TET_Dwarf_EngineerEye</li>
+		</apparelRequired>
+		<apparelMoney>150~200</apparelMoney>
+		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
+		<weaponMoney>
+			<min>400</min>
+			<max>500</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>RH_TET_Dwarf_Ranged_Engineer</li>
+		</weaponTags>
+		<initialResistanceRange>20~30</initialResistanceRange>
+		<initialWillRange>2~3</initialWillRange>
+	</PawnKindDef> 
+ 
 	<PawnKindDef ParentName="RH_TET_DwarfSlayerPlayerPawnKind" Name="RH_TET_DwarfSlayerLord">
 		<defName>RH_TET_DwarfSlayerLord</defName>
 		<defaultFactionType>RH_TET_Dwarf_KarakMountain</defaultFactionType>
@@ -753,20 +936,16 @@
 		<gearHealthRange>1~1</gearHealthRange>
 		<combatPower>100</combatPower>
 		<apparelTags>
-			<li>RH_TET_Dwarf_Apparel_Low</li>
-			<li>RH_TET_Dwarf_Armor_Low</li>
-			<li>RH_TET_Dwarf_Apparel_Warm</li>
-			<li>IndustrialBasic</li>
-			<li>IndustrialAdvanced</li>
+			<li>RH_TET_Dwarf_Armor_Slayer</li>
 		</apparelTags>
 		<minGenerationAge>70</minGenerationAge>
 		<maxGenerationAge>200</maxGenerationAge>
 		<apparelIgnoreSeasons>false</apparelIgnoreSeasons>
 		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
-		<apparelMoney>0~0</apparelMoney>
+		<apparelMoney>3000~3500</apparelMoney>
 		<weaponMoney>
-			<min>1000</min>
-			<max>5000</max>
+			<min>3000</min>
+			<max>3500</max>
 		</weaponMoney>
 		<techHediffsMoney>
 			<min>250</min>
@@ -781,7 +960,7 @@
 		</weaponTags>
 		<inventoryOptions>
 			<skipChance>0.75</skipChance>
-			<thingDef>Silver</thingDef>
+			<thingDef>Gold</thingDef>
 			<countRange>
 				<min>10</min>
 				<max>20</max>

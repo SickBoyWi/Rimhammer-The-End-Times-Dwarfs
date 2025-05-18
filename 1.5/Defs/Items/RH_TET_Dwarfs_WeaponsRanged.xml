@@ -237,6 +237,7 @@
 		</recipeMaker>
 		<weaponTags>
 			<li>RH_TET_Dwarf_Ranged_High</li>
+			<li>RH_TET_Dwarf_Ranged_Engineer</li>
 		</weaponTags>
 		<statBases>
 			<WorkToMake>8000</WorkToMake>

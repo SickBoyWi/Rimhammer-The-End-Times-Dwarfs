@@ -62,7 +62,8 @@
 				<li>Overhead</li>
 			</layers>
 			<tags>
-				<li>RH_TET_Dwarf_Armor_Low</li>
+				<li>RH_TET_Dwarf_Apparel_Engineer</li>
+				<li>RH_TET_Dwarf_Apparel_Utility</li>
 			</tags>
 			<canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
 			<canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>     
@@ -316,6 +317,7 @@
 			</layers>
 			<tags>
 				<li>RH_TET_Dwarf_Armor_Mid</li>
+				<li>RH_TET_Dwarf_Armor_Miner</li>
 			</tags>
 			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
@@ -632,8 +634,7 @@
 				<li>Overhead</li>
 			</layers>
 			<tags>
-				<li>RH_TET_Dwarf_Armor_High</li>
-				<li>RH_TET_Dwarf_Armor_Lordly</li>
+				<li>RH_TET_Dwarf_Armor_Slayer</li>
 			</tags>
 			<defaultOutfitTags>
 				<li>RH_TET_DwarfSlayer</li>

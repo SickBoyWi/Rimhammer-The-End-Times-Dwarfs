@@ -8,6 +8,7 @@
 		<graphicData>
 			<texPath>Things/Item/Weapons/Melee/RH_TET_Dwarf_Axe_simple</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 			<drawSize>.8</drawSize>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
@@ -19,7 +20,7 @@
 			<WorkToMake>8500</WorkToMake>
 			<Mass>1.1</Mass>
 		</statBases>
-		<equippedAngleOffset>60</equippedAngleOffset>
+		<equippedAngleOffset>30</equippedAngleOffset>
 		<stuffCategories>
 			<li>Metallic</li>
 		</stuffCategories>
@@ -32,10 +33,10 @@
 				<verticalFlipNorth>true</verticalFlipNorth>
 				<angleAdjustmentWest>90</angleAdjustmentWest>
 				<angleAdjustmentEast>-130</angleAdjustmentEast>
-				<northOffset>(0.30,0,0.2)</northOffset>
-				<eastOffset>(0,0,-0.1)</eastOffset>
-				<westOffset>(0,0,-0.1)</westOffset>
-				<southOffset>(-0.30,0,-0.2)</southOffset>
+				<northOffset>(0.20,0,0.25)</northOffset>
+				<eastOffset>(0,0,0.0)</eastOffset>
+				<westOffset>(0,0,0.0)</westOffset>
+				<southOffset>(-0.20,0,0.0)</southOffset>
 			</li>
 		</comps>
 		<tools>
@@ -82,6 +83,7 @@
 		<graphicData>
 			<texPath>Things/Item/Weapons/Melee/RH_TET_Dwarf_Axe_fancy</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 			<drawSize>.8</drawSize>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
@@ -93,7 +95,7 @@
 			<WorkToMake>11000</WorkToMake>
 			<Mass>1.2</Mass>
 		</statBases>
-		<equippedAngleOffset>60</equippedAngleOffset>
+		<equippedAngleOffset>30</equippedAngleOffset>
 		<stuffCategories>
 			<li>Metallic</li>
 		</stuffCategories>
@@ -104,15 +106,14 @@
 			<Gold>1</Gold>
 		</costList>
 		<comps>
-			<!-- from jec's tools -->
 			<li Class="SickCompOversizedWeapon.CompProperties_OversizedWeapon">
 				<verticalFlipNorth>true</verticalFlipNorth>
 				<angleAdjustmentWest>90</angleAdjustmentWest>
 				<angleAdjustmentEast>-130</angleAdjustmentEast>
-				<northOffset>(0.30,0,0.2)</northOffset>
-				<eastOffset>(0,0,-0.1)</eastOffset>
-				<westOffset>(0,0,-0.1)</westOffset>
-				<southOffset>(-0.30,0,-0.2)</southOffset>
+				<northOffset>(0.20,0,0.25)</northOffset>
+				<eastOffset>(0,0,0.0)</eastOffset>
+				<westOffset>(0,0,0.0)</westOffset>
+				<southOffset>(-0.20,0,0.0)</southOffset>
 			</li>
 		</comps>
 		<tools>
@@ -160,6 +161,7 @@
 		<graphicData>
 			<texPath>Things/Item/Weapons/Melee/RH_TET_Dwarf_Axe_elaborate</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 			<drawSize>.8</drawSize>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
@@ -171,7 +173,7 @@
 			<WorkToMake>18000</WorkToMake>
 			<Mass>1.1</Mass>
 		</statBases>
-		<equippedAngleOffset>60</equippedAngleOffset>
+		<equippedAngleOffset>30</equippedAngleOffset>
 		<stuffCategories>
 			<li>Metallic</li>
 		</stuffCategories>
@@ -182,15 +184,14 @@
 			<Gold>2</Gold>
 		</costList>
 		<comps>
-			<!-- from jec's tools -->
 			<li Class="SickCompOversizedWeapon.CompProperties_OversizedWeapon">
 				<verticalFlipNorth>true</verticalFlipNorth>
 				<angleAdjustmentWest>90</angleAdjustmentWest>
 				<angleAdjustmentEast>-130</angleAdjustmentEast>
-				<northOffset>(0.30,0,0.2)</northOffset>
-				<eastOffset>(0,0,-0.1)</eastOffset>
-				<westOffset>(0,0,-0.1)</westOffset>
-				<southOffset>(-0.30,0,0.2)</southOffset>
+				<northOffset>(0.20,0,0.25)</northOffset>
+				<eastOffset>(0,0,0.0)</eastOffset>
+				<westOffset>(0,0,0.0)</westOffset>
+				<southOffset>(-0.20,0,0.0)</southOffset>
 			</li>
 		</comps>
 		<tools>
@@ -238,6 +239,7 @@
 		<graphicData>
 			<texPath>Things/Item/Weapons/Melee/RH_TET_Dwarf_Hammer_simple</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 			<drawSize>.8</drawSize>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
@@ -246,7 +248,7 @@
 			<WorkToMake>8000</WorkToMake>
 			<Mass>1.45</Mass>
 		</statBases>
-		<equippedAngleOffset>60</equippedAngleOffset>
+		<equippedAngleOffset>30</equippedAngleOffset>
 		<stuffCategories>
 			<li>Metallic</li>
 		</stuffCategories>
@@ -259,10 +261,10 @@
 				<verticalFlipNorth>true</verticalFlipNorth>
 				<angleAdjustmentWest>90</angleAdjustmentWest>
 				<angleAdjustmentEast>-130</angleAdjustmentEast>
-				<northOffset>(0.30,0,0.2)</northOffset>
-				<eastOffset>(0,0,-0.1)</eastOffset>
-				<westOffset>(0,0,-0.1)</westOffset>
-				<southOffset>(-0.30,0,-0.2)</southOffset>
+				<northOffset>(0.20,0,0.25)</northOffset>
+				<eastOffset>(0,0,0.0)</eastOffset>
+				<westOffset>(0,0,0.0)</westOffset>
+				<southOffset>(-0.20,0,0.0)</southOffset>
 			</li>
 		</comps>
 		<weaponTags>
@@ -305,6 +307,7 @@
 		<graphicData>
 			<texPath>Things/Item/Weapons/Melee/RH_TET_Dwarf_Hammer_fancy</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 			<drawSize>.8</drawSize>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
@@ -313,7 +316,7 @@
 			<WorkToMake>11000</WorkToMake>
 			<Mass>1.5</Mass>
 		</statBases>
-		<equippedAngleOffset>60</equippedAngleOffset>
+		<equippedAngleOffset>30</equippedAngleOffset>
 		<stuffCategories>
 			<li>Metallic</li>
 		</stuffCategories>
@@ -329,10 +332,10 @@
 				<verticalFlipNorth>true</verticalFlipNorth>
 				<angleAdjustmentWest>90</angleAdjustmentWest>
 				<angleAdjustmentEast>-130</angleAdjustmentEast>
-				<northOffset>(0.30,0,0.2)</northOffset>
-				<eastOffset>(0,0,-0.1)</eastOffset>
-				<westOffset>(0,0,-0.1)</westOffset>
-				<southOffset>(-0.30,0,-0.2)</southOffset>
+				<northOffset>(0.20,0,0.25)</northOffset>
+				<eastOffset>(0,0,0.0)</eastOffset>
+				<westOffset>(0,0,0.0)</westOffset>
+				<southOffset>(-0.20,0,0.0)</southOffset>
 			</li>
 		</comps>
 		<weaponTags>
@@ -377,7 +380,7 @@
 			<texPath>Things/Item/Weapons/Melee/RH_TET_Dwarf_GreatAxe_simple</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<drawSize>1.6</drawSize>
+			<drawSize>1.3</drawSize>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
 		<weaponTags>
@@ -389,7 +392,6 @@
 			<WorkToMake>25000</WorkToMake>
 			<Mass>4.0</Mass>
 		</statBases>
-		<!--<equippedAngleOffset>60</equippedAngleOffset>-->
 		<equippedAngleOffset>-30</equippedAngleOffset>
 		<stuffCategories>
 			<li>Metallic</li>
@@ -397,19 +399,6 @@
 		<thingCategories Inherit="False">
 			<li>RH_TET_Dwarfs_WeaponsMelee</li>
 		</thingCategories>
-		<!--
-		<comps>
-			<li Class="SickCompOversizedWeapon.CompProperties_OversizedWeapon">
-				<verticalFlipNorth>true</verticalFlipNorth>
-				<angleAdjustmentWest>90</angleAdjustmentWest>
-				<angleAdjustmentEast>-130</angleAdjustmentEast>
-				<northOffset>(0.30,0,0.2)</northOffset>
-				<eastOffset>(0,0,-0.1)</eastOffset>
-				<westOffset>(0,0,-0.1)</westOffset>
-				<southOffset>(-0.30,0,-0.2)</southOffset>
-			</li>
-		</comps>
-		-->
 		<tools>
 			<li>
 				<label>handle</label>
@@ -456,7 +445,7 @@
 			<texPath>Things/Item/Weapons/Melee/RH_TET_Dwarf_GreatAxe_fancy</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<drawSize>1.6</drawSize>
+			<drawSize>1.3</drawSize>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
 		<weaponTags>
@@ -468,7 +457,6 @@
 			<WorkToMake>28000</WorkToMake>
 			<Mass>4.0</Mass>
 		</statBases>
-		<!--<equippedAngleOffset>60</equippedAngleOffset>-->
 		<equippedAngleOffset>-30</equippedAngleOffset>
 		<stuffCategories>
 			<li>Metallic</li>
@@ -479,19 +467,6 @@
 		<costList>
 			<Gold>2</Gold>
 		</costList>
-		<!--
-		<comps>
-			<li Class="SickCompOversizedWeapon.CompProperties_OversizedWeapon">
-				<verticalFlipNorth>true</verticalFlipNorth>
-				<angleAdjustmentWest>90</angleAdjustmentWest>
-				<angleAdjustmentEast>-130</angleAdjustmentEast>
-				<northOffset>(0.30,0,0.2)</northOffset>
-				<eastOffset>(0,0,-0.1)</eastOffset>
-				<westOffset>(0,0,-0.1)</westOffset>
-				<southOffset>(-0.30,0,-0.2)</southOffset>
-			</li>
-		</comps>
-		-->
 		<tools>
 			<li>
 				<label>handle</label>
@@ -537,7 +512,8 @@
 		<graphicData>
 			<texPath>Things/Item/Weapons/Melee/RH_TET_Dwarf_GreatHammer_simple</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.6</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>1.3</drawSize>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
 		<costStuffCount>165</costStuffCount>
@@ -545,7 +521,6 @@
 			<WorkToMake>25000</WorkToMake>
 			<Mass>4.0</Mass>
 		</statBases>
-		<!--<equippedAngleOffset>60</equippedAngleOffset>-->
 		<equippedAngleOffset>-30</equippedAngleOffset>
 		<stuffCategories>
 			<li>Metallic</li>
@@ -553,19 +528,6 @@
 		<thingCategories Inherit="False">
 			<li>RH_TET_Dwarfs_WeaponsMelee</li>
 		</thingCategories>
-		<!--
-		<comps>
-			<li Class="SickCompOversizedWeapon.CompProperties_OversizedWeapon">
-				<verticalFlipNorth>true</verticalFlipNorth>
-				<angleAdjustmentWest>90</angleAdjustmentWest>
-				<angleAdjustmentEast>-130</angleAdjustmentEast>
-				<northOffset>(0.30,0,0.2)</northOffset>
-				<eastOffset>(0,0,-0.1)</eastOffset>
-				<westOffset>(0,0,-0.1)</westOffset>
-				<southOffset>(-0.30,0,-0.2)</southOffset>
-			</li>
-		</comps>
-		-->
 		<weaponTags>
 			<li>RH_TET_Dwarf_Melee_Low</li>
 		</weaponTags>
@@ -607,7 +569,8 @@
 		<graphicData>
 			<texPath>Things/Item/Weapons/Melee/RH_TET_Dwarf_GreatHammer_fancy</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.6</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>1.3</drawSize>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
 		<costStuffCount>185</costStuffCount>
@@ -615,7 +578,6 @@
 			<WorkToMake>28000</WorkToMake>
 			<Mass>4.0</Mass>
 		</statBases>
-		<!--<equippedAngleOffset>60</equippedAngleOffset>-->
 		<equippedAngleOffset>-30</equippedAngleOffset>
 		<stuffCategories>
 			<li>Metallic</li>
@@ -626,19 +588,6 @@
 		<costList>
 			<Gold>2</Gold>
 		</costList>
-		<!--
-		<comps>
-			<li Class="SickCompOversizedWeapon.CompProperties_OversizedWeapon">
-				<verticalFlipNorth>true</verticalFlipNorth>
-				<angleAdjustmentWest>90</angleAdjustmentWest>
-				<angleAdjustmentEast>-130</angleAdjustmentEast>
-				<northOffset>(0.30,0,0.2)</northOffset>
-				<eastOffset>(0,0,-0.1)</eastOffset>
-				<westOffset>(0,0,-0.1)</westOffset>
-				<southOffset>(-0.30,0,-0.2)</southOffset>
-			</li>
-		</comps>
-		-->
 		<weaponTags>
 			<li>RH_TET_Dwarf_Melee_High</li>
 		</weaponTags>
@@ -681,7 +630,7 @@
 			<texPath>Things/Item/Weapons/Melee/RH_TET_Dwarf_PickAxe_simple</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<drawSize>1.6</drawSize>
+			<drawSize>1.3</drawSize>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
 		<weaponTags>
@@ -693,7 +642,6 @@
 			<WorkToMake>26000</WorkToMake>
 			<Mass>4.0</Mass>
 		</statBases>
-		<!--<equippedAngleOffset>60</equippedAngleOffset>-->
 		<equippedAngleOffset>-30</equippedAngleOffset>
 		<equippedStatOffsets>
 			<MiningSpeed>0.10</MiningSpeed>
@@ -704,19 +652,6 @@
 		<thingCategories Inherit="False">
 			<li>RH_TET_Dwarfs_WeaponsMelee</li>
 		</thingCategories>
-		<!--
-		<comps>
-			<li Class="SickCompOversizedWeapon.CompProperties_OversizedWeapon">
-				<verticalFlipNorth>true</verticalFlipNorth>
-				<angleAdjustmentWest>90</angleAdjustmentWest>
-				<angleAdjustmentEast>-130</angleAdjustmentEast>
-				<northOffset>(0.30,0,0.2)</northOffset>
-				<eastOffset>(0,0,-0.1)</eastOffset>
-				<westOffset>(0,0,-0.1)</westOffset>
-				<southOffset>(-0.30,0,-0.2)</southOffset>
-			</li>
-		</comps>
-		-->
 		<tools>
 			<li>
 				<label>handle</label>
@@ -755,7 +690,7 @@
 			<texPath>Things/Item/Weapons/Melee/RH_TET_Dwarf_PickAxe_fancy</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<drawSize>1.6</drawSize>
+			<drawSize>1.3</drawSize>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
 		<weaponTags>
@@ -770,7 +705,6 @@
 			<WorkToMake>29000</WorkToMake>
 			<Mass>4.0</Mass>
 		</statBases>
-		<!--<equippedAngleOffset>60</equippedAngleOffset>-->
 		<equippedAngleOffset>-30</equippedAngleOffset>
 		<equippedStatOffsets>
 			<MiningSpeed>0.20</MiningSpeed>
@@ -781,19 +715,6 @@
 		<thingCategories Inherit="False">
 			<li>RH_TET_Dwarfs_WeaponsMelee</li>
 		</thingCategories>
-		<!--
-		<comps>
-			<li Class="SickCompOversizedWeapon.CompProperties_OversizedWeapon">
-				<verticalFlipNorth>true</verticalFlipNorth>
-				<angleAdjustmentWest>90</angleAdjustmentWest>
-				<angleAdjustmentEast>-130</angleAdjustmentEast>
-				<northOffset>(0.30,0,0.2)</northOffset>
-				<eastOffset>(0,0,-0.1)</eastOffset>
-				<westOffset>(0,0,-0.1)</westOffset>
-				<southOffset>(-0.30,0,-0.2)</southOffset>
-			</li>
-		</comps>
-		-->
 		<tools>
 			<li>
 				<label>handle</label>

@@ -51,6 +51,7 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_Boots</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
+			<drawSize>.70</drawSize>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>180</MaxHitPoints>
@@ -94,6 +95,7 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_PlatedBoots</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
+			<drawSize>.70</drawSize>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>190</MaxHitPoints>
@@ -126,6 +128,10 @@
 			<tags>
 				<li>RH_TET_Dwarf_Armor_Mid</li>
 				<li>RH_TET_Dwarf_Armor_High</li>
+				<li>RH_TET_Dwarf_Armor_IronBreaker</li>
+				<li>RH_TET_Dwarf_Armor_Miner</li>
+				<li>RH_TET_Dwarf_Armor_Hammerer</li>
+				<li>RH_TET_Dwarf_Armor_LongBeard</li>
 			</tags>
 		</apparel>
 	</ThingDef>
@@ -138,6 +144,7 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_LordlyBoots</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
+			<drawSize>.70</drawSize>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>200</MaxHitPoints>

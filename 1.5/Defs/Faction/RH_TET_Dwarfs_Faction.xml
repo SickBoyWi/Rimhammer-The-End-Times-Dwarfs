@@ -59,11 +59,15 @@
 					<RH_TET_DwarfClansman>100</RH_TET_DwarfClansman>
 					<RH_TET_DwarfVillager>100</RH_TET_DwarfVillager>
 					<RH_TET_DwarfWarrior>20</RH_TET_DwarfWarrior>
+					<RH_TET_DwarfLongBeard>10</RH_TET_DwarfLongBeard>
 					<RH_TET_DwarfRanged>10</RH_TET_DwarfRanged>
+					<RH_TET_DwarfThunderer>5</RH_TET_DwarfThunderer>
 					<RH_TET_DwarfSlayerStandard>10</RH_TET_DwarfSlayerStandard>
 					<RH_TET_DwarfSlayer>10</RH_TET_DwarfSlayer>
 					<RH_TET_DwarfSlayerSeeker>10</RH_TET_DwarfSlayerSeeker>
 					<RH_TET_DwarfMinerBlaster>5</RH_TET_DwarfMinerBlaster>
+					<RH_TET_DwarfEngineer>5</RH_TET_DwarfEngineer>
+					<RH_TET_DwarfSlayerEngineer>2</RH_TET_DwarfSlayerEngineer>
 				</options>
 			</li>
 			<li>
@@ -75,12 +79,19 @@
 					<RH_TET_DwarfSlayer>20</RH_TET_DwarfSlayer>
 					<RH_TET_DwarfSlayerSeeker>20</RH_TET_DwarfSlayerSeeker>
 					<RH_TET_DwarfWarrior>20</RH_TET_DwarfWarrior>
+					<RH_TET_DwarfLongBeard>10</RH_TET_DwarfLongBeard>
 					<RH_TET_DwarfRanged>10</RH_TET_DwarfRanged>
+					<RH_TET_DwarfThunderer>5</RH_TET_DwarfThunderer>
 					<RH_TET_DwarfMinerBlaster>5</RH_TET_DwarfMinerBlaster>
+					<RH_TET_DwarfIronBreaker>5</RH_TET_DwarfIronBreaker>
+					<RH_TET_DwarfShieldBearer>3</RH_TET_DwarfShieldBearer>
+					<RH_TET_DwarfHammerer>3</RH_TET_DwarfHammerer>
 					<RH_TET_DwarfThane>5</RH_TET_DwarfThane>
 					<RH_TET_DwarfSlayerThane>3</RH_TET_DwarfSlayerThane>
 					<RH_TET_DwarfLord>1</RH_TET_DwarfLord>
 					<RH_TET_DwarfSlayerLord>1</RH_TET_DwarfSlayerLord>
+					<RH_TET_DwarfEngineer>3</RH_TET_DwarfEngineer>
+					<RH_TET_DwarfSlayerEngineer>2</RH_TET_DwarfSlayerEngineer>
 				</options>
 			</li>
 			<li>
@@ -95,11 +106,15 @@
 					<RH_TET_DwarfVillager>50</RH_TET_DwarfVillager>
 					<RH_TET_DwarfClansman>100</RH_TET_DwarfClansman>
 					<RH_TET_DwarfWarrior>10</RH_TET_DwarfWarrior>
+					<RH_TET_DwarfLongBeard>5</RH_TET_DwarfLongBeard>
 					<RH_TET_DwarfRanged>10</RH_TET_DwarfRanged>
+					<RH_TET_DwarfThunderer>10</RH_TET_DwarfThunderer>
 					<RH_TET_DwarfSlayerStandard>5</RH_TET_DwarfSlayerStandard>
 					<RH_TET_DwarfSlayer>5</RH_TET_DwarfSlayer>
 					<RH_TET_DwarfSlayerSeeker>5</RH_TET_DwarfSlayerSeeker>
 					<RH_TET_DwarfMinerBlaster>5</RH_TET_DwarfMinerBlaster>
+					<RH_TET_DwarfEngineer>2</RH_TET_DwarfEngineer>
+					<RH_TET_DwarfSlayerEngineer>1</RH_TET_DwarfSlayerEngineer>
 				</guards>
 			</li>
 			<li>
@@ -108,11 +123,18 @@
 					<RH_TET_DwarfVillager>50</RH_TET_DwarfVillager>
 					<RH_TET_DwarfClansman>100</RH_TET_DwarfClansman>
 					<RH_TET_DwarfWarrior>20</RH_TET_DwarfWarrior>
+					<RH_TET_DwarfLongBeard>10</RH_TET_DwarfLongBeard>
 					<RH_TET_DwarfRanged>10</RH_TET_DwarfRanged>
+					<RH_TET_DwarfThunderer>5</RH_TET_DwarfThunderer>
 					<RH_TET_DwarfSlayerStandard>5</RH_TET_DwarfSlayerStandard>
 					<RH_TET_DwarfSlayer>5</RH_TET_DwarfSlayer>
 					<RH_TET_DwarfSlayerSeeker>5</RH_TET_DwarfSlayerSeeker>
 					<RH_TET_DwarfMinerBlaster>5</RH_TET_DwarfMinerBlaster>
+					<RH_TET_DwarfIronBreaker>5</RH_TET_DwarfIronBreaker>
+					<RH_TET_DwarfShieldBearer>3</RH_TET_DwarfShieldBearer>
+					<RH_TET_DwarfHammerer>3</RH_TET_DwarfHammerer>
+					<RH_TET_DwarfEngineer>5</RH_TET_DwarfEngineer>
+					<RH_TET_DwarfSlayerEngineer>2</RH_TET_DwarfSlayerEngineer>
 					<RH_TET_DwarfThane>5</RH_TET_DwarfThane>
 					<RH_TET_DwarfSlayerThane>3</RH_TET_DwarfSlayerThane>
 					<RH_TET_DwarfLord>1</RH_TET_DwarfLord>

@@ -9,6 +9,54 @@
 	</ThingDef>
 
 	<ThingDef ParentName="RH_TET_Dwarfs_ApparelMakeableBase">
+		<defName>RH_TET_Dwarf_PantsBasic</defName>
+		<label>dawi pants</label>
+		<description>A pair of dwarfen pants. Fit for most dwarfs, as they're sturdy and well built for work or battle. A perfect fit for a dawi's short stature.</description>
+		<techLevel>Neolithic</techLevel>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Apparel_Basic</researchPrerequisite>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/RH_TET_Dwarfs_PantsBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>40</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+		  <MaxHitPoints>110</MaxHitPoints>
+		  <WorkToMake>1600</WorkToMake>
+		  <Mass>0.5</Mass>
+		  <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+		  <StuffEffectMultiplierInsulation_Cold>0.20</StuffEffectMultiplierInsulation_Cold>
+		  <StuffEffectMultiplierInsulation_Heat>0.08</StuffEffectMultiplierInsulation_Heat>
+		  <EquipDelay>2</EquipDelay>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>RH_TET_Dwarf_Apparel_Mid</li>
+				<li>RH_TET_Dwarf_Apparel_Low</li>
+			</tags>
+		</apparel>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Apparel</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_StandardApparel"/>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_ApparelMakeableBase">
 		<defName>RH_TET_Dwarf_PantsHighBlood</defName>
 		<label>dawi high blood pants</label>
 		<description>A pair of dwarfen pants fit for a high blood. A perfect fit for a dawi's short stature. These fine pants good looking, yet highly functional.</description>
@@ -46,6 +94,7 @@
 				<li>OnSkin</li>
 			</layers>
 			<tags>
+				<li>RH_TET_Dwarf_Apparel_Mid</li>
 				<li>RH_TET_Dwarf_Apparel_High</li>
 			</tags>
 			<defaultOutfitTags>
@@ -102,7 +151,7 @@
 				<li>OnSkin</li>
 			</layers>
 			<tags>
-				<li>RH_TET_Dwarf_Apparel_Mid</li>
+				<li>RH_TET_Dwarf_Apparel_Low</li>
 			</tags>
 			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
@@ -155,7 +204,7 @@
 				<li>OnSkin</li>
 			</layers>
 			<tags>
-				<li>RH_TET_Dwarf_Apparel_High</li>
+				<li>RH_TET_Dwarf_Apparel_Mid</li>
 			</tags>
 			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
@@ -405,10 +454,14 @@
 			</layers>
 			<tags>
 				<li>RH_TET_Dwarf_Armor_Mid</li>
+				<li>RH_TET_Dwarf_Armor_Miner</li>
+				<li>RH_TET_Dwarf_Armor_LongBeard</li>
 			</tags>
 			<defaultOutfitTags>
 				<li>RH_TET_DwarfIronBreaker</li>
 				<li>RH_TET_DwarfShieldBearer</li>
+				<li>RH_TET_DwarfHammerer</li>
+				<li>RH_TET_DwarfLongBeard</li>
 			</defaultOutfitTags>
 			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
@@ -545,6 +598,7 @@
 			</layers>
 			<tags>
 				<li>RH_TET_Dwarf_Armor_High</li>
+				<li>RH_TET_Dwarf_Armor_Hammerer</li>
 			</tags>
 			<defaultOutfitTags>
 				<li>RH_TET_DwarfThane</li>
@@ -607,6 +661,7 @@
 			</layers>
 			<tags>
 				<li>RH_TET_Dwarf_Apparel_Engineer</li>
+				<li>RH_TET_Dwarf_Apparel_Utility</li>
 			</tags>
 		</apparel>
 		<tradeTags>

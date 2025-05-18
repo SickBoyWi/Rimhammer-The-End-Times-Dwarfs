@@ -51,6 +51,7 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_Warrior_Bracers</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
+			<drawSize>.70</drawSize>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>175</MaxHitPoints>
@@ -67,11 +68,12 @@
 		</statBases>
 		<apparel>
 			<tags>
+				<li>RH_TET_Dwarf_Armor_Miner</li>
 				<li>RH_TET_Dwarf_Armor_Mid</li>
 			</tags>
 		</apparel>
 		<recipeMaker>
-			<researchPrerequisite>RH_TET_Dwarf_Armor_Mid</researchPrerequisite>
+			<researchPrerequisite>RH_TET_Dwarf_Armor_Basic</researchPrerequisite>
 			<displayPriority>208</displayPriority>
 			<skillRequirements>
 				<Crafting>7</Crafting>
@@ -96,6 +98,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_Ranger_Gauntlets</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>.70</drawSize>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>175</MaxHitPoints>
@@ -139,6 +142,7 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_Longbeard_Gauntlets</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
+			<drawSize>.70</drawSize>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>180</MaxHitPoints>
@@ -156,10 +160,12 @@
 		<apparel>
 			<tags>
 				<li>RH_TET_Dwarf_Armor_Mid</li>
+				<li>RH_TET_Dwarf_Armor_Hammerer</li>
+				<li>RH_TET_Dwarf_Armor_LongBeard</li>
 			</tags>
 		</apparel>
 		<recipeMaker>
-			<researchPrerequisite>RH_TET_Dwarf_Armor_Mid</researchPrerequisite>
+			<researchPrerequisite>RH_TET_Dwarf_Armor_Advanced</researchPrerequisite>
 			<displayPriority>208</displayPriority>
 			<skillRequirements>
 				<Crafting>7</Crafting>
@@ -185,6 +191,7 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_Ironbreaker_Gauntlets</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
+			<drawSize>.70</drawSize>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>190</MaxHitPoints>
@@ -201,6 +208,7 @@
 		</statBases>
 		<apparel>
 			<tags>
+				<li>RH_TET_Dwarf_Armor_IronBreaker</li>
 				<li>RH_TET_Dwarf_Armor_High</li>
 			</tags>
 		</apparel>
@@ -232,6 +240,7 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/Dwarf_Lordly_Gauntlets</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
+			<drawSize>.70</drawSize>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>200</MaxHitPoints>

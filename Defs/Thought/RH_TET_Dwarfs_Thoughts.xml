@@ -81,15 +81,43 @@
 	</ThoughtDef>
 
 	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_DeadThaneSlayer</defName>
+		<icon>Mote/RH_TET_Dwarfs_SkullCrown</icon>
+		<showBubble>true</showBubble>
+		<durationDays>30</durationDays>
+		<stages>
+			<li>
+				<label>Slayer thane died</label>
+				<description>A slayer thane died. They have fulfilled their oath to seek death against our foes.</description>
+				<baseMoodEffect>8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
 		<defName>RH_TET_Dwarfs_DeadKing</defName>
 		<icon>Mote/RH_TET_Dwarfs_SkullCrown</icon>
 		<showBubble>true</showBubble>
 		<durationDays>60</durationDays>
 		<stages>
 			<li>
-				<label>King or Queen died</label>
+				<label>Ruler died</label>
 				<description>Our great leader has died. There must be a grudge that we can create and avenge from this. Great woe for all the clans.</description>
 				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_DeadKingSlayer</defName>
+		<icon>Mote/RH_TET_Dwarfs_SkullCrown</icon>
+		<showBubble>true</showBubble>
+		<durationDays>60</durationDays>
+		<stages>
+			<li>
+				<label>Slayer Ruler died</label>
+				<description>Our great slayer leader has died. The oath has been fulfilled, but a new grudge will still be written.</description>
+				<baseMoodEffect>10</baseMoodEffect>
 			</li>
 		</stages>
 	</ThoughtDef>
