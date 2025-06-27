@@ -1161,4 +1161,40 @@
 		<researchPrerequisite>RH_TET_Dwarfs_RepairAdvanced</researchPrerequisite>
 	</RecipeDef>
 
+	<RecipeDef>
+		<defName>RH_TET_Dwarf_BeardProcess</defName>
+		<label>process dawi beard</label>
+		<description>Comb, shred, and prep a dwarf beard for use as a wool in making other items.</description>
+		<jobString>Processing dwarf beard.</jobString>
+		<workAmount>500</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Tailor</effectWorking>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<allowMixingIngredients>false</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_BodyPart_Beard</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Dwarfs_BodyPart_Beard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_HandTailoringBench</li>
+			<li>CraftingSpot</li>
+			<li>HandTailoringBench</li>
+		</recipeUsers>
+		<products>
+			<RH_TET_Dwarfs_Beard_Wool>30</RH_TET_Dwarfs_Beard_Wool>
+		</products>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
 </Defs>

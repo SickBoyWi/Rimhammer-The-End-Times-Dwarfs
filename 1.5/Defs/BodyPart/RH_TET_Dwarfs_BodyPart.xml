@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="WoolBase">
+		<defName>RH_TET_Dwarfs_Beard_Wool</defName>
+		<label>dawi beard</label>
+		<description>A dwarf beard is made of strong stuff. It's thick and coarse, and provides great warmth.</description>
+		<possessionCount>30</possessionCount>
+		<statBases>
+			<MarketValue>7.6</MarketValue>
+			<StuffPower_Armor_Blunt>0.20</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Sharp>0.80</StuffPower_Armor_Sharp>
+			<StuffPower_Insulation_Cold>36</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>12</StuffPower_Insulation_Heat>
+		</statBases>
+		<graphicData>
+			<color>(98,74,35)</color>
+		</graphicData>
+		<stuffProps>
+			<color>(98,74,35)</color>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPartBase">
+		<defName>RH_TET_Dwarfs_BodyPart_Beard</defName>
+		<label>dawi beard</label>
+		<description>The beard of a shorn dwarf. There is no doubt the clans went to war over the removal of this.</description>
+		<graphicData>
+			<texPath>Things/Item/Misc/BeardShaved</texPath>
+			<color>(98,74,35)</color>
+			<graphicClass>Graphic_Single</graphicClass>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<tickerType>Never</tickerType>
+		<alwaysHaulable>true</alwaysHaulable>
+		<isTechHediff>false</isTechHediff>
+		<tradeTags>
+		  <li>TechHediff</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<pathCost>10</pathCost>		
+		<thingCategories>
+			<li>BodyPartsNatural</li>
+		</thingCategories>
+		<statBases>
+			<Mass>0.5</Mass>
+			<MarketValue>200</MarketValue>
+			<DeteriorationRate>1.0</DeteriorationRate>
+			<Flammability>0.7</Flammability>
+			<Beauty>-10</Beauty>
+		</statBases>
+	</ThingDef>
+	
+	<BodyPartDef Name="RH_TET_Dwarfs_Beard">
+		<defName>RH_TET_Dwarfs_BP_Beard</defName>
+		<label>beard</label>
+		<hitPoints>100</hitPoints>
+		<frostbiteVulnerability>0.0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0.00</permanentInjuryChanceFactor>
+		<pawnGeneratorCanAmputate>false</pawnGeneratorCanAmputate>
+		<bleedRate>0</bleedRate>
+		<beautyRelated>true</beautyRelated>
+		<skinCovered>false</skinCovered>
+		<spawnThingOnRemoved>RH_TET_Dwarfs_BodyPart_Beard</spawnThingOnRemoved>
+		<!--
+		<forceAlwaysRemovable>false</forceAlwaysRemovable>
+		<removeRecipeLabelOverride>shave</removeRecipeLabelOverride>
+		-->
+	</BodyPartDef>
+
+</Defs>
