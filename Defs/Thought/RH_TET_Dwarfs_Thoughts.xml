@@ -370,7 +370,7 @@
 			</li>
 			<li>
 				<label>beard missing</label>
-				<description>My precious beard is gone. How will I bear the shame?</description>
+				<description>My precious beard is gone. I cannot bear the shame.</description>
 				<baseMoodEffect>-30</baseMoodEffect>
 			</li>
 		</stages>

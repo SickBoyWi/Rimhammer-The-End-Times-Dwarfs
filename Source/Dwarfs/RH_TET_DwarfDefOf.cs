@@ -74,8 +74,6 @@ namespace TheEndTimes_Dwarfs
         public static ThingDef RH_TET_Dwarfs_Dresser;
         public static ThingDef RH_TET_Dwarfs_SteamInfestationLure;
 
-        public static BodyPartDef RH_TET_Dwarfs_BP_Beard;
-
         // Magic weapons and armor.
         // Thane
         public static ThingDef RH_TET_Dwarf_Helmet_MagicGrungi;

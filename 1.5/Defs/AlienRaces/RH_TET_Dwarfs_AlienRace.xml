@@ -483,7 +483,7 @@
 			<makesFootprints>true</makesFootprints>
 			<lifeExpectancy>400</lifeExpectancy>
 			<nameCategory>HumanStandard</nameCategory>
-			<body>RH_TET_Dwarfs_Body</body>
+			<body>Human</body>
 			<leatherDef>RH_TET_Dwarf_Leather</leatherDef>
 			<baseBodySize>1</baseBodySize>
 			<baseHealthScale>1</baseHealthScale>
@@ -982,7 +982,7 @@
 			<makesFootprints>true</makesFootprints>
 			<lifeExpectancy>400</lifeExpectancy>
 			<nameCategory>HumanStandard</nameCategory>
-			<body>RH_TET_Dwarfs_Body</body>
+			<body>Human</body>
 			<leatherDef>RH_TET_Dwarf_Leather</leatherDef>
 			<baseBodySize>1</baseBodySize>
 			<baseHealthScale>1</baseHealthScale>
