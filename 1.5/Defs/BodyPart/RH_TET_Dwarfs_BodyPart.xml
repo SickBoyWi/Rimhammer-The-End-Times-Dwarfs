@@ -57,5 +57,22 @@
 			<Beauty>-10</Beauty>
 		</statBases>
 	</ThingDef>
+	
+	<BodyPartDef Name="RH_TET_Dwarfs_Beard">
+		<defName>RH_TET_Dwarfs_BP_Beard</defName>
+		<label>beard</label>
+		<hitPoints>100</hitPoints>
+		<frostbiteVulnerability>0.0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0.00</permanentInjuryChanceFactor>
+		<pawnGeneratorCanAmputate>false</pawnGeneratorCanAmputate>
+		<bleedRate>0</bleedRate>
+		<beautyRelated>true</beautyRelated>
+		<skinCovered>false</skinCovered>
+		<spawnThingOnRemoved>RH_TET_Dwarfs_BodyPart_Beard</spawnThingOnRemoved>
+		<!--
+		<forceAlwaysRemovable>false</forceAlwaysRemovable>
+		<removeRecipeLabelOverride>shave</removeRecipeLabelOverride>
+		-->
+	</BodyPartDef>
 
 </Defs>
