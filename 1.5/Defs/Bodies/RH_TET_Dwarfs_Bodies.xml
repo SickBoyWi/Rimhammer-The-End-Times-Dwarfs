@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+	<BodyPartGroupDef>
+		<defName>RH_TET_Dwarfs_BP_Beards</defName>
+		<label>beards</label>
+	</BodyPartGroupDef>
+
 	<BodyDef>
 		<defName>RH_TET_Dwarfs_Body</defName>
 		<label>dawi</label>
@@ -215,16 +220,15 @@
 												<li>FullHead</li>
 											</groups>
 										</li>
-										<!--
 										<li>
 											<def>RH_TET_Dwarfs_BP_Beard</def>
 											<coverage>0.10</coverage>
 											<depth>Outside</depth>
 											<groups>
 												<li>FullHead</li>
+												<li>RH_TET_Dwarfs_BP_Beards</li>
 											</groups>
 										</li>
-										-->
 									</parts>
 								</li>
 							</parts>

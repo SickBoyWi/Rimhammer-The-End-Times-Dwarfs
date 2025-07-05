@@ -69,10 +69,8 @@
 		<beautyRelated>true</beautyRelated>
 		<skinCovered>false</skinCovered>
 		<spawnThingOnRemoved>RH_TET_Dwarfs_BodyPart_Beard</spawnThingOnRemoved>
-		<!--
 		<forceAlwaysRemovable>false</forceAlwaysRemovable>
 		<removeRecipeLabelOverride>shave</removeRecipeLabelOverride>
-		-->
 	</BodyPartDef>
 
 </Defs>

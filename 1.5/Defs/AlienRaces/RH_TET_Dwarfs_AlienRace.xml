@@ -247,7 +247,7 @@
 
 							<conditions>
 								<BodyPart>
-									<bodyPart>Jaw</bodyPart>
+									<bodyPart>RH_TET_Dwarfs_BP_Beard</bodyPart>
 									<drawWithoutPart>false</drawWithoutPart>
 								</BodyPart>
 								<Posture>
@@ -745,7 +745,7 @@
 
 							<conditions>
 								<BodyPart>
-									<bodyPart>Jaw</bodyPart>
+									<bodyPart>RH_TET_Dwarfs_BP_Beard</bodyPart>
 									<drawWithoutPart>false</drawWithoutPart>
 								</BodyPart>
 								<Posture>

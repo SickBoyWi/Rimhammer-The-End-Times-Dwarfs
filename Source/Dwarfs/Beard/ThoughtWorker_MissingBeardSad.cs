@@ -7,7 +7,7 @@ namespace TheEndTimes_Dwarfs
     {
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
-            if (!p.RaceProps.Humanlike || p.RaceProps.IsMechanoid || !DwarfsUtil.IsDwarf(p) || p.gender == Gender.Male)
+            if (!p.RaceProps.Humanlike || p.RaceProps.IsMechanoid || p.gender != Gender.Male || !DwarfsUtil.IsDwarf(p))
                 return ThoughtState.Inactive;
 
             if (p.health.hediffSet.PartIsMissing(p.RaceProps.body.AllParts.FirstOrFallback(part => part.def == RH_TET_DwarfDefOf.RH_TET_Dwarfs_BP_Beard)))

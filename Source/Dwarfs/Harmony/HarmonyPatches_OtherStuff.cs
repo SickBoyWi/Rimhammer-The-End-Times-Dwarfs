@@ -73,6 +73,67 @@ namespace TheEndTimes_Dwarfs
             }
         }
 
+        [HarmonyPatch(typeof(Recipe_RemoveBodyPart), "ApplyOnPawn")]
+        internal static class Patch_RemoveBodyPart
+        {
+            // Assist with beard removal thoughts.
+            private static bool Prefix(ref Recipe_RemoveBodyPart __instance,
+                    ref Pawn pawn,
+                    ref BodyPartRecord part,
+                    ref Pawn billDoer,
+                    ref List<Thing> ingredients,
+                    ref Bill bill)
+            {
+                if (part.def != RH_TET_DwarfDefOf.RH_TET_Dwarfs_BP_Beard)
+                {
+                    return true;
+                }
+
+                if (billDoer != null)
+                {
+                    MedicalRecipesUtility.SpawnNaturalPartIfClean(pawn, part, billDoer.Position, billDoer.Map);
+                    MedicalRecipesUtility.SpawnThingsFromHediffs(pawn, part, billDoer.Position, billDoer.Map);
+                }
+
+                __instance.DamagePart(pawn, part);
+                pawn.Drawer.renderer.SetAllGraphicsDirty();
+
+                return false;
+            }
+        }
+
+        [HarmonyPatch(typeof(PawnGenerator), "GeneratePawn", (new[] { typeof(PawnGenerationRequest) }))]
+        internal static class Patch_GeneratePawn
+        {
+            private static void Postfix(Pawn __result)
+            {
+                // Remove beard on female dwarfs.
+                if (!__result.RaceProps.Humanlike || __result.RaceProps.IsMechanoid || __result.gender == Gender.Female || !DwarfsUtil.IsDwarf(__result))
+                {
+                    if (!__result.health.hediffSet.PartIsMissing(__result.RaceProps.body.AllParts.FirstOrFallback(part => part.def == RH_TET_DwarfDefOf.RH_TET_Dwarfs_BP_Beard)))
+                    {
+                        List<BodyPartRecord> parts = __result.RaceProps.body.GetPartsWithDef(RH_TET_DwarfDefOf.RH_TET_Dwarfs_BP_Beard);
+                        BodyPartRecord part;
+                        if (parts.Count > 0)
+                            part = parts.First();
+                        else
+                            return;
+
+                        HediffDef hediffDefFromDamage = DamageDefOf.SurgicalCut.hediff;
+                        Hediff_MissingPart hediffMissingPart = (Hediff_MissingPart)HediffMaker.MakeHediff(HediffDefOf.MissingBodyPart, __result, (BodyPartRecord)null);
+                        hediffMissingPart.lastInjury = hediffDefFromDamage;
+                        hediffMissingPart.Part = part;
+                        hediffMissingPart.IsFresh = false;
+
+                        __result.health.AddHediff((Hediff)hediffMissingPart, part, new DamageInfo?(), (DamageWorker.DamageResult)null);
+
+                        //__result.TakeDamage(new DamageInfo(DamageDefOf.SurgicalCut, 99999f, 999f, -1f, (Thing)null, part, (ThingDef)null, DamageInfo.SourceCategory.ThingOrUnknown, (Thing)null, false, false, QualityCategory.Normal, true));
+                        //__result.health.RestorePart(part, (Hediff)null, true);
+                    }
+                }
+            }
+        }
+
         [HarmonyPatch(typeof(InfestationCellFinder))]
         [HarmonyPatch("TryFindCell")]
         internal static class Patch_TryFindCell

@@ -69,6 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Beard\ThoughtWorker_MissingBeardSad.cs" />
     <Compile Include="Blasting\Alert_BlastingWireFailure.cs" />
     <Compile Include="Blasting\Building_AdvancedBlastingExplosive.cs" />
     <Compile Include="Blasting\Building_BlastingCharge.cs" />
