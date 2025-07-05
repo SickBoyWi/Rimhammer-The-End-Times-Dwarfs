@@ -357,5 +357,23 @@
 			</li>
 		</stages>
 	</ThoughtDef>
-  
+ 
+	<!-- Beard stuff. -->
+	<ThoughtDef>
+		<defName>RH_TET_Dwarfs_BeardDamagedOrLost</defName>
+		<workerClass>TheEndTimes_Dwarfs.ThoughtWorker_MissingBeardSad</workerClass>
+		<stages>
+			<li>
+				<label>beard damaged</label>
+				<description>My beard has been damaged. This is a shameful display.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+			<li>
+				<label>beard missing</label>
+				<description>My precious beard is gone. I cannot bear the shame.</description>
+				<baseMoodEffect>-30</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+ 
 </Defs>

@@ -242,13 +242,12 @@
 							<drawSize>.9</drawSize>
 							<inFrontOfBody>true</inFrontOfBody>
 							<!--<layerOffset>.35</layerOffset><layerOffset>0</layerOffset> TOO MUCH - IN FRONT OF HELMET -->
-							<!--<layerOffset>-.20</layerOffset><layerOffset>0</layerOffset> TOO LITTLE - BEHIND SHIRT  -->							
-							
+							<!--<layerOffset>-.20</layerOffset><layerOffset>0</layerOffset> TOO LITTLE - BEHIND SHIRT  -->		
 							<alignWithHead>true</alignWithHead>
 
 							<conditions>
 								<BodyPart>
-									<bodyPart>Head</bodyPart>
+									<bodyPart>RH_TET_Dwarfs_BP_Beard</bodyPart>
 									<drawWithoutPart>false</drawWithoutPart>
 								</BodyPart>
 								<Posture>
@@ -263,11 +262,11 @@
 							<offsets>
 								<south>
 									<bodyTypes>
-										<Male>(-.01,0.0)</Male>
+										<Male>(0.0,-0.02)</Male>
 									</bodyTypes>
 									<headTypes>
 										<Male_AverageNormal>(0,0)</Male_AverageNormal>
-										<Male_AverageWide>(0,0)</Male_AverageWide>
+										<Male_AverageWide>(0,-0.01)</Male_AverageWide>
 										<Male_AveragePointy>(0,0)</Male_AveragePointy>
 										<Male_NarrowNormal>(0,0)</Male_NarrowNormal>
 										<Male_NarrowWide>(0,0)</Male_NarrowWide>
@@ -277,7 +276,7 @@
 								</south>
 								<north>
 									<bodyTypes>
-										<Male>(-.01,0.0)</Male>
+										<Male>(0.0,0.0)</Male>
 									</bodyTypes>
 									<headTypes>
 										<Male_AverageNormal>(0,0)</Male_AverageNormal>
@@ -291,29 +290,29 @@
 								</north>
 								<east>
 									<bodyTypes>
-										<Male>(-.05,0.0)</Male>
+										<Male>(-.05,-0.02)</Male>
 									</bodyTypes>
 									<headTypes>
 										<Male_AverageNormal>(0.05,0)</Male_AverageNormal>
-										<Male_AverageWide>(0,0)</Male_AverageWide>
+										<Male_AverageWide>(0,-0.01)</Male_AverageWide>
 										<Male_AveragePointy>(0.05,0)</Male_AveragePointy>
-										<Male_NarrowNormal>(0.1,0)</Male_NarrowNormal>
-										<Male_NarrowWide>(0.08,0)</Male_NarrowWide>
-										<Male_NarrowPointy>(0.1,0)</Male_NarrowPointy>
+										<Male_NarrowNormal>(0.11,-.01)</Male_NarrowNormal>
+										<Male_NarrowWide>(0.09,-.01)</Male_NarrowWide>
+										<Male_NarrowPointy>(0.11,-.01)</Male_NarrowPointy>
 									</headTypes>
 									<layerOffset>-.275</layerOffset>
 								</east>
 								<west>
 									<bodyTypes>
-										<Male>(-.05,0.0)</Male>
+										<Male>(-.05,-0.02)</Male>
 									</bodyTypes>
 									<headTypes>
 										<Male_AverageNormal>(0.05,0)</Male_AverageNormal>
-										<Male_AverageWide>(0,0)</Male_AverageWide>
+										<Male_AverageWide>(0,-0.01)</Male_AverageWide>
 										<Male_AveragePointy>(0.05,0)</Male_AveragePointy>
-										<Male_NarrowNormal>(0.1,0)</Male_NarrowNormal>
-										<Male_NarrowWide>(0.08,0)</Male_NarrowWide>
-										<Male_NarrowPointy>(0.1,0)</Male_NarrowPointy>
+										<Male_NarrowNormal>(0.11,-.01)</Male_NarrowNormal>
+										<Male_NarrowWide>(0.09,-.01)</Male_NarrowWide>
+										<Male_NarrowPointy>(0.11,-.01)</Male_NarrowPointy>
 									</headTypes>
 									<layerOffset>-.275</layerOffset>
 								</west>
@@ -484,7 +483,7 @@
 			<makesFootprints>true</makesFootprints>
 			<lifeExpectancy>400</lifeExpectancy>
 			<nameCategory>HumanStandard</nameCategory>
-			<body>Human</body>
+			<body>RH_TET_Dwarfs_Body</body>
 			<leatherDef>RH_TET_Dwarf_Leather</leatherDef>
 			<baseBodySize>1</baseBodySize>
 			<baseHealthScale>1</baseHealthScale>
@@ -746,7 +745,7 @@
 
 							<conditions>
 								<BodyPart>
-									<bodyPart>Head</bodyPart>
+									<bodyPart>RH_TET_Dwarfs_BP_Beard</bodyPart>
 									<drawWithoutPart>false</drawWithoutPart>
 								</BodyPart>
 								<Posture>
@@ -761,11 +760,11 @@
 							<offsets>
 								<south>
 									<bodyTypes>
-										<Male>(-.01,0.0)</Male>
+										<Male>(0.0,-0.02)</Male>
 									</bodyTypes>
-									<headTypes>			
+									<headTypes>
 										<Male_AverageNormal>(0,0)</Male_AverageNormal>
-										<Male_AverageWide>(0,0)</Male_AverageWide>
+										<Male_AverageWide>(0,-0.01)</Male_AverageWide>
 										<Male_AveragePointy>(0,0)</Male_AveragePointy>
 										<Male_NarrowNormal>(0,0)</Male_NarrowNormal>
 										<Male_NarrowWide>(0,0)</Male_NarrowWide>
@@ -775,9 +774,9 @@
 								</south>
 								<north>
 									<bodyTypes>
-										<Male>(-.01,0.0)</Male>
+										<Male>(0.0,0.0)</Male>
 									</bodyTypes>
-									<headTypes>										
+									<headTypes>
 										<Male_AverageNormal>(0,0)</Male_AverageNormal>
 										<Male_AverageWide>(0,0)</Male_AverageWide>
 										<Male_AveragePointy>(0,0)</Male_AveragePointy>
@@ -789,29 +788,29 @@
 								</north>
 								<east>
 									<bodyTypes>
-										<Male>(-.05,0.0)</Male>
+										<Male>(-.05,-0.02)</Male>
 									</bodyTypes>
-									<headTypes>			
+									<headTypes>
 										<Male_AverageNormal>(0.05,0)</Male_AverageNormal>
-										<Male_AverageWide>(0,0)</Male_AverageWide>
+										<Male_AverageWide>(0,-0.01)</Male_AverageWide>
 										<Male_AveragePointy>(0.05,0)</Male_AveragePointy>
-										<Male_NarrowNormal>(0.1,0)</Male_NarrowNormal>
-										<Male_NarrowWide>(0.08,0)</Male_NarrowWide>
-										<Male_NarrowPointy>(0.1,0)</Male_NarrowPointy>
+										<Male_NarrowNormal>(0.11,-.01)</Male_NarrowNormal>
+										<Male_NarrowWide>(0.09,-.01)</Male_NarrowWide>
+										<Male_NarrowPointy>(0.11,-.01)</Male_NarrowPointy>
 									</headTypes>
 									<layerOffset>-.275</layerOffset>
 								</east>
 								<west>
 									<bodyTypes>
-										<Male>(-.05,0.0)</Male>
+										<Male>(-.05,-0.02)</Male>
 									</bodyTypes>
-									<headTypes>			
+									<headTypes>
 										<Male_AverageNormal>(0.05,0)</Male_AverageNormal>
-										<Male_AverageWide>(0,0)</Male_AverageWide>
+										<Male_AverageWide>(0,-0.01)</Male_AverageWide>
 										<Male_AveragePointy>(0.05,0)</Male_AveragePointy>
-										<Male_NarrowNormal>(0.1,0)</Male_NarrowNormal>
-										<Male_NarrowWide>(0.08,0)</Male_NarrowWide>
-										<Male_NarrowPointy>(0.1,0)</Male_NarrowPointy>
+										<Male_NarrowNormal>(0.11,-.01)</Male_NarrowNormal>
+										<Male_NarrowWide>(0.09,-.01)</Male_NarrowWide>
+										<Male_NarrowPointy>(0.11,-.01)</Male_NarrowPointy>
 									</headTypes>
 									<layerOffset>-.275</layerOffset>
 								</west>
@@ -983,7 +982,7 @@
 			<makesFootprints>true</makesFootprints>
 			<lifeExpectancy>400</lifeExpectancy>
 			<nameCategory>HumanStandard</nameCategory>
-			<body>Human</body>
+			<body>RH_TET_Dwarfs_Body</body>
 			<leatherDef>RH_TET_Dwarf_Leather</leatherDef>
 			<baseBodySize>1</baseBodySize>
 			<baseHealthScale>1</baseHealthScale>

@@ -185,5 +185,72 @@
 			<li>RH_TET_Dwarf_Apparel_Mid</li>
 		</tradeTags>
 	</ThingDef>
-
+ 
+<!-- Saving this here. Will delete once I get a copy of this back to GH.
+	<ThingDef ParentName="RH_TET_Dwarfs_ApparelMakeableBase">
+		<defName>RH_TET_Dwarf_BeardBauble_A</defName>
+		<label>dawi beard bauble</label>
+		<description>A golden bauble worn on the beard of a dwarf. Makes them happy, and grants respect.</description>
+		<techLevel>Medieval</techLevel>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Apparel_Advanced</researchPrerequisite>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/RHTET_Dwarf_BeardBaubles16</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>.75</drawSize>
+		</graphicData>
+		<costList>
+			<Gold>25</Gold>
+			<Steel>25</Steel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>4000</WorkToMake>
+			<Mass>0.1</Mass>
+			<StuffEffectMultiplierArmor>0.25</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.05</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.05</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.0</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+			<SocialImpact>.05</SocialImpact>
+		</equippedStatOffsets>
+		<generateCommonality>.05</generateCommonality>
+		<apparel>
+			<bodyPartGroups>
+				<li>RH_TET_Dwarfs_BP_Beards</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/RHTET_Dwarf_BeardBaubles16</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>RH_TET_Dwarf_Apparel_High</li>
+			</tags>
+			<wornGraphicData>
+				<north>
+					<offset>(0,0)</offset>
+				</north>
+				<south>
+					<offset>(0,0)</offset>
+				</south>
+				<east>
+					<offset>(0,0)</offset>
+				</east>
+				<west>
+					<offset>(0,0)</offset>
+				</west>
+			</wornGraphicData>			
+		</apparel>
+		<tradeTags>
+			<li>RH_TET_Dwarf_Apparel_High</li>
+		</tradeTags>
+	</ThingDef>
+-->
 </Defs>
