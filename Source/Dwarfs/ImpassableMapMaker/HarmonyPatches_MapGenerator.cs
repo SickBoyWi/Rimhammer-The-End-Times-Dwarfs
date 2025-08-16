@@ -128,7 +128,7 @@ namespace TheEndTimes_Dwarfs
                     MountainShape mountainShape = GetMountainShape(RH_TET_DwarfsMod.random.Next(0, 2));
 
                     // If there's an ocean neighbor, set us to convex.
-                    bool isCoastalSideMatch = false;
+                    bool isCoastalSideMatch;
                     Rot4 rot = Find.World.CoastDirectionAt(map.Tile);
                     isCoastalSideMatch = DetermineCoastalSideMatchesPawnStartSide(rot, nsew);
                     NSEW deepOpeningSide = NSEW.South;

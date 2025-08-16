@@ -52,6 +52,7 @@
 		<staticSunShadowHeight>1.0</staticSunShadowHeight>
 		<blockLight>true</blockLight>
 		<canOverlapZones>false</canOverlapZones>
+		<drawStyleCategory>Walls</drawStyleCategory>
 		<stuffCategories>
 			<li>Stony</li>
 		</stuffCategories>
@@ -126,6 +127,7 @@
 		<staticSunShadowHeight>1.0</staticSunShadowHeight>
 		<blockLight>true</blockLight>
 		<canOverlapZones>false</canOverlapZones>
+		<drawStyleCategory>Walls</drawStyleCategory>
 		<stuffCategories>
 			<li>Stony</li>
 		</stuffCategories>

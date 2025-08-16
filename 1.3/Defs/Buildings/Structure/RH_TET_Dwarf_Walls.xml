@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<ThingDef ParentName="BuildingBase" Name="RH_TET_Dwarf_Buttressed_Wall">
+	<ThingDef ParentName="Wall" Name="RH_TET_Dwarf_Buttressed_Wall">
 		<defName>RH_TET_Dwarfs_ButtressedWall</defName>
 		<label>buttressed wall</label>
 		<description>A very strong, impassable wall. Capable of holding up a roof, or forming a perimeter. Sturdy dwarfen construction, so it's stronger than any human construction.\n\nDwarfs use these walls both outside and inside their holds. They strengthen the mountains themselves, and dwarfs consider them the bones of the mountains.</description>
@@ -75,7 +75,7 @@
 		</researchPrerequisites>
 	</ThingDef>
 
-	<ThingDef ParentName="BuildingBase" Name="RH_TET_Dwarfs_Buttressed_Emb">
+	<ThingDef ParentName="Wall" Name="RH_TET_Dwarfs_Buttressed_Emb">
 		<defName>RH_TET_Dwarfs_ButtressedEmbWall</defName>
 		<label>buttressed wall with arrow slits</label>
 		<description>A strong, impassable wall that can be fired through. Capable of holding up a roof, or forming a perimeter. Uses extra material, and takes longer to build, but has a huge strategic benefit.\n\nWhen exterior defensive structure is considered, dwarfs will always turn to these walls. The strengh and versatility is fantastic, and has saved many a hold from destruction.</description>
