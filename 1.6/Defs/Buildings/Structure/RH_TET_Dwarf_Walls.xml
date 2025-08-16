@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase" Name="RH_TET_Dwarf_Buttressed_Wall">
+		<defName>RH_TET_Dwarfs_ButtressedWall</defName>
+		<label>buttressed wall</label>
+		<description>A very strong, impassable wall. Capable of holding up a roof, or forming a perimeter. Sturdy dwarfen construction, so it's stronger than any human construction.\n\nDwarfs use these walls both outside and inside their holds. They strengthen the mountains themselves, and dwarfs consider them the bones of the mountains.</description>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_ButtressedWall</texPath>
+			<graphicClass>Graphic_Appearances</graphicClass>
+			<linkType>CornerFiller</linkType>
+			<linkFlags>
+				<li>Wall</li>
+				<li>Rock</li>
+			</linkFlags>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeTop>Damage/Edge</edgeTop>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+		<uiIconPath>UI/Menu/RH_TET_Dwarfs_ButtressedWall_Menuicon</uiIconPath>
+		<statBases>
+			<MaxHitPoints>750</MaxHitPoints>
+			<WorkToBuild>320</WorkToBuild>
+			<Flammability>0.0</Flammability>
+			<Beauty>1</Beauty>
+		</statBases>
+		<costStuffCount>10</costStuffCount>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>1</fillPercent>
+		<coversFloor>true</coversFloor>
+		<tickerType>Never</tickerType>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<useStuffTerrainAffordance>true</useStuffTerrainAffordance>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded><!-- Best affordance needed for stone -->
+		<holdsRoof>true</holdsRoof>
+		<designationCategory>Structure</designationCategory>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<blockLight>true</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<building>
+			<isInert>true</isInert>
+			<ai_chillDestination>false</ai_chillDestination>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_ButtressedWall/RH_TET_DwarfWall_Atlas_Blueprint</texPath>
+			</blueprintGraphicData>
+			<supportsWallAttachments>true</supportsWallAttachments>
+		</building>
+		<damageMultipliers>
+			<li>
+				<damageDef>Bomb</damageDef>
+				<multiplier>1.5</multiplier>
+			</li>
+		</damageMultipliers>
+		<designationHotKey>Misc3</designationHotKey>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WallsBasic</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase" Name="RH_TET_Dwarfs_Buttressed_Emb">
+		<defName>RH_TET_Dwarfs_ButtressedEmbWall</defName>
+		<label>buttressed wall with arrow slits</label>
+		<description>A strong, impassable wall that can be fired through. Capable of holding up a roof, or forming a perimeter. Uses extra material, and takes longer to build, but has a huge strategic benefit.\n\nWhen exterior defensive structure is considered, dwarfs will always turn to these walls. The strengh and versatility is fantastic, and has saved many a hold from destruction.</description>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_ButtressedEmb</texPath>
+			<graphicClass>Graphic_Appearances</graphicClass>
+			<linkType>CornerFiller</linkType>
+			<linkFlags>
+				<li>Wall</li>
+				<li>Rock</li>
+			</linkFlags>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeTop>Damage/Edge</edgeTop>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+		<uiIconPath>UI/Menu/RH_TET_Dwarfs_ButtressedEmb_Menuicon</uiIconPath>
+		<statBases>
+			<MaxHitPoints>600</MaxHitPoints>
+			<WorkToBuild>920</WorkToBuild>
+			<Flammability>0.0</Flammability>
+			<Beauty>1</Beauty>
+		</statBases>
+		<costStuffCount>28</costStuffCount>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>.75</fillPercent>
+		<coversFloor>true</coversFloor>
+		<tickerType>Never</tickerType>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<useStuffTerrainAffordance>true</useStuffTerrainAffordance>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded><!-- Best affordance needed for stone -->
+		<holdsRoof>true</holdsRoof>
+		<designationCategory>Structure</designationCategory>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<blockLight>true</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<building>
+			<isInert>true</isInert>
+			<ai_chillDestination>false</ai_chillDestination>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_ButtressedWall/RH_TET_DwarfWall_Atlas_Blueprint</texPath>
+			</blueprintGraphicData>
+			<supportsWallAttachments>true</supportsWallAttachments>
+		</building>
+		<damageMultipliers>
+			<li>
+				<damageDef>Bomb</damageDef>
+				<multiplier>1.5</multiplier>
+			</li>
+		</damageMultipliers>
+		<designationHotKey>Misc3</designationHotKey>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WallsAdvanced</li>
+		</researchPrerequisites>
+		<disableImpassableShotOverConfigError>True</disableImpassableShotOverConfigError>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarfs_Vent</defName>
+		<label>dwarf vent</label>
+		<description>A nice looking vent for equalizing the temperature between two rooms without allowing people to walk between them. Attractive and sturdy dwarfen construction.\n\nAir flow is important under the mountain, and this vent accomplishes that.</description>
+		<thingClass>Building_Vent</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Structure/RH_TET_Dwarfs_Vent</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<coversFloor>true</coversFloor>
+		<blockLight>true</blockLight>
+		<castEdgeShadows>true</castEdgeShadows>
+		<canOverlapZones>false</canOverlapZones>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<statBases>
+			<WorkToBuild>400</WorkToBuild>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>1</Beauty>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+
+		<fillPercent>0.99</fillPercent>
+		<altitudeLayer>PawnUnused</altitudeLayer>
+	
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<placeWorkers>
+			<li>PlaceWorker_Vent</li>
+			<li>TheEndTimes_Dwarfs.PlaceWorker_OnWallVent</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<building>
+			<canPlaceOverWall>true</canPlaceOverWall>
+	  
+			<isEdifice>false</isEdifice>
+	  
+		</building>
+		<clearBuildingArea>false</clearBuildingArea>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Lighting_Basic</li>
+		</researchPrerequisites>
+		<designationHotKey>Misc8</designationHotKey>
+		<comps>
+			<li Class="CompProperties_Flickable">
+				<commandTexture>UI/Commands/Vent</commandTexture>
+				<commandLabelKey>CommandDesignateOpenCloseVentLabel</commandLabelKey>
+				<commandDescKey>CommandDesignateOpenCloseVentDesc</commandDescKey>
+			</li>
+		</comps>
+		<designationCategory>Temperature</designationCategory>
+		<disableImpassableShotOverConfigError>True</disableImpassableShotOverConfigError>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarfs_ColumnSmallA</defName>
+		<label>column thin</label>
+		<description>A beautiful column capable of holding a roof. This is the thinner version, which takes less materials, but is slighly weaker.\n\nBeautiful artistic columns that support the overhead mountain are found in every dwarfen hold worthy of any respect.</description>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<fillPercent>1</fillPercent>
+		<statBases>
+			<MaxHitPoints>275</MaxHitPoints>
+			<Mass>20</Mass>
+			<Beauty>50</Beauty>
+			<WorkToBuild>5000</WorkToBuild>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>45</costStuffCount>
+		<holdsRoof>true</holdsRoof>
+		<specialDisplayRadius>6.9</specialDisplayRadius><!-- must be kept in sync with roof hold-up radius -->
+		<canOverlapZones>false</canOverlapZones>
+		<rotatable>false</rotatable>
+		<graphicData>
+			<drawSize>(2.6)</drawSize>
+			<texPath>Things/Building/Structure/RH_TET_Dwarfs_PillarSmallA</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<shadowData>
+				<volume>(0.3, 0.5, 0.3)</volume>
+				<offset>(0,0,-0.23)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.4</uiIconScale>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WallsBasic</li>
+		</researchPrerequisites>
+		<designationCategory>Structure</designationCategory>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>		
+		<building>
+			<supportsWallAttachments>true</supportsWallAttachments>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarfs_ColumnSmallB</defName>
+		<label>column thick</label>
+		<description>A beautiful column capable of holding a roof. This is the thicker column, which is a bit tougher than the thin version.\n\nBeautiful artistic columns that support the overhead mountain are found in every dwarfen hold worthy of any respect.</description>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<fillPercent>1</fillPercent>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Mass>20</Mass>
+			<Beauty>50</Beauty>
+			<WorkToBuild>5000</WorkToBuild>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+		<holdsRoof>true</holdsRoof>
+		<specialDisplayRadius>6.9</specialDisplayRadius><!-- must be kept in sync with roof hold-up radius -->
+		<canOverlapZones>false</canOverlapZones>
+		<rotatable>false</rotatable>
+		<graphicData>
+			<drawSize>(2.6)</drawSize>
+			<texPath>Things/Building/Structure/RH_TET_Dwarfs_PillarSmallB</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<shadowData>
+				<volume>(0.3, 0.5, 0.3)</volume>
+				<offset>(0,0,-0.23)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.4</uiIconScale>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WallsBasic</li>
+		</researchPrerequisites>
+		<designationCategory>Structure</designationCategory>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>		
+		<building>
+			<supportsWallAttachments>true</supportsWallAttachments>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarfs_ColumnLitSmallA</defName>
+		<label>lighted column thin</label>
+		<description>A beautiful column capable of holding a roof. Has a center alcove for a fire, to generate light. Doesn't produce heat. This is the thinner version, which takes less materials, but is slighly weaker.\n\nBeautiful artistic columns that support the overhead mountain are found in every dwarfen hold worthy of any respect. When necessary, the dwarf will add lighted alcoves to grant give a more home like feeling, and keep the evil creatures of the dark at bay.</description>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<fillPercent>.9</fillPercent>
+		<statBases>
+			<MaxHitPoints>275</MaxHitPoints>
+			<Mass>20</Mass>
+			<Beauty>50</Beauty>
+			<WorkToBuild>7500</WorkToBuild>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>45</costStuffCount>
+		<costList>
+			<WoodLog>40</WoodLog>
+		</costList>
+		<holdsRoof>true</holdsRoof>
+		<specialDisplayRadius>6.9</specialDisplayRadius><!-- must be kept in sync with roof hold-up radius -->
+		<canOverlapZones>false</canOverlapZones>
+		<rotatable>false</rotatable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<drawSize>(2.6)</drawSize>
+			<texPath>Things/Building/Structure/RH_TET_Dwarfs_PillarLitA</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<shadowData>
+				<volume>(0.3, 0.5, 0.3)</volume>
+				<offset>(0,0,-0.23)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.4</uiIconScale>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WallsAdvanced</li>
+		</researchPrerequisites>
+		<designationCategory>Structure</designationCategory>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>1.75</fuelConsumptionRate>
+				<fuelCapacity>40.0</fuelCapacity>
+				<fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>RH_TET_Coal</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15</glowRadius>
+				<glowColor>(252,187,113,0)</glowColor>
+			</li>
+			<li Class="CompProperties_FireOverlay">
+				<fireSize>0.20</fireSize>
+				<offset>(0,0,-0.10)</offset>
+			</li>
+		</comps>
+		<disableImpassableShotOverConfigError>True</disableImpassableShotOverConfigError>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarfs_ColumnLitSmallB</defName>
+		<label>lighted column thick</label>
+		<description>A beautiful column capable of holding a roof. Has a center alcove for a fire, to generate light. Doesn't produce heat. This is the thicker column, which is a bit tougher than the thin version.\n\nBeautiful artistic columns that support the overhead mountain are found in every dwarfen hold worthy of any respect. When necessary, the dwarf will add lighted alcoves to grant give a more home like feeling, and keep the evil creatures of the dark at bay.</description>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<fillPercent>.9</fillPercent>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Mass>20</Mass>
+			<Beauty>50</Beauty>
+			<WorkToBuild>7500</WorkToBuild>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+		<costList>
+			<WoodLog>40</WoodLog>
+		</costList>
+		<holdsRoof>true</holdsRoof>
+		<specialDisplayRadius>6.9</specialDisplayRadius><!-- must be kept in sync with roof hold-up radius -->
+		<canOverlapZones>false</canOverlapZones>
+		<rotatable>false</rotatable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<drawSize>(2.6)</drawSize>
+			<texPath>Things/Building/Structure/RH_TET_Dwarfs_PillarLitB</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<shadowData>
+				<volume>(0.3, 0.5, 0.3)</volume>
+				<offset>(0,0,-0.23)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.4</uiIconScale>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WallsAdvanced</li>
+		</researchPrerequisites>
+		<designationCategory>Structure</designationCategory>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>1.75</fuelConsumptionRate>
+				<fuelCapacity>40.0</fuelCapacity>
+				<fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>RH_TET_Coal</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15</glowRadius>
+				<glowColor>(252,187,113,0)</glowColor>
+			</li>
+			<li Class="CompProperties_FireOverlay">
+				<fireSize>0.35</fireSize>
+				<offset>(0,0,.46)</offset>
+			</li>
+		</comps>
+		<disableImpassableShotOverConfigError>True</disableImpassableShotOverConfigError>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarfs_ColumnBigA</defName>
+		<label>massive column thinner</label>
+		<description>A massive and beautiful column capable of holding a roof. This is the thinner version, which takes less materials, but is slighly weaker.\n\nWhen an impression needs to be made, these massive pillars are there to make it. Their beauty and functionality can be doubted by none, and should a non-dawi make an ill comment on them, grudges would surely be written.</description>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<fillPercent>1</fillPercent>
+		<statBases>
+			<MaxHitPoints>460</MaxHitPoints>
+			<Mass>40</Mass>
+			<Beauty>55</Beauty>
+			<WorkToBuild>10000</WorkToBuild>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>115</costStuffCount>
+		<holdsRoof>true</holdsRoof>
+		<specialDisplayRadius>6.9</specialDisplayRadius><!-- must be kept in sync with roof hold-up radius -->
+		<canOverlapZones>false</canOverlapZones>
+		<rotatable>false</rotatable>
+		<size>(2,2)</size>
+		<graphicData>
+			<drawSize>(2.6)</drawSize>
+			<texPath>Things/Building/Structure/RH_TET_Dwarfs_PillarBigA</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<shadowData>
+				<volume>(0.3, 0.5, 0.3)</volume>
+				<offset>(0,0,-0.23)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>1.0</uiIconScale>
+		<uiIconOffset>(0, -.1)</uiIconOffset>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WallsHighBlood</li>
+		</researchPrerequisites>
+		<designationCategory>Structure</designationCategory>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>		
+		<building>
+			<supportsWallAttachments>true</supportsWallAttachments>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarfs_ColumnBigB</defName>
+		<label>massive column thick</label>
+		<description>A massive and beautiful column capable of holding a roof.  This is the thicker column, which is a bit tougher than the thin version.\n\nWhen an impression needs to be made, these massive pillars are there to make it. Their beauty and functionality can be doubted by none, and should a non-dawi make an ill comment on them, grudges would surely be written.</description>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<fillPercent>1</fillPercent>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Mass>40</Mass>
+			<Beauty>55</Beauty>
+			<WorkToBuild>10000</WorkToBuild>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>125</costStuffCount>
+		<holdsRoof>true</holdsRoof>
+		<specialDisplayRadius>6.9</specialDisplayRadius><!-- must be kept in sync with roof hold-up radius -->
+		<canOverlapZones>false</canOverlapZones>
+		<rotatable>false</rotatable>
+		<size>(2,2)</size>
+		<graphicData>
+			<drawSize>(2.6)</drawSize>
+			<texPath>Things/Building/Structure/RH_TET_Dwarfs_PillarBigB</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<shadowData>
+				<volume>(0.3, 0.5, 0.3)</volume>
+				<offset>(0,0,-0.23)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>1.0</uiIconScale>
+		<uiIconOffset>(0, -.1)</uiIconOffset>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WallsHighBlood</li>
+		</researchPrerequisites>
+		<designationCategory>Structure</designationCategory>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>		
+		<building>
+			<supportsWallAttachments>true</supportsWallAttachments>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarfs_ColumnLitBigA</defName>
+		<label>massive lighted column thinner</label>
+		<description>A massive and beautiful column capable of holding a roof. Has a center alcove for a fire, to generate light. Doesn't produce heat. This is the thinner version, which takes less materials, but is slighly weaker.\n\nWhen an impression needs to be made, these massive pillars are there to make it. Their beauty and functionality can be doubted by none, and should a non-dawi make an ill comment on them, grudges would surely be written.</description>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<fillPercent>.9</fillPercent>
+		<statBases>
+			<MaxHitPoints>460</MaxHitPoints>
+			<Mass>40</Mass>
+			<Beauty>55</Beauty>
+			<WorkToBuild>12500</WorkToBuild>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>115</costStuffCount>
+		<costList>
+			<WoodLog>80</WoodLog>
+		</costList>
+		<holdsRoof>true</holdsRoof>
+		<specialDisplayRadius>6.9</specialDisplayRadius><!-- must be kept in sync with roof hold-up radius -->
+		<canOverlapZones>false</canOverlapZones>
+		<rotatable>false</rotatable>
+		<size>(2,2)</size>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<drawSize>(2.6)</drawSize>
+			<texPath>Things/Building/Structure/RH_TET_Dwarfs_PillarBigLitA</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<shadowData>
+				<volume>(0.3, 0.5, 0.3)</volume>
+				<offset>(0,0,-0.23)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>1.0</uiIconScale>
+		<uiIconOffset>(0, -.1)</uiIconOffset>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WallsHighBlood</li>
+		</researchPrerequisites>
+		<designationCategory>Structure</designationCategory>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>1.75</fuelConsumptionRate>
+				<fuelCapacity>80.0</fuelCapacity>
+				<fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>RH_TET_Coal</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>20</glowRadius>
+				<glowColor>(252,187,113,0)</glowColor>
+			</li>
+			<li Class="CompProperties_FireOverlay">
+				<fireSize>0.50</fireSize>
+				<offset>(0,0,0.05)</offset>
+			</li>
+		</comps>
+		<disableImpassableShotOverConfigError>True</disableImpassableShotOverConfigError>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarfs_ColumnLitBigB</defName>
+		<label>massive lighted column thick</label>
+		<description>A massive and beautiful column capable of holding a roof. Has a center alcove for a fire, to generate light. Doesn't produce heat.  This is the thicker column, which is a bit tougher than the thin version.\n\nWhen an impression needs to be made, these massive pillars are there to make it. Their beauty and functionality can be doubted by none, and should a non-dawi make an ill comment on them, grudges would surely be written.</description>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<fillPercent>.9</fillPercent>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Mass>40</Mass>
+			<Beauty>55</Beauty>
+			<WorkToBuild>12500</WorkToBuild>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>125</costStuffCount>
+		<costList>
+			<WoodLog>80</WoodLog>
+		</costList>
+		<holdsRoof>true</holdsRoof>
+		<specialDisplayRadius>6.9</specialDisplayRadius><!-- must be kept in sync with roof hold-up radius -->
+		<canOverlapZones>false</canOverlapZones>
+		<rotatable>false</rotatable>
+		<size>(2,2)</size>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<drawSize>(2.6)</drawSize>
+			<texPath>Things/Building/Structure/RH_TET_Dwarfs_PillarBigLitB</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<shadowData>
+				<volume>(0.3, 0.5, 0.3)</volume>
+				<offset>(0,0,-0.23)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>1.0</uiIconScale>
+		<uiIconOffset>(0, -.1)</uiIconOffset>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WallsHighBlood</li>
+		</researchPrerequisites>
+		<designationCategory>Structure</designationCategory>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>1.75</fuelConsumptionRate>
+				<fuelCapacity>80.0</fuelCapacity>
+				<fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>RH_TET_Coal</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>20</glowRadius>
+				<glowColor>(252,187,113,0)</glowColor>
+			</li>
+			<li Class="CompProperties_FireOverlay">
+				<fireSize>0.50</fireSize>
+				<offset>(0,0,0.05)</offset>
+			</li>
+		</comps>
+		<disableImpassableShotOverConfigError>True</disableImpassableShotOverConfigError>
+	</ThingDef>
+
+	<ThingDef ParentName="SandstoneBase">
+		<defName>RH_TET_Dwarfs_SmoothedSandstone_Decorated</defName>
+		<label>smooth decorative sandstone</label>
+		<description>A sedimentary rock composed of sand particles compressed together. The sand layers have been polished to a flat, smooth surface, and then beautifully decorated.\n\nThe dawi take all craftsmanship to the highest level, and smooth stone walls simply don't please them. Dawi artisans see such walls as a blank canvas; one to be used for honoring the clans and the ancestors.</description>
+		<graphicData>
+			<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_DecoratedWall/RH_TET_DwarfWall_Atlas_Bricks</texPath>
+		</graphicData>
+		<statBases>
+			<Beauty>4</Beauty>
+			<MarketValue>35</MarketValue>
+		</statBases>
+		<building>
+			<isNaturalRock>false</isNaturalRock>
+			<canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<paintable>true</paintable>
+			<smoothedThing/>
+		</building>
+		<saveCompressible>false</saveCompressible>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+
+	<ThingDef ParentName="GraniteBase">
+		<defName>RH_TET_Dwarfs_SmoothedGranite_Decorated</defName>
+		<label>smooth decorative granite</label>
+		<description>A very hard igneous rock. The decorative shining surface is filled with a mosaic of black, white, and pink speckles.\n\nThe dawi take all craftsmanship to the highest level, and smooth stone walls simply don't please them. Dawi artisans see such walls as a blank canvas; one to be used for honoring the clans and the ancestors.</description>
+		<graphicData>
+			<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_DecoratedWall/RH_TET_DwarfWall_Atlas_Bricks</texPath>
+		</graphicData>
+		<statBases>
+			<Beauty>4</Beauty>
+			<MarketValue>40</MarketValue>
+		</statBases>
+		<building>
+			<isNaturalRock>false</isNaturalRock>
+			<canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<paintable>true</paintable>
+			<smoothedThing/>
+		</building>
+		<saveCompressible>false</saveCompressible>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+  
+	<ThingDef ParentName="LimestoneBase">
+		<defName>RH_TET_Dwarfs_SmoothedLimestone_Decorated</defName>
+		<label>smooth decorative limestone</label>
+		<description>A sedimentary rock formed from the compacted remains of ancient seashells. It glows a smooth white, with light patterns of impurities suspended within. It's been decorated by a dwarfen artist.\n\nThe dawi take all craftsmanship to the highest level, and smooth stone walls simply don't please them. Dawi artisans see such walls as a blank canvas; one to be used for honoring the clans and the ancestors.</description>
+		<graphicData>
+			<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_DecoratedWall/RH_TET_DwarfWall_Atlas_Bricks</texPath>
+		</graphicData>
+		<statBases>
+			<Beauty>4</Beauty>
+			<MarketValue>40</MarketValue>
+		</statBases>
+		<building>
+			<isNaturalRock>false</isNaturalRock>
+			<canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<paintable>true</paintable>
+			<smoothedThing/>
+		</building>
+		<saveCompressible>false</saveCompressible>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+  
+	<ThingDef ParentName="SlateBase">
+		<defName>RH_TET_Dwarfs_SmoothedSlate_Decorated</defName>
+		<label>smooth decorative slate</label>
+		<description>A dark-colored metamorphic rock. Its fine layers are emblematic of slaty cleavage. Interior strata are clearly visible through the decorative polished surface.\n\nThe dawi take all craftsmanship to the highest level, and smooth stone walls simply don't please them. Dawi artisans see such walls as a blank canvas; one to be used for honoring the clans and the ancestors.</description>
+		<graphicData>
+			<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_DecoratedWall/RH_TET_DwarfWall_Atlas_Bricks</texPath>
+		</graphicData>
+		<statBases>
+			<Beauty>4</Beauty>
+			<MarketValue>40</MarketValue>
+		</statBases>
+		<building>
+			<isNaturalRock>false</isNaturalRock>
+			<canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<paintable>true</paintable>
+			<smoothedThing/>
+		</building>
+		<saveCompressible>false</saveCompressible>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+  
+	<ThingDef ParentName="MarbleBase">
+		<defName>RH_TET_Dwarfs_SmoothedMarble_Decorated</defName>
+		<label>smooth decorative marble</label>
+		<description>A soft metamorphic rock. This semi-transparent rock almost appears to glow with its own inner light. It's been decorated by a dwarfen artisan.\n\nThe dawi take all craftsmanship to the highest level, and smooth stone walls simply don't please them. Dawi artisans see such walls as a blank canvas; one to be used for honoring the clans and the ancestors.</description>
+		<graphicData>
+			<texPath>Things/Building/Structure/Linked/RH_TET_Dwarfs_DecoratedWall/RH_TET_DwarfWall_Atlas_Bricks</texPath>
+		</graphicData>
+		<statBases>
+			<Beauty>5</Beauty>
+			<MarketValue>45</MarketValue>
+		</statBases>
+		<building>
+			<isNaturalRock>false</isNaturalRock>
+			<canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<paintable>true</paintable>
+			<smoothedThing/>
+		</building>
+		<saveCompressible>false</saveCompressible>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+  
+</Defs>

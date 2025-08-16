@@ -9,6 +9,7 @@
 			<MoveSpeed>6.0</MoveSpeed>
 			<MarketValue>35</MarketValue>
 			<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+			<Wildness>0.50</Wildness>
 		</statBases>
 		<tools>
 			<li>
@@ -57,7 +58,6 @@
 			<baseHealthScale>0.29</baseHealthScale>
 			<foodType>OmnivoreRoughAnimal</foodType>
 			<leatherDef>Leather_Light</leatherDef>
-			<wildness>0.50</wildness>
 			<trainability>None</trainability>
 			<petness>0.01</petness>
 			<manhunterOnTameFailChance>.99</manhunterOnTameFailChance>
@@ -154,6 +154,7 @@
 			<MoveSpeed>5.9</MoveSpeed>
 			<MarketValue>150</MarketValue>
 			<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+			<Wildness>0.75</Wildness>
 		</statBases>
 		<tools>
 			<li>
@@ -203,7 +204,6 @@
 			<baseHealthScale>0.7</baseHealthScale>
 			<foodType>OmnivoreRoughAnimal</foodType>
 			<leatherDef>Leather_Light</leatherDef>
-			<wildness>0.75</wildness>
 			<petness>0.01</petness>
 			<manhunterOnTameFailChance>.99</manhunterOnTameFailChance>
 			<manhunterOnDamageChance>.99</manhunterOnDamageChance>
@@ -427,6 +427,7 @@
 			<MoveSpeed>6.0</MoveSpeed>
 			<MarketValue>100</MarketValue>
 			<ComfyTemperatureMin>-15</ComfyTemperatureMin>
+			<Wildness>0.99</Wildness>
 		</statBases>
 		<tools>
 			<li>
@@ -481,7 +482,6 @@
 			<foodType>OmnivoreRoughAnimal</foodType>
 			<leatherDef>Leather_Light</leatherDef>
 			<trainability>Advanced</trainability>
-			<wildness>0.99</wildness>
 			<nuzzleMtbHours>48</nuzzleMtbHours>
 			<gestationPeriodDays>16</gestationPeriodDays>
 			<lifeExpectancy>30</lifeExpectancy>
@@ -572,6 +572,7 @@
 			<MoveSpeed>6.0</MoveSpeed>
 			<MarketValue>100</MarketValue>
 			<ComfyTemperatureMin>-20</ComfyTemperatureMin>
+			<Wildness>0.99</Wildness>
 		</statBases>
 		<tools>
 			<li>
@@ -626,7 +627,6 @@
 			<foodType>OmnivoreRoughAnimal</foodType>
 			<leatherDef>Leather_Light</leatherDef>
 			<trainability>Advanced</trainability>
-			<wildness>0.99</wildness>
 			<nuzzleMtbHours>48</nuzzleMtbHours>
 			<gestationPeriodDays>16</gestationPeriodDays>
 			<lifeExpectancy>30</lifeExpectancy>
@@ -725,6 +725,7 @@
 			<ComfyTemperatureMin>-20</ComfyTemperatureMin>
 			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<Wildness>0.99</Wildness>
 		</statBases>
 		<tools>
 			<li>
@@ -779,7 +780,6 @@
 			<foodType>OmnivoreRoughAnimal</foodType>
 			<leatherDef>Leather_Light</leatherDef>
 			<trainability>Advanced</trainability>
-			<wildness>0.99</wildness>
 			<nuzzleMtbHours>48</nuzzleMtbHours>
 			<gestationPeriodDays>16</gestationPeriodDays>
 			<lifeExpectancy>30</lifeExpectancy>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<VEF.Planet.SiegeParameterSetDef>
+		<defName>RH_TET_Dwarfs_Siege</defName>
+		<coverDef>Barricade</coverDef>
+		<artilleryBuildingTags>
+			<li>Artillery_DwarfsBaseDestroyer</li>
+		</artilleryBuildingTags>
+		<artilleryCountRange>1~2</artilleryCountRange>
+		<mealDef>RH_TET_Dwarf_Stonebread</mealDef>
+	</VEF.Planet.SiegeParameterSetDef>
+  
+</Defs>

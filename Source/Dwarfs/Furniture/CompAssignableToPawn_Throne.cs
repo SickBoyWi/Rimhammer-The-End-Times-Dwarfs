@@ -117,7 +117,7 @@ namespace TheEndTimes_Dwarfs
                             comp.highBloodComp.SetHighBlood(RH_TET_DwarfDefOf.RH_TET_Dwarfs_HighBloodKing, false, pawnWasThane, building);
 
                             // Give all other pawns mood bumps when a new high blood is assigned.
-                            List<Pawn> pawnsToCheck = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive;
+                            List<Pawn> pawnsToCheck = PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive;
                             //pawnsToCheck.Remove(pawn);
                             DwarfsUtil.GiveMoodToPawns(RH_TET_DwarfDefOf.RH_TET_Dwarfs_AKingWasCrowned, pawnsToCheck, pawn);
        
@@ -275,7 +275,7 @@ namespace TheEndTimes_Dwarfs
                         {
                             RH_TET_DwarfsMod.deadHighBloods.Add(pawn);
                             // Give all other pawns mood issues when a king dies.
-                            List<Pawn> pawnsToCheck = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive;
+                            List<Pawn> pawnsToCheck = PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive;
                             DwarfsUtil.GiveMoodToPawns(RH_TET_DwarfDefOf.RH_TET_Dwarfs_DeadKing, pawnsToCheck, pawn);
                         }
                     }

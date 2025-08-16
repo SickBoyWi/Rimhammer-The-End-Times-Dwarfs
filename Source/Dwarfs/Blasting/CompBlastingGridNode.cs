@@ -16,7 +16,7 @@ namespace TheEndTimes_Dwarfs
             this.parent.Map.mapDrawer.MapMeshDirty(this.parent.Position, MapMeshFlagDefOf.Buildings);
         }
 
-        public override void PostDeSpawn(Map map)
+        public override void PostDeSpawn(Map map, DestroyMode mode = DestroyMode.Vanish)
         {
             base.PostDeSpawn(map);
             if (!this.cachedPosition.IsValid)

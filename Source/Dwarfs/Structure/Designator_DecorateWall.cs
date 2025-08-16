@@ -7,13 +7,13 @@ namespace TheEndTimes_Dwarfs
 {
     public class Designator_DecorateWall : Designator
     {
-        public override int DraggableDimensions
-        {
-            get
-            {
-                return 2;
-            }
-        }
+        //public override int DraggableDimensions
+        //{
+        //    get
+        //    {
+        //        return 2;
+        //    }
+        //}
 
         public override bool DragDrawMeasurements
         {

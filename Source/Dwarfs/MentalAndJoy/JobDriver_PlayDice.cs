@@ -37,7 +37,7 @@ namespace TheEndTimes_Dwarfs
                 if (Find.TickManager.TicksGame > f.startTick + f.job.def.joyDuration)
                     this.EndJobWith(JobCondition.Succeeded);
                 else
-                    JoyUtility.JoyTickCheckEnd(this.pawn, JoyTickFullJoyAction.EndJob, 1f, (Building)this.TargetThingA);
+                    JoyUtility.JoyTickCheckEnd(this.pawn, 1, JoyTickFullJoyAction.EndJob, 1f, (Building)this.TargetThingA);
                 });
             toil.handlingFacing = true;
             toil.socialMode = RandomSocialMode.SuperActive;

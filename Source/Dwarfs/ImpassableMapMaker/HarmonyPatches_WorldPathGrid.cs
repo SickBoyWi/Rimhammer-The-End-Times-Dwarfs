@@ -23,20 +23,20 @@ namespace TheEndTimes_Dwarfs
         [HarmonyPatch(typeof(WorldPathGrid), "CalculatedMovementDifficultyAt")]
         static class Patch_WorldPathGrid_CalculatedMovementDifficultyAt
         {
-            static bool Prefix(ref float __result, int tile, bool perceivedStatic, int? ticksAbs = null, StringBuilder explanation = null)
+            static bool Prefix(ref float __result, PlanetTile tile, bool perceivedStatic, int? ticksAbs = null, StringBuilder explanation = null)
             {
                 Tile tile2 = Find.WorldGrid[tile];
-                if (tile2.biome.impassable || tile2.hilliness == Hilliness.Impassable)
+                if (tile2.PrimaryBiome.impassable || tile2.hilliness == Hilliness.Impassable)
                 {
                     if (explanation != null && explanation.Length > 0)
                     {
                         explanation.AppendLine();
                     }
 
-                    float num = tile2.biome.movementDifficulty;
+                    float num = tile2.PrimaryBiome.movementDifficulty;
                     if (explanation != null)
                     {
-                        explanation.Append(tile2.biome.LabelCap + ": " + tile2.biome.movementDifficulty.ToStringWithSign("0.#"));
+                        explanation.Append(tile2.PrimaryBiome.LabelCap + ": " + tile2.PrimaryBiome.movementDifficulty.ToStringWithSign("0.#"));
                     }
                     float num2 = Settings.MovementDifficulty;
                     num += num2;
@@ -57,7 +57,7 @@ namespace TheEndTimes_Dwarfs
         static class Patch_TileFinder_IsValidTileForNewSettlement
         {
             [HarmonyPriority(Priority.First)]
-            static void Postfix(ref bool __result, int tile, StringBuilder reason)
+            static void Postfix(ref bool __result, PlanetTile tile, StringBuilder reason)
             {
                 if (__result == false)
                 {

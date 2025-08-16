@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HairDef>
+		<defName>RH_TET_Dwarf_Hair_Bald</defName>
+		<label>dwarf bald</label>
+		<hairGender>Male</hairGender>
+		<texPath>Things/Pawn/Dwarf/Hairs/RH_TET_Dwarf_Bald</texPath>
+		<styleTags>
+			<li>RH_TET_Dwarfs</li>
+		</styleTags>
+	</HairDef>
+	<HairDef>
+		<defName>RH_TET_Dwarf_Hair_Braid</defName>
+		<label>dwarf braid</label>
+		<hairGender>Any</hairGender>
+		<texPath>Things/Pawn/Dwarf/Hairs/RH_TET_Dwarf_Braid</texPath>
+		<styleTags>
+			<li>RH_TET_Dwarfs</li>
+		</styleTags>
+	</HairDef>
+	<HairDef>
+		<defName>RH_TET_Dwarf_Hair_Fancy</defName>
+		<label>dwarf fancy</label>
+		<hairGender>Any</hairGender>
+		<texPath>Things/Pawn/Dwarf/Hairs/RH_TET_Dwarf_Fancy</texPath>
+		<styleTags>
+			<li>RH_TET_Dwarfs</li>
+		</styleTags>
+	</HairDef>
+	<HairDef>
+		<defName>RH_TET_Dwarf_Hair_Grombrindal</defName>
+		<label>dwarf, the Grombrindal look</label>
+		<hairGender>Male</hairGender>
+		<texPath>Things/Pawn/Dwarf/Hairs/RH_TET_Dwarf_Grombrindal</texPath>
+		<styleTags>
+			<li>RH_TET_Dwarfs</li>
+		</styleTags>
+	</HairDef>
+	<HairDef>
+		<defName>RH_TET_Dwarf_Hair_Long</defName>
+		<label>dwarf long</label>
+		<hairGender>Any</hairGender>
+		<texPath>Things/Pawn/Dwarf/Hairs/RH_TET_Dwarf_Long</texPath>
+		<styleTags>
+			<li>RH_TET_Dwarfs</li>
+		</styleTags>
+	</HairDef>
+	<HairDef>
+		<defName>RH_TET_Dwarf_Hair_Pony</defName>
+		<label>dwarf pony tail</label>
+		<hairGender>Any</hairGender>
+		<texPath>Things/Pawn/Dwarf/Hairs/RH_TET_Dwarf_Pony</texPath>
+		<styleTags>
+			<li>RH_TET_Dwarfs</li>
+		</styleTags>
+	</HairDef>
+	<HairDef>
+		<defName>RH_TET_Dwarf_Hair_Thorgrim</defName>
+		<label>dwarf thorgrim hair</label>
+		<hairGender>Any</hairGender>
+		<texPath>Things/Pawn/Dwarf/Hairs/RH_TET_Dwarf_Thorgrim</texPath>
+		<styleTags>
+			<li>RH_TET_Dwarfs</li>
+		</styleTags>
+	</HairDef>
+</Defs>

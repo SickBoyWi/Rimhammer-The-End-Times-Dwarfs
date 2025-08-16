@@ -61,7 +61,7 @@ namespace TheEndTimes_Dwarfs
             this.CreateSustainer();
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             if (!this.Spawned)
                 return;

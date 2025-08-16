@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CavePlantBase">
+		<defName>RH_TET_Dwarf_Plant_DwarfBile</defName>
+		<label>dwarf bile mushroom</label>
+		<description>An edible mushroom first discovered by dwarfs. Grows well inside a cave, as it prefers low light environments. Somewhat difficult to get started, but hearty once established.</description>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Nutrition>0.35</Nutrition>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plant/DwarfBile</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+		<plant>
+			<fertilityMin>0.01</fertilityMin>
+			<fertilitySensitivity>0.15</fertilitySensitivity>
+			<growDays>6.5</growDays>
+			<dieIfLeafless>false</dieIfLeafless>
+			<harvestYield>15</harvestYield>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RH_TET_Dwarf_RawDwarfBile</harvestedThingDef>
+			<maxMeshCount>4</maxMeshCount>
+			<visualSizeRange>0.2~0.5</visualSizeRange>
+			<topWindExposure>0.05</topWindExposure>
+			<wildClusterRadius>3</wildClusterRadius>
+			<wildClusterWeight>5</wildClusterWeight>
+			<sowMinSkill>8</sowMinSkill>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<sowResearchPrerequisites>
+				<li>RH_TET_Dwarfs_Plants</li>
+			</sowResearchPrerequisites>
+			<purpose>Food</purpose>
+			<humanFoodPlant>true</humanFoodPlant>
+		</plant>
+	</ThingDef>
+  
+	<ThingDef ParentName="PlantFoodRawBase">
+		<defName>RH_TET_Dwarf_RawDwarfBile</defName>
+		<label>raw dwarf bile mushroom</label>
+		<description>Raw dwarf bile mushrooms. Edible and nutritious, although not terribly tasty.\n\nDwarfs aren't terribly picky when it comes to food, and most other races would say that is evidenced by their consumption of this mushroom.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Raw/DwarfBile</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>.75</MarketValue>
+		</statBases>
+		<ingestible>
+			<foodType>Fungus</foodType>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>15</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="PlantBase">
+		<defName>RH_TET_Dwarf_Plant_Stoneroot</defName>
+		<label>stoneroot</label>
+		<description>An edible root that only dwarfs eat. Grows well inside a cave, as it prefers minimal light.</description>
+		<statBases>
+			<MaxHitPoints>95</MaxHitPoints>
+			<Nutrition>0.4</Nutrition>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plant/Stoneroot</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+		<plant>
+			<growMinGlow>0</growMinGlow>
+			<growOptimalGlow>0</growOptimalGlow>
+			<wildClusterRadius>8</wildClusterRadius>
+			<fertilityMin>0.01</fertilityMin>
+			<fertilitySensitivity>0.15</fertilitySensitivity>
+			<dieIfLeafless>true</dieIfLeafless>
+			<sowMinSkill>4</sowMinSkill>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RH_TET_Dwarf_RawStoneroot</harvestedThingDef>
+			<harvestYield>20</harvestYield>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<topWindExposure>0.01</topWindExposure>
+			<growDays>12</growDays>
+			<visualSizeRange>0.3~1.5</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>RH_TET_Dwarfs_Plants</li>
+			</sowResearchPrerequisites>
+			<purpose>Food</purpose>
+			<humanFoodPlant>true</humanFoodPlant>
+		</plant>
+	</ThingDef>
+
+</Defs>

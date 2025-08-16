@@ -72,7 +72,7 @@ namespace TheEndTimes_Dwarfs
 
         public override FloatMenuAcceptanceReport StillValid(
           Caravan caravan,
-          int destinationTile)
+          PlanetTile destinationTile)
         {
             FloatMenuAcceptanceReport acceptanceReport = (FloatMenuAcceptanceReport)true;
             if (!(bool)acceptanceReport)

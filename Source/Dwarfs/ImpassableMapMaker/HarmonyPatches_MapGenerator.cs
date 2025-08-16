@@ -3,6 +3,7 @@ using RimWorld;
 using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Verse;
 
@@ -83,6 +84,8 @@ namespace TheEndTimes_Dwarfs
         public static int SHALLOWEST_CLEARING_SIZE = SHALLOWEST_CLEARING_SIZE_DEFAULT;
         private static float SAVED_VANILLA_MOUNTAINOUS_ELEVATION_FACTOR = 0f;
 
+        private static bool debug_WarnedMissingTerrain;
+
         static void Prefix(Map map)
         {
             if (Settings.UseVanillaMap)
@@ -150,8 +153,9 @@ namespace TheEndTimes_Dwarfs
                     MapGenFloatGrid elevation = Verse.MapGenerator.Elevation;
                     TerrainGrid terrainGrid = map.terrainGrid;
 
-                    // Save the ocean.
-                    BeachMaker.Init(map);
+                    // Save the ocean as generated for vanilla map.
+                    //BeachMaker.Init(map);
+                    WorldGenStep_Mutators.AddMutatorsFromTile(Find.WorldGrid.Surface);
 
                     foreach (IntVec3 current in map.AllCells)
                     {
@@ -172,7 +176,7 @@ namespace TheEndTimes_Dwarfs
                             currentZone = Settings.ZoneCount - currentZone + 1;
 
                         bool currentTileNSEWMatchesStartNSEW = GetCurrentNSEWMatchesStartNSEW(nsew, current, map);
-                        TerrainDef terrainDef = TerrainFrom(current, map, elevation[current], fertility[current], null, false);
+                        TerrainDef terrainDef = TerrainFrom(current, map, elevation[current], fertility[current], false);
 
                         if (currentTileNSEWMatchesStartNSEW && isCoastalSideMatch)
                         {
@@ -279,56 +283,49 @@ namespace TheEndTimes_Dwarfs
         }
 
         // Copy from core GenStep_Terrain
-        private static TerrainDef TerrainFrom(IntVec3 c, Map map, float elevation, float fertility, RiverMaker river, bool preferSolid)
+        public static TerrainDef TerrainFrom(
+          IntVec3 c,
+          Map map,
+          float elevation,
+          float fertility,
+          bool preferRock)
         {
-            TerrainDef terrainDef = null;
-            if (river != null)
+            TerrainDef terrainDef = (TerrainDef)null;
+            BiomeDef biomeDef = map.BiomeAt(c);
+            bool flag = map.TileInfo.Mutators.Any<TileMutatorDef>((Func<TileMutatorDef, bool>)(m => m.preventsPondGeneration));
+            if (!map.TileInfo.Mutators.Any<TileMutatorDef>((Func<TileMutatorDef, bool>)(m => m.preventPatches)))
             {
-                terrainDef = river.TerrainAt(c, true);
-            }
-            if (terrainDef == null && preferSolid)
-            {
-                return GenStep_RocksFromGrid.RockDefAt(c).building.naturalTerrain;
-            }
-            TerrainDef terrainDef2 = BeachMaker.BeachTerrainAt(c, map.Biome);
-            if (terrainDef2 == TerrainDefOf.WaterOceanDeep)
-            {
-                return terrainDef2;
-            }
-            if (terrainDef != null && terrainDef.IsRiver)
-            {
-                return terrainDef;
-            }
-            if (terrainDef2 != null)
-            {
-                return terrainDef2;
-            }
-            if (terrainDef != null)
-            {
-                return terrainDef;
-            }
-            for (int i = 0; i < map.Biome.terrainPatchMakers.Count; i++)
-            {
-                terrainDef2 = map.Biome.terrainPatchMakers[i].TerrainAt(c, map, fertility);
-                if (terrainDef2 != null)
+                foreach (TerrainPatchMaker terrainPatchMaker in biomeDef.terrainPatchMakers)
                 {
-                    return terrainDef2;
+                    if (!flag || !terrainPatchMaker.isPond)
+                    {
+                        terrainDef = terrainPatchMaker.TerrainAt(c, map, fertility);
+                        if (terrainDef != null)
+                            break;
+                    }
                 }
             }
-            if (elevation > 0.55f && elevation < 0.61f)
+            if (terrainDef == null)
             {
-                return TerrainDefOf.Gravel;
+                if ((double)elevation > 0.550000011920929 && (double)elevation < 0.610000014305115 && !biomeDef.noGravel)
+                    terrainDef = biomeDef.gravelTerrain ?? TerrainDefOf.Gravel;
+                else if ((double)elevation >= 0.610000014305115)
+                    terrainDef = GenStep_RocksFromGrid.RockDefAt(c).building.naturalTerrain;
             }
-            if (elevation >= 0.61f)
+            if (terrainDef == null)
+                terrainDef = TerrainThreshold.TerrainAtValue(biomeDef.terrainsByFertility, fertility);
+            if (terrainDef == null)
             {
-                return GenStep_RocksFromGrid.RockDefAt(c).building.naturalTerrain;
+                if (!Patch_GenStep_ElevationFertility.debug_WarnedMissingTerrain)
+                {
+                    Log.Error("No terrain found in biome " + biomeDef.defName + " for elevation=" + elevation.ToString() + ", fertility=" + fertility.ToString());
+                    Patch_GenStep_ElevationFertility.debug_WarnedMissingTerrain = true;
+                }
+                terrainDef = TerrainDefOf.Sand;
             }
-            terrainDef2 = TerrainThreshold.TerrainAtValue(map.Biome.terrainsByFertility, fertility);
-            if (terrainDef2 != null)
-            {
-                return terrainDef2;
-            }
-            return TerrainDefOf.Sand;
+            if (preferRock && terrainDef.supportsRock)
+                terrainDef = GenStep_RocksFromGrid.RockDefAt(c).building.naturalTerrain;
+            return terrainDef;
         }
 
         private static bool GetCurrentNSEWMatchesStartNSEW(NSEW startNSEW, IntVec3 current, Map map)

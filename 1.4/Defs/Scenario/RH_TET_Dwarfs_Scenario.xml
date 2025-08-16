@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ScenarioDef>
+		<defName>RH_TET_Dwarf_Dispossessed</defName>
+		<label>Rimhammer - The End Times - Dwarfs - Dispossessed</label>
+		<description>Driven from their ancestral hold by enemies of the Dawi, a group of dwarfs fled with everything they had. They now seek to make a new home.</description>
+		<scenario>
+			<summary>Three dwarfs and their remaining animals build a new home.</summary>
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>RH_TET_Dwarf_PlayerColony</factionDef>
+			</playerFaction>
+			<parts>
+
+				<!-- Game set up pages. -->
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+					<def>ConfigPage_ConfigureStartingPawns</def>
+					<pawnCount>3</pawnCount>
+					<pawnChoiceCount>9</pawnChoiceCount>
+				</li>
+
+				<!-- Starting stuff spawn method. -->
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>Standing</method>
+					<visible>false</visible>
+				</li>
+
+				<!-- Starting research. -->
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>Stonecutting</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ComplexClothing</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ComplexFurniture</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>Brewing</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>Smithing</project>
+				</li>
+		
+				<!-- Starting stuff. -->
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Silver</thingDef>
+					<count>250</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RH_TET_Dwarf_Stonebread</thingDef>
+					<count>25</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MedicineHerbal</thingDef>
+					<count>20</count>
+				</li>
+				<li Class="ScenPart_StartingAnimal">
+					<def>StartingAnimal</def>
+					<count>1</count>
+					<animalKind>Bear_Grizzly</animalKind>
+					<bondToRandomPlayerPawnChance>1.0</bondToRandomPlayerPawnChance>
+				</li>
+				<li Class="ScenPart_StartingAnimal">
+					<def>StartingAnimal</def>
+					<count>3</count>
+					<animalKind>Ibex</animalKind>
+					<bondToRandomPlayerPawnChance>0.0</bondToRandomPlayerPawnChance>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RH_TET_Dwarf_Armor_Low</thingDef>
+					<stuff>Steel</stuff>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RH_TET_Dwarf_Shield_Low</thingDef>
+					<stuff>Steel</stuff>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RH_TET_Dwarf_Helmet_Low</thingDef>
+					<stuff>Steel</stuff>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RH_TET_Dwarf_HandAxe_Low</thingDef>
+					<stuff>Steel</stuff>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RH_TET_Dwarf_PickAxe_Low</thingDef>
+					<stuff>Steel</stuff>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RH_TET_Dwarf_Quarreller_Low</thingDef>
+				</li>
+				<!-- Scatter some things near player start. -->
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>Steel</thingDef>
+					<count>250</count>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>WoodLog</thingDef>
+					<count>250</count>
+				</li>
+				<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>RH_TET_Dwarf_Stonebread</thingDef>
+					<count>25</count>
+				</li>
+				<!-- Scatter some things anywhere. -->
+				<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>Steel</thingDef>
+					<count>75</count>
+				</li>
+			</parts>
+		</scenario>
+	</ScenarioDef>
+
+
+	<ScenarioDef>
+		<defName>RH_TET_Dwarf_Slayer_NakedBrutality</defName>
+		<label>Rimhammer - The End Times - Dwarf Slayer - Naked Brutality</label>
+		<description>You've forsaken everything to take the slayer vow, due having endured a mightly shame. Can you survive, and bring pride back to your name? If not, there's always an honorable death waiting somewhere. Having forsaken most everything for a life of battle, your knowledge base is sorely lacking; to top it all off, you've nothing to eat!</description>
+		<scenario>
+			<summary>A lone dwarf slayer sets out to survive, and bring honor back to the family name; before seeking an honorable death.</summary>
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>RH_TET_Dwarf_Slayer_PlayerColony</factionDef>
+			</playerFaction>
+			<parts>
+
+				<!-- Game set up pages. -->
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+					<def>ConfigPage_ConfigureStartingPawns</def>
+					<pawnCount>1</pawnCount>
+					<pawnChoiceCount>6</pawnChoiceCount>
+				</li>
+
+				<!-- Starting stuff spawn method. -->
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>Standing</method>
+					<visible>false</visible>
+				</li>
+			</parts>
+		</scenario>
+	</ScenarioDef>
+  
+</Defs>

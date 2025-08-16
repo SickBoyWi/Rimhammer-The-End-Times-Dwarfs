@@ -94,7 +94,7 @@ namespace TheEndTimes_Dwarfs
                 yield return gizmo;
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             if (this.def.defName.Equals("RH_TET_Dwarfs_KingsThrone"))

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef Name="RH_TET_Dwarf_RacialBase" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.0, 0.8, 0.0)</defaultLabelColor>
+		<initialSeverity>1.0</initialSeverity>
+		<isBad>false</isBad>
+		<scenarioCanAdd>false</scenarioCanAdd>
+	</HediffDef>
+
+	<SickTools.HediffExpandedDef ParentName="RH_TET_Dwarf_RacialBase">
+		<defName>RH_TET_Dwarf_Traits</defName>
+		<label>Racial Bonus: Dwarf</label>
+		<description>A dwarf's high constitution makes them highly immune to disease, and grants them increased tolerances to heat and cold. They're also naturally good miners.</description>
+		<postListText>A dwarf's high constitution makes them highly immune to disease, and grants them increased tolerances to heat and cold. They're also naturally good miners.</postListText>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<postFactor>1.3</postFactor>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MiningSpeed>0.25</MiningSpeed>
+					<MiningYield>0.10</MiningYield>
+				</statOffsets>
+			</li>
+		</stages>
+	</SickTools.HediffExpandedDef>
+  
+	<HediffGiverSetDef>
+		<defName>RH_TET_Dwarf_TraitsGiver</defName>
+		<hediffGivers>
+			<li Class="HediffGiver_Bleeding">
+				<hediff>BloodLoss</hediff>
+			</li>
+	  
+			<!-- Environmental -->
+			<li Class="HediffGiver_Hypothermia">
+				<hediff>Hypothermia</hediff>
+			</li>
+			<li Class="HediffGiver_Heat">
+				<hediff>Heatstroke</hediff>
+			</li>
+
+			<!-- Responsive -->
+			<li Class="HediffGiver_BrainInjury">
+				<hediff>TraumaSavant</hediff>
+				<partsToAffect>
+					<li>Brain</li>
+				</partsToAffect>
+				<chancePerDamagePct>0.1</chancePerDamagePct>
+				<letterLabel>Trauma savant</letterLabel>
+				<letter>[PAWN_nameDef]'s brain injury has caused [PAWN_objective] to develop strange savant-like abilities.</letter>
+			</li>
+	  
+			<!-- Other mod stuff, to start with the prescribed dwarfy traits. -->
+			<li Class="SickTools.HediffGiver_StartWithHediff">
+				<hediff>RH_TET_Dwarf_Traits</hediff>
+				<expandedDef>RH_TET_Dwarf_Traits</expandedDef>
+			</li>
+		</hediffGivers>
+	</HediffGiverSetDef>
+
+	<HediffDef Name="RH_TET_Dwarfs_NoFindBase" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+		<comps>
+			<li Class="HediffCompProperties_Discoverable">
+				<sendLetterWhenDiscovered>false</sendLetterWhenDiscovered>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef Abstract="True" ParentName="RH_TET_Dwarfs_NoFindBase" Name="RH_TET_Dwarfs_HighBloodEnhanceBase">
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<minSeverity>1.0</minSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+	</HediffDef>
+
+	<HediffDef ParentName="RH_TET_Dwarfs_HighBloodEnhanceBase">
+		<defName>RH_TET_Dwarfs_HighBloodThaneHediff</defName>
+		<description>A dwarf thane has enhanced stats.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Dwarf Thane</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>Thane</label>
+				<minSeverity>1.0</minSeverity>
+				<painOffset>-0.1</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="RH_TET_Dwarfs_HighBloodEnhanceBase">
+		<defName>RH_TET_Dwarfs_HighBloodKingHediff</defName>
+		<description>A dwarf king has enhanced stats.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Dwarf King</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>King</label>
+				<minSeverity>1.0</minSeverity>
+				<painOffset>-0.15</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+</Defs>

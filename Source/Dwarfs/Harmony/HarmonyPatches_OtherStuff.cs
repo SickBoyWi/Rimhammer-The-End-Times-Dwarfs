@@ -397,7 +397,9 @@ namespace TheEndTimes_Dwarfs
         [HarmonyPatch(typeof(DownedRefugeeQuestUtility), "GenerateRefugee")]
         static class Patch_DownedRefugeeQuestUtility_GenerateRefugee
         {
-            static bool Prefix(ref Pawn __result, int tile)
+            static bool Prefix(ref Pawn __result, PlanetTile tile,
+                  PawnKindDef pawnKind,
+                  float chanceForFaction)
             {
                 Faction ofPlayer = Faction.OfPlayer;
 
@@ -415,7 +417,9 @@ namespace TheEndTimes_Dwarfs
                 return true;
             }
 
-            static void Postfix(ref Pawn __result, int tile)
+            static void Postfix(ref Pawn __result, PlanetTile tile,
+                  PawnKindDef pawnKind,
+                  float chanceForFaction)
             {
                 Faction ofPlayer = Faction.OfPlayer;
 
@@ -562,49 +566,50 @@ namespace TheEndTimes_Dwarfs
             }
         }
 
-        [HarmonyPatch(typeof(FloatMenuMakerMap), "AddHumanlikeOrders")]
-        static class Patch_FloatMenuMakerMap_AddHumanlikeOrders
-        {
-            static void Postfix(Vector3 clickPos, Pawn pawn, List<FloatMenuOption> opts)
-            {
-                if (DwarfsUtil.IsDwarf(pawn))
-                {
-                    if ((RH_TET_DwarfsMod.king != null && RH_TET_DwarfsMod.king.Equals(pawn))
-                        || (RH_TET_DwarfsMod.thanes != null && RH_TET_DwarfsMod.thanes.Count > 0 && RH_TET_DwarfsMod.thanes.Contains(pawn)))
-                    {
-                        CompDwarfHighBlood comp = pawn.TryGetComp<CompDwarfHighBlood>();
+        // Removed for 1.6.
+        //[HarmonyPatch(typeof(FloatMenuMakerMap), "AddHumanlikeOrders")]
+        //static class Patch_FloatMenuMakerMap_AddHumanlikeOrders
+        //{
+        //    static void Postfix(Vector3 clickPos, Pawn pawn, List<FloatMenuOption> opts)
+        //    {
+        //        if (DwarfsUtil.IsDwarf(pawn))
+        //        {
+        //            if ((RH_TET_DwarfsMod.king != null && RH_TET_DwarfsMod.king.Equals(pawn))
+        //                || (RH_TET_DwarfsMod.thanes != null && RH_TET_DwarfsMod.thanes.Count > 0 && RH_TET_DwarfsMod.thanes.Contains(pawn)))
+        //            {
+        //                CompDwarfHighBlood comp = pawn.TryGetComp<CompDwarfHighBlood>();
 
-                        if (comp == null)
-                            Log.Error("Dwarf has null high blood comp.");
+        //                if (comp == null)
+        //                    Log.Error("Dwarf has null high blood comp.");
                         
-                        IntVec3 c = IntVec3.FromVector3(clickPos);
+        //                IntVec3 c = IntVec3.FromVector3(clickPos);
 
-                        foreach (Thing thing in c.GetThingList(pawn.Map))
-                        {
-                            Thing t = thing;
-                            if ((t.def.ingestible != null && pawn.RaceProps.CanEverEat(t) && t.IngestibleNow) && !(t.def.IsNonMedicalDrug && pawn.IsTeetotaler()))
-                            {
-                                if (DwarfsUtil.InappropriateForHighBlood(t.def, pawn, true))
-                                {
-                                    FloatMenuOption fmoSave = null;
-                                    foreach (FloatMenuOption fmo in opts)
-                                    {
-                                        if (fmo.Label.Contains(t.LabelShort))
-                                        {
-                                            fmoSave = fmo;
-                                            break;
-                                        }
-                                    }
+        //                foreach (Thing thing in c.GetThingList(pawn.Map))
+        //                {
+        //                    Thing t = thing;
+        //                    if ((t.def.ingestible != null && pawn.RaceProps.CanEverEat(t) && t.IngestibleNow) && !(t.def.IsNonMedicalDrug && pawn.IsTeetotaler()))
+        //                    {
+        //                        if (DwarfsUtil.InappropriateForHighBlood(t.def, pawn, true))
+        //                        {
+        //                            FloatMenuOption fmoSave = null;
+        //                            foreach (FloatMenuOption fmo in opts)
+        //                            {
+        //                                if (fmo.Label.Contains(t.LabelShort))
+        //                                {
+        //                                    fmoSave = fmo;
+        //                                    break;
+        //                                }
+        //                            }
 
-                                    fmoSave.Label += ( ": " + "RH_TET_Dwarfs_HighBloodFoodBad".Translate((NamedArgument)comp.highBloodComp.GetCurrentHighBlood().GetLabelFor(pawn)));
-                                    fmoSave.Disabled = true;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        //                            fmoSave.Label += ( ": " + "RH_TET_Dwarfs_HighBloodFoodBad".Translate((NamedArgument)comp.highBloodComp.GetCurrentHighBlood().GetLabelFor(pawn)));
+        //                            fmoSave.Disabled = true;
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
 
         [HarmonyPatch(typeof(Mineable), "TrySpawnYield", new Type[] { typeof(Map), typeof(bool), typeof(Pawn)})]
         static class Patch_Mineable_TrySpawnYield

@@ -35,7 +35,9 @@ namespace TheEndTimes_Dwarfs
         private bool TryFindTile(Slate slate, out int tile)
         {
             Map map = slate.Get<Map>("map", (Map)null, false) ?? Find.RandomPlayerHomeMap;
-            int nearThisTile1 = map != null ? map.Tile : -1;
+            int nearThisTile1 = -1;
+            if (map != null)
+                nearThisTile1 = map.Tile;
             IntRange var;
             if (slate.TryGet<IntRange>("siteDistRange", out var, false))
                 return QuestNode_GetSiteTileImpassible.TryFindNewSiteTile(out tile, var.min, var.max, this.allowCaravans.GetValue(slate), this.preferCloserTiles.GetValue(slate), nearThisTile1);
@@ -54,12 +56,12 @@ namespace TheEndTimes_Dwarfs
             {
                 int minDist2 = minDist;
                 int maxDist2 = maxDist;
-                Predicate<int> validator = (int x) =>
+                Predicate<PlanetTile> validator = (PlanetTile x) =>
                     !Find.WorldObjects.AnyWorldObjectAt(x)
                     && Find.WorldGrid[x].hilliness == Hilliness.Impassable
                     && IsValidTileForNewSettlement(x, null);
                 bool preferCloserTiles2 = preferCloserTiles;
-                int result;
+                PlanetTile result;
                 if (TileFinder.TryFindPassableTileWithTraversalDistance(root, minDist2, maxDist2, out result, validator,
                     false, TileFinderMode.Random, false, false))
                 {
@@ -68,12 +70,12 @@ namespace TheEndTimes_Dwarfs
                 return -1;
             };
 
-            int arg;
+            PlanetTile arg;
             if (nearThisTile != -1)
             {
                 arg = nearThisTile;
             }
-            else if (!TileFinder.TryFindRandomPlayerTile(out arg, allowCaravans, (int x) => findTile(x) != -1))
+            else if (!TileFinder.TryFindRandomPlayerTile(out arg, allowCaravans, (PlanetTile x) => findTile(x) != -1))
             {
                 tile = -1;
                 return false;
@@ -82,17 +84,17 @@ namespace TheEndTimes_Dwarfs
             return tile != -1;
         }
 
-        public static bool IsValidTileForNewSettlement(int tile, StringBuilder reason = null)
+        public static bool IsValidTileForNewSettlement(PlanetTile tile, StringBuilder reason = null)
         {
             Tile tile1 = Find.WorldGrid[tile];
-            if (!tile1.biome.canBuildBase)
+            if (!tile1.PrimaryBiome.canBuildBase)
             {
-                reason?.Append("CannotLandBiome".Translate((NamedArgument)tile1.biome.LabelCap));
+                reason?.Append("CannotLandBiome".Translate((NamedArgument)tile1.PrimaryBiome.LabelCap));
                 return false;
             }
-            if (!tile1.biome.implemented)
+            if (!tile1.PrimaryBiome.implemented)
             {
-                reason?.Append("BiomeNotImplemented".Translate() + ": " + tile1.biome.LabelCap);
+                reason?.Append("BiomeNotImplemented".Translate() + ": " + tile1.PrimaryBiome.LabelCap);
                 return false;
             }
             Settlement settlementBase = Find.WorldObjects.SettlementBaseAt(tile);

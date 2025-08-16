@@ -6,7 +6,7 @@
 		<mods>
 			<li>Rimhammer - Story Tellers</li>
 		</mods>
-		<nomatch Class="PatchOperationSequence">
+		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
 					<order>Append</order>
@@ -35,7 +35,7 @@
 					</value>
 				</li>
 			</operations>
-		</nomatch>
+		</match>
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">

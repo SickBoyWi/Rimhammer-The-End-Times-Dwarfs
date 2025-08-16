@@ -78,42 +78,35 @@ namespace TheEndTimes_Dwarfs
         [DebuggerHidden]
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            this.EndOnDespawnedOrNull(TargetIndex.A, JobCondition.Incompletable);
-            bool hasBed = base.TargetC.HasThing && base.TargetC.Thing is Building_Bed;
+            JobDriver_WatchGold driverWatchThing = this;
+            driverWatchThing.EndOnDespawnedOrNull<JobDriver_WatchGold>(TargetIndex.A, JobCondition.Incompletable);
             Toil watch;
-            if (hasBed)
+            if ((!driverWatchThing.TargetC.HasThing ? 0 : (driverWatchThing.TargetC.Thing is Building_Bed ? 1 : 0)) != 0)
             {
-                this.KeepLyingDown(TargetIndex.C);
+                driverWatchThing.KeepLyingDown(TargetIndex.C);
                 yield return Toils_Bed.ClaimBedIfNonMedical(TargetIndex.C, TargetIndex.None);
                 yield return Toils_Bed.GotoBed(TargetIndex.C);
-                watch = Toils_LayDown.LayDown(TargetIndex.C, true, false, true, true);
-                watch.AddFailCondition(() => !watch.actor.Awake());
+                watch = Toils_LayDown.LayDown(TargetIndex.C, true, false, true, true, PawnPosture.LayingOnGroundNormal, false);
+                watch.AddFailCondition((Func<bool>)(() => !watch.actor.Awake()));
             }
             else
             {
                 yield return Toils_Goto.GotoCell(TargetIndex.B, PathEndMode.OnCell);
-                watch = new Toil();
+                watch = ToilMaker.MakeToil(nameof(MakeNewToils));
             }
-            watch.AddPreTickAction(delegate
-            {
-                this.WatchTickAction();
-            });
-            watch.AddFinishAction(delegate
-            {
-                JoyUtility.TryGainRecRoomThought(this.pawn);
-            });
+            watch.AddPreTickIntervalAction(new Action<int>(driverWatchThing.WatchTickAction));
+            watch.AddFinishAction((Action)(() => JoyUtility.TryGainRecRoomThought(this.pawn)));
             watch.defaultCompleteMode = ToilCompleteMode.Delay;
-            watch.defaultDuration = this.job.def.joyDuration;
+            watch.defaultDuration = driverWatchThing.job.def.joyDuration;
             watch.handlingFacing = true;
             yield return watch;
         }
 
-        protected override void WatchTickAction()
+        protected override void WatchTickAction(int delta)
         {
-            this.pawn.rotationTracker.FaceCell(base.TargetA.Cell);
-            this.pawn.GainComfortFromCellIfPossible();
-            Pawn pawn = this.pawn;
-            JoyUtility.JoyTickCheckEnd(pawn, JoyTickFullJoyAction.EndJob, 1f, null);
+            this.pawn.rotationTracker.FaceCell(this.TargetA.Cell);
+            this.pawn.GainComfortFromCellIfPossible(delta, false);
+            JoyUtility.JoyTickCheckEnd(this.pawn, delta, JoyTickFullJoyAction.EndJob, 1f, null);
         }
 
         public override object[] TaleParameters()

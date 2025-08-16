@@ -51,7 +51,7 @@ namespace TheEndTimes_Dwarfs
             Scribe_Values.Look<bool>(ref this.needSynchronization, "needSynchronization", false, false);
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             if (!this.lightIsOn && Find.TickManager.TicksGame < this.nextUpdateTick)

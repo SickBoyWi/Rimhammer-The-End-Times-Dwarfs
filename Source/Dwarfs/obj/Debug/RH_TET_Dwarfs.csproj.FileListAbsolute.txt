@@ -32,4 +32,5 @@ D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Dwarfs\1.4\Assem
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Dwarfs\1.5\Assemblies\RH_TET_Dwarfs.dll
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Dwarfs\Source\Dwarfs\obj\Debug\RH_TET_Dwarfs.csproj.CoreCompileInputs.cache
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Dwarfs\Source\Dwarfs\obj\Debug\RH_TET_Dwarfs.dll
-D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Dwarfs\Source\Dwarfs\obj\Debug\RH_TET_Dwarfs.csprojAssemblyReference.cache
+D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Dwarfs\Source\Dwarfs\obj\Debug\RH_TET_Dwarfs.csproj.AssemblyReference.cache
+D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Dwarfs\1.6\Assemblies\RH_TET_Dwarfs.dll

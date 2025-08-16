@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- =========================== Good - special ============================-->
+
+	<IncidentDef>
+		<defName>RH_TET_Dwarfs_SlayerSavesTheDay</defName>
+		<label>slayer savior</label>
+		<category>Special</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>IncidentWorker_WandererJoin</workerClass>
+		<letterLabel>Slayer Savior</letterLabel>
+		<letterText>Sensing trouble, a wandering dwarf slayer has arrived.\n\nWill [PAWN_pronoun] be able to save the day, or will [PAWN_pronoun] meet an honourable death attempting?</letterText>
+		<baseChance>0</baseChance>
+		<minRefireDays>60</minRefireDays>
+		<minGreatestPopulation>3</minGreatestPopulation>
+		<pawnKind>RH_TET_DwarfSlayer</pawnKind>
+		<pawnFixedGender>Male</pawnFixedGender>
+		<pawnMustBeCapableOfViolence>true</pawnMustBeCapableOfViolence>
+	</IncidentDef>
+	
+	<IncidentDef>
+		<defName>RH_TET_Dwarfs_WildDwarfWandersIn</defName>
+		<label>wild dwarf wanders in</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>TheEndTimes_Dwarfs.IncidentWorker_WildDwarfWandersIn</workerClass>
+		<baseChance>0.70</baseChance>
+		<populationEffect>IncreaseMedium</populationEffect>
+		<letterLabel>{PAWN_kind} wanders in</letterLabel>
+		<letterText>A dwarf living among wild animals has wandered into the area. {PAWN_pronoun}'s called {0}.\n\nYou can attempt to tame or arrest {PAWN_objective}.</letterText>
+		<letterDef>NeutralEvent</letterDef>
+	</IncidentDef>
+
+</Defs>

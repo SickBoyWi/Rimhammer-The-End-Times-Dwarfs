@@ -22,7 +22,7 @@ namespace TheEndTimes_Dwarfs
             else if ((building.def.graphicData.linkFlags & (LinkFlags.Wall | LinkFlags.Rock)) == 0)
                 return (AcceptanceReport)"RH_TET_Dwarfs_WallNeeded".Translate();
 
-            if (rot.FacingCell != null)
+            if (rot.FacingCell != IntVec3.Invalid)
             {
 
                 IntVec3 facingLoc = loc;

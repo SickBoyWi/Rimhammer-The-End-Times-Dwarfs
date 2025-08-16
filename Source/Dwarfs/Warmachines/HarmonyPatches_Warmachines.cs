@@ -59,7 +59,7 @@ namespace TheEndTimes_Dwarfs
                 Map map = __instance.Map;
                 float statValue = 2f;
                 DamageDef smoke = DamageDefOf.Smoke;
-                GenExplosion.DoExplosion(position, map, statValue, smoke, null, -1, -1f, null, null, null, null, null, 0f, 0, new GasType?(GasType.BlindSmoke), false, null, 0f, 1, 0f, false);
+                GenExplosion.DoExplosion(position, map, statValue, smoke, null, -1, -1f, null, null, null, null, null, 0f, 0, new GasType?(GasType.BlindSmoke), new float?(), (int)byte.MaxValue, false, null, 0f, 1, 0f, false);
             }
         }
     }

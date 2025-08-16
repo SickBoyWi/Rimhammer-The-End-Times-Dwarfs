@@ -60,7 +60,7 @@ namespace TheEndTimes_Dwarfs
                         }
                     }
                     this.rotateToFace = FacingInd;
-                    this.pawn.GainComfortFromCellIfPossible(false);
+                    this.pawn.GainComfortFromCellIfPossible(1, false);
 
                     comp.highBloodComp.lastRuledTicks = Find.TickManager.TicksGame;
                 }

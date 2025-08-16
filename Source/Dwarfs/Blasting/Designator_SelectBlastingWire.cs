@@ -44,13 +44,13 @@ namespace TheEndTimes_Dwarfs
             }
         }
 
-        public override int DraggableDimensions
-        {
-            get
-            {
-                return 2;
-            }
-        }
+        //public override int DraggableDimensions
+        //{
+        //    get
+        //    {
+        //        return 2;
+        //    }
+        //}
 
         public override bool DragDrawMeasurements
         {

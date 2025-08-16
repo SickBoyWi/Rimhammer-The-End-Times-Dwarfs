@@ -157,7 +157,7 @@ namespace TheEndTimes_Dwarfs
             float explosiveRadius = explosiveProps.explosiveRadius;
             if (this.parent.stackCount > 1 && (double)explosiveProps.explosiveExpandPerStackcount > 0.0)
                 explosiveRadius += Mathf.Sqrt((float)(this.parent.stackCount - 1) * explosiveProps.explosiveExpandPerStackcount);
-            GenExplosion.DoExplosion(this.parentPosition, this.parentMap, explosiveRadius, explosiveProps.explosiveDamageType, (Verse.Thing)this.parent, -1, -1f, (SoundDef)null, (ThingDef)null, (ThingDef)null, (Verse.Thing)null, (ThingDef)null, 0.0f, 1, new GasType?(GasType.BlindSmoke), false, (ThingDef)null, 0.0f, 1, 0.0f, false);
+            GenExplosion.DoExplosion(this.parentPosition, this.parentMap, explosiveRadius, explosiveProps.explosiveDamageType, (Verse.Thing)this.parent, -1, -1f, (SoundDef)null, (ThingDef)null, (ThingDef)null, (Verse.Thing)null, (ThingDef)null, 0.0f, 1, new GasType?(GasType.BlindSmoke), new float?(), (int)byte.MaxValue, false, (ThingDef)null, 0.0f, 1, 0.0f, false);
         }
     }
 }

@@ -40,7 +40,7 @@ namespace TheEndTimes_Dwarfs
             f2.FailOn<Toil>(new Func<bool>(() => RoomRoleWorker_DwarfRulingRoom.Validate(this.DwarfThrone.GetRoom(RegionType.Set_Passable)) != null));
             f2.tickAction = new Action(delegate ()
             {
-                this.pawn.GainComfortFromCellIfPossible(false);
+                this.pawn.GainComfortFromCellIfPossible(1, false);
                 this.pawn.skills.Learn(SkillDefOf.Social, 0.3f, false);
                 if (this.pawn.IsHashIntervalTick(JobDriver_HoldCourt.MoteInterval.RandomInRange))
                 {

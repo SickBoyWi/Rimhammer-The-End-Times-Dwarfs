@@ -200,7 +200,7 @@
 		<label>tobacco dependence</label>
 		<description>A chemical addiction to tobacco. Long-term use of tobacco has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.\nWithout regular doses of tobacco, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
 		<hediffClass>Hediff_Addiction</hediffClass>
-		<causesNeed>RH_TET_Dwarfs_Chemical_Tobacco</causesNeed>
+		<chemicalNeed>RH_TET_Dwarfs_Chemical_Tobacco</chemicalNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.0333</severityPerDay>

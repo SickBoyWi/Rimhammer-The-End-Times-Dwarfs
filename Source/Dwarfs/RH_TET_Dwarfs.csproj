@@ -17,7 +17,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\1.5\Assemblies\</OutputPath>
+    <OutputPath>..\..\1.6\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -41,16 +41,12 @@
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="DoorsExpanded">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\1316188771\1.5\Assemblies\DoorsExpanded.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="HugsLib">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\818773962\v1.5\Assemblies\HugsLib.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\818773962\v1.6\Assemblies\HugsLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="RH_TET_Magic">
-      <HintPath>..\..\..\Rimhammer-The-End-Times-Magic\1.5\Assemblies\RH_TET_Magic.dll</HintPath>
+      <HintPath>..\..\..\Rimhammer-The-End-Times-Magic\1.6\Assemblies\RH_TET_Magic.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -127,6 +123,7 @@
     <Compile Include="Furniture\WallLightGlower.cs" />
     <Compile Include="Furniture\StaticWallLightStuff.cs" />
     <Compile Include="Harmony\OnStartup.cs" />
+    <Compile Include="HighBloodStuff\FloatMenuOptionProvider_DwarfHighBloods.cs" />
     <Compile Include="HighBloodStuff\PlaceWorker_ThaneThroneRequired.cs" />
     <Compile Include="HighBloodStuff\Command_AbilityHoldCourt.cs" />
     <Compile Include="HighBloodStuff\CompAbilityEffect_HoldCourt.cs" />

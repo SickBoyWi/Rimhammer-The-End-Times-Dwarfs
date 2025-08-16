@@ -82,7 +82,7 @@ namespace TheEndTimes_Dwarfs
             this.SetFaction(Faction.OfInsects, (Pawn)null);
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             if (!this.Spawned || this.CompDormant.Awake || this.Position.Fogged(this.Map))

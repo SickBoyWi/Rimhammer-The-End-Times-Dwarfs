@@ -63,7 +63,7 @@ namespace TheEndTimes_Dwarfs
             return f;
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
 
@@ -95,7 +95,7 @@ namespace TheEndTimes_Dwarfs
 
             // Do positive mood thing for a pawns involved.
             DwarfsUtil.RemoveMoodFromPawns(RH_TET_DwarfDefOf.RH_TET_Dwarfs_ReclaimingCapturedHold, map.mapPawns.FreeColonistsSpawned);
-            DwarfsUtil.GiveMoodToPawns(RH_TET_DwarfDefOf.RH_TET_Dwarfs_ReclaimedCapturedHold, PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists);
+            DwarfsUtil.GiveMoodToPawns(RH_TET_DwarfDefOf.RH_TET_Dwarfs_ReclaimedCapturedHold, PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_Colonists);
 
             StringBuilder text = new StringBuilder();
             text.Append("RH_TET_Dwarf_ReclaimedAncientHoldDesc".Translate((NamedArgument)this.Label, (NamedArgument)TimedForcedExit.GetForceExitAndRemoveMapCountdownTimeLeftString(60000)));
@@ -241,7 +241,7 @@ namespace TheEndTimes_Dwarfs
             Find.LetterStack.ReceiveLetter((Letter)LetterMaker.MakeLetter("RH_TET_Dwarf_FailedToReclaimCapturedHoldLabel".Translate(), "RH_TET_Dwarf_FailedToReclaimCapturedHoldDesc".Translate(), LetterDefOf.NegativeEvent), (string)null);
             Current.Game.DeinitAndRemoveMap(this.Map, false);
 
-            DwarfsUtil.GiveMoodToPawns(RH_TET_DwarfDefOf.RH_TET_Dwarfs_FailedToReclaimCapturedHold, PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists);
+            DwarfsUtil.GiveMoodToPawns(RH_TET_DwarfDefOf.RH_TET_Dwarfs_FailedToReclaimCapturedHold, PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_Colonists);
         }
 
         public override void PostMapGenerate()

@@ -9,9 +9,13 @@ namespace TheEndTimes_Dwarfs
     {
         public override string GetInspectString()
         {
-            string str = "";
+            string str = base.GetInspectString();
             if (this.Spawned)
-                str = !PlantUtility.GrowthSeasonNow(this.Position, this.Map, true) ? (string)(str + ("CannotGrowBadSeasonTemperature".Translate())) : (string)(str + ("GrowSeasonHereNow".Translate()));
+            {
+                if (!str.NullOrEmpty())
+                    str += "\n";
+                str = !PlantUtility.GrowthSeasonNow(this.Position, this.Map, this.GetPlantDefToGrow()) ? (string)(str + "CannotGrowBadSeasonTemperature".Translate()) : (string)(str + "GrowSeasonHereNow".Translate());
+            }
             return str;
         }
     }
