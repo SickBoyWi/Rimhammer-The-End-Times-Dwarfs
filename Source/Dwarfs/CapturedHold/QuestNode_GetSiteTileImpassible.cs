@@ -2,7 +2,9 @@
 using RimWorld.Planet;
 using RimWorld.QuestGen;
 using System;
+using System.Collections.Generic;
 using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace TheEndTimes_Dwarfs
@@ -16,26 +18,28 @@ namespace TheEndTimes_Dwarfs
 
         protected override bool TestRunInt(Slate slate)
         {
-            int tile;
+            PlanetTile tile;
             if (!this.TryFindTile(slate, out tile))
                 return false;
-            slate.Set<int>(this.storeAs.GetValue(slate), tile, false);
+            slate.Set<PlanetTile>(this.storeAs.GetValue(slate), tile, false);
             return true;
         }
 
         protected override void RunInt()
         {
             Slate slate = RimWorld.QuestGen.QuestGen.slate;
-            int tile;
-            if (!this.TryFindTile(RimWorld.QuestGen.QuestGen.slate, out tile))
+            PlanetTile tile;
+
+            bool result = this.TryFindTile(RimWorld.QuestGen.QuestGen.slate, out tile);
+            if (!result)
                 return;
-            RimWorld.QuestGen.QuestGen.slate.Set<int>(this.storeAs.GetValue(slate), tile, false);
+            RimWorld.QuestGen.QuestGen.slate.Set<PlanetTile>(this.storeAs.GetValue(slate), tile, false);
         }
 
-        private bool TryFindTile(Slate slate, out int tile)
+        private bool TryFindTile(Slate slate, out PlanetTile tile)
         {
             Map map = slate.Get<Map>("map", (Map)null, false) ?? Find.RandomPlayerHomeMap;
-            int nearThisTile1 = -1;
+            PlanetTile nearThisTile1 = -1;
             if (map != null)
                 nearThisTile1 = map.Tile;
             IntRange var;
@@ -45,14 +49,14 @@ namespace TheEndTimes_Dwarfs
             bool flag = this.preferCloserTiles.GetValue(slate);
             int num1 = this.allowCaravans.GetValue(slate) ? 1 : 0;
             int num2 = flag ? 1 : 0;
-            int nearThisTile2 = nearThisTile1;
+            PlanetTile nearThisTile2 = nearThisTile1;
             return QuestNode_GetSiteTileImpassible.TryFindNewSiteTile(out tile, 7, 27, num1 != 0, num2 != 0, nearThisTile2);
         }
 
-        public static bool TryFindNewSiteTile(out int tile, int minDist = 8, int maxDist = 30,
+        public static bool TryFindNewSiteTile(out PlanetTile tile, int minDist = 8, int maxDist = 30,
             bool allowCaravans = false, bool preferCloserTiles = true, int nearThisTile = -1)
         {
-            Func<int, int> findTile = delegate (int root)
+            Func<PlanetTile, int> findTile = delegate (PlanetTile root)
             {
                 int minDist2 = minDist;
                 int maxDist2 = maxDist;
@@ -63,11 +67,11 @@ namespace TheEndTimes_Dwarfs
                 bool preferCloserTiles2 = preferCloserTiles;
                 PlanetTile result;
                 if (TileFinder.TryFindPassableTileWithTraversalDistance(root, minDist2, maxDist2, out result, validator,
-                    false, TileFinderMode.Random, false, false))
+                    false, TileFinderMode.Random, true, false))
                 {
                     return result;
                 }
-                return -1;
+                return PlanetTile.Invalid;
             };
 
             PlanetTile arg;
@@ -77,12 +81,60 @@ namespace TheEndTimes_Dwarfs
             }
             else if (!TileFinder.TryFindRandomPlayerTile(out arg, allowCaravans, (PlanetTile x) => findTile(x) != -1))
             {
-                tile = -1;
+                tile = PlanetTile.Invalid;
                 return false;
             }
+
             tile = findTile(arg);
-            return tile != -1;
+            return tile != PlanetTile.Invalid;
         }
+
+
+        // Copied from core TileFinder code. Failed on their side. Had to tweak.
+        //private static readonly List<(PlanetTile tile, int traversalDistance)> tmpTiles = new List<(PlanetTile, int)>();
+        //public static bool TryFindPassableTileWithTraversalDistance(
+        //  PlanetTile rootTile,
+        //  int minDist,
+        //  int maxDist,
+        //  out PlanetTile result,
+        //  Predicate<PlanetTile> validator = null,
+        //  bool ignoreFirstTilePassability = false,
+        //  TileFinderMode tileFinderMode = TileFinderMode.Random,
+        //  bool canTraverseImpassable = false,
+        //  bool exitOnFirstTileFound = false)
+        //{
+        //    QuestNode_GetSiteTileImpassible.tmpTiles.Clear();
+        //    rootTile.Layer.Filler.FloodFill(rootTile, (Predicate<PlanetTile>)
+        //        (x => canTraverseImpassable || !Find.World.Impassable(x) || x == rootTile & ignoreFirstTilePassability), (Predicate<PlanetTile, int>)((tile, traversalDistance) =>
+        //            {
+        //                if (traversalDistance > maxDist || traversalDistance < minDist || Find.World.Impassable(tile) || validator != null && !validator(tile))
+        //                    return false;
+        //                QuestNode_GetSiteTileImpassible.tmpTiles.Add((tile, traversalDistance));
+        //                return exitOnFirstTileFound;
+        //            }), int.MaxValue, (IEnumerable<PlanetTile>)null);
+            
+        //    switch (tileFinderMode)
+        //    {
+        //        case TileFinderMode.Random:
+        //            Log.Error("WTF");
+        //            (PlanetTile, int) result1;
+        //            if (((IEnumerable<(PlanetTile, int)>)QuestNode_GetSiteTileImpassible.tmpTiles).TryRandomElement<(PlanetTile, int)>(out result1))
+        //            {
+        //                result = (PlanetTile)result1.Item1;
+        //                return true;
+        //            }
+
+        //            Log.Error(string.Format("Unknown tile distance preference {0}.", (object)tileFinderMode));
+        //            result = PlanetTile.Invalid;
+        //            return false;
+        //    }
+
+        //    result = PlanetTile.Invalid;
+        //    return false;
+        //}
+
+
+
 
         public static bool IsValidTileForNewSettlement(PlanetTile tile, StringBuilder reason = null)
         {

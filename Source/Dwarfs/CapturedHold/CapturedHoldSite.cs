@@ -27,9 +27,9 @@ namespace TheEndTimes_Dwarfs
         {
             if (this.Faction == null)
             {
-                this.SetFaction(this.GetEnemyFaction());
+                this.SetFaction(RH_TET_DwarfDefOf.GetFinalEnemyFaction());
             }
-            
+
             base.SpawnSetup();
             this.caravanAction = new CaravanArrivalAction_CapturedHold((MapParent)this);
             this.capturedHoldComp = this.GetComponent<CapturedHoldComp>();
@@ -55,12 +55,6 @@ namespace TheEndTimes_Dwarfs
                 
                 f.TryAffectGoodwillWith(Faction.OfPlayer, currentGoodwill, true, true, null);
             }
-        }
-
-        private Faction GetEnemyFaction()
-        {
-            Faction f = Find.FactionManager.FirstFactionOfDef(RH_TET_DwarfDefOf.TribeRough);
-            return f;
         }
 
         protected override void Tick()
@@ -250,7 +244,7 @@ namespace TheEndTimes_Dwarfs
             
             List<Pawn> pawnList;
 
-            MapGenHandler.GenerateMap(RH_TET_DwarfDefOf.RH_TET_Dwarfs_CapturedHoldMap, this.Map, out pawnList, true, true, true, true, false, true, true, false, Find.FactionManager.FirstFactionOfDef(RH_TET_DwarfDefOf.TribeRough));
+            MapGenHandler.GenerateMap(RH_TET_DwarfDefOf.RH_TET_Dwarfs_CapturedHoldMap, this.Map, out pawnList, true, true, true, true, false, true, true, false, RH_TET_DwarfDefOf.GetFinalEnemyFaction());
 
             this.ShowHelp();
         }

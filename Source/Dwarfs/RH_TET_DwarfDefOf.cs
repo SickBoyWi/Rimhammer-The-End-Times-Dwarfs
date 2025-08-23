@@ -145,6 +145,23 @@ namespace TheEndTimes_Dwarfs
         public static InspirationDef RH_TET_Dwarfs_Frenzy_Constr;
         public static InspirationDef RH_TET_Dwarfs_Frenzy_Dodge;
 
+        public static Faction GetFinalEnemyFaction()
+        {
+            Faction f = Find.FactionManager.FirstFactionOfDef(RH_TET_DwarfDefOf.TribeRough);
+
+            if (f is null)
+            {
+                foreach (Faction fact in Find.FactionManager.AllFactionsVisible)
+                    if (fact.HostileTo(Faction.OfPlayer) && fact.def.techLevel.Equals(TechLevel.Neolithic))
+                    {
+                        f = fact;
+                        break;
+                    }
+            }
+
+            return f;
+        }
+
         [StaticConstructorOnStartup]
         public static class Textures
         {

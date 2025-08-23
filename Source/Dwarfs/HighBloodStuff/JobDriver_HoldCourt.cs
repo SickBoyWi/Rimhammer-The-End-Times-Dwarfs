@@ -13,6 +13,8 @@ namespace TheEndTimes_Dwarfs
         private static readonly IntRange MoteInterval = new IntRange(300, 500);
         public static readonly Texture2D moteImage1 = ContentFinder<Texture2D>.Get("Mote/RH_TET_Dwarfs_HoldCourtSpeech", true);
         public static readonly Texture2D moteImage2 = ContentFinder<Texture2D>.Get("Mote/RH_TET_Dwarfs_HoldCourtSpeech2", true);
+        public static readonly Texture2D moteImage3 = ContentFinder<Texture2D>.Get("Mote/RH_TET_Dwarfs_HoldCourtSpeech3", true);
+        public static readonly Texture2D moteImage4 = ContentFinder<Texture2D>.Get("Mote/RH_TET_Dwarfs_HoldCourtSpeech4", true);
         private const TargetIndex ThroneIndex = TargetIndex.A;
         private const TargetIndex FacingIndex = TargetIndex.B;
 
@@ -44,10 +46,15 @@ namespace TheEndTimes_Dwarfs
                 this.pawn.skills.Learn(SkillDefOf.Social, 0.3f, false);
                 if (this.pawn.IsHashIntervalTick(JobDriver_HoldCourt.MoteInterval.RandomInRange))
                 {
-                    if (RH_TET_DwarfsMod.random.Next(0, 2) == 1)
+                    int rando = RH_TET_DwarfsMod.random.Next(0, 4);
+                    if (rando == 1)
                         MoteMaker.MakeSpeechBubble(this.pawn, JobDriver_HoldCourt.moteImage1);
-                    else
+                    else if (rando == 2)
                         MoteMaker.MakeSpeechBubble(this.pawn, JobDriver_HoldCourt.moteImage2);
+                    else if (rando == 3)
+                        MoteMaker.MakeSpeechBubble(this.pawn, JobDriver_HoldCourt.moteImage3);
+                    else
+                        MoteMaker.MakeSpeechBubble(this.pawn, JobDriver_HoldCourt.moteImage4);
                 }
                 this.rotateToFace = TargetIndex.B;
             });

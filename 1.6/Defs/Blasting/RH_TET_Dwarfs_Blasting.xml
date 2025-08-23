@@ -118,6 +118,7 @@
 		<stuffCategories>
 			<li>Leathery</li>
 		</stuffCategories>
+		<drawStyleCategory>Conduits</drawStyleCategory>
 		<building Class="TheEndTimes_Dwarfs.BuildingProperties_BlastingWire">
 			<isInert>true</isInert>
 			<isEdifice>false</isEdifice>

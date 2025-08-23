@@ -62,15 +62,9 @@ namespace TheEndTimes_Dwarfs
             if (!CapturedHoldSite.playerWon)
             { 
                 Log.Clear();
-                Faction f = GetEnemyFaction();
-                this.SetMapSpecificJobs(map.mapPawns.SpawnedPawnsInFaction(GetEnemyFaction()), f, map);
+                Faction f = RH_TET_DwarfDefOf.GetFinalEnemyFaction();
+                this.SetMapSpecificJobs(map.mapPawns.SpawnedPawnsInFaction(f), f, map);
             }
-        }
-
-        private Faction GetEnemyFaction()
-        {
-            Faction f = Find.FactionManager.FirstFactionOfDef(RH_TET_DwarfDefOf.TribeRough);
-            return f;
         }
 
         private void SetMapSpecificJobs(List<Pawn> pawnList, Faction f, Map map)

@@ -29,6 +29,7 @@ namespace TheEndTimes_Dwarfs
                 if (c.InBounds(map))
                 {
                     RoofDef roofDef = map.roofGrid.RoofAt(c);
+
                     if (roofDef != null && (!roofDef.isThickRoof || flag1))
                     {
                         if (roofDef.filthLeaving != null)
