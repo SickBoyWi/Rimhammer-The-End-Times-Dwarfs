@@ -4,6 +4,7 @@
 	<BodyPartGroupDef>
 		<defName>RH_TET_Dwarfs_BP_Beards</defName>
 		<label>beards</label>
+		<listOrder>202</listOrder>
 	</BodyPartGroupDef>
 
 	<BodyDef>

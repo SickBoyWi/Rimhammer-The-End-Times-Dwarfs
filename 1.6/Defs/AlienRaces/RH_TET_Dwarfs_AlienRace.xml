@@ -395,6 +395,7 @@
 					<li>RH_TET_Dwarf_Hood</li>
 					<li>RH_TET_Dwarf_Helmet_Hammerer</li>
 					<li>RH_TET_Dwarf_Helmet_LongBeard</li>
+					<li>RH_TET_Dwarf_BeardBauble_A</li>
 				</apparelList>
 				<onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
 				<recipeList>
@@ -893,6 +894,7 @@
 					<li>RH_TET_Dwarf_Hood</li>
 					<li>RH_TET_Dwarf_Helmet_Hammerer</li>
 					<li>RH_TET_Dwarf_Helmet_LongBeard</li>
+					<li>RH_TET_Dwarf_BeardBauble_A</li>
 				</apparelList>
 				<onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
 				<recipeList>

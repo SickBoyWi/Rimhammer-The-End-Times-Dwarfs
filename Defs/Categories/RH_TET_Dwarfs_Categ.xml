@@ -74,6 +74,12 @@
 	</ThingCategoryDef>
 
 	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_Headgear_Beard</defName>
+		<label>beard decoration</label>
+		<parent>RH_TET_Dwarfs_Headgear</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
 		<defName>RH_TET_Dwarfs_ArmorHeadgear</defName>
 		<label>dawi</label>
 		<parent>ArmorHeadgear</parent>

@@ -145,6 +145,10 @@ namespace TheEndTimes_Dwarfs
         public static InspirationDef RH_TET_Dwarfs_Frenzy_Constr;
         public static InspirationDef RH_TET_Dwarfs_Frenzy_Dodge;
 
+        //public static BodyPartGroupDef RH_TET_Dwarfs_BP_Beards;
+
+        //public static ApparelLayerDef RH_TET_Dwarfs_BeardCover;
+
         public static Faction GetFinalEnemyFaction()
         {
             Faction f = Find.FactionManager.FirstFactionOfDef(RH_TET_DwarfDefOf.TribeRough);

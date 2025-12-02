@@ -186,71 +186,210 @@
 		</tradeTags>
 	</ThingDef>
  
-<!-- Saving this here. Will delete once I get a copy of this back to GH.
-	<ThingDef ParentName="RH_TET_Dwarfs_ApparelMakeableBase">
-		<defName>RH_TET_Dwarf_BeardBauble_A</defName>
-		<label>dawi beard bauble</label>
-		<description>A golden bauble worn on the beard of a dwarf. Makes them happy, and grants respect.</description>
+ 
+	<ThingDef Abstract="True" ParentName="RH_TET_Dwarfs_ApparelMakeableBase" Name="RH_TET_Dwarfs_BeardBaubleBase">
 		<techLevel>Medieval</techLevel>
 		<recipeMaker>
-			<researchPrerequisite>RH_TET_Dwarf_Apparel_Advanced</researchPrerequisite>
 			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
-			<skillRequirements>
-				<Crafting>8</Crafting>
-			</skillRequirements>
 		</recipeMaker>
 		<graphicData>
-			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/RHTET_Dwarf_BeardBaubles16</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>.75</drawSize>
 		</graphicData>
-		<costList>
-			<Gold>25</Gold>
-			<Steel>25</Steel>
-		</costList>
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
-			<WorkToMake>4000</WorkToMake>
 			<Mass>0.1</Mass>
 			<StuffEffectMultiplierArmor>0.25</StuffEffectMultiplierArmor>
 			<StuffEffectMultiplierInsulation_Cold>0.05</StuffEffectMultiplierInsulation_Cold>
 			<StuffEffectMultiplierInsulation_Heat>0.05</StuffEffectMultiplierInsulation_Heat>
 			<EquipDelay>1.0</EquipDelay>
 		</statBases>
-		<equippedStatOffsets>
-			<MentalBreakThreshold>-0.1</MentalBreakThreshold>
-			<SocialImpact>.05</SocialImpact>
-		</equippedStatOffsets>
 		<generateCommonality>.05</generateCommonality>
 		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
 			<bodyPartGroups>
 				<li>RH_TET_Dwarfs_BP_Beards</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/RHTET_Dwarf_BeardBaubles16</wornGraphicPath>
 			<layers>
-				<li>Overhead</li>
+				<li>RH_TET_Dwarfs_BeardCover</li>
 			</layers>
-			<tags>
-				<li>RH_TET_Dwarf_Apparel_High</li>
-			</tags>
-			<wornGraphicData>
-				<north>
-					<offset>(0,0)</offset>
-				</north>
-				<south>
-					<offset>(0,0)</offset>
-				</south>
-				<east>
-					<offset>(0,0)</offset>
-				</east>
-				<west>
-					<offset>(0,0)</offset>
-				</west>
-			</wornGraphicData>			
+			<!--
+			<drawData>
+				<defaultData>
+					<layer>61</layer>
+				</defaultData>
+			</drawData>
+			<renderSkipFlags>
+				<li>None</li>
+			</renderSkipFlags>
+			-->
 		</apparel>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Apparel_High</li>
 		</tradeTags>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Dwarfs_Headgear_Beard</li>
+		</thingCategories>
 	</ThingDef>
--->
+ 
+	<ThingDef ParentName="RH_TET_Dwarfs_BeardBaubleBase">
+		<defName>RH_TET_Dwarf_BeardBauble_A</defName>
+		<label>dawi beard bauble</label>
+		<description>A golden bauble worn on the beard of a dwarf. Makes them happy, and grants respect.</description>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Apparel_Advanced</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/RHTET_Dwarf_BeardBaubles1</texPath>
+		</graphicData>
+		<costList>
+			<Gold>25</Gold>
+			<Steel>25</Steel>
+		</costList>
+		<statBases>
+			<WorkToMake>4000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+			<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+			<SocialImpact>.05</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/RHTET_Dwarf_BeardBaubles1</wornGraphicPath>
+			<tags>
+				<li>RH_TET_Dwarf_Apparel_High</li>
+			</tags>		
+		</apparel>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Dwarfs_BeardBaubleBase">
+		<defName>RH_TET_Dwarf_BeardBauble_B</defName>
+		<label>dawi beard bauble</label>
+		<description>A golden bauble worn on the beard of a dwarf. Makes them happy, and grants respect.</description>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Apparel_Advanced</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/RHTET_Dwarf_BeardBaubles3</texPath>
+		</graphicData>
+		<costList>
+			<Gold>25</Gold>
+			<Steel>25</Steel>
+		</costList>
+		<statBases>
+			<WorkToMake>4000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+			<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+			<SocialImpact>.05</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/RHTET_Dwarf_BeardBaubles3</wornGraphicPath>
+			<tags>
+				<li>RH_TET_Dwarf_Apparel_High</li>
+			</tags>		
+		</apparel>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Dwarfs_BeardBaubleBase">
+		<defName>RH_TET_Dwarf_BeardBauble_C</defName>
+		<label>dawi beard bauble</label>
+		<description>A golden bauble worn on the beard of a dwarf. Makes them happy, and grants respect.</description>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Apparel_Advanced</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/RHTET_Dwarf_BeardBaubles6</texPath>
+		</graphicData>
+		<costList>
+			<Gold>25</Gold>
+			<Steel>25</Steel>
+		</costList>
+		<statBases>
+			<WorkToMake>4000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+			<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+			<SocialImpact>.05</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/RHTET_Dwarf_BeardBaubles6</wornGraphicPath>
+			<tags>
+				<li>RH_TET_Dwarf_Apparel_High</li>
+			</tags>		
+		</apparel>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Dwarfs_BeardBaubleBase">
+		<defName>RH_TET_Dwarf_BeardBauble_D</defName>
+		<label>dawi beard bauble</label>
+		<description>A golden bauble worn on the beard of a dwarf. Makes them happy, and grants respect.</description>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Apparel_Advanced</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/RHTET_Dwarf_BeardBaubles16</texPath>
+		</graphicData>
+		<costList>
+			<Gold>25</Gold>
+			<Steel>25</Steel>
+		</costList>
+		<statBases>
+			<WorkToMake>4000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+			<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+			<SocialImpact>.05</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/RHTET_Dwarf_BeardBaubles16</wornGraphicPath>
+			<tags>
+				<li>RH_TET_Dwarf_Apparel_High</li>
+			</tags>		
+		</apparel>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Dwarfs_BeardBaubleBase">
+		<defName>RH_TET_Dwarf_BeardBauble_EA</defName>
+		<label>dawi beard bauble</label>
+		<description>A golden bauble worn on the beard of a dwarf. Makes them happy, and grants respect.</description>
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Dwarf_Apparel_Advanced</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/RHTET_Dwarf_BeardBaubles20</texPath>
+		</graphicData>
+		<costList>
+			<Gold>25</Gold>
+			<Steel>25</Steel>
+		</costList>
+		<statBases>
+			<WorkToMake>4000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+			<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+			<SocialImpact>.05</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/RHTET_Dwarf_BeardBaubles20</wornGraphicPath>
+			<tags>
+				<li>RH_TET_Dwarf_Apparel_High</li>
+			</tags>		
+		</apparel>
+	</ThingDef>
+
 </Defs>
