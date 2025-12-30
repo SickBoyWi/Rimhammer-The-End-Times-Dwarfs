@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Beard\RH_TET_Dwarfs_BodyPartGroupDefOf.cs" />
     <Compile Include="Beard\RH_TET_Dwarfs_ApparelLayerDefOf.cs" />
+    <Compile Include="Beard\Recipe_RemoveBeard.cs" />
     <Compile Include="Beard\ThoughtWorker_MissingBeardSad.cs" />
     <Compile Include="Blasting\Alert_BlastingWireFailure.cs" />
     <Compile Include="Blasting\Building_AdvancedBlastingExplosive.cs" />

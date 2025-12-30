@@ -714,6 +714,7 @@
 			<li>RH_TET_Dwarf_Apparel_Low</li>
 			<li>RH_TET_Dwarf_Armor_Low</li>
 			<li>RH_TET_Dwarf_Apparel_Warm</li>
+			<li>RH_TET_Dwarf_Apparel_Thunderer</li>
 		</apparelTags>
 		<apparelMoney>450~550</apparelMoney>
 		<apparelAllowHeadgearChance>.75</apparelAllowHeadgearChance>

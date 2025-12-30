@@ -4,7 +4,7 @@
 	<ApparelLayerDef>
 		<defName>RH_TET_Dwarfs_BeardCover</defName>
 		<label>beard</label>
-		<drawOrder>502</drawOrder>
+		<drawOrder>505</drawOrder>
 	</ApparelLayerDef>
 
 </Defs>
