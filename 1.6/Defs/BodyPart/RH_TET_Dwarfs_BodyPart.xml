@@ -68,9 +68,23 @@
 		<bleedRate>0</bleedRate>
 		<beautyRelated>true</beautyRelated>
 		<skinCovered>false</skinCovered>
+	</BodyPartDef>
+	
+	<BodyPartDef Name="RH_TET_Dwarfs_JawBeard">
+		<defName>RH_TET_Dwarfs_BP_JawBeard</defName>
+		<label>outer jaw</label>
+		<hitPoints>100</hitPoints>
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>.05</permanentInjuryChanceFactor>
+		<skinCovered>true</skinCovered>
+		<solid>true</solid>
+		<beautyRelated>false</beautyRelated>
+		<bleedRate>0</bleedRate>
+		<!--
 		<spawnThingOnRemoved>RH_TET_Dwarfs_BodyPart_Beard</spawnThingOnRemoved>
 		<forceAlwaysRemovable>false</forceAlwaysRemovable>
 		<removeRecipeLabelOverride>shave</removeRecipeLabelOverride>
-	</BodyPartDef>
-
+		-->
+	  </BodyPartDef>
+  
 </Defs>

@@ -73,66 +73,265 @@ namespace TheEndTimes_Dwarfs
             }
         }
 
-        [HarmonyPatch(typeof(Recipe_RemoveBodyPart), "ApplyOnPawn")]
-        internal static class Patch_RemoveBodyPart
-        {
-            // Assist with beard removal thoughts.
-            private static bool Prefix(ref Recipe_RemoveBodyPart __instance,
-                    ref Pawn pawn,
-                    ref BodyPartRecord part,
-                    ref Pawn billDoer,
-                    ref List<Thing> ingredients,
-                    ref Bill bill)
-            {
-                if (part.def != RH_TET_DwarfDefOf.RH_TET_Dwarfs_BP_Beard)
-                {
-                    return true;
-                }
+        //// Beard cover stuff.
+        //[HarmonyPatch(typeof(ApparelGraphicRecordGetter), "TryGetGraphicApparel")]
+        //internal static class Patch_ApparelGraphicRecordGetter_TryGetGraphicApparel
+        //{
+        //    private static bool Prefix(bool __result,
+        //          Apparel apparel,
+        //          BodyTypeDef bodyType,
+        //          ref ApparelGraphicRecord rec)
+        //    {
+        //        if (apparel != null && apparel.def != null && apparel.def.defName != null && apparel.def.defName.Contains("Dwarf_BeardBauble"))
+        //        {
+        //            if (bodyType == null)
+        //            {
+        //                Log.Error("[RH_TET_Dwarfs]Getting apparel graphic with undefined body type.");
+        //                bodyType = BodyTypeDefOf.Male;
+        //            }
+        //            if (apparel.WornGraphicPath.NullOrEmpty())
+        //            {
+        //                rec = new ApparelGraphicRecord((Graphic)null, (Apparel)null);
+        //                __result = false;
+        //            }
 
-                if (billDoer != null)
-                {
-                    MedicalRecipesUtility.SpawnNaturalPartIfClean(pawn, part, billDoer.Position, billDoer.Map);
-                    MedicalRecipesUtility.SpawnThingsFromHediffs(pawn, part, billDoer.Position, billDoer.Map);
-                }
+        //            string path;
+        //            if (apparel.def.apparel.LastLayer == RH_TET_Dwarfs_ApparelLayerDefOf.RH_TET_Dwarfs_BeardCover)
+        //            {
+        //                path = apparel.WornGraphicPath;
+        //                Shader shader = ShaderDatabase.Cutout;
+        //                if (apparel.def.apparel.useWornGraphicMask)
+        //                {
+        //                    shader = ShaderDatabase.CutoutComplex;
+        //                }
+        //                Graphic graphic = GraphicDatabase.Get<Graphic_Multi>(path, shader, apparel.def.graphicData.drawSize, apparel.DrawColor);
+        //                rec = new ApparelGraphicRecord(graphic, apparel);
 
-                __instance.DamagePart(pawn, part);
-                pawn.Drawer.renderer.SetAllGraphicsDirty();
+        //                __result = true;
+        //                return false;
+        //            }
+        //        }
 
-                return false;
-            }
-        }
+        //        return true;
+        //    }
+        //}
 
-        [HarmonyPatch(typeof(PawnGenerator), "GeneratePawn", (new[] { typeof(PawnGenerationRequest) }))]
-        internal static class Patch_GeneratePawn
-        {
-            private static void Postfix(Pawn __result)
-            {
-                // Remove beard on female dwarfs.
-                if (!__result.RaceProps.Humanlike || __result.RaceProps.IsMechanoid || __result.gender == Gender.Female || !DwarfsUtil.IsDwarf(__result))
-                {
-                    if (!__result.health.hediffSet.PartIsMissing(__result.RaceProps.body.AllParts.FirstOrFallback(part => part.def == RH_TET_DwarfDefOf.RH_TET_Dwarfs_BP_Beard)))
-                    {
-                        List<BodyPartRecord> parts = __result.RaceProps.body.GetPartsWithDef(RH_TET_DwarfDefOf.RH_TET_Dwarfs_BP_Beard);
-                        BodyPartRecord part;
-                        if (parts.Count > 0)
-                            part = parts.First();
-                        else
-                            return;
+        //// Beard cover stuff
+        //[HarmonyPatch(typeof(ApparelUtility))]
+        //static class CanWearTogether
+        //{
+        //    [HarmonyPatch(typeof(ApparelUtility), "CanWearTogether")]
+        //    [HarmonyPrefix]
+        //    static bool Prefix(ThingDef A, ThingDef B, BodyDef body, ref bool __result)
+        //    {
+        //        ApparelProperties aProps = A.apparel;
+        //        ApparelProperties bProps = B.apparel;
 
-                        HediffDef hediffDefFromDamage = DamageDefOf.SurgicalCut.hediff;
-                        Hediff_MissingPart hediffMissingPart = (Hediff_MissingPart)HediffMaker.MakeHediff(HediffDefOf.MissingBodyPart, __result, (BodyPartRecord)null);
-                        hediffMissingPart.lastInjury = hediffDefFromDamage;
-                        hediffMissingPart.Part = part;
-                        hediffMissingPart.IsFresh = false;
+        //        BodyPartGroupDef beardCover = RH_TET_Dwarfs_BodyPartGroupDefOf.RH_TET_Dwarfs_BP_Beards;
+        //        List<BodyPartRecord> beardCoverIncludes = new List<BodyPartRecord>(from x in body.AllParts where x.depth == BodyPartDepth.Outside && x.groups.Contains(beardCover) select x);
 
-                        __result.health.AddHediff((Hediff)hediffMissingPart, part, new DamageInfo?(), (DamageWorker.DamageResult)null);
+        //        // Prevent pawn selection of two pieces of the same clothing (fixes bugs with odd pans types: hiver, android)
+        //        if (A.defName == B.defName)
+        //        {
+        //            __result = false;
+        //            return false;
+        //        }
 
-                        //__result.TakeDamage(new DamageInfo(DamageDefOf.SurgicalCut, 99999f, 999f, -1f, (Thing)null, part, (ThingDef)null, DamageInfo.SourceCategory.ThingOrUnknown, (Thing)null, false, false, QualityCategory.Normal, true));
-                        //__result.health.RestorePart(part, (Hediff)null, true);
-                    }
-                }
-            }
-        }
+        //        if (!aProps.layers.Contains(RH_TET_Dwarfs_ApparelLayerDefOf.RH_TET_Dwarfs_BeardCover) && !bProps.layers.Contains(RH_TET_Dwarfs_ApparelLayerDefOf.RH_TET_Dwarfs_BeardCover))
+        //        {
+        //            return true;
+        //        }
+
+        //        if (aProps.layers.Contains(RH_TET_Dwarfs_ApparelLayerDefOf.RH_TET_Dwarfs_BeardCover) && bProps.layers.Contains(RH_TET_Dwarfs_ApparelLayerDefOf.RH_TET_Dwarfs_BeardCover))
+        //        {
+        //            __result = false;
+        //            return false;
+        //        }
+
+        //        if (bProps.layers.Contains(RH_TET_Dwarfs_ApparelLayerDefOf.RH_TET_Dwarfs_BeardCover))
+        //        {
+        //            // Swap apparel.
+        //            ThingDef C = A;
+        //            A = B;
+        //            B = C;
+        //        }
+
+        //        aProps = A.apparel;
+        //        bProps = B.apparel;
+
+        //        foreach (BodyPartGroupDef group in aProps.bodyPartGroups)
+        //        {
+        //            if (group.defName == "RH_TET_Dwarfs_BP_Beards")
+        //            {
+        //                // Check that other apparel does not include parts that BeardCover includes.
+        //                foreach (BodyPartGroupDef groupDef in bProps.bodyPartGroups)
+        //                {
+        //                    List<BodyPartRecord> otherIncludes = new List<BodyPartRecord>(from x in body.AllParts where x.depth == BodyPartDepth.Outside && x.groups.Contains(groupDef) select x);
+        //                    foreach (BodyPartRecord bpr in otherIncludes)
+        //                    {
+        //                        if (bpr.Label != "head")
+        //                        {
+        //                            if (beardCoverIncludes.Contains(bpr))
+        //                            {
+        //                                __result = false;
+        //                                return false;
+        //                            }
+        //                        }
+        //                    }
+        //                }
+        //            }
+
+        //        }
+        //        return true;
+        //    }
+        //}
+
+        
+        //[HarmonyPatch(typeof(PawnApparelGenerator))]
+        //static class IsHeadgear
+        //{
+        //    [HarmonyPatch(typeof(PawnApparelGenerator), "IsHeadgear")]
+        //    [HarmonyPrefix]
+        //    static bool IsHeadgear_prefix(ThingDef td, ref bool __result)
+        //    {
+        //        StatDef tempStatDef = StatDefOf.ComfyTemperatureMax;
+        //        BodyPartGroupDef beardsBodyPart = RH_TET_Dwarfs_BodyPartGroupDefOf.RH_TET_Dwarfs_BP_Beards;
+
+        //        if (td.apparel.bodyPartGroups.Contains(beardsBodyPart))
+        //        {
+        //            __result = true;
+        //            return false;
+        //        }
+        //        return true;
+        //    }
+        //}
+
+        //// Beard cover stuff.
+        //[HarmonyPatch(typeof(PawnApparelGenerator), "IsHeadgear")]
+        //internal static class Patch_PawnApparelGenerator_IsHeadgear
+        //{
+        //    [HarmonyPrefix]
+        //    static bool Dwarfs_IsHeadgear_prefix(ThingDef td, ref bool __result)
+        //    {
+        //        BodyPartGroupDef beardsBodyPartGroupDef = RH_TET_Dwarfs_BodyPartGroupDefOf.RH_TET_Dwarfs_BP_Beards;
+
+        //        if (td != null && td.apparel != null && td.apparel.bodyPartGroups != null 
+        //            && td.apparel.bodyPartGroups.Contains(beardsBodyPartGroupDef))
+        //        {
+        //            __result = true;
+        //            return false;
+        //        }
+        //        __result = false;
+        //        return true;
+        //    }
+        //}
+
+        //// Beard cover stuff.
+        //[HarmonyPatch]
+        //public class PairOverlapsAnything
+        //{
+
+        //    static System.Reflection.MethodBase TargetMethod()
+        //    {
+        //        return AccessTools.Method(typeof(PawnApparelGenerator).GetNestedType("PossibleApparelSet", BindingFlags.NonPublic | BindingFlags.Instance), "PairOverlapsAnything");
+        //    }
+
+        //    [HarmonyPrefix]
+        //    public static bool PairOverlapsAnything_Prefix(List<ThingStuffPair> ___aps, HashSet<ApparelUtility.LayerGroupPair> ___lgps, BodyDef ___body, ThingStuffPair pair, ref bool __result)
+        //    {
+        //        if (!___lgps.Any<ApparelUtility.LayerGroupPair>())
+        //        {
+        //            return false;
+        //        }
+
+        //        BodyPartGroupDef beardCover = RH_TET_Dwarfs_BodyPartGroupDefOf.RH_TET_Dwarfs_BP_Beards;
+
+        //        if (pair.thing.apparel.bodyPartGroups.Contains(beardCover))
+        //        {
+
+        //            bool overlaps = false;
+        //            foreach (ThingStuffPair otherApparel in ___aps)
+        //            {
+        //                if (otherApparel != pair)
+        //                {
+        //                    if (!ApparelUtility.CanWearTogether(DefDatabase<ThingDef>.GetNamed(pair.thing.defName), DefDatabase<ThingDef>.GetNamed(pair.thing.defName), ___body))
+        //                    {
+        //                        overlaps = true;
+        //                    }
+        //                }
+        //            }
+        //            __result = overlaps;
+        //            return false;
+        //        }
+        //        else
+        //        {
+
+        //            return true;
+        //        }
+        //    }
+        //}
+
+        //// Beard stuff - beard removal thoughts.
+        //[HarmonyPatch(typeof(Recipe_RemoveBodyPart), "ApplyOnPawn")]
+        //internal static class Patch_RemoveBodyPart
+        //{
+        //    private static bool Prefix(ref Recipe_RemoveBodyPart __instance,
+        //            ref Pawn pawn,
+        //            ref BodyPartRecord part,
+        //            ref Pawn billDoer,
+        //            ref List<Thing> ingredients,
+        //            ref Bill bill)
+        //    {
+        //        if (part.def != RH_TET_DwarfDefOf.RH_TET_Dwarfs_BP_Beard)
+        //        {
+        //            return true;
+        //        }
+
+        //        if (billDoer != null)
+        //        {
+        //            MedicalRecipesUtility.SpawnNaturalPartIfClean(pawn, part, billDoer.Position, billDoer.Map);
+        //            MedicalRecipesUtility.SpawnThingsFromHediffs(pawn, part, billDoer.Position, billDoer.Map);
+        //        }
+
+        //        __instance.DamagePart(pawn, part);
+        //        pawn.Drawer.renderer.SetAllGraphicsDirty();
+
+        //        return false;
+        //    }
+        //}
+
+        //// Beard stuff - remove beards on females.  TODO: DELETE
+        //[HarmonyPatch(typeof(PawnGenerator), "GeneratePawn", (new[] { typeof(PawnGenerationRequest) }))]
+        //internal static class Patch_GeneratePawn
+        //{
+        //    private static void Postfix(Pawn __result)
+        //    {
+        //        // Remove beard on female dwarfs.
+        //        if (!__result.RaceProps.Humanlike || __result.RaceProps.IsMechanoid || __result.gender == Gender.Female || !DwarfsUtil.IsDwarf(__result))
+        //        {
+        //            if (!__result.health.hediffSet.PartIsMissing(__result.RaceProps.body.AllParts.FirstOrFallback(part => part.def == RH_TET_DwarfDefOf.RH_TET_Dwarfs_BP_Beard)))
+        //            {
+        //                List<BodyPartRecord> parts = __result.RaceProps.body.GetPartsWithDef(RH_TET_DwarfDefOf.RH_TET_Dwarfs_BP_Beard);
+        //                BodyPartRecord part;
+        //                if (parts.Count > 0)
+        //                    part = parts.First();
+        //                else
+        //                    return;
+
+        //                HediffDef hediffDefFromDamage = DamageDefOf.SurgicalCut.hediff;
+        //                Hediff_MissingPart hediffMissingPart = (Hediff_MissingPart)HediffMaker.MakeHediff(HediffDefOf.MissingBodyPart, __result, (BodyPartRecord)null);
+        //                hediffMissingPart.lastInjury = hediffDefFromDamage;
+        //                hediffMissingPart.Part = part;
+        //                hediffMissingPart.IsFresh = false;
+
+        //                __result.health.AddHediff((Hediff)hediffMissingPart, part, new DamageInfo?(), (DamageWorker.DamageResult)null);
+
+        //                //__result.TakeDamage(new DamageInfo(DamageDefOf.SurgicalCut, 99999f, 999f, -1f, (Thing)null, part, (ThingDef)null, DamageInfo.SourceCategory.ThingOrUnknown, (Thing)null, false, false, QualityCategory.Normal, true));
+        //                //__result.health.RestorePart(part, (Hediff)null, true);
+        //            }
+        //        }
+        //    }
+        //}
 
         [HarmonyPatch(typeof(InfestationCellFinder))]
         [HarmonyPatch("TryFindCell")]
@@ -565,51 +764,6 @@ namespace TheEndTimes_Dwarfs
                     __result.Add((object)highBlood);
             }
         }
-
-        // Removed for 1.6.
-        //[HarmonyPatch(typeof(FloatMenuMakerMap), "AddHumanlikeOrders")]
-        //static class Patch_FloatMenuMakerMap_AddHumanlikeOrders
-        //{
-        //    static void Postfix(Vector3 clickPos, Pawn pawn, List<FloatMenuOption> opts)
-        //    {
-        //        if (DwarfsUtil.IsDwarf(pawn))
-        //        {
-        //            if ((RH_TET_DwarfsMod.king != null && RH_TET_DwarfsMod.king.Equals(pawn))
-        //                || (RH_TET_DwarfsMod.thanes != null && RH_TET_DwarfsMod.thanes.Count > 0 && RH_TET_DwarfsMod.thanes.Contains(pawn)))
-        //            {
-        //                CompDwarfHighBlood comp = pawn.TryGetComp<CompDwarfHighBlood>();
-
-        //                if (comp == null)
-        //                    Log.Error("Dwarf has null high blood comp.");
-                        
-        //                IntVec3 c = IntVec3.FromVector3(clickPos);
-
-        //                foreach (Thing thing in c.GetThingList(pawn.Map))
-        //                {
-        //                    Thing t = thing;
-        //                    if ((t.def.ingestible != null && pawn.RaceProps.CanEverEat(t) && t.IngestibleNow) && !(t.def.IsNonMedicalDrug && pawn.IsTeetotaler()))
-        //                    {
-        //                        if (DwarfsUtil.InappropriateForHighBlood(t.def, pawn, true))
-        //                        {
-        //                            FloatMenuOption fmoSave = null;
-        //                            foreach (FloatMenuOption fmo in opts)
-        //                            {
-        //                                if (fmo.Label.Contains(t.LabelShort))
-        //                                {
-        //                                    fmoSave = fmo;
-        //                                    break;
-        //                                }
-        //                            }
-
-        //                            fmoSave.Label += ( ": " + "RH_TET_Dwarfs_HighBloodFoodBad".Translate((NamedArgument)comp.highBloodComp.GetCurrentHighBlood().GetLabelFor(pawn)));
-        //                            fmoSave.Disabled = true;
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
 
         [HarmonyPatch(typeof(Mineable), "TrySpawnYield", new Type[] { typeof(Map), typeof(bool), typeof(Pawn)})]
         static class Patch_Mineable_TrySpawnYield

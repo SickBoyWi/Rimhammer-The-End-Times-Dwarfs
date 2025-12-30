@@ -247,7 +247,7 @@
 
 							<conditions>
 								<BodyPart>
-									<bodyPart>RH_TET_Dwarfs_BP_Beard</bodyPart>
+									<bodyPart>RH_TET_Dwarfs_BP_JawBeard</bodyPart>
 									<drawWithoutPart>false</drawWithoutPart>
 								</BodyPart>
 								<Posture>
@@ -395,6 +395,20 @@
 					<li>RH_TET_Dwarf_Hood</li>
 					<li>RH_TET_Dwarf_Helmet_Hammerer</li>
 					<li>RH_TET_Dwarf_Helmet_LongBeard</li>
+					<li>RH_TET_Dwarf_BeardBauble_Miner</li>
+					<li>RH_TET_Dwarf_BeardBauble_Thunderer</li>
+					<li>RH_TET_Dwarf_BeardBauble_Warrior</li>
+					<li>RH_TET_Dwarf_BeardBauble_Slayer</li>
+					<li>RH_TET_Dwarf_BeardBauble_Hammerer</li>
+					<li>RH_TET_Dwarf_BeardBauble_Ironbreaker</li>
+					<li>RH_TET_Dwarf_BeardBauble_LongBeard</li>
+					<li>RH_TET_Dwarf_BeardBauble_Ranger</li>
+					<li>RH_TET_Dwarf_BeardBauble_Engineer</li>
+					<li>RH_TET_Dwarf_BeardBauble_Doomseeker</li>
+					<li>RH_TET_Dwarf_BeardBauble_RuneSmith</li>
+					<li>RH_TET_Dwarf_BeardBauble_Thane</li>
+					<li>RH_TET_Dwarf_BeardBauble_Lord</li>
+					<li>RH_TET_Dwarf_BeardBauble_DaemonSlayer</li>
 				</apparelList>
 				<onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
 				<recipeList>
@@ -574,6 +588,7 @@
 			<li>RemoveBodyPart</li>
 			<li>Euthanize</li>
 			<li>Anesthetize</li>
+			<li>RH_TET_Dwarfs_RemoveBeard</li>
 		</recipes>
 	</AlienRace.ThingDef_AlienRace>
   
@@ -745,7 +760,7 @@
 
 							<conditions>
 								<BodyPart>
-									<bodyPart>RH_TET_Dwarfs_BP_Beard</bodyPart>
+									<bodyPart>RH_TET_Dwarfs_BP_JawBeard</bodyPart>
 									<drawWithoutPart>false</drawWithoutPart>
 								</BodyPart>
 								<Posture>
@@ -893,6 +908,20 @@
 					<li>RH_TET_Dwarf_Hood</li>
 					<li>RH_TET_Dwarf_Helmet_Hammerer</li>
 					<li>RH_TET_Dwarf_Helmet_LongBeard</li>
+					<li>RH_TET_Dwarf_BeardBauble_Miner</li>
+					<li>RH_TET_Dwarf_BeardBauble_Thunderer</li>
+					<li>RH_TET_Dwarf_BeardBauble_Warrior</li>
+					<li>RH_TET_Dwarf_BeardBauble_Slayer</li>
+					<li>RH_TET_Dwarf_BeardBauble_Hammerer</li>
+					<li>RH_TET_Dwarf_BeardBauble_Ironbreaker</li>
+					<li>RH_TET_Dwarf_BeardBauble_LongBeard</li>
+					<li>RH_TET_Dwarf_BeardBauble_Ranger</li>
+					<li>RH_TET_Dwarf_BeardBauble_Engineer</li>
+					<li>RH_TET_Dwarf_BeardBauble_Doomseeker</li>
+					<li>RH_TET_Dwarf_BeardBauble_RuneSmith</li>
+					<li>RH_TET_Dwarf_BeardBauble_Thane</li>
+					<li>RH_TET_Dwarf_BeardBauble_Lord</li>
+					<li>RH_TET_Dwarf_BeardBauble_DaemonSlayer</li>
 				</apparelList>
 				<onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
 				<recipeList>
@@ -1073,6 +1102,7 @@
 			<li>RemoveBodyPart</li>
 			<li>Euthanize</li>
 			<li>Anesthetize</li>
+			<li>RH_TET_Dwarfs_RemoveBeard</li>
 		</recipes>
 	</AlienRace.ThingDef_AlienRace>
 </Defs>

@@ -4,6 +4,7 @@
 	<BodyPartGroupDef>
 		<defName>RH_TET_Dwarfs_BP_Beards</defName>
 		<label>beards</label>
+		<listOrder>202</listOrder>
 	</BodyPartGroupDef>
 
 	<BodyDef>
@@ -221,11 +222,10 @@
 											</groups>
 										</li>
 										<li>
-											<def>RH_TET_Dwarfs_BP_Beard</def>
-											<coverage>0.10</coverage>
+											<def>RH_TET_Dwarfs_BP_JawBeard</def>
+											<coverage>0.01</coverage>
 											<depth>Outside</depth>
 											<groups>
-												<li>FullHead</li>
 												<li>RH_TET_Dwarfs_BP_Beards</li>
 											</groups>
 										</li>

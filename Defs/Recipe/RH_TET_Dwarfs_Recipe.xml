@@ -1161,6 +1161,33 @@
 		<researchPrerequisite>RH_TET_Dwarfs_RepairAdvanced</researchPrerequisite>
 	</RecipeDef>
 
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Dwarfs_RemoveBeard</defName>
+		<label>shave beard</label>
+		<description>Remove a dwarfs beard. No dwarf would willingly allow this, thus sedation is required.</description>
+		<workerClass>TheEndTimes_Dwarfs.Recipe_RemoveBeard</workerClass>
+		<jobString>Removing beard.</jobString>
+		<workAmount>2000</workAmount>
+		<surgerySuccessChanceFactor>2.0</surgerySuccessChanceFactor>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<genderPrerequisite>Male</genderPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
 	<RecipeDef>
 		<defName>RH_TET_Dwarf_BeardProcess</defName>
 		<label>process dawi beard</label>
