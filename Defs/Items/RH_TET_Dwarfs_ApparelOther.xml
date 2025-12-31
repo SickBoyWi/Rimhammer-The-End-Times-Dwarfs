@@ -189,7 +189,14 @@
 	<ThingDef Abstract="True" ParentName="RH_TET_Dwarfs_ApparelMakeableBase" Name="RH_TET_Dwarfs_BeardBaubleBase">
 		<techLevel>Medieval</techLevel>
 		<recipeMaker>
-			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+			<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers Inherit="False">
+				<li>RH_TET_TableSmithy</li>
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+			</recipeUsers>
 		</recipeMaker>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
