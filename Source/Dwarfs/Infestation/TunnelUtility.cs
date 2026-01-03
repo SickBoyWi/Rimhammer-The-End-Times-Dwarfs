@@ -38,7 +38,7 @@ namespace TheEndTimes_Dwarfs
                     List<Thing> thingList = c.GetThingList(map);
                     for (int index2 = 0; index2 < thingList.Count; ++index2)
                     {
-                        if (thingList[index2].Faction == Faction.OfInsects && !TunnelUtility.AnyTunnelPreventsClaiming(thingList[index2]) && !(thingList[index2] is Pawn))
+                        if (thingList[index2].Faction == DwarfsUtil.GetInsectsOrSkavenFaction() && !TunnelUtility.AnyTunnelPreventsClaiming(thingList[index2]) && !(thingList[index2] is Pawn))
                             thingList[index2].SetFaction((Faction)null, (Pawn)null);
                     }
                 }

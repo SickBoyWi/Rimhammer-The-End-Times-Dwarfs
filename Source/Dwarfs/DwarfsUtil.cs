@@ -134,6 +134,21 @@ namespace TheEndTimes_Dwarfs
             return buildingThrone;
         }
 
+        public static Faction GetInsectsOrSkavenFaction()
+        {
+            Faction newFact = Faction.OfInsects;
+
+            if (Find.FactionManager.AllFactions.Any(f => f == newFact))
+                return newFact;
+
+            Faction newSFact = Find.FactionManager.AllFactions.First(f => f.def.defName == "RH_TET_Skaven_UnderEmpireFaction");
+
+            if (newSFact != null)
+                newFact = newSFact;
+
+            return newFact;
+        }
+
         public static bool ShouldBecomeHighMaintenanceOnHighBlood(Pawn p)
         {
             TraitSet traits = p.story?.traits;

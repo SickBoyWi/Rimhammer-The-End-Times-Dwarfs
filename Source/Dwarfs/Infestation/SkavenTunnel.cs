@@ -79,7 +79,7 @@ namespace TheEndTimes_Dwarfs
             base.SpawnSetup(map, respawningAfterLoad);
             if (this.Faction != null)
                 return;
-            this.SetFaction(Faction.OfInsects, (Pawn)null);
+            this.SetFaction(DwarfsUtil.GetInsectsOrSkavenFaction(), (Pawn)null);
         }
 
         protected override void Tick()

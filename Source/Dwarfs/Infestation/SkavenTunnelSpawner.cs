@@ -84,7 +84,7 @@ namespace TheEndTimes_Dwarfs
             if (this.spawnTunnel)
             {
                 SkavenTunnel tunnel = (SkavenTunnel)GenSpawn.Spawn(ThingMaker.MakeThing(RH_TET_DwarfDefOf.RH_TET_SkavenTunnel, (ThingDef)null), position, map, WipeMode.Vanish);
-                tunnel.SetFaction(Faction.OfInsects, (Pawn)null);
+                tunnel.SetFaction(DwarfsUtil.GetInsectsOrSkavenFaction(), (Pawn)null);
                 tunnel.questTags = this.questTags;
                 foreach (CompSpawner comp in tunnel.GetComps<CompSpawner>())
                 {
@@ -112,7 +112,7 @@ namespace TheEndTimes_Dwarfs
                 }
                 if (SkavenTunnel.spawnablePawnKinds.Where<PawnKindDef>((Func<PawnKindDef, bool>)(x => (double)x.combatPower <= (double)pointsLeft)).TryRandomElement<PawnKindDef>(out result2))
                 {
-                    Pawn pawn = PawnGenerator.GeneratePawn(result2, Faction.OfInsects);
+                    Pawn pawn = PawnGenerator.GeneratePawn(result2, DwarfsUtil.GetInsectsOrSkavenFaction());
                     GenSpawn.Spawn((Thing)pawn, CellFinder.RandomClosewalkCellNear(position, map, 2, (Predicate<IntVec3>)null), map, WipeMode.Vanish);
                     pawn.mindState.spawnedByInfestationThingComp = this.spawnedByInfestationThingComp;
                     list.Add(pawn);
@@ -122,7 +122,7 @@ namespace TheEndTimes_Dwarfs
             }
             if (!list.Any<Pawn>())
                 return;
-            LordMaker.MakeNewLord(Faction.OfInsects, (LordJob)new LordJob_AssaultColony(Faction.OfInsects, true, false, false, false, true), map, (IEnumerable<Pawn>)list);
+            LordMaker.MakeNewLord(DwarfsUtil.GetInsectsOrSkavenFaction(), (LordJob)new LordJob_AssaultColony(DwarfsUtil.GetInsectsOrSkavenFaction(), true, false, false, false, true), map, (IEnumerable<Pawn>)list);
         }
 
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
