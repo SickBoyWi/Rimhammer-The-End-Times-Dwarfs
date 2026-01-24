@@ -31,6 +31,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/DwarfEye</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>10</costStuffCount>
 		<stuffCategories>
@@ -255,6 +256,7 @@
 		<graphicData>
 			<texPath>Things/Building/Misc/RH_TET_Dwarf_MiningHelmetLight</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<selectable>false</selectable>
 		<building>
@@ -600,6 +602,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Slayer</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>70</costStuffCount>
 		<stuffCategories>
@@ -639,6 +642,7 @@
 			<defaultOutfitTags>
 				<li>RH_TET_DwarfSlayer</li>
 			</defaultOutfitTags>
+			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Armor_High</li>

@@ -2,6 +2,14 @@
 
 <Patch>
 
+	<!-- for Slayer tattoos -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ApparelLayerDef[defName = "OnSkin"]/drawOrder</xpath>
+		<value>
+			<drawOrder>1</drawOrder>
+		</value>
+	</Operation>
+
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/IncidentDef[defName="Infestation"]/workerClass</xpath>
 		<value>

@@ -68,6 +68,12 @@
 	</ThingCategoryDef>
 
 	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_SlayerTattoo</defName>
+		<label>slayer tattoos</label>
+		<parent>RH_TET_Dwarfs_Apparel</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
 		<defName>RH_TET_Dwarfs_Headgear</defName>
 		<label>dawi</label>
 		<parent>Headgear</parent>

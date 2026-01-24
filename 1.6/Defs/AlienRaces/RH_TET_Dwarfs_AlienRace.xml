@@ -922,6 +922,14 @@
 					<li>RH_TET_Dwarf_BeardBauble_Thane</li>
 					<li>RH_TET_Dwarf_BeardBauble_Lord</li>
 					<li>RH_TET_Dwarf_BeardBauble_DaemonSlayer</li>
+					<li>RH_TET_Slayer_Tattoo_Troll</li>
+					<li>RH_TET_Slayer_Tattoo_Head_Troll</li>
+					<li>RH_TET_Slayer_Tattoo_Giant</li>
+					<li>RH_TET_Slayer_Tattoo_Head_Giant</li>
+					<li>RH_TET_Slayer_Tattoo_Daemon</li>
+					<li>RH_TET_Slayer_Tattoo_Head_Daemon</li>
+					<li>RH_TET_Slayer_Tattoo_Doomseeker</li>
+					<li>RH_TET_Slayer_Tattoo_Head_Doomseeker</li>
 				</apparelList>
 				<onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
 				<recipeList>

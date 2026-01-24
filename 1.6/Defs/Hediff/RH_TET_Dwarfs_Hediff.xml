@@ -28,6 +28,15 @@
 				</statOffsets>
 			</li>
 		</stages>
+		<comps>
+			<li Class="TheEndTimes_Dwarfs.HediffCompProperties_DissolveSlayerTattooOnDeath">
+				<fleck>DustPuffLong</fleck>
+				<moteCount>6</moteCount>
+				<moteOffsetRange>0.25~0.75</moteOffsetRange>
+				<sound>DeathAcidifier</sound>
+				<injuryCount>3~6</injuryCount>
+			</li>
+		</comps>
 	</SickTools.HediffExpandedDef>
   
 	<HediffGiverSetDef>
