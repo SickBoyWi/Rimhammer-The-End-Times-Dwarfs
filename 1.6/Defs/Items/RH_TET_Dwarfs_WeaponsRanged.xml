@@ -745,7 +745,7 @@
 			<li>RH_TET_Dwarfs_WeaponsRanged</li>
 		</thingCategories>
 		<modExtensions>
-			<li Class="BrawlerFriendly.DefModExtension_BrawlerFriendly" />
+			<li Class="SickTools.DefModExtension_BrawlerAllowance" />
 		</modExtensions>		
 	</ThingDef>
 
