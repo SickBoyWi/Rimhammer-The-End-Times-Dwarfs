@@ -79,12 +79,6 @@ Development started.
 			<downloadUrl />
 		</li>
 		<li>
-			<packageId>zal.brawlerfriendly</packageId>
-			<displayName>Brawler-Friendly</displayName>
-			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3510865756</steamWorkshopUrl>
-			<downloadUrl />
-		</li>
-		<li>
 			<packageId>sickboywi.sicktools</packageId>
 			<displayName>SickTools</displayName>
 			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=3221151657</steamWorkshopUrl>
