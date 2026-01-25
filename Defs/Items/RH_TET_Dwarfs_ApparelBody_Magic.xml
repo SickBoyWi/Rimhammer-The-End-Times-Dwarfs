@@ -34,9 +34,6 @@
 			<layers>
 				<li>Middle</li>
 			</layers>
-			<tags>
-				<li>RH_TET_Dwarf_Armor_Magic_Thane</li>
-			</tags>
 			<countsAsClothingForNudity>false</countsAsClothingForNudity>
 		</apparel>
 		<tradeTags>
@@ -50,6 +47,7 @@
 		<description>Very protective magical dwarfen armor. Provides great protection from sharp attacks, and blunt attacks. Tough, won't deteriorate, insulated, and great looking. Master crafted with the proper runes and blessings to Grungni, and it's been imbued with some of his magic.</description>
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Grungi</texPath>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>150</costStuffCount>
 		<stuffCategories>
@@ -76,6 +74,10 @@
 		<generateCommonality>.9</generateCommonality>
 		<apparel>
 			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Grungi</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Magic_Thane</li>
+			</tags>
 		</apparel>
 	</ThingDef>
 
@@ -85,6 +87,7 @@
 		<description>Very protective magical dwarfen armor. Provides great protection from sharp attacks, and blunt attacks. Tough, won't deteriorate, insulated, and great looking. Master crafted with the proper runes and blessings to Smednir, and it's been imbued with some of his magic.</description>
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Smednir</texPath>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>150</costStuffCount>
 		<stuffCategories>
@@ -111,6 +114,10 @@
 		<generateCommonality>.9</generateCommonality>
 		<apparel>
 			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Smednir</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Magic_Thane</li>
+			</tags>
 		</apparel>
 	</ThingDef>
 
@@ -120,6 +127,7 @@
 		<description>Very protective magical dwarfen armor. Provides great protection from sharp attacks, and blunt attacks. Tough, won't deteriorate, insulated, and great looking. Master crafted with the proper runes and blessings to Gazul, and it's been imbued with some of his magic.</description>
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Gazul</texPath>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>150</costStuffCount>
 		<stuffCategories>
@@ -146,6 +154,10 @@
 		<generateCommonality>.9</generateCommonality>
 		<apparel>
 			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Gazul</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Magic_Thane</li>
+			</tags>
 		</apparel>
 	</ThingDef>
 
@@ -155,6 +167,7 @@
 		<description>Very protective magical dwarfen armor. Fit for a king. Provides great protection from sharp attacks, and blunt attacks. Tough, won't deteriorate, insulated, and great looking. Master crafted with the proper runes and blessings to Valaya, and it's been imbued with some of her magic.</description>
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Valaya</texPath>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>175</costStuffCount>
 		<stuffCategories>
@@ -181,6 +194,10 @@
 		<generateCommonality>.9</generateCommonality>
 		<apparel>
 			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Valaya</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Magic_King</li>
+			</tags>
 		</apparel>
 	</ThingDef>
 
@@ -190,6 +207,7 @@
 		<description>Very protective magical dwarfen armor. Fit for a king. Provides great protection from sharp attacks, and blunt attacks. Tough, won't deteriorate, insulated, and great looking. Master crafted with the proper runes and blessings to Grimnir, and it's been imbued with some of her magic.</description>
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Grimnir</texPath>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>175</costStuffCount>
 		<stuffCategories>
@@ -216,6 +234,10 @@
 		<generateCommonality>.9</generateCommonality>
 		<apparel>
 			<wornGraphicPath>Things/Pawn/Dwarf/Apparel/Armor/RH_TET_DwarfArmor_Grimnir</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<tags>
+				<li>RH_TET_Dwarf_Armor_Magic_King</li>
+			</tags>
 		</apparel>
 	</ThingDef>
   

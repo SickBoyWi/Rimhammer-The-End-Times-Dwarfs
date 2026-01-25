@@ -1168,10 +1168,10 @@
 				<heatPushMaxTemperature>15</heatPushMaxTemperature>
 			</li>
 			<li Class="TheEndTimes_Dwarfs.CompProperties_FireOverlayRotatable">
-				<fireSize>0.4</fireSize>
+				<fireSize>0.3</fireSize>
 				<offset_south>(0,0,0.17)</offset_south>
 				<offset_west>(-0.26,0,0.26)</offset_west>
-				<offset_north>(0,0,0.50)</offset_north>
+				<offset_north>(0,0,0.30)</offset_north>
 				<offset_east>(0.26,0,0.26)</offset_east>
 				<dependency>Fuel</dependency>
 				<ticks>10</ticks>
@@ -1431,8 +1431,8 @@
 				<heatPushMaxTemperature>25</heatPushMaxTemperature>
 			</li>
 			<li Class="CompProperties_FireOverlay">
-				<fireSize>1</fireSize>
-				<offset>(0,0,0.40)</offset>
+				<fireSize>.85</fireSize>
+				<offset>(0,0,0.2)</offset>
 			</li>
 		</comps>
 		<canOverlapZones>false</canOverlapZones>

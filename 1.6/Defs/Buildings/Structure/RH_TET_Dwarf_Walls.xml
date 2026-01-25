@@ -448,7 +448,7 @@
 			</li>
 			<li Class="CompProperties_FireOverlay">
 				<fireSize>0.35</fireSize>
-				<offset>(0,0,.46)</offset>
+				<offset>(0,0,-.04)</offset>
 			</li>
 		</comps>
 		<disableImpassableShotOverConfigError>True</disableImpassableShotOverConfigError>
@@ -617,7 +617,7 @@
 				<glowColor>(252,187,113,0)</glowColor>
 			</li>
 			<li Class="CompProperties_FireOverlay">
-				<fireSize>0.50</fireSize>
+				<fireSize>0.45</fireSize>
 				<offset>(0,0,0.05)</offset>
 			</li>
 		</comps>
@@ -691,8 +691,8 @@
 				<glowColor>(252,187,113,0)</glowColor>
 			</li>
 			<li Class="CompProperties_FireOverlay">
-				<fireSize>0.50</fireSize>
-				<offset>(0,0,0.05)</offset>
+				<fireSize>0.55</fireSize>
+				<offset>(0,0,-.10)</offset>
 			</li>
 		</comps>
 		<disableImpassableShotOverConfigError>True</disableImpassableShotOverConfigError>

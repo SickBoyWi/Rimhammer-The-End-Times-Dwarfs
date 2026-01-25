@@ -19,10 +19,11 @@
 			<layers>
 				<li>Overhead</li>
 			</layers>
-			<countsAsClothingForNudity>false</countsAsClothingForNudity>			
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>		
 		</apparel>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Armor_Magic</li>
@@ -44,6 +45,7 @@
 		<tickerType>Normal</tickerType>
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Grungi</texPath>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>100</costStuffCount>
 		<stuffCategories>
@@ -65,6 +67,7 @@
 			<tags>
 				<li>RH_TET_Dwarf_Armor_Magic_Thane</li>
 			</tags>
+			<useWornGraphicMask>true</useWornGraphicMask>	
 		</apparel>
 	</ThingDef>
 
@@ -74,6 +77,7 @@
 		<description>A highly protective, and nice looking dwarfen magic helmet. Master crafted by runesmiths in the name of Smednir. The magic imbued in the helm makes a dwarf capable of carrying more weight than normal.</description>
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Smednir</texPath>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>100</costStuffCount>
 		<stuffCategories>
@@ -98,6 +102,7 @@
 			<tags>
 				<li>RH_TET_Dwarf_Armor_Magic_Thane</li>
 			</tags>
+			<useWornGraphicMask>true</useWornGraphicMask>	
 		</apparel>
 	</ThingDef>
 
@@ -107,6 +112,7 @@
 		<description>A highly protective, and nice looking dwarfen magic helmet. Master crafted by runesmiths in the name of Gazul. The magic imbued in the helm makes a dwarf more likely to dodge enemy attacks than normal.</description>
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Gazul</texPath>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>100</costStuffCount>
 		<stuffCategories>
@@ -131,6 +137,7 @@
 			<tags>
 				<li>RH_TET_Dwarf_Armor_Magic_Thane</li>
 			</tags>
+			<useWornGraphicMask>true</useWornGraphicMask>	
 		</apparel>
 	</ThingDef>
 
@@ -140,6 +147,7 @@
 		<description>A highly protective, and great looking dwarfen magic helmet. Fit for a king. Master crafted by runesmiths in the name of Valaya. The healing magic of Valaya makes the wearer of this helm perform much better when tending the wounded.</description>
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Valaya</texPath>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>150</costStuffCount>
 		<stuffCategories>
@@ -165,6 +173,7 @@
 			<tags>
 				<li>RH_TET_Dwarf_Armor_Magic_King</li>
 			</tags>
+			<useWornGraphicMask>true</useWornGraphicMask>	
 		</apparel>
 	</ThingDef>
 
@@ -174,6 +183,7 @@
 		<description>A highly protective, and great looking dwarfen magic helmet. Fit for a king. Master crafted by runesmiths in the name of Valaya. The magic imbued in the helm makes a dwarf more likely to dodge enemy attacks than normal. The war magic of Grimnir makes the wearer of this helm more likely to hit in melee combat, and penetrate armor better.</description>
 		<graphicData>
 			<texPath>Things/Pawn/Dwarf/Apparel/Helmet/RH_TET_Dwarf_Helmet_Grimnir</texPath>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>150</costStuffCount>
 		<stuffCategories>
@@ -199,6 +209,7 @@
 			<tags>
 				<li>RH_TET_Dwarf_Armor_Magic_King</li>
 			</tags>
+			<useWornGraphicMask>true</useWornGraphicMask>	
 		</apparel>
 	</ThingDef>
   
