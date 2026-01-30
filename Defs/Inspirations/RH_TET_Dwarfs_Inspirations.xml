@@ -129,7 +129,7 @@
 		<defName>RH_TET_Dwarfs_Frenzy_Dodge</defName>
 		<label>Favor of Gazul</label>
 		<baseDurationDays>8</baseDurationDays>
-		<beginLetter>[PAWN_pronoun] has been favored by Gazul, and will an uncanny ability to dodge enemy blows for the next 8 days.</beginLetter>
+		<beginLetter>[PAWN_pronoun] has been favored by Gazul, and will have an uncanny ability to dodge enemy blows for the next 8 days.</beginLetter>
 		<beginLetterDef>PositiveEvent</beginLetterDef>
 		<endMessage>{0} is no longer favored (dodge chance).</endMessage>
 		<baseInspectLine>Favor of Gazul: Melee Dodge Chance</baseInspectLine>

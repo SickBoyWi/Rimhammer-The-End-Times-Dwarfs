@@ -156,6 +156,32 @@
 		<costStuffCount>220</costStuffCount>
 	</ThingDef>
 
+	<ThingDef ParentName="RH_TET_DwarfSculptureBase">
+		<defName>RH_TET_Dwarfs_SculptureExuberant</defName>
+		<label>exuberant dawi sculpture</label>
+		<description>A massive dwarfen sculpture sized to dominate a room.\n\nDwarfs theme their art after their gods, the things that are important to them (weapons and armor), and their honored heroes.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/Art/RH_TET_Dwarf_SculptureExuberant</texPath>
+			<drawSize>(6,6)</drawSize>
+		</graphicData>
+		<fillPercent>0.5</fillPercent>
+		<rotatable>false</rotatable>
+		<size>(2,4)</size>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Beauty>320</Beauty>
+			<Mass>45</Mass>
+			<WorkToMake>90000</WorkToMake>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>350</costStuffCount>
+	</ThingDef>
+
 	<ThingDef ParentName="BuildingBase" Name="RH_TET_Dwarfs_PillarBase" Abstract="True">
 		<thingClass>Building_Art</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
