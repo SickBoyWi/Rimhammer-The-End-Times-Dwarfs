@@ -151,6 +151,7 @@
 		</graphicData>
 		<pathCost>10</pathCost>
 		<plant>
+			<immatureGraphicPath>Things/Plant/StoneSalve_Immature</immatureGraphicPath>
 			<growDays>7</growDays>
 			<sowWork>800</sowWork>
 			<sowMinSkill>8</sowMinSkill>
