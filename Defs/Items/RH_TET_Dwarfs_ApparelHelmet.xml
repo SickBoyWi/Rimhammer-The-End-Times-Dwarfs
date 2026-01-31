@@ -14,6 +14,9 @@
 			<li>ArmorHeadgear</li>
 			<li>RH_TET_Dwarfs_ArmorHeadgear</li>
 		</thingCategories>
+		<apparel>
+			<parentTagDef>ApparelHead</parentTagDef>
+		</apparel>
 	</ThingDef>
 
 	<ThingDef ParentName="RH_TET_Dwarfs_ArmorHelmetMakeableBase">
