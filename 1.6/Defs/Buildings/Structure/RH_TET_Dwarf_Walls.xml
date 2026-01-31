@@ -287,7 +287,7 @@
 		<canOverlapZones>false</canOverlapZones>
 		<rotatable>false</rotatable>
 		<graphicData>
-			<drawSize>(2.6)</drawSize>
+			<drawSize>(3.5)</drawSize>
 			<texPath>Things/Building/Structure/RH_TET_Dwarfs_PillarSmallB</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
@@ -409,7 +409,7 @@
 		<rotatable>false</rotatable>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
-			<drawSize>(2.6)</drawSize>
+			<drawSize>(3.5)</drawSize>
 			<texPath>Things/Building/Structure/RH_TET_Dwarfs_PillarLitB</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
@@ -478,7 +478,7 @@
 		<rotatable>false</rotatable>
 		<size>(2,2)</size>
 		<graphicData>
-			<drawSize>(2.6)</drawSize>
+			<drawSize>(4.0)</drawSize>
 			<texPath>Things/Building/Structure/RH_TET_Dwarfs_PillarBigA</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
