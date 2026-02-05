@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ApparelLayerDef>
+		<defName>RH_TET_Dwarfs_InSkin</defName>
+		<label>in skin</label>
+		<drawOrder>0</drawOrder>
+	</ApparelLayerDef>
+
+	<ApparelLayerDef>
+		<defName>RH_TET_Dwarfs_BeardCover</defName>
+		<label>beard</label>
+		<drawOrder>505</drawOrder>
+	</ApparelLayerDef>
+
+</Defs>
