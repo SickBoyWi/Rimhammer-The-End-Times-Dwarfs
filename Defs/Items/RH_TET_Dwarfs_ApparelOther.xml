@@ -249,7 +249,8 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/LowTier/RHTET_Dwarf_BeardBaubles_Miners</texPath>
 		</graphicData>
 		<costList>
-			<Gold>25</Gold>
+			<Silver>5</Silver>
+			<Gold>2</Gold>
 			<Steel>25</Steel>
 		</costList>
 		<statBases>
@@ -282,7 +283,8 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/LowTier/RHTET_Dwarf_BeardBaubles_Thunderer</texPath>
 		</graphicData>
 		<costList>
-			<Gold>25</Gold>
+			<Silver>5</Silver>
+			<Gold>2</Gold>
 			<Steel>25</Steel>
 		</costList>
 		<statBases>
@@ -315,7 +317,8 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/LowTier/RHTET_Dwarf_BeardBaubles_Warrior</texPath>
 		</graphicData>
 		<costList>
-			<Gold>25</Gold>
+			<Silver>5</Silver>
+			<Gold>2</Gold>
 			<Steel>25</Steel>
 		</costList>
 		<statBases>
@@ -348,7 +351,8 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/Slayer/RHTET_Dwarf_BeardBaubles_Slayer</texPath>
 		</graphicData>
 		<costList>
-			<Gold>30</Gold>
+			<Silver>5</Silver>
+			<Gold>2</Gold>
 			<Steel>25</Steel>
 		</costList>
 		<statBases>
@@ -381,7 +385,8 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/MidTier/RHTET_Dwarf_BeardBaubles_Hammerer</texPath>
 		</graphicData>
 		<costList>
-			<Gold>30</Gold>
+			<Silver>1</Silver>
+			<Gold>3</Gold>
 			<Steel>25</Steel>
 		</costList>
 		<statBases>
@@ -414,7 +419,8 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/MidTier/RHTET_Dwarf_BeardBaubles_Ironbreaker</texPath>
 		</graphicData>
 		<costList>
-			<Gold>30</Gold>
+			<Silver>1</Silver>
+			<Gold>3</Gold>
 			<Steel>25</Steel>
 		</costList>
 		<statBases>
@@ -447,7 +453,8 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/MidTier/RHTET_Dwarf_BeardBaubles_Longbeard</texPath>
 		</graphicData>
 		<costList>
-			<Gold>30</Gold>
+			<Silver>1</Silver>
+			<Gold>3</Gold>
 			<Steel>25</Steel>
 		</costList>
 		<statBases>
@@ -480,7 +487,8 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/MidTier/RHTET_Dwarf_BeardBaubles_Ranger</texPath>
 		</graphicData>
 		<costList>
-			<Gold>30</Gold>
+			<Silver>1</Silver>
+			<Gold>3</Gold>
 			<Steel>25</Steel>
 		</costList>
 		<statBases>
@@ -513,7 +521,8 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/HighTier/RHTET_Dwarf_BeardBaubles_Engineer</texPath>
 		</graphicData>
 		<costList>
-			<Gold>35</Gold>
+			<Silver>1</Silver>
+			<Gold>3</Gold>
 			<Steel>30</Steel>
 		</costList>
 		<statBases>
@@ -546,7 +555,8 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/Slayer/RHTET_Dwarf_BeardBaubles_Doomseeker</texPath>
 		</graphicData>
 		<costList>
-			<Gold>35</Gold>
+			<Silver>5</Silver>
+			<Gold>3</Gold>
 			<Steel>30</Steel>
 		</costList>
 		<statBases>
@@ -580,7 +590,8 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/HighTier/RHTET_Dwarf_BeardBaubles_Runesmith</texPath>
 		</graphicData>
 		<costList>
-			<Gold>35</Gold>
+			<Silver>5</Silver>
+			<Gold>3</Gold>
 			<Steel>30</Steel>
 		</costList>
 		<statBases>
@@ -614,7 +625,8 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/HighTier/RHTET_Dwarf_BeardBaubles_Thane</texPath>
 		</graphicData>
 		<costList>
-			<Gold>40</Gold>
+			<Silver>5</Silver>
+			<Gold>4</Gold>
 			<Steel>35</Steel>
 		</costList>
 		<statBases>
@@ -649,7 +661,8 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/HighTier/RHTET_Dwarf_BeardBaubles_Lord</texPath>
 		</graphicData>
 		<costList>
-			<Gold>50</Gold>
+			<Silver>5</Silver>
+			<Gold>5</Gold>
 			<Steel>40</Steel>
 		</costList>
 		<statBases>
@@ -685,7 +698,8 @@
 			<texPath>Things/Pawn/Dwarf/Apparel/Other/BeardBaubles/Slayer/RHTET_Dwarf_BeardBaubles_DaemonSlayer</texPath>
 		</graphicData>
 		<costList>
-			<Gold>50</Gold>
+			<Silver>5</Silver>
+			<Gold>5</Gold>
 			<Steel>40</Steel>
 		</costList>
 		<statBases>
