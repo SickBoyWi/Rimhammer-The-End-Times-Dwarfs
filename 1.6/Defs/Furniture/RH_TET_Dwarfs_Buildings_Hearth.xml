@@ -71,8 +71,9 @@
 						<li>RH_TET_Coal</li>
 					</thingDefs>
 				</fuelFilter>
-				<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+				<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>			
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<canEjectFuel>true</canEjectFuel>	
 				<initialFuelPercent>.05</initialFuelPercent>
 			</li>
 			<li Class="CompProperties_Glower">

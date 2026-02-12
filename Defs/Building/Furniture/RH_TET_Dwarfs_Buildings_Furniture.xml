@@ -169,8 +169,9 @@
 						<li>RH_TET_AnimalFat</li>
 					</thingDefs>
 				</fuelFilter>
-				<initialFuelPercent>1</initialFuelPercent>
+				<initialFuelPercent>1</initialFuelPercent>			
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<canEjectFuel>true</canEjectFuel>	
 			</li>
 			<li Class="CompProperties_Glower">
 				<glowRadius>9</glowRadius>
@@ -224,8 +225,9 @@
 						<li>RH_TET_AnimalFat</li>
 					</thingDefs>
 				</fuelFilter>
-				<initialFuelPercent>1</initialFuelPercent>
+				<initialFuelPercent>1</initialFuelPercent>			
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<canEjectFuel>true</canEjectFuel>	
 			</li>
 			<li Class="CompProperties_Glower">
 				<glowRadius>12</glowRadius>
@@ -277,8 +279,9 @@
 						<li>RH_TET_AnimalFat</li>
 					</thingDefs>
 				</fuelFilter>
-				<initialFuelPercent>1</initialFuelPercent>
+				<initialFuelPercent>1</initialFuelPercent>			
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<canEjectFuel>true</canEjectFuel>	
 			</li>
 			<li Class="CompProperties_Glower">
 				<glowRadius>15</glowRadius>
@@ -1159,8 +1162,9 @@
 						<li>RH_TET_Coal</li>
 					</thingDefs>
 				</fuelFilter>
-				<initialFuelPercent>1</initialFuelPercent>
+				<initialFuelPercent>1</initialFuelPercent>			
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<canEjectFuel>true</canEjectFuel>	
 			</li>
 			<li Class="CompProperties_HeatPusher">
 				<compClass>CompHeatPusherPowered</compClass>
@@ -1418,8 +1422,9 @@
 						<li>RH_TET_Coal</li>
 					</thingDefs>
 				</fuelFilter>
-				<initialFuelPercent>.1</initialFuelPercent>
+				<initialFuelPercent>.1</initialFuelPercent>			
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<canEjectFuel>true</canEjectFuel>	
 			</li>
 			<li Class="CompProperties_Glower">
 				<glowRadius>10</glowRadius>

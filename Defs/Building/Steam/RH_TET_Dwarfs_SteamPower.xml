@@ -79,7 +79,9 @@
 						<li>WoodLog</li>
 						<li>RH_TET_Coal</li>
 					</thingDefs>
-				</fuelFilter>
+				</fuelFilter>			
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<canEjectFuel>true</canEjectFuel>	
 			</li>
 			<li Class="CompProperties_Glower">
 				<glowRadius>5</glowRadius>
