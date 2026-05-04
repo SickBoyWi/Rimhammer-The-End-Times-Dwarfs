@@ -199,6 +199,7 @@
 						<RH_TET_DwarfRanged>7</RH_TET_DwarfRanged>
 						<RH_TET_DwarfSlayer>2</RH_TET_DwarfSlayer>
 						<RH_TET_DwarfMinerBlaster>2</RH_TET_DwarfMinerBlaster>
+						<RH_TET_Dwarfs_RunicStandard>1</RH_TET_Dwarfs_RunicStandard>
 						<RH_TET_DwarfThane>1</RH_TET_DwarfThane>
 					</value>
 				</li>
@@ -210,6 +211,7 @@
 						<RH_TET_DwarfRanged>7</RH_TET_DwarfRanged>
 						<RH_TET_DwarfSlayer>2</RH_TET_DwarfSlayer>
 						<RH_TET_DwarfMinerBlaster>2</RH_TET_DwarfMinerBlaster>
+						<RH_TET_Dwarfs_RunicStandard>1</RH_TET_Dwarfs_RunicStandard>
 						<RH_TET_DwarfThane>1</RH_TET_DwarfThane>
 					</value>
 				</li>
@@ -221,6 +223,7 @@
 						<RH_TET_DwarfRanged>7</RH_TET_DwarfRanged>
 						<RH_TET_DwarfSlayer>2</RH_TET_DwarfSlayer>
 						<RH_TET_DwarfMinerBlaster>2</RH_TET_DwarfMinerBlaster>
+						<RH_TET_Dwarfs_RunicStandard>1</RH_TET_Dwarfs_RunicStandard>
 						<RH_TET_DwarfThane>1</RH_TET_DwarfThane>
 					</value>
 				</li>
@@ -232,6 +235,7 @@
 						<RH_TET_DwarfRanged>7</RH_TET_DwarfRanged>
 						<RH_TET_DwarfSlayer>2</RH_TET_DwarfSlayer>
 						<RH_TET_DwarfMinerBlaster>2</RH_TET_DwarfMinerBlaster>
+						<RH_TET_Dwarfs_RunicStandard>1</RH_TET_Dwarfs_RunicStandard>
 						<RH_TET_DwarfThane>1</RH_TET_DwarfThane>
 					</value>
 				</li>
@@ -243,6 +247,7 @@
 						<RH_TET_DwarfRanged>8</RH_TET_DwarfRanged>
 						<RH_TET_DwarfSlayer>3</RH_TET_DwarfSlayer>
 						<RH_TET_DwarfMinerBlaster>3</RH_TET_DwarfMinerBlaster>
+						<RH_TET_Dwarfs_RunicStandard>1</RH_TET_Dwarfs_RunicStandard>
 						<RH_TET_DwarfThane>1</RH_TET_DwarfThane>
 					</value>
 				</li>
@@ -254,6 +259,7 @@
 						<RH_TET_DwarfRanged>8</RH_TET_DwarfRanged>
 						<RH_TET_DwarfSlayer>3</RH_TET_DwarfSlayer>
 						<RH_TET_DwarfMinerBlaster>3</RH_TET_DwarfMinerBlaster>
+						<RH_TET_Dwarfs_RunicStandard>1</RH_TET_Dwarfs_RunicStandard>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">

@@ -75,6 +75,8 @@ namespace TheEndTimes_Dwarfs
         public static ThingDef RH_TET_Dwarfs_SteamInfestationLure;
         public static ThingDef RH_TET_Dwarfs_BodyPart_Beard;
 
+        public static ThingCategoryDef RH_TET_Dwarfs_StoneWools;
+
         public static BodyPartDef RH_TET_Dwarfs_BP_Beard;
         public static BodyPartDef RH_TET_Dwarfs_BP_JawBeard;
 

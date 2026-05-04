@@ -199,6 +199,7 @@
 			</skillRequirements>
 			<researchPrerequisite>RH_TET_Dwarfs_Furniture_Recreation</researchPrerequisite>
 			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
 				<li>FueledSmithy</li>
 				<li>ElectricSmithy</li>
 				<li>RH_TET_TableSmithy</li>

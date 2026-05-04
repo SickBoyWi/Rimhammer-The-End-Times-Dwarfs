@@ -37,6 +37,7 @@
 				<!--<li>FabricationBench</li> Removing this to keep non-dwarfs from making them. -->
 				<li>RH_TET_Dwarfs_BlastingBench</li>
 				<li>RH_TET_TableSmithy</li>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
 			</recipeUsers>
 		</recipeMaker>
 	</ThingDef>

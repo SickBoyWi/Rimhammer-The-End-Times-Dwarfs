@@ -4,6 +4,7 @@
 	<ThingDef Name="RH_TET_Dwarfs_ArmorHelmetMakeableBase" ParentName="ArmorMachineableBase" Abstract="True">
 		<recipeMaker>
 			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
 				<li>RH_TET_TableSmithy</li>
 				<li>ElectricSmithy</li>
 				<li>FueledSmithy</li>

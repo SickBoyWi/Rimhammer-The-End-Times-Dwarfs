@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<StuffCategoryDef>
+		<defName>RH_TET_Dwarfs_StoneFabric</defName>
+		<label>stone weave</label>
+		<noun>stone weave</noun>
+		<destroySoundSmall>BuildingDestroyed_Soft_Small</destroySoundSmall>
+		<destroySoundMedium>BuildingDestroyed_Soft_Medium</destroySoundMedium>
+	</StuffCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwarfs_StoneWools</defName>
+		<label>stone wools</label>
+		<parent>ResourcesRaw</parent>
+		<iconPath>UI/Icons/ThingCategories/StoneBlocks</iconPath>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+	</ThingCategoryDef>
+
+	<!--=====================================================================-->
+	<!--============================ Stone Wool =============================-->
+	<!--=====================================================================-->
+	<ThingDef ParentName="ResourceBase" Name="RH_TET_Dwarfs_StoneWoolBase" Abstract="True">
+		<stackLimit>100</stackLimit>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<MarketValue>4.0</MarketValue>
+			<Mass>0.038</Mass>
+			<Flammability>0.0</Flammability>
+			<DeteriorationRate>0.40</DeteriorationRate>
+			<StuffPower_Armor_Sharp>0.60</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.40</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.10</StuffPower_Armor_Heat>
+		</statBases>
+		<burnableByRecipe>false</burnableByRecipe>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<minRewardCount>30</minRewardCount>
+		<stuffProps>
+			<commonality>0.05</commonality>
+			<statFactors>
+				<Flammability>0.5</Flammability>
+				<Beauty>1.5</Beauty>
+			</statFactors>
+			<categories>
+				<li>RH_TET_Dwarfs_StoneFabric</li>
+			</categories>
+			<canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+		</stuffProps>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_StoneWools</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Item/Resource/Wool</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+	</ThingDef>
+
+	<!-- Wool for each type of stone chunk. -->
+	<ThingDef ParentName="RH_TET_Dwarfs_StoneWoolBase">
+		<defName>RH_TET_Dwarfs_WoolSandstone</defName>
+		<label>sandstone weave</label>
+		<description>Fine stone thread, made from stone chunks by a dawi runesmith.</description>
+		<possessionCount>25</possessionCount>
+		<statBases>
+			<StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+		</statBases>
+		<stuffProps>
+			<color>(126,104,94)</color>
+			<statFactors>
+				<Beauty>1.1</Beauty>
+				<MaxHitPoints>1.4</MaxHitPoints>
+				<WorkToBuild>5.0</WorkToBuild>
+				<WorkToMake>1.1</WorkToMake>
+			</statFactors>
+		</stuffProps>
+		<graphicData>
+			<color>(126,104,94)</color>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="RH_TET_Dwarfs_StoneWoolBase">
+		<defName>RH_TET_Dwarfs_WoolGranite</defName>
+		<label>granite weave</label>
+		<description>Fine stone thread, made from stone chunks by a dawi runesmith.</description>
+		<possessionCount>25</possessionCount>
+		<statBases>
+			<StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+		</statBases>
+		<stuffProps>
+			<color>(105,95,97)</color>
+			<statFactors>
+				<MaxHitPoints>1.7</MaxHitPoints>
+			</statFactors>
+		</stuffProps>
+		<graphicData>
+			<color>(105,95,97)</color>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="RH_TET_Dwarfs_StoneWoolBase">
+		<defName>RH_TET_Dwarfs_WoolLimestone</defName>
+		<label>limestone weave</label>
+		<description>Fine stone thread, made from stone chunks by a dawi runesmith.</description>
+		<possessionCount>25</possessionCount>
+		<statBases>
+			<StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+		</statBases>
+		<stuffProps>
+			<color>(158,153,135)</color>
+			<statFactors>
+				<MaxHitPoints>1.55</MaxHitPoints>
+			</statFactors>
+		</stuffProps>
+		<graphicData>
+			<color>(158,153,135)</color>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="RH_TET_Dwarfs_StoneWoolBase">
+		<defName>RH_TET_Dwarfs_WoolSlate</defName>
+		<label>slate weave</label>
+		<description>Fine stone thread, made from stone chunks by a dawi runesmith.</description>
+		<possessionCount>25</possessionCount>
+		<statBases>
+			<StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+		</statBases>
+		<stuffProps>
+			<color>(70,70,70)</color>
+			<statFactors>
+				<Beauty>1.1</Beauty>
+				<MaxHitPoints>1.3</MaxHitPoints>
+			</statFactors>
+		</stuffProps>
+		<graphicData>
+			<color>(70,70,70)</color>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="RH_TET_Dwarfs_StoneWoolBase">
+		<defName>RH_TET_Dwarfs_WoolMarble</defName>
+		<label>marble weave</label>
+		<description>Fine stone thread, made from stone chunks by a dawi runesmith.</description>
+		<possessionCount>25</possessionCount>
+		<statBases>
+			<StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+		</statBases>
+		<stuffProps>
+			<color>(132,135,132)</color>
+			<statFactors>
+				<Beauty>1.35</Beauty>
+				<MaxHitPoints>1.2</MaxHitPoints>
+				<WorkToBuild>5.5</WorkToBuild>
+				<WorkToMake>1.15</WorkToMake>
+			</statFactors>
+		</stuffProps>
+		<graphicData>
+			<color>(132,135,132)</color>
+		</graphicData>
+	</ThingDef>
+
+</Defs>

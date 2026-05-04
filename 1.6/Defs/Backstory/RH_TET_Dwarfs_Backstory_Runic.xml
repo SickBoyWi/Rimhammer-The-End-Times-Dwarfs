@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- base -->
+	<AlienRace.AlienBackstoryDef Name="RH_TET_Dwarf_Runic_Backstory" Abstract="True">
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Male</bodyTypeFemale>
+		<disallowedTraitsChance>
+			<li>
+				<defName>Wimp</defName>
+			</li>
+		</disallowedTraitsChance>
+	</AlienRace.AlienBackstoryDef>
+
+	<!-- Adulthood -->
+	<AlienRace.AlienBackstoryDef ParentName="RH_TET_Dwarf_Runic_Backstory">
+		<defName>RH_TET_Dwarfs_Runesmith_Novice</defName>
+		<title>Runesmith</title>
+		<titleShort>Runesmith</titleShort>
+		<description>[PAWN_nameDef] can sense and wield magic in the manner of the dawi, via runes and minor powers. Gifted by the dwarfen gods at birth, [PAWN_pronoun] crafts wonderful things and assists in making life better for all dawi in the hold. [PAWN_possessive] innate abilities combined with studies have crafted [PAWN_objective] into a runesmith.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Crafting>3</Crafting>
+			<Artistic>2</Artistic>
+			<Intellectual>3</Intellectual>
+		</skillGains>
+		<forcedTraits>
+			<RH_TET_RunesmithTrait>1</RH_TET_RunesmithTrait>
+		</forcedTraits>
+		<requiredWorkTags>
+			<li>ManualSkilled</li>
+			<li>Intellectual</li>
+			<li>Artistic</li>
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>RH_TET_Dwarf_Runic_Backstory_Novice</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef ParentName="RH_TET_Dwarf_Runic_Backstory">
+		<defName>RH_TET_Dwarfs_Runesmith_Adept</defName>
+		<title>Runesmith</title>
+		<titleShort>Runesmith</titleShort>
+		<description>[PAWN_nameDef] can sense and wield magic in the manner of the dawi, via runes and minor powers. Gifted by the dwarfen gods at birth, [PAWN_pronoun] crafts wonderful things and assists in making life better for all dawi in the hold. [PAWN_possessive] innate abilities combined with many years of study has crafted [PAWN_objective] into a runesmith.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Crafting>4</Crafting>
+			<Artistic>2</Artistic>
+			<Intellectual>4</Intellectual>
+		</skillGains>
+		<forcedTraits>
+			<RH_TET_RunesmithTrait>2</RH_TET_RunesmithTrait>
+		</forcedTraits>
+		<requiredWorkTags>
+			<li>ManualSkilled</li>
+			<li>Violent</li>
+			<li>Intellectual</li>
+			<li>Artistic</li>
+		</requiredWorkTags>
+		<workDisables>
+			<li>ManualDumb</li>
+			<li>PlantWork</li>
+		</workDisables>
+		<spawnCategories>
+			<li>RH_TET_Dwarf_Runic_Backstory_Novice</li>
+			<li>RH_TET_Dwarf_Runic_Backstory_Master</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef ParentName="RH_TET_Dwarf_Runic_Backstory">
+		<defName>RH_TET_Dwarfs_Runesmith_Master</defName>
+		<title>Runelord</title>
+		<titleShort>Runelord</titleShort>
+		<description>[PAWN_nameDef] can sense and wield magic in the manner of the dawi, via runes and minor powers. Gifted by the dwarfen gods at birth, [PAWN_pronoun] crafts wonderful things and assists in making life better for all dawi in the hold. [PAWN_possessive] innate abilities combined with many decades of study has crafted [PAWN_objective] into a runelord.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Crafting>6</Crafting>
+			<Artistic>4</Artistic>
+			<Intellectual>5</Intellectual>
+		</skillGains>
+		<forcedTraits>
+			<RH_TET_RunesmithTrait>3</RH_TET_RunesmithTrait>
+		</forcedTraits>
+		<requiredWorkTags>
+			<li>ManualSkilled</li>
+			<li>Violent</li>
+			<li>Intellectual</li>
+			<li>Artistic</li>
+		</requiredWorkTags>
+		<workDisables>
+			<li>ManualDumb</li>
+			<li>PlantWork</li>
+			<li>Animals</li>
+		</workDisables>
+		<spawnCategories>
+			<li>RH_TET_Dwarf_Runic_Backstory_Master</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+</Defs>

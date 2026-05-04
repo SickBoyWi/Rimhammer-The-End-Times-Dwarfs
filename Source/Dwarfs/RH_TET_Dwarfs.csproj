@@ -188,6 +188,7 @@
     <Compile Include="BugmansAle\JoyGiver_InteractBugmansAle.cs" />
     <Compile Include="BugmansAle\WorkGiver_FillBugmansFermentingBarrel.cs" />
     <Compile Include="BugmansAle\WorkGiver_TakeAleOutOfBugmansFermentingBarrel.cs" />
+    <Compile Include="Recipes\RecipeWorkerCounter_MakeStoneWool.cs" />
     <Compile Include="Settings\Settings.cs" />
     <Compile Include="ImpassableMapMaker\HarmonyPatches_WorldPathGrid.cs" />
     <Compile Include="ImpassableMapMaker\HarmonyPatches_MapGenerator.cs" />

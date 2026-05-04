@@ -406,6 +406,7 @@
 		<recipeUsers>
 			<li>RH_TET_Dwarfs_BlastingBench</li>
 			<li>RH_TET_TableSmithy</li>
+			<li>RH_TET_Dwarfs_TableAnvil</li>
 		</recipeUsers>
 		<ingredients>
 			<li>
@@ -454,6 +455,7 @@
 		<recipeUsers>
 			<li>RH_TET_Dwarfs_BlastingBench</li>
 			<li>RH_TET_TableSmithy</li>
+			<li>RH_TET_Dwarfs_TableAnvil</li>
 		</recipeUsers>
 		<ingredients>
 			<li>
@@ -978,6 +980,7 @@
 		<recipeUsers>
 			<li>RH_TET_Dwarfs_BlastingBench</li>
 			<li>RH_TET_TableSmithy</li>
+			<li>RH_TET_Dwarfs_TableAnvil</li>
 		</recipeUsers>
 		<ingredients>
 			<li>
@@ -1026,6 +1029,7 @@
 		<recipeUsers>
 			<li>RH_TET_Dwarfs_BlastingBench</li>
 			<li>RH_TET_TableSmithy</li>
+			<li>RH_TET_Dwarfs_TableAnvil</li>
 		</recipeUsers>
 		<ingredients>
 			<li>
@@ -1096,6 +1100,7 @@
 		<ingredients/>
 		<recipeUsers>
 			<li>RH_TET_TableSmithy</li>
+			<li>RH_TET_Dwarfs_TableAnvil</li>
 		</recipeUsers>
 		<workAmount>200</workAmount>
 		<effectWorking>Smith</effectWorking>
@@ -1121,6 +1126,7 @@
 		<ingredients/>
 		<recipeUsers>
 			<li>RH_TET_TableSmithy</li>
+			<li>RH_TET_Dwarfs_TableAnvil</li>
 		</recipeUsers>
 		<workAmount>50</workAmount>
 		<effectWorking>Smith</effectWorking>

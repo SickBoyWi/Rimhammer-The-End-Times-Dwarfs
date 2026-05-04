@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarfs_MeditationPad</defName>
+		<thingClass>TheEndTimes_Magic.Building_MagicMeditationSpot</thingClass>
+		<label>Meditation Cushion</label>
+		<graphicData>
+			<texPath>Things/Building/Furniture/Runic/RH_TET_Magic_MeditationPad</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawRotated>false</drawRotated>
+			<drawSize>(1.2)</drawSize>
+			<shadowData>
+				<volume>(0.6, 0.6, 0.6)</volume>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<useHitPoints>true</useHitPoints>
+		<size>(1,1)</size>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>400</WorkToBuild>
+			<Comfort>1.0</Comfort>
+			<Mass>3</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>1</Beauty>
+		</statBases>
+		<description>A place to meditate in comfort, will restore magic, faith, runic, or action ability. Used by magic, faith, runic, and ability action users.</description>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stuffCategories>
+			<li>Leathery</li>
+			<li>Fabric</li>
+		</stuffCategories>
+		<costStuffCount>40</costStuffCount>
+		<pathCost>1</pathCost>
+		<fillPercent>0.10</fillPercent>
+		<building>
+			<isSittable>true</isSittable>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<rotatable>false</rotatable>
+		<designationCategory>RH_TET_Dwarfs_Buildings</designationCategory>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Advanced</li>
+		</researchPrerequisites>
+		<category>Building</category>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsFurniture</li>
+		</thingCategories>
+		<passability>Standable</passability>
+		<drawGUIOverlay>True</drawGUIOverlay>
+		<defaultPlacingRot>South</defaultPlacingRot>
+	</ThingDef>
+
+</Defs>

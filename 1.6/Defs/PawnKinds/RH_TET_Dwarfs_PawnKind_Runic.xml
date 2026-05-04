@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<PawnKindDef>
+		<defName>RH_TET_Dwarfs_RunicPlayer</defName>
+		<race>RH_TET_Dwarf_Race_Standard</race>
+		<combatPower>40</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RH_TET_Dwarf_Runic_Backstory</li>
+					<li>RH_TET_Dwarf_Runic_Backstory_Novice</li>
+					<li>RH_TET_Dwarf_Runic_Backstory_Adept</li>
+					<li>RH_TET_Dwarf_Runic_Backstory_Master</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<minGenerationAge>150</minGenerationAge>
+		<maxGenerationAge>250</maxGenerationAge>
+		<apparelTags>
+			<li>RH_TET_Dwarf_Apparel_RuneSmith</li>
+			<li>RH_TET_Dwarf_Apparel_Mid</li>
+			<li>RH_TET_Dwarf_Apparel_High</li>
+			<li>RH_TET_Dwarf_Apparel_Warm</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>800</min>
+			<max>1500</max>
+		</apparelMoney>
+		<weaponTags>
+			<li>RH_TET_Dwarf_Melee_Low</li>
+			<li>RH_TET_Dwarf_Melee_High</li>
+			<li>RH_TET_Dwarf_Ranged_High</li>
+		</weaponTags>
+		<weaponMoney>
+			<min>400</min>
+			<max>1000</max>
+		</weaponMoney>
+		<initialResistanceRange>30~40</initialResistanceRange>
+		<initialWillRange>3~4</initialWillRange>
+	</PawnKindDef>
+  
+	<PawnKindDef Name="RH_TET_Dwarfs_Runic_PawnKind" Abstract="True">
+		<race>RH_TET_Dwarf_Race_Standard</race>
+		<combatPower>40</combatPower>
+		<isFighter>false</isFighter>
+		<apparelIgnoreSeasons>false</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<invNutrition>2.55</invNutrition>
+		<invFoodDef>RH_TET_Dwarf_Stonebread</invFoodDef>
+		<defaultFactionType>RH_TET_Dwarf_KarakMountain</defaultFactionType>
+	</PawnKindDef>
+
+	<!-- ================= Novice ============= -->
+  
+	<PawnKindDef Name="RH_TET_Dwarfs_Runic_PawnKind_Standard" ParentName="RH_TET_Dwarfs_Runic_PawnKind" Abstract="True">
+		<factionLeader>false</factionLeader>
+		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+		<apparelMoney>
+			<min>750</min>
+			<max>1500</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>400</min>
+			<max>1000</max>
+		</weaponMoney>
+		<minGenerationAge>120</minGenerationAge>
+		<maxGenerationAge>180</maxGenerationAge>
+		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
+		<initialResistanceRange>30~40</initialResistanceRange>
+		<initialWillRange>3~4</initialWillRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RH_TET_Dwarfs_Runic_PawnKind_Standard">
+		<defName>RH_TET_Dwarfs_RunicStandard</defName>
+		<label>Dawi Runesmith</label>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RH_TET_Dwarf_Runic_Backstory</li>
+					<li>RH_TET_Dwarf_Runic_Backstory_Novice</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponTags>
+			<li>RH_TET_Dwarf_Melee_Low</li>
+			<li>RH_TET_Dwarf_Melee_High</li>
+			<li>RH_TET_Dwarf_Ranged_High</li>
+		</weaponTags>
+		<apparelTags>
+			<li>RH_TET_Dwarf_Apparel_RuneSmith</li>
+			<li>RH_TET_Dwarf_Apparel_Mid</li>
+			<li>RH_TET_Dwarf_Apparel_Warm</li>
+		</apparelTags>
+	</PawnKindDef>
+  
+	<!-- ================= GREAT WIZARDS ============= -->
+  
+	<PawnKindDef Name="RH_TET_Dwarfs_Runic_PawnKind_Master" ParentName="RH_TET_Dwarfs_Runic_PawnKind" Abstract="True">
+		<combatPower>80</combatPower>
+		<factionLeader>true</factionLeader>
+		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+		<apparelMoney>
+			<min>1000</min>
+			<max>2500</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>500</min>
+			<max>2500</max>
+		</weaponMoney>
+		<minGenerationAge>180</minGenerationAge>
+		<maxGenerationAge>250</maxGenerationAge>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<initialResistanceRange>30~40</initialResistanceRange>
+		<initialWillRange>3~5</initialWillRange>
+		<defaultFactionType>RH_TET_Dwarf_KarakMountain</defaultFactionType>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RH_TET_Dwarfs_Runic_PawnKind_Master">
+		<defName>RH_TET_Dwarfs_RunicMaster</defName>
+		<label>Dawi Runelord</label>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RH_TET_Dwarf_Runic_Backstory</li>
+					<li>RH_TET_Dwarf_Runic_Backstory_Master</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponTags>
+			<li>RH_TET_Dwarf_Melee_Low</li>
+			<li>RH_TET_Dwarf_Melee_High</li>
+			<li>RH_TET_Dwarf_Ranged_High</li>
+		</weaponTags>
+		<apparelTags>
+			<li>RH_TET_Dwarf_Apparel_RuneSmith</li>
+			<li>RH_TET_Dwarf_Apparel_Mid</li>
+			<li>RH_TET_Dwarf_Apparel_High</li>
+			<li>RH_TET_Dwarf_Apparel_Warm</li>
+		</apparelTags>
+	</PawnKindDef>
+ 
+</Defs>

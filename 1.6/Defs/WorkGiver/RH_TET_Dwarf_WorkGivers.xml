@@ -58,6 +58,24 @@
 	</WorkGiverDef>
 
 	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_DoBillsRunicBench</defName>
+		<label>forge with rune magic</label>
+		<giverClass>TheEndTimes_Magic.WorkGiver_DoBillRunicBench</giverClass>
+		<workType>Crafting</workType>
+		<priorityInType>111</priorityInType>
+		<fixedBillGiverDefs>
+			<li>RH_TET_Dwarfs_TableRunicAnvil</li>
+		</fixedBillGiverDefs>
+		<verb>craft</verb>
+		<gerund>crafting at</gerund>
+		<requiredCapacities>
+			<li>Sight</li>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
 		<defName>RH_TET_DoSmithing</defName>
 		<label>work</label>
 		<giverClass>TheEndTimes_Dwarfs.WorkGiver_DoBillDwarfs</giverClass>
@@ -65,6 +83,8 @@
 		<priorityInType>95</priorityInType>
 		<fixedBillGiverDefs>
 			<li>RH_TET_TableSmithy</li>
+			<li>RH_TET_Dwarfs_TableAnvil</li>
+			<li>RH_TET_Dwarfs_TableForge</li>
 		</fixedBillGiverDefs>
 		<verb>smith</verb>
 		<gerund>smithing</gerund>

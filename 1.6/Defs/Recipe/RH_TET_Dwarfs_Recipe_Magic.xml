@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--=====================================================================-->
+	<!--============================ Stone Wool =============================-->
+	<!--=====================================================================-->
+	<RecipeDef Name="RH_TET_Dwarfs_MakeStoneWoolBase" Abstract="True">
+		<jobString>Creating stone wool from chunk.</jobString>
+		<workAmount>2900</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<targetCountAdjustment>20</targetCountAdjustment>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0</workSkillLearnFactor>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_TableRunicAnvil</li>
+		</recipeUsers>
+	</RecipeDef>
+
+	<!--
+  <RecipeDef ParentName="RH_TET_Dwarfs_MakeStoneWoolBase">
+    <defName>RH_TET_Dwarfs_Make_StoneWoolAny</defName>
+    <label>make any stone wool</label>
+    <description>Create stone wool from rock chunk.</description>
+    <workerCounterClass>TheEndTimes_Dwarfs.RecipeWorkerCounter_MakeStoneWool</workerCounterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>StoneChunks</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>StoneChunks</li>
+      </categories>
+    </fixedIngredientFilter>
+	
+	TODO: ISSUE IS HERE WITH THIS RECIPE: 
+		I added <products>, default was <specialProducts>. Can't use the generic recipe for any block,
+		because it'll hose up the vanilla chunk cutting stuff.
+    <products>
+      <BabyFood>10</BabyFood>
+    </products>
+    <specialProducts>
+      <li>Butchery</li>
+    </specialProducts>
+	
+  </RecipeDef>
+-->
+
+	<RecipeDef ParentName="RH_TET_Dwarfs_MakeStoneWoolBase">
+		<defName>RH_TET_Dwarfs_Make_StoneWoolSandstone</defName>
+		<label>make sandstone weave</label>
+		<description>Use runic magic to craft sandstone chunks into sandstone thread.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChunkSandstone</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ChunkSandstone</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_WoolSandstone>25</RH_TET_Dwarfs_WoolSandstone>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="RH_TET_Dwarfs_MakeStoneWoolBase">
+		<defName>RH_TET_Dwarfs_Make_StoneWoolGranite</defName>
+		<label>make granite weave</label>
+		<description>Use runic magic to craft granite chunks into granite thread.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChunkGranite</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ChunkGranite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_WoolGranite>25</RH_TET_Dwarfs_WoolGranite>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="RH_TET_Dwarfs_MakeStoneWoolBase">
+		<defName>RH_TET_Dwarfs_Make_StoneWoolLimestone</defName>
+		<label>make limestone weave</label>
+		<description>Use runic magic to craft limestone chunks into limestone thread.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChunkLimestone</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ChunkLimestone</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_WoolLimestone>25</RH_TET_Dwarfs_WoolLimestone>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="RH_TET_Dwarfs_MakeStoneWoolBase">
+		<defName>RH_TET_Dwarfs_Make_StoneWoolSlate</defName>
+		<label>make slate weave</label>
+		<description>Use runic magic to craft slate chunks into slate thread.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChunkSlate</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ChunkSlate</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_WoolSlate>25</RH_TET_Dwarfs_WoolSlate>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="RH_TET_Dwarfs_MakeStoneWoolBase">
+		<defName>RH_TET_Dwarfs_Make_StoneWoolMarble</defName>
+		<label>make marble weave</label>
+		<description>Use runic magic to craft marble chunks into marble thread.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChunkMarble</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ChunkMarble</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_WoolMarble>25</RH_TET_Dwarfs_WoolMarble>
+		</products>
+	</RecipeDef>
+
+
+</Defs>

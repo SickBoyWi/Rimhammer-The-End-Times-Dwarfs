@@ -68,6 +68,8 @@
 					<RH_TET_DwarfMinerBlaster>5</RH_TET_DwarfMinerBlaster>
 					<RH_TET_DwarfEngineer>5</RH_TET_DwarfEngineer>
 					<RH_TET_DwarfSlayerEngineer>2</RH_TET_DwarfSlayerEngineer>
+					<RH_TET_Dwarfs_RunicStandard>3</RH_TET_Dwarfs_RunicStandard>
+					<RH_TET_Dwarfs_RunicMaster>1</RH_TET_Dwarfs_RunicMaster>
 				</options>
 			</li>
 			<li>
@@ -92,6 +94,8 @@
 					<RH_TET_DwarfSlayerLord>1</RH_TET_DwarfSlayerLord>
 					<RH_TET_DwarfEngineer>3</RH_TET_DwarfEngineer>
 					<RH_TET_DwarfSlayerEngineer>2</RH_TET_DwarfSlayerEngineer>
+					<RH_TET_Dwarfs_RunicStandard>3</RH_TET_Dwarfs_RunicStandard>
+					<RH_TET_Dwarfs_RunicMaster>1</RH_TET_Dwarfs_RunicMaster>
 				</options>
 			</li>
 			<li>
@@ -115,6 +119,8 @@
 					<RH_TET_DwarfMinerBlaster>5</RH_TET_DwarfMinerBlaster>
 					<RH_TET_DwarfEngineer>2</RH_TET_DwarfEngineer>
 					<RH_TET_DwarfSlayerEngineer>1</RH_TET_DwarfSlayerEngineer>
+					<RH_TET_Dwarfs_RunicStandard>3</RH_TET_Dwarfs_RunicStandard>
+					<RH_TET_Dwarfs_RunicMaster>1</RH_TET_Dwarfs_RunicMaster>
 				</guards>
 			</li>
 			<li>
@@ -139,6 +145,8 @@
 					<RH_TET_DwarfSlayerThane>3</RH_TET_DwarfSlayerThane>
 					<RH_TET_DwarfLord>1</RH_TET_DwarfLord>
 					<RH_TET_DwarfSlayerLord>1</RH_TET_DwarfSlayerLord>
+					<RH_TET_Dwarfs_RunicStandard>3</RH_TET_Dwarfs_RunicStandard>
+					<RH_TET_Dwarfs_RunicMaster>1</RH_TET_Dwarfs_RunicMaster>
 				</options>
 			</li>
 		</pawnGroupMakers>

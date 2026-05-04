@@ -11,12 +11,14 @@
 					<xpath>/Defs/RecipeDef[defName = "GLO_WeldGlowstoneClusterElectric"]/recipeUsers</xpath>
 					<value>
 						<li>RH_TET_TableSmithy</li>
+						<li>RH_TET_Dwarfs_TableAnvil</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/RecipeDef[defName = "GLO_Weld4GlowstoneClusterElectric"]/recipeUsers</xpath>
 					<value>
 						<li>RH_TET_TableSmithy</li>
+						<li>RH_TET_Dwarfs_TableAnvil</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
@@ -35,12 +37,14 @@
 					<xpath>/Defs/RecipeDef[defName = "GLO_WeldLargeGlowstoneElectric"]/recipeUsers</xpath>
 					<value>
 						<li>RH_TET_TableSmithy</li>
+						<li>RH_TET_Dwarfs_TableAnvil</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/RecipeDef[defName = "GLO_Weld4LargeGlowstoneElectric"]/recipeUsers</xpath>
 					<value>
 						<li>RH_TET_TableSmithy</li>
+						<li>RH_TET_Dwarfs_TableAnvil</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
@@ -59,12 +63,14 @@
 					<xpath>/Defs/RecipeDef[defName = "GLO_WeldSmallGlowstoneElectric"]/recipeUsers</xpath>
 					<value>
 						<li>RH_TET_TableSmithy</li>
+						<li>RH_TET_Dwarfs_TableAnvil</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/RecipeDef[defName = "GLO_Weld4SmallGlowstoneElectric"]/recipeUsers</xpath>
 					<value>
 						<li>RH_TET_TableSmithy</li>
+						<li>RH_TET_Dwarfs_TableAnvil</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
@@ -83,12 +89,14 @@
 					<xpath>/Defs/RecipeDef[defName = "GLO_MakeEightGlowstoneTilesElectric"]/recipeUsers</xpath>
 					<value>
 						<li>RH_TET_TableSmithy</li>
+						<li>RH_TET_Dwarfs_TableAnvil</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/RecipeDef[defName = "GLO_MakeFortyGlowstoneTilesElectric"]/recipeUsers</xpath>
 					<value>
 						<li>RH_TET_TableSmithy</li>
+						<li>RH_TET_Dwarfs_TableAnvil</li>
 					</value>
 				</li>
 			</operations>

@@ -338,6 +338,7 @@
 		</weaponTags>
 		<recipeMaker>
 			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
 				<li>RH_TET_TableSmithy</li>
 				<li>ElectricSmithy</li>
 				<li>FueledSmithy</li>
@@ -423,6 +424,7 @@
 		</weaponTags>
 		<recipeMaker>
 			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
 				<li>RH_TET_TableSmithy</li>
 				<li>ElectricSmithy</li>
 				<li>FueledSmithy</li>
@@ -486,7 +488,7 @@
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<recipeMaker>
 			<recipeUsers>
-				<li>RH_TET_TableSmithy</li>
+				<li>RH_TET_Dwarfs_BlastingBench</li>
 				<li>ElectricSmithy</li>
 				<li>FueledSmithy</li>
 			</recipeUsers>
@@ -588,7 +590,7 @@
 		</costList>
 		<recipeMaker>
 			<recipeUsers>
-				<li>RH_TET_TableSmithy</li>
+				<li>RH_TET_Dwarfs_BlastingBench</li>
 				<li>ElectricSmithy</li>
 				<li>FueledSmithy</li>
 			</recipeUsers>

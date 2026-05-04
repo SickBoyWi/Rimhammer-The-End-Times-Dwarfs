@@ -23,6 +23,7 @@
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Smith</soundWorking>
 			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
 				<li>RH_TET_TableSmithy</li>
 				<li>ElectricSmithy</li>
 				<li>FueledSmithy</li>
