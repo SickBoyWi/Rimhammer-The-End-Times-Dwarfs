@@ -170,4 +170,10 @@
 		<parent>Handwear</parent>
 	</ThingCategoryDef>
 
+	<ThingCategoryDef>
+		<defName>RH_TET_Dwafs_MagicItems_Runes</defName>
+		<label>dawi runes</label>
+		<parent>RH_TET_MagicItems</parent>
+	</ThingCategoryDef>
+
 </Defs>

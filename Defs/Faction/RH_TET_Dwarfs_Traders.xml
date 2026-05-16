@@ -53,6 +53,11 @@
 			</li>
 			<li Class="StockGenerator_Tag">
 				<tradeTag>Artifact</tradeTag>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>1~1</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>DawiRunic</tradeTag>
 				<thingDefCountRange>2~2</thingDefCountRange>
 				<countRange>1~1</countRange>
 			</li>
@@ -257,8 +262,13 @@
 			</li>
 			<li Class="StockGenerator_Tag">
 				<tradeTag>Artifact</tradeTag>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>1~1</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>DawiRunic</tradeTag>
 				<thingDefCountRange>2~2</thingDefCountRange>
-				<countRange>1~2</countRange>
+				<countRange>1~1</countRange>
 			</li>
 			<li Class="StockGenerator_Tag">
 				<tradeTag>RH_TET_MagicApparel</tradeTag>
@@ -394,7 +404,12 @@
 			</li>
 			<li Class="StockGenerator_Tag">
 				<tradeTag>Artifact</tradeTag>
-				<thingDefCountRange>1~2</thingDefCountRange>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>DawiRunic</tradeTag>
+				<thingDefCountRange>2~2</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 			<li Class="StockGenerator_Tag">

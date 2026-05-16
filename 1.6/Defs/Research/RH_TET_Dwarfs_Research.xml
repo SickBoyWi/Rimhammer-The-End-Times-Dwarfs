@@ -896,6 +896,21 @@
 		<researchViewX>10.00</researchViewX>
 		<researchViewY>2.2</researchViewY>
 	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_Runic_Advanced</defName>
+		<label>Advanced Rune Crafting</label>
+		<description>Unlocks the ability to craft advanced dwarfen runes.\n\nA Runesmith is required in order to craft runes and runic items. Runesmiths are dwarfs born with the innate ability to work magic as only the dawi can: via magic captured in runes, and applied to items and buildings.</description>
+		<baseCost>3500</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_Runic_Basic</li>
+		</prerequisites>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>4.80</researchViewY>
+	</ResearchProjectDef>
   
 	<!-- Column 12 -->
 
@@ -976,6 +991,21 @@
 		</prerequisites>
 		<researchViewX>1.00</researchViewX>
 		<researchViewY>5.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_Runic_Master</defName>
+		<label>Apex Rune Crafting</label>
+		<description>Unlocks the ability to craft the highest tier of dwarfen runes.\n\nA Runesmith is required in order to craft runes and runic items. Runesmiths are dwarfs born with the innate ability to work magic as only the dawi can: via magic captured in runes, and applied to items and buildings.</description>
+		<baseCost>5000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_Runic_Advanced</li>
+		</prerequisites>
+		<researchViewX>11.00</researchViewX>
+		<researchViewY>4.80</researchViewY>
 	</ResearchProjectDef>
 
 	<!-- Column 12 -->

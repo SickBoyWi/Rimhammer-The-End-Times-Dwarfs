@@ -1,6 +1,152 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>RH_TET_Dwarfs_Unfinished_Rune</defName>
+		<label>unfinished rune</label>
+		<description>An unfinished dawi rune.</description>
+		<graphicData>
+			<texPath>Things/Item/Misc/RH_TET_UnfinishedRune</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>.65</drawSize>
+		</graphicData>
+	</ThingDef>
+
+	<!--=====================================================================-->
+	<!--============================== Runes ================================-->
+	<!--=====================================================================-->
+	<ThingDef ParentName="ResourceBase" Name="RH_TET_Dwarfs_RuneBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<Mass>0.2</Mass>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Flammability>0</Flammability>
+		</statBases>
+		<graphicData>
+			<drawSize>.65</drawSize>
+		</graphicData>
+		<thingCategories>
+			<li>RH_TET_Dwafs_MagicItems_Runes</li>
+		</thingCategories>
+		<techLevel>Medieval</techLevel>
+		<altitudeLayer>Item</altitudeLayer>
+		<tradeTags>
+			<li>DawiRunic</li>
+		</tradeTags>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>10</pathCost>
+	</ThingDef>	
+	
+	<ThingDef ParentName="RH_TET_Dwarfs_RuneBase">
+		<defName>RH_TET_Dwarfs_Rune_Blank</defName>
+		<label>blank rune</label>
+		<description>A blank rune crafted by a dwarfen runesmith. This rune holds no magic power, as it is blank. It is used by a runesmith to create a proper magic rune.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Runic/Blank_Rune</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>700</MarketValue>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="RH_TET_Dwarfs_RuneBase">
+		<defName>RH_TET_Dwarfs_Rune_Common</defName>
+		<label>common rune</label>
+		<description>The most basic form of magic rune crafted by a dwarfen runesmith. This rune is simple, but does hold magic power. It's relatively simple enough to not require a runic anvil to create.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Runic/Common_Rune</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>1900</MarketValue>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="RH_TET_Dwarfs_RuneBase">
+		<defName>RH_TET_Dwarfs_Rune_Uncommon</defName>
+		<label>uncommon rune</label>
+		<description>A magic rune crafted by a dwarfen runesmith. These aren't common, as they're more powerful than the common runes. This rune is not simple, and does hold a good degree of magic power. It is not powerful enough to require a runic anvil to create, and thus can be created at a standard anvil as well as at a runic anvil.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Runic/Uncommon_Rune</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>3000</MarketValue>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="RH_TET_Dwarfs_RuneBase">
+		<defName>RH_TET_Dwarfs_Rune_Rare</defName>
+		<label>rare rune</label>
+		<description>A magic rune crafted by a dwarfen runesmith. These are rare, and they're more powerful than the uncommon runes. This rune is complex, and holds a high degree of magic power. It requires a runic anvil in order to be able to craft it.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Runic/Rare_Rune</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>4200</MarketValue>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="RH_TET_Dwarfs_RuneBase">
+		<defName>RH_TET_Dwarfs_Rune_Master</defName>
+		<label>master rune</label>
+		<description>A master magic rune crafted by a dwarfen runesmith. These are very rare, and they're the second most poewrful rune. This rune is very complex to craft, and holds a very high degree of magic power. It requires a runic anvil in order to be able to craft it.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Runic/Master_Rune</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>5000</MarketValue>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="RH_TET_Dwarfs_RuneBase">
+		<defName>RH_TET_Dwarfs_Rune_Ancestor</defName>
+		<label>ancestor rune</label>
+		<description>An ancestor magic rune crafted by a dwarfen runesmith. These are the ultimate dwarfen runes, in terms of power and difficulty to craft. This rune is massively complex to craft, and therefore holds a massively high degree of magic power. It requires a runic anvil in order to be able to craft it.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Runic/Ancestor_Rune</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>6000</MarketValue>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	
+
+	<!--=====================================================================-->
+	<!--============================ Stone Wool =============================-->
+	<!--=====================================================================-->
 	<StuffCategoryDef>
 		<defName>RH_TET_Dwarfs_StoneFabric</defName>
 		<label>stone weave</label>
@@ -17,9 +163,6 @@
 		<resourceReadoutRoot>true</resourceReadoutRoot>
 	</ThingCategoryDef>
 
-	<!--=====================================================================-->
-	<!--============================ Stone Wool =============================-->
-	<!--=====================================================================-->
 	<ThingDef ParentName="ResourceBase" Name="RH_TET_Dwarfs_StoneWoolBase" Abstract="True">
 		<stackLimit>100</stackLimit>
 		<statBases>

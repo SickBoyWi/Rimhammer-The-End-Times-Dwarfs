@@ -1,6 +1,410 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+	<RecipeDef>
+		<defName>RH_TET_Dwarfs_Magic_RefineMagic</defName>
+		<label>refine magic essence</label>
+		<description>Turn raw magic essence into refined magic essence so that it's usable for crafting, at a runic anvil.</description>
+		<jobString>Refining magic essence.</jobString>
+		<workAmount>1000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<unfinishedThingDef>RH_TET_Unfinished_MagicItem</unfinishedThingDef>
+		<allowMixingIngredients>false</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Daemons_MagicEssence_Raw</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Daemons_MagicEssence_Raw</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_TableRunicAnvil</li>
+		</recipeUsers>
+		<products>
+			<RH_TET_Daemons_MagicEssence_Refined>10</RH_TET_Daemons_MagicEssence_Refined>
+		</products>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Runic_Basic</li>
+		</researchPrerequisites>
+	</RecipeDef>
+
+	<!--=====================================================================-->
+	<!--============================= Runes =================================-->
+	<!--=====================================================================-->
+	<RecipeDef Name="RH_TET_Dwarfs_RuneRecipeBase" Abstract="True">
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<unfinishedThingDef>RH_TET_Dwarfs_Unfinished_Rune</unfinishedThingDef>
+		<allowMixingIngredients>false</allowMixingIngredients>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="RH_TET_Dwarfs_RuneRecipeBase">
+		<defName>RH_TET_Dwarfs_Rune_Blank</defName>
+		<label>Forge rune blank</label>
+		<description>Forge a rune blank at the runic anvil to be used later for crafting a proper rune of power.</description>
+		<jobString>Forging rune blank.</jobString>
+		<workAmount>10000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarf_Gromril</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Silver</li>
+				<li>RH_TET_Dwarf_Gromril</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_Rune_Blank>1</RH_TET_Dwarfs_Rune_Blank>
+		</products>
+		<skillRequirements>
+			<Crafting>10</Crafting>
+		</skillRequirements>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Runic_Basic</li>
+		</researchPrerequisites>
+		<recipeUsers>
+			<li>RH_TET_TableSmithy</li>
+			<li>RH_TET_Dwarfs_TableAnvil</li>
+			<li>RH_TET_Dwarfs_TableRunicAnvil</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="RH_TET_Dwarfs_RuneRecipeBase">
+		<defName>RH_TET_Dwarfs_Rune_Common</defName>
+		<label>Forge common rune</label>
+		<description>Forge a common rune. Can be crafted at a runic anvil, or a regular anvil due to the low magic level that it contains.</description>
+		<jobString>Forging common rune.</jobString>
+		<workAmount>15000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_Rune_Blank</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarf_Gromril</li>
+					</thingDefs>
+				</filter>
+				<count>35</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Dwarfs_Rune_Blank</li>
+				<li>Silver</li>
+				<li>RH_TET_Dwarf_Gromril</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_Rune_Common>1</RH_TET_Dwarfs_Rune_Common>
+		</products>
+		<skillRequirements>
+			<Crafting>12</Crafting>
+		</skillRequirements>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Runic_Basic</li>
+		</researchPrerequisites>
+		<recipeUsers>
+			<li>RH_TET_TableSmithy</li>
+			<li>RH_TET_Dwarfs_TableAnvil</li>
+			<li>RH_TET_Dwarfs_TableRunicAnvil</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="RH_TET_Dwarfs_RuneRecipeBase">
+		<defName>RH_TET_Dwarfs_Rune_Uncommon</defName>
+		<label>Forge uncommon rune</label>
+		<description>Forge an uncommon rune. Can be crafted at a runic anvil, or a regular anvil due to the not very high magic level that it contains.</description>
+		<jobString>Forging uncommon rune.</jobString>
+		<workAmount>20000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_Rune_Blank</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarf_Gromril</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Dwarfs_Rune_Blank</li>
+				<li>Silver</li>
+				<li>RH_TET_Dwarf_Gromril</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_Rune_Uncommon>1</RH_TET_Dwarfs_Rune_Uncommon>
+		</products>
+		<skillRequirements>
+			<Crafting>14</Crafting>
+		</skillRequirements>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Runic_Basic</li>
+		</researchPrerequisites>
+		<recipeUsers>
+			<li>RH_TET_TableSmithy</li>
+			<li>RH_TET_Dwarfs_TableAnvil</li>
+			<li>RH_TET_Dwarfs_TableRunicAnvil</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="RH_TET_Dwarfs_RuneRecipeBase">
+		<defName>RH_TET_Dwarfs_Rune_Rare</defName>
+		<label>Forge rare rune</label>
+		<description>Forge a rare rune. Must be crafted at a runic anvil due to the high magic level that it contains.</description>
+		<jobString>Forging rare rune.</jobString>
+		<workAmount>25000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_Rune_Blank</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gold</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarf_Gromril</li>
+					</thingDefs>
+				</filter>
+				<count>75</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Dwarfs_Rune_Blank</li>
+				<li>Silver</li>
+				<li>Gold</li>
+				<li>RH_TET_Dwarf_Gromril</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_Rune_Rare>1</RH_TET_Dwarfs_Rune_Rare>
+		</products>
+		<skillRequirements>
+			<Crafting>16</Crafting>
+		</skillRequirements>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Runic_Advanced</li>
+		</researchPrerequisites>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_TableRunicAnvil</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="RH_TET_Dwarfs_RuneRecipeBase">
+		<defName>RH_TET_Dwarfs_Rune_Master</defName>
+		<label>Forge master rune</label>
+		<description>Forge a master rune. Must be crafted at a runic anvil due to the very high magic level that it contains.</description>
+		<jobString>Forging master rune.</jobString>
+		<workAmount>30000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_Rune_Blank</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gold</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarf_Gromril</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Dwarfs_Rune_Blank</li>
+				<li>Silver</li>
+				<li>Gold</li>
+				<li>RH_TET_Dwarf_Gromril</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_Rune_Master>1</RH_TET_Dwarfs_Rune_Master>
+		</products>
+		<skillRequirements>
+			<Crafting>18</Crafting>
+		</skillRequirements>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Runic_Advanced</li>
+		</researchPrerequisites>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_TableRunicAnvil</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="RH_TET_Dwarfs_RuneRecipeBase">
+		<defName>RH_TET_Dwarfs_Rune_Ancestor</defName>
+		<label>Forge ancestor rune</label>
+		<description>Forge aa ancestor rune. Must be crafted at a runic anvil due to the extremely high magic level that it contains.</description>
+		<jobString>Forging ancestor rune.</jobString>
+		<workAmount>35000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_Rune_Blank</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gold</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarf_Gromril</li>
+					</thingDefs>
+				</filter>
+				<count>75</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Dwarfs_Rune_Blank</li>
+				<li>Silver</li>
+				<li>Gold</li>
+				<li>RH_TET_Dwarf_Gromril</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Dwarfs_Rune_Ancestor>1</RH_TET_Dwarfs_Rune_Ancestor>
+		</products>
+		<skillRequirements>
+			<Crafting>20</Crafting>
+		</skillRequirements>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Runic_Master</li>
+		</researchPrerequisites>
+		<recipeUsers>
+			<li>RH_TET_Dwarfs_TableRunicAnvil</li>
+		</recipeUsers>
+	</RecipeDef>
+
 	<!--=====================================================================-->
 	<!--============================ Stone Wool =============================-->
 	<!--=====================================================================-->

@@ -331,6 +331,7 @@
 		</graphicData>
 		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
 		<costList>
+			<RH_TET_Dwarfs_Rune_Uncommon>6</RH_TET_Dwarfs_Rune_Uncommon>
 			<Steel>75</Steel>
 			<RH_TET_Dwarf_Gromril>25</RH_TET_Dwarf_Gromril>
 			<Gold>10</Gold>
@@ -387,5 +388,4 @@
 		<staticSunShadowHeight>0</staticSunShadowHeight>
 	</ThingDef>
 
-	
 </Defs>
