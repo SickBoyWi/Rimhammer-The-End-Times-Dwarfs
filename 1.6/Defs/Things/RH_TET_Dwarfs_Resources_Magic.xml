@@ -197,6 +197,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<allowedArchonexusCount>80</allowedArchonexusCount>
+		<tradeTags>
+			<li>RH_TET_Dwarfs_Textiles</li>
+		</tradeTags>
 	</ThingDef>
 
 	<!-- Wool for each type of stone chunk. -->

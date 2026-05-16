@@ -153,6 +153,9 @@
 			<li Class="StockGenerator_Category">
 				<categoryDef>Textiles</categoryDef>
 			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_Dwarfs_Textiles</tradeTag>
+			</li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>RH_TET_Dwarfs_MortarShell</tag></li>
 			<li Class="StockGenerator_BuyExpensiveSimple"/>
@@ -294,6 +297,9 @@
 				<tradeTag>RH_TET_Dwarf_Ranged_Lordly</tradeTag>
 				<thingDefCountRange>0~1</thingDefCountRange>
 				<countRange>0~1</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_Dwarfs_Textiles</tradeTag>
 			</li>
 			<li Class="StockGenerator_BuyExpensiveSimple"/>
 			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>

@@ -344,6 +344,438 @@
 							</costList>
 						</TerrainDef>
 						
+						<ThingDef ParentName="RH_TET_Dwarfs_StoneWoolBase">
+							<defName>RH_TET_Dwarfs_Wool_Claystone</defName>
+							<label>clay stone weave</label>
+							<description>Fine stone thread, made from stone chunks by a dawi runesmith.</description>
+							<possessionCount>25</possessionCount>
+							<statBases>
+								<StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+								<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+							</statBases>
+							<stuffProps>
+								<color>(228, 188, 147)</color>
+								<statFactors>
+									<MaxHitPoints>1.2</MaxHitPoints>	
+								</statFactors>
+							</stuffProps>
+							<graphicData>
+								<color>(228, 188, 147)</color>
+							</graphicData>
+						</ThingDef>		
+						<ThingDef ParentName="RH_TET_Dwarfs_StoneWoolBase">
+							<defName>RH_TET_Dwarfs_Wool_Andesite</defName>
+							<label>andesite weave</label>
+							<description>Fine stone thread, made from stone chunks by a dawi runesmith.</description>
+							<possessionCount>25</possessionCount>
+							<statBases>
+								<StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+								<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+							</statBases>
+							<stuffProps>
+								<color>(155, 164, 166)</color>
+								<statFactors>
+									<Beauty>1.1</Beauty>
+									<MaxHitPoints>1.4</MaxHitPoints>
+									<WorkToBuild>5.0</WorkToBuild>
+									<WorkToMake>1.1</WorkToMake>	
+								</statFactors>
+							</stuffProps>
+							<graphicData>
+								<color>(155, 164, 166)</color>
+							</graphicData>
+						</ThingDef>			
+						<ThingDef ParentName="RH_TET_Dwarfs_StoneWoolBase">
+							<defName>RH_TET_Dwarfs_Wool_Syenite</defName>
+							<label>syenite weave</label>
+							<description>Fine stone thread, made from stone chunks by a dawi runesmith.</description>
+							<possessionCount>25</possessionCount>
+							<statBases>
+								<StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+								<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+							</statBases>
+							<stuffProps>
+								<color>(186, 126, 121)</color>
+								<statFactors>
+									<MaxHitPoints>1.5</MaxHitPoints>	
+								</statFactors>
+							</stuffProps>
+							<graphicData>
+								<color>(186, 126, 121)</color>
+							</graphicData>
+						</ThingDef>		
+						<ThingDef ParentName="RH_TET_Dwarfs_StoneWoolBase">
+							<defName>RH_TET_Dwarfs_Wool_Gneiss</defName>
+							<label>gneiss weave</label>
+							<description>Fine stone thread, made from stone chunks by a dawi runesmith.</description>
+							<possessionCount>25</possessionCount>
+							<statBases>
+								<StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+								<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+							</statBases>
+							<stuffProps>
+								<color>(146, 138, 104)</color>
+								<statFactors>
+									<Beauty>1.5</Beauty>	
+									<MaxHitPoints>1.5</MaxHitPoints>
+								</statFactors>
+							</stuffProps>
+							<graphicData>
+								<color>(146, 138, 104)</color>
+							</graphicData>
+						</ThingDef>	
+						<ThingDef ParentName="RH_TET_Dwarfs_StoneWoolBase">
+							<defName>RH_TET_Dwarfs_Wool_Quartzite</defName>
+							<label>quartzite weave</label>
+							<description>Fine stone thread, made from stone chunks by a dawi runesmith.</description>
+							<possessionCount>25</possessionCount>
+							<statBases>
+								<StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+								<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+							</statBases>
+							<stuffProps>
+								<color>(155, 156, 160)</color>
+								<statFactors>
+									<Beauty>1.5</Beauty>	
+									<MaxHitPoints>1.3</MaxHitPoints>
+								</statFactors>
+							</stuffProps>
+							<graphicData>
+								<color>(155, 156, 160)</color>
+							</graphicData>
+						</ThingDef>		
+						<ThingDef ParentName="RH_TET_Dwarfs_StoneWoolBase">
+							<defName>RH_TET_Dwarfs_Wool_Schist</defName>
+							<label>schist weave</label>
+							<description>Fine stone thread, made from stone chunks by a dawi runesmith.</description>
+							<possessionCount>25</possessionCount>
+							<statBases>
+								<StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+								<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+							</statBases>
+							<stuffProps>
+								<color>(105, 124, 102)</color>
+								<statFactors>
+									<Beauty>1.4</Beauty>	
+									<MaxHitPoints>1.4</MaxHitPoints>
+								</statFactors>
+							</stuffProps>
+							<graphicData>
+								<color>(105, 124, 102)</color>
+							</graphicData>
+						</ThingDef>			
+						<ThingDef ParentName="RH_TET_Dwarfs_StoneWoolBase">
+							<defName>RH_TET_Dwarfs_Wool_Gabbro</defName>
+							<label>gabbro weave</label>
+							<description>Fine stone thread, made from stone chunks by a dawi runesmith.</description>
+							<possessionCount>25</possessionCount>
+							<statBases>
+								<StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+								<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+							</statBases>
+							<stuffProps>
+								<color>(122, 122, 122)</color>
+								<statFactors>
+									<Beauty>1.2</Beauty>	
+									<MaxHitPoints>1.5</MaxHitPoints>
+								</statFactors>
+							</stuffProps>
+							<graphicData>
+								<color>(122, 122, 122)</color>
+							</graphicData>
+						</ThingDef>			
+						<ThingDef ParentName="RH_TET_Dwarfs_StoneWoolBase">
+							<defName>RH_TET_Dwarfs_Wool_Diorite</defName>
+							<label>diorite weave</label>
+							<description>Fine stone thread, made from stone chunks by a dawi runesmith.</description>
+							<possessionCount>25</possessionCount>
+							<statBases>
+								<StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+								<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+							</statBases>
+							<stuffProps>
+								<color>(204, 204, 204)</color>
+								<statFactors>
+									<Beauty>1.5</Beauty>	
+									<MaxHitPoints>1.3</MaxHitPoints>
+								</statFactors>
+							</stuffProps>
+							<graphicData>
+								<color>(204, 204, 204)</color>
+							</graphicData>
+						</ThingDef>			
+						<ThingDef ParentName="RH_TET_Dwarfs_StoneWoolBase">
+							<defName>RH_TET_Dwarfs_Wool_Dunite</defName>
+							<label>dunite weave</label>
+							<description>Fine stone thread, made from stone chunks by a dawi runesmith.</description>
+							<possessionCount>25</possessionCount>
+							<statBases>
+								<StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+								<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+							</statBases>
+							<stuffProps>
+								<color>(154, 162, 126)</color>
+								<statFactors>
+									<Beauty>1.5</Beauty>	
+									<MaxHitPoints>1.4</MaxHitPoints>
+								</statFactors>
+							</stuffProps>
+							<graphicData>
+								<color>(154, 162, 126)</color>
+							</graphicData>
+						</ThingDef>		
+						<ThingDef ParentName="RH_TET_Dwarfs_StoneWoolBase">
+							<defName>RH_TET_Dwarfs_Wool_Pegmatite</defName>
+							<label>pegmatite weave</label>
+							<description>Fine stone thread, made from stone chunks by a dawi runesmith.</description>
+							<possessionCount>25</possessionCount>
+							<statBases>
+								<StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+								<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+							</statBases>
+							<stuffProps>
+								<color>(201, 150, 115)</color>
+								<statFactors>
+									<Beauty>1.5</Beauty>	
+									<MaxHitPoints>1.3</MaxHitPoints>
+								</statFactors>
+							</stuffProps>
+							<graphicData>
+								<color>(201, 150, 115)</color>
+							</graphicData>
+						</ThingDef>		
+
+						<RecipeDef ParentName="RH_TET_Dwarfs_MakeStoneWoolBase">
+							<defName>RH_TET_Dwarfs_Make_StoneWoolClaystone</defName>
+							<label>make claystone weave</label>
+							<description>Use runic magic to craft claystone chunks into claystone thread.</description>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>ChunkClaystone</li>
+										</thingDefs>
+									</filter>
+									<count>1</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>ChunkClaystone</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<RH_TET_Dwarfs_Wool_Claystone>25</RH_TET_Dwarfs_Wool_Claystone>
+							</products>
+						</RecipeDef>
+						<RecipeDef ParentName="RH_TET_Dwarfs_MakeStoneWoolBase">
+							<defName>RH_TET_Dwarfs_Make_StoneWoolAndesite</defName>
+							<label>make andesite weave</label>
+							<description>Use runic magic to craft andesite chunks into andesite thread.</description>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>ChunkAndesite</li>
+										</thingDefs>
+									</filter>
+									<count>1</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>ChunkAndesite</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<RH_TET_Dwarfs_Wool_Andesite>25</RH_TET_Dwarfs_Wool_Andesite>
+							</products>
+						</RecipeDef>
+						<RecipeDef ParentName="RH_TET_Dwarfs_MakeStoneWoolBase">
+							<defName>RH_TET_Dwarfs_Make_StoneWoolSyenite</defName>
+							<label>make syenite weave</label>
+							<description>Use runic magic to craft syenite chunks into syenite thread.</description>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>ChunkSyenite</li>
+										</thingDefs>
+									</filter>
+									<count>1</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>ChunkSyenite</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<RH_TET_Dwarfs_Wool_Syenite>25</RH_TET_Dwarfs_Wool_Syenite>
+							</products>
+						</RecipeDef>
+						<RecipeDef ParentName="RH_TET_Dwarfs_MakeStoneWoolBase">
+							<defName>RH_TET_Dwarfs_Make_StoneWoolGneiss</defName>
+							<label>make gneiss weave</label>
+							<description>Use runic magic to craft gneiss chunks into gneiss thread.</description>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>ChunkGneiss</li>
+										</thingDefs>
+									</filter>
+									<count>1</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>ChunkGneiss</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<RH_TET_Dwarfs_Wool_Gneiss>25</RH_TET_Dwarfs_Wool_Gneiss>
+							</products>
+						</RecipeDef>
+						<RecipeDef ParentName="RH_TET_Dwarfs_MakeStoneWoolBase">
+							<defName>RH_TET_Dwarfs_Make_StoneWoolQuartzite</defName>
+							<label>make quartzite weave</label>
+							<description>Use runic magic to craft quartzite chunks into quartzite thread.</description>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>ChunkQuartzite</li>
+										</thingDefs>
+									</filter>
+									<count>1</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>ChunkQuartzite</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<RH_TET_Dwarfs_Wool_Quartzite>25</RH_TET_Dwarfs_Wool_Quartzite>
+							</products>
+						</RecipeDef>
+						<RecipeDef ParentName="RH_TET_Dwarfs_MakeStoneWoolBase">
+							<defName>RH_TET_Dwarfs_Make_StoneWoolSchist</defName>
+							<label>make schist weave</label>
+							<description>Use runic magic to craft schist chunks into schist thread.</description>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>ChunkSchist</li>
+										</thingDefs>
+									</filter>
+									<count>1</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>ChunkSchist</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<RH_TET_Dwarfs_Wool_Schist>25</RH_TET_Dwarfs_Wool_Schist>
+							</products>
+						</RecipeDef>
+						<RecipeDef ParentName="RH_TET_Dwarfs_MakeStoneWoolBase">
+							<defName>RH_TET_Dwarfs_Make_StoneWoolGabbro</defName>
+							<label>make gabbro weave</label>
+							<description>Use runic magic to craft gabbro chunks into gabbro thread.</description>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>ChunkGabbro</li>
+										</thingDefs>
+									</filter>
+									<count>1</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>ChunkGabbro</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<RH_TET_Dwarfs_Wool_Gabbro>25</RH_TET_Dwarfs_Wool_Gabbro>
+							</products>
+						</RecipeDef>
+						<RecipeDef ParentName="RH_TET_Dwarfs_MakeStoneWoolBase">
+							<defName>RH_TET_Dwarfs_Make_StoneWoolDiorite</defName>
+							<label>make diorite weave</label>
+							<description>Use runic magic to craft diorite chunks into diorite thread.</description>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>ChunkDiorite</li>
+										</thingDefs>
+									</filter>
+									<count>1</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>ChunkDiorite</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<RH_TET_Dwarfs_Wool_Diorite>25</RH_TET_Dwarfs_Wool_Diorite>
+							</products>
+						</RecipeDef>
+						<RecipeDef ParentName="RH_TET_Dwarfs_MakeStoneWoolBase">
+							<defName>RH_TET_Dwarfs_Make_StoneWoolDunite</defName>
+							<label>make dunite weave</label>
+							<description>Use runic magic to craft dunite chunks into dunite thread.</description>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>ChunkDunite</li>
+										</thingDefs>
+									</filter>
+									<count>1</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>ChunkDunite</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<RH_TET_Dwarfs_Wool_Dunite>25</RH_TET_Dwarfs_Wool_Dunite>
+							</products>
+						</RecipeDef>
+						<RecipeDef ParentName="RH_TET_Dwarfs_MakeStoneWoolBase">
+							<defName>RH_TET_Dwarfs_Make_StoneWoolPegmatite</defName>
+							<label>make pegmatite weave</label>
+							<description>Use runic magic to craft pegmatite chunks into pegmatite thread.</description>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>ChunkPegmatite</li>
+										</thingDefs>
+									</filter>
+									<count>1</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>ChunkPegmatite</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<RH_TET_Dwarfs_Wool_Pegmatite>25</RH_TET_Dwarfs_Wool_Pegmatite>
+							</products>
+						</RecipeDef>
+						
 						<ThingDef ParentName="TWC_SmoothedRockBase">
 							<defName>RH_TET_Dwarfs_SmoothedClaystone_Decorated</defName>
 							<label>smooth decorative claystone</label>
@@ -369,7 +801,6 @@
 							<saveCompressible>false</saveCompressible>
 							<repairEffect>Repair</repairEffect>
 						</ThingDef>
-						
 						<ThingDef ParentName="TWC_SmoothedRockBase">
 							<defName>RH_TET_Dwarfs_SmoothedAndesite_Decorated</defName>
 							<label>smooth decorative andesite</label>
@@ -395,7 +826,6 @@
 							<saveCompressible>false</saveCompressible>
 							<repairEffect>Repair</repairEffect>
 						</ThingDef>
-						
 						<ThingDef ParentName="TWC_SmoothedRockBase">
 							<defName>RH_TET_Dwarfs_SmoothedSyenite_Decorated</defName>
 							<label>smooth decorative syenite</label>
@@ -421,7 +851,6 @@
 							<saveCompressible>false</saveCompressible>
 							<repairEffect>Repair</repairEffect>
 						</ThingDef>
-						
 						<ThingDef ParentName="TWC_SmoothedRockBase">
 							<defName>RH_TET_Dwarfs_SmoothedGneiss_Decorated</defName>
 							<label>smooth decorative gneiss</label>
@@ -447,7 +876,6 @@
 							<saveCompressible>false</saveCompressible>
 							<repairEffect>Repair</repairEffect>
 						</ThingDef>
-						
 						<ThingDef ParentName="TWC_SmoothedRockBase">
 							<defName>RH_TET_Dwarfs_SmoothedQuartzite_Decorated</defName>
 							<label>smooth decorative quartzite</label>
@@ -473,7 +901,6 @@
 							<saveCompressible>false</saveCompressible>
 							<repairEffect>Repair</repairEffect>
 						</ThingDef>
-						
 						<ThingDef ParentName="TWC_SmoothedRockBase">
 							<defName>RH_TET_Dwarfs_SmoothedSchist_Decorated</defName>
 							<label>smooth decorative schist</label>
@@ -499,7 +926,6 @@
 							<saveCompressible>false</saveCompressible>
 							<repairEffect>Repair</repairEffect>
 						</ThingDef>
-						
 						<ThingDef ParentName="TWC_SmoothedRockBase">
 							<defName>RH_TET_Dwarfs_SmoothedGabbro_Decorated</defName>
 							<label>smooth decorative gabbro</label>
@@ -525,7 +951,6 @@
 							<saveCompressible>false</saveCompressible>
 							<repairEffect>Repair</repairEffect>
 						</ThingDef>
-						
 						<ThingDef ParentName="TWC_SmoothedRockBase">
 							<defName>RH_TET_Dwarfs_SmoothedDiorite_Decorated</defName>
 							<label>smooth decorative diorite</label>
@@ -551,7 +976,6 @@
 							<saveCompressible>false</saveCompressible>
 							<repairEffect>Repair</repairEffect>
 						</ThingDef>
-						
 						<ThingDef ParentName="TWC_SmoothedRockBase">
 							<defName>RH_TET_Dwarfs_SmoothedDunite_Decorated</defName>
 							<label>smooth decorative dunite</label>
@@ -577,7 +1001,6 @@
 							<saveCompressible>false</saveCompressible>
 							<repairEffect>Repair</repairEffect>
 						</ThingDef>
-						
 						<ThingDef ParentName="TWC_SmoothedRockBase">
 							<defName>RH_TET_Dwarfs_SmoothedPegmatite_Decorated</defName>
 							<label>smooth decorative pegmatite</label>
@@ -603,6 +1026,7 @@
 							<saveCompressible>false</saveCompressible>
 							<repairEffect>Repair</repairEffect>
 						</ThingDef>
+						
 					</value>
 				</li>
 			</operations>
