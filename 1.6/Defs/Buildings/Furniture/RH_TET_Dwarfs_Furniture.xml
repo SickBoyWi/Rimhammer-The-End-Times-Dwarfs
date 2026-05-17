@@ -8,9 +8,8 @@
 		<graphicData>
 			<texPath>Things/Building/Furniture/Runic/RH_TET_Magic_MeditationPad</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
 			<drawRotated>false</drawRotated>
-			<drawSize>(1.2)</drawSize>
+			<drawSize>(1.0)</drawSize>
 			<shadowData>
 				<volume>(0.6, 0.6, 0.6)</volume>
 			</shadowData>
@@ -29,8 +28,7 @@
 		<description>A place to meditate in comfort, will restore magic, faith, runic, or action ability. Used by magic, faith, runic, and ability action users.</description>
 		<socialPropernessMatters>true</socialPropernessMatters>
 		<stuffCategories>
-			<li>Leathery</li>
-			<li>Fabric</li>
+			<li>RH_TET_Dwarfs_StoneFabric</li>
 		</stuffCategories>
 		<costStuffCount>40</costStuffCount>
 		<pathCost>1</pathCost>
