@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<IncidentDef>
+		<defName>RH_TET_Dwarfs_RunicHunted</defName>
+		<label>hunted runesmith</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>TheEndTimes_Dwarfs.IncidentWorker_HuntedRunesmith</workerClass>
+		<baseChance>2</baseChance>
+		<populationEffect>IncreaseHard</populationEffect>
+		<minRefireDays>120</minRefireDays>
+		<earliestDay>15</earliestDay>
+	</IncidentDef>
+
+</Defs>

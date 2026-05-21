@@ -141,6 +141,8 @@ namespace TheEndTimes_Dwarfs
 
         public static PawnKindDef RH_TET_DwarfSlave;
         public static PawnKindDef RH_TET_DwarfSlayerVillager;
+        public static PawnKindDef RH_TET_Dwarfs_RunicStandard;
+        public static PawnKindDef RH_TET_Dwarfs_RunicMaster;
 
         public static InspirationDef RH_TET_Dwarfs_Mining_Frenzy_Yield;
         public static InspirationDef RH_TET_Dwarfs_Inspired_Tending;

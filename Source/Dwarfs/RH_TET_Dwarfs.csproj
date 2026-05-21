@@ -146,6 +146,7 @@
     <Compile Include="HighBloodStuff\LordToilData_HoldCourt.cs" />
     <Compile Include="HighBloodStuff\LordToil_HoldCourt.cs" />
     <Compile Include="HighBloodStuff\LordJob_Joinable_Court.cs" />
+    <Compile Include="Incidents\IncidentWorker_HuntedRunesmith.cs" />
     <Compile Include="Infestation\JobGiver_MaintainTunnels.cs" />
     <Compile Include="Infestation\LordToil_DefendTunnelAggressively.cs" />
     <Compile Include="Infestation\LordToil_TunnelRelatedData.cs" />

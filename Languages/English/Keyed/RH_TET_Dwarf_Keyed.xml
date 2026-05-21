@@ -64,6 +64,13 @@
 	<RH_TET_Dwarfs_BlastingWireDesigLabel>Blasting wire select</RH_TET_Dwarfs_BlastingWireDesigLabel>
 	<RH_TET_Dwarfs_BlastingWireDesig>Selects blasting wire in an area. Useful for maintenance and deconstruction. Hold Shift to add to current selection.</RH_TET_Dwarfs_BlastingWireDesig>
 	
+	<!-- Incidents -->
+	<RH_TET_Dwarfs_RefugeeChasedRunicInitial>{PAWN_titleIndef} named {PAWN_nameDef} contacts you runically from nearby. {PAWN_pronoun} is being hunted by {2} from {3}!\n\n{PAWN_pronoun} asks for sanctuary, and offers to join your group. {PAWN_pronoun} apologizes for not being able to provide more information, but does promise to use the powers of the runes that {PAWN_pronoun} has been granted in order to assist your cause. \n\nBe warned - if you accept, you'll have to fight off the {2} on {PAWN_possessive} tail. Their group is large, as {PAWN_nameDef} is a powerful person, it is composed of:\n\n{4}</RH_TET_Dwarfs_RefugeeChasedRunicInitial>
+	<RH_TET_Dwarfs_RefugeeChasedRunicTitle>Runesmith hunted at {0}</RH_TET_Dwarfs_RefugeeChasedRunicTitle>
+	<RH_TET_Dwarfs_RefugeeChasedRunicInitial_Accept>Offer sanctuary</RH_TET_Dwarfs_RefugeeChasedRunicInitial_Accept>
+	<RH_TET_Dwarfs_RefugeeChasedRunicInitial_Reject>Ignore the message</RH_TET_Dwarfs_RefugeeChasedRunicInitial_Reject>
+	<RH_TET_Dwarfs_RefugeeChasedRunicInitial_Rejected>{1_labelShort} accepts your decision, and will move on with little more than a mental grudge.</RH_TET_Dwarfs_RefugeeChasedRunicInitial_Rejected>
+	
 	<!--Captured Hold Stuff -->
 	<RH_TET_Dwarfs_CapturedHoldHelp>You've reached the old dwarfen hold that is held by your enemies. Defeat your foes, and claim it as your home!</RH_TET_Dwarfs_CapturedHoldHelp>
 	<RH_TET_Dwarf_HostileReasonCapturedHold>They live in your captured hold, and refuse to leave. They will fight for it!</RH_TET_Dwarf_HostileReasonCapturedHold>
