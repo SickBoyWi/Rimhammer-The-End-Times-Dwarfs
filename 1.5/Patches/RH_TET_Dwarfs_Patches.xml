@@ -424,6 +424,19 @@
 				</li>
 			</operations>
 		</match>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<order>Append</order>
+					<xpath>
+					Defs/WorkGiverDef[defName = "RH_TET_Dwarfs_DoSmithing"]/fixedBillGiverDefs
+					</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+			</operations>
+		</nomatch>		
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">

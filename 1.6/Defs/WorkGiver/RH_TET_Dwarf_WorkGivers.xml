@@ -76,13 +76,12 @@
 	</WorkGiverDef>
 
 	<WorkGiverDef>
-		<defName>RH_TET_DoSmithing</defName>
+		<defName>RH_TET_Dwarfs_DoSmithing</defName>
 		<label>work</label>
 		<giverClass>TheEndTimes_Dwarfs.WorkGiver_DoBillDwarfs</giverClass>
 		<workType>Smithing</workType>
 		<priorityInType>95</priorityInType>
 		<fixedBillGiverDefs>
-			<li>RH_TET_TableSmithy</li>
 			<li>RH_TET_Dwarfs_TableAnvil</li>
 			<li>RH_TET_Dwarfs_TableForge</li>
 		</fixedBillGiverDefs>
