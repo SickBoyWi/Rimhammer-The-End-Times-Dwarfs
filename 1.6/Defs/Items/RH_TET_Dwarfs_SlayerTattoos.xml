@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!-- TODO: 20260124 Need to fix crafting location, and costlist for the tattoos. 
-	
-		Research Too!-->
-
 	<!-- Body Tattoos -->
 	<ThingDef Name="RH_TET_Slayer_TattooBody_Base" ParentName="ApparelNoQualityBase" Abstract="True">
 		<thingClass>TheEndTimes_Dwarfs.Apparel_SlayerTattoos</thingClass>
@@ -39,7 +35,7 @@
 			<effectWorking>Smelt</effectWorking>
 			<soundWorking>Recipe_Cremate</soundWorking>
 			<recipeUsers>
-				<li>RH_TET_TableSmithy</li>
+				<li>RH_TET_Dwarfs_TableRunicAnvil</li>
 			</recipeUsers>
 			<unfinishedThingDef>RH_TET_Unfinished_MagicItem</unfinishedThingDef>
 		</recipeMaker>
@@ -48,10 +44,10 @@
 	<ThingDef ParentName="RH_TET_Slayer_TattooBody_Base">
 		<defName>RH_TET_Slayer_Tattoo_Troll</defName>
 		<description>The body tattoos favored by dwarf slayers. Tattoo is a bit of a misnomer here, as these are more magic aura than tattoo. They look like tattoos when worn, and do take a while to apply and remove.\n\nGrants the slayer wearing it armor, protection from the elements, and a boost to pain shock thresholds, but does make them more likely to have a mental break./n/nNote that if the pawn is killed the magic of the tattoo will disperse, and the tattoo will fade away; so if later resurrected somehow, that pawn will need a new tattoo.</description>
-		<label>dawi slayer body tattoo</label>
+		<label>troll slayer body tattoo</label>
 		<techLevel>Medieval</techLevel>
 		<recipeMaker>
-			<researchPrerequisite>RH_TET_Dwarf_Apparel_Advanced</researchPrerequisite>
+			<researchPrerequisite>RH_TET_Dwarfs_RunicTattoos_Basic</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>10</Crafting>
 			</skillRequirements>
@@ -95,7 +91,7 @@
 		</equippedStatOffsets>
 		<costList>
 			<RH_TET_Coal>50</RH_TET_Coal>
-			<RH_TET_Dwarf_Gromril>10</RH_TET_Dwarf_Gromril>
+			<RH_TET_Dwarf_Gromril>5</RH_TET_Dwarf_Gromril>
 			<Dye>80</Dye>
 		</costList>
 	</ThingDef>
@@ -103,10 +99,10 @@
 	<ThingDef ParentName="RH_TET_Slayer_TattooBody_Base">
 		<defName>RH_TET_Slayer_Tattoo_Giant</defName>
 		<description>The body tattoos favored by dwarf giant slayers. Tattoo is a bit of a misnomer here, as these are more magic aura than tattoo. They look like tattoos when worn, and do take a while to apply and remove.\n\nGrants the slayer wearing it armor, protection from the elements, and a boost to pain shock thresholds, but does make them more likely to have a mental break./n/nNote that if the pawn is killed the magic of the tattoo will disperse, and the tattoo will fade away; so if later resurrected somehow, that pawn will need a new tattoo.</description>
-		<label>dawi slayer body tattoo</label>
+		<label>giant slayer body tattoo</label>
 		<techLevel>Medieval</techLevel>
 		<recipeMaker>
-			<researchPrerequisite>RH_TET_Dwarf_Apparel_Advanced</researchPrerequisite>
+			<researchPrerequisite>RH_TET_Dwarfs_RunicTattoos_Basic</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>11</Crafting>
 			</skillRequirements>
@@ -151,7 +147,7 @@
 		</equippedStatOffsets>
 		<costList>
 			<RH_TET_Coal>60</RH_TET_Coal>
-			<RH_TET_Dwarf_Gromril>20</RH_TET_Dwarf_Gromril>
+			<RH_TET_Dwarf_Gromril>10</RH_TET_Dwarf_Gromril>
 			<Dye>90</Dye>
 		</costList>
 	</ThingDef>
@@ -159,12 +155,12 @@
 	<ThingDef ParentName="RH_TET_Slayer_TattooBody_Base">
 		<defName>RH_TET_Slayer_Tattoo_Daemon</defName>
 		<description>The body tattoos favored by dwarf daemon slayers. Tattoo is a bit of a misnomer here, as these are more magic aura than tattoo. They look like tattoos when worn, and do take a while to apply and remove.\n\nGrants the slayer wearing it armor, protection from the elements, and a boost to pain shock thresholds, but does make them more likely to have a mental break./n/nNote that if the pawn is killed the magic of the tattoo will disperse, and the tattoo will fade away; so if later resurrected somehow, that pawn will need a new tattoo.</description>
-		<label>dawi slayer body tattoo</label>
+		<label>daemon slayer body tattoo</label>
 		<techLevel>Medieval</techLevel>
 		<recipeMaker>
-			<researchPrerequisite>RH_TET_Dwarf_Apparel_Advanced</researchPrerequisite>
+			<researchPrerequisite>RH_TET_Dwarfs_RunicTattoos_Advanced</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>12</Crafting>
+				<Crafting>14</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<graphicData>
@@ -207,7 +203,7 @@
 		</equippedStatOffsets>
 		<costList>
 			<RH_TET_Coal>70</RH_TET_Coal>
-			<RH_TET_Dwarf_Gromril>30</RH_TET_Dwarf_Gromril>
+			<RH_TET_Dwarf_Gromril>15</RH_TET_Dwarf_Gromril>
 			<Dye>100</Dye>
 		</costList>
 	</ThingDef>
@@ -215,12 +211,12 @@
 	<ThingDef ParentName="RH_TET_Slayer_TattooBody_Base">
 		<defName>RH_TET_Slayer_Tattoo_Doomseeker</defName>
 		<description>The body tattoos favored by dwarf doomseeker slayers. Tattoo is a bit of a misnomer here, as these are more magic aura than tattoo. They look like tattoos when worn, and do take a while to apply and remove.\n\nGrants the slayer wearing it armor, protection from the elements, and a boost to pain shock thresholds, but does make them more likely to have a mental break./n/nNote that if the pawn is killed the magic of the tattoo will disperse, and the tattoo will fade away; so if later resurrected somehow, that pawn will need a new tattoo.</description>
-		<label>dawi slayer body tattoo</label>
+		<label>doomseeker body tattoo</label>
 		<techLevel>Medieval</techLevel>
 		<recipeMaker>
-			<researchPrerequisite>RH_TET_Dwarf_Apparel_Advanced</researchPrerequisite>
+			<researchPrerequisite>RH_TET_Dwarfs_RunicTattoos_Advanced</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>13</Crafting>
+				<Crafting>15</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<graphicData>
@@ -263,7 +259,7 @@
 		</equippedStatOffsets>
 		<costList>
 			<RH_TET_Coal>80</RH_TET_Coal>
-			<RH_TET_Dwarf_Gromril>40</RH_TET_Dwarf_Gromril>
+			<RH_TET_Dwarf_Gromril>20</RH_TET_Dwarf_Gromril>
 			<Dye>110</Dye>
 		</costList>
 	</ThingDef>
@@ -279,10 +275,10 @@
 	<ThingDef ParentName="RH_TET_Slayer_TattooHead_Base">
 		<defName>RH_TET_Slayer_Tattoo_Head_Troll</defName>
 		<description>The head tattoos favored by dwarf slayers. Tattoo is a bit of a misnomer here, as these are more magic aura than tattoo. They look like tattoos when worn, and do take a while to apply and remove.\n\nGrants the slayer wearing it armor, protection from the elements, and a boost to pain shock thresholds, but does make them more likely to have a mental break./n/nNote that if the pawn is killed the magic of the tattoo will disperse, and the tattoo will fade away; so if later resurrected somehow, that pawn will need a new tattoo.</description>
-		<label>dawi slayer head tattoo</label>
+		<label>troll slayer head tattoo</label>
 		<techLevel>Medieval</techLevel>
 		<recipeMaker>
-			<researchPrerequisite>RH_TET_Dwarf_Apparel_Advanced</researchPrerequisite>
+			<researchPrerequisite>RH_TET_Dwarfs_RunicTattoos_Basic</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>10</Crafting>
 			</skillRequirements>
@@ -330,10 +326,10 @@
 	<ThingDef ParentName="RH_TET_Slayer_TattooHead_Base">
 		<defName>RH_TET_Slayer_Tattoo_Head_Giant</defName>
 		<description>The head tattoos favored by dwarf giant slayers. Tattoo is a bit of a misnomer here, as these are more magic aura than tattoo. They look like tattoos when worn, and do take a while to apply and remove.\n\nGrants the slayer wearing it armor, protection from the elements, and a boost to pain shock thresholds, but does make them more likely to have a mental break./n/nNote that if the pawn is killed the magic of the tattoo will disperse, and the tattoo will fade away; so if later resurrected somehow, that pawn will need a new tattoo.</description>
-		<label>dawi slayer head tattoo</label>
+		<label>giant slayer head tattoo</label>
 		<techLevel>Medieval</techLevel>
 		<recipeMaker>
-			<researchPrerequisite>RH_TET_Dwarf_Apparel_Advanced</researchPrerequisite>
+			<researchPrerequisite>RH_TET_Dwarfs_RunicTattoos_Basic</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>11</Crafting>
 			</skillRequirements>
@@ -381,12 +377,12 @@
 	<ThingDef ParentName="RH_TET_Slayer_TattooHead_Base">
 		<defName>RH_TET_Slayer_Tattoo_Head_Daemon</defName>
 		<description>The head tattoos favored by dwarf daemon slayers. Tattoo is a bit of a misnomer here, as these are more magic aura than tattoo. They look like tattoos when worn, and do take a while to apply and remove.\n\nGrants the slayer wearing it armor, protection from the elements, and a boost to pain shock thresholds, but does make them more likely to have a mental break./n/nNote that if the pawn is killed the magic of the tattoo will disperse, and the tattoo will fade away; so if later resurrected somehow, that pawn will need a new tattoo.</description>
-		<label>dawi slayer head tattoo</label>
+		<label>daemon slayer head tattoo</label>
 		<techLevel>Medieval</techLevel>
 		<recipeMaker>
-			<researchPrerequisite>RH_TET_Dwarf_Apparel_Advanced</researchPrerequisite>
+			<researchPrerequisite>RH_TET_Dwarfs_RunicTattoos_Advanced</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>12</Crafting>
+				<Crafting>14</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<graphicData>
@@ -432,12 +428,12 @@
 	<ThingDef ParentName="RH_TET_Slayer_TattooHead_Base">
 		<defName>RH_TET_Slayer_Tattoo_Head_Doomseeker</defName>
 		<description>The head tattoos favored by dwarf doomseeker slayers. Tattoo is a bit of a misnomer here, as these are more magic aura than tattoo. They look like tattoos when worn, and do take a while to apply and remove.\n\nGrants the slayer wearing it armor, protection from the elements, and a boost to pain shock thresholds, but does make them more likely to have a mental break./n/nNote that if the pawn is killed the magic of the tattoo will disperse, and the tattoo will fade away; so if later resurrected somehow, that pawn will need a new tattoo.</description>
-		<label>dawi slayer head tattoo</label>
+		<label>doomseeker slayer head tattoo</label>
 		<techLevel>Medieval</techLevel>
 		<recipeMaker>
-			<researchPrerequisite>RH_TET_Dwarf_Apparel_Advanced</researchPrerequisite>
+			<researchPrerequisite>RH_TET_Dwarfs_RunicTattoos_Advanced</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>13</Crafting>
+				<Crafting>15</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<graphicData>

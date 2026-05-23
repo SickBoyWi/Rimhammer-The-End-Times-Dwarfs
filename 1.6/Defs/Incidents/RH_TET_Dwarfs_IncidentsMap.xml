@@ -10,7 +10,6 @@
 		</targetTags>
 		<workerClass>TheEndTimes_Dwarfs.IncidentWorker_HuntedRunesmith</workerClass>
 		<baseChance>2</baseChance>
-		<populationEffect>IncreaseHard</populationEffect>
 		<minRefireDays>120</minRefireDays>
 		<earliestDay>15</earliestDay>
 	</IncidentDef>

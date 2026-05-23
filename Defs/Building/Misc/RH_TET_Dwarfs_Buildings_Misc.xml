@@ -240,7 +240,7 @@
 	<ThingDef ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase">
 		<defName>RH_TET_Dwarfs_Banner</defName>
 		<label>dawi banner</label>
-		<description>A dwarfen war banner. Carried to battle when the clans march to war. Kept safe when in the hold, and has the benefit of adding beauty to a room.</description>
+		<description>A dwarfen war banner. Carried to battle when the clans march to war. Kept safe when in the hold, and has the benefit of adding beauty to a room.\n\nRotating this building will change the color and symbol on the banner.</description>
 		<designationCategory>RH_TET_Dwarfs_Buildings</designationCategory>
 		<altitudeLayer>BuildingOnTop</altitudeLayer>
 		<passability>PassThroughOnly</passability>

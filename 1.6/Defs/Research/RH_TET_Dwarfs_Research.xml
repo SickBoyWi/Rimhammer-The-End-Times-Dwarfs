@@ -911,6 +911,21 @@
 		<researchViewX>10.00</researchViewX>
 		<researchViewY>4.80</researchViewY>
 	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_RunicTattoos_Basic</defName>
+		<label>Slayer Tattoo Crafting</label>
+		<description>Unlocks the ability to craft dwarfen slayer tattoos at a runic anvil.\n\nA Runesmith is required in order to craft these items. Slayer tattoos provide protection and melee buffs for dwarf slayer pawns. They are worn similar to apparel, but once put on are not meant to be taken off.</description>
+		<baseCost>3000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_Runic_Basic</li>
+		</prerequisites>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>5.80</researchViewY>
+	</ResearchProjectDef>
   
 	<!-- Column 12 -->
 
@@ -993,6 +1008,8 @@
 		<researchViewY>5.40</researchViewY>
 	</ResearchProjectDef>
 	
+	<!-- Column 12 -->
+	
 	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
 		<defName>RH_TET_Dwarfs_Runic_Master</defName>
 		<label>Apex Rune Crafting</label>
@@ -1008,8 +1025,6 @@
 		<researchViewY>4.80</researchViewY>
 	</ResearchProjectDef>
 
-	<!-- Column 12 -->
-  
 	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
 		<defName>RH_TET_Dwarfs_FlooringHighBlood</defName>
 		<label>High Blood Flooring</label>
@@ -1057,6 +1072,22 @@
 		</prerequisites>
 		<researchViewX>12.00</researchViewX>
 		<researchViewY>1.40</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarfs_RunicTattoos_Advanced</defName>
+		<label>Advanced Slayer Tattoo Crafting</label>
+		<description>Unlocks the ability to craft high level dwarfen slayer tattoos at a runic anvil.\n\nA Runesmith is required in order to craft these items. Slayer tattoos provide protection and melee buffs for dwarf slayer pawns. They are worn similar to apparel, but once put on are not meant to be taken off.</description>
+		<baseCost>6000</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarfs_Runic_Master</li>
+			<li>RH_TET_Dwarfs_RunicTattoos_Basic</li>
+		</prerequisites>
+		<researchViewX>12.00</researchViewX>
+		<researchViewY>5.80</researchViewY>
 	</ResearchProjectDef>
   
 </Defs>
