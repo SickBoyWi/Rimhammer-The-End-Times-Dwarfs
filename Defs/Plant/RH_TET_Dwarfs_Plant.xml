@@ -126,6 +126,7 @@
 		<graphicData>
 			<texPath>Things/Item/Resource/Raw/Stoneroot</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>.8</drawSize>
 		</graphicData>
 		<statBases>
 			<MarketValue>1.3</MarketValue>
@@ -178,7 +179,7 @@
 	<ThingDef ParentName="PlantBase">
 		<defName>RH_TET_Dwarfs_FungalPlank</defName>
 		<label>fungal plank</label>
-		<description>Brown undeground tree-like mushroom that grows only in the underground. When cut down, they can be used very much like trees. While not pleasant to look at, they are extremely useful.</description>
+		<description>Undeground tree-like mushroom that grows only in the underground. When cut down, they can be used very much like trees. While not pleasant to look at, they are extremely useful.</description>
 		<graphicData>
 			<texPath>Things/Plant/FungalPlank</texPath>
 			<graphicClass>Graphic_Random</graphicClass>

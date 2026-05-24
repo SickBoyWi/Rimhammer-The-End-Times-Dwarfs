@@ -50,7 +50,7 @@
 		</graphicData>
 		<stackLimit>10</stackLimit>
 		<statBases>
-			<MarketValue>700</MarketValue>
+			<MarketValue>600</MarketValue>
 		</statBases>
 		<thingSetMakerTags>
 			<li>RewardStandardHighFreq</li>
@@ -67,7 +67,7 @@
 		</graphicData>
 		<stackLimit>10</stackLimit>
 		<statBases>
-			<MarketValue>1900</MarketValue>
+			<MarketValue>1400</MarketValue>
 		</statBases>
 		<thingSetMakerTags>
 			<li>RewardStandardHighFreq</li>
@@ -84,7 +84,7 @@
 		</graphicData>
 		<stackLimit>10</stackLimit>
 		<statBases>
-			<MarketValue>3000</MarketValue>
+			<MarketValue>2000</MarketValue>
 		</statBases>
 		<thingSetMakerTags>
 			<li>RewardStandardHighFreq</li>
@@ -101,7 +101,7 @@
 		</graphicData>
 		<stackLimit>10</stackLimit>
 		<statBases>
-			<MarketValue>4200</MarketValue>
+			<MarketValue>3500</MarketValue>
 		</statBases>
 		<thingSetMakerTags>
 			<li>RewardStandardLowFreq</li>
@@ -118,7 +118,7 @@
 		</graphicData>
 		<stackLimit>10</stackLimit>
 		<statBases>
-			<MarketValue>5000</MarketValue>
+			<MarketValue>4000</MarketValue>
 		</statBases>
 		<thingSetMakerTags>
 			<li>RewardStandardLowFreq</li>
@@ -135,7 +135,7 @@
 		</graphicData>
 		<stackLimit>10</stackLimit>
 		<statBases>
-			<MarketValue>6000</MarketValue>
+			<MarketValue>5000</MarketValue>
 		</statBases>
 		<thingSetMakerTags>
 			<li>RewardStandardLowFreq</li>

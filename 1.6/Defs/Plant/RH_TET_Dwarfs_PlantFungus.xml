@@ -74,6 +74,7 @@
 		<graphicData>
 			<texPath>Things/Plant/Stoneroot</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>.8</drawSize>
 		</graphicData>
 		<selectable>true</selectable>
 		<pathCost>10</pathCost>

@@ -18,6 +18,10 @@
 		<apparel>
 			<parentTagDef>ApparelHead</parentTagDef>
 		</apparel>
+		<tradeTags>
+			<li>Clothing</li>
+			<li>Armor</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="RH_TET_Dwarfs_ArmorHelmetMakeableBase">

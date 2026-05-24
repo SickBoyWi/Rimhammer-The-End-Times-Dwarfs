@@ -6,6 +6,10 @@
 			<!--<li>Apparel</li>-->
 			<li>RH_TET_Dwarfs_Apparel</li>
 		</thingCategories>
+		<tradeTags>
+			<li>Clothing</li>
+			<li>Armor</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="RH_TET_Dwarfs_ApparelMakeableBase">
@@ -275,6 +279,15 @@
 			<li>ApparelArmor</li>
 			<li>RH_TET_Dwarfs_Armor</li>
 		</thingCategories>
+		<tradeTags>
+			<li>Clothing</li>
+			<li>Armor</li>
+		</tradeTags>
+		<recipeMaker>
+			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
+			</recipeUsers>
+		</recipeMaker>
 	</ThingDef>
 
 	<ThingDef ParentName="RH_TET_Dwarfs_ArmorSmithableBase">

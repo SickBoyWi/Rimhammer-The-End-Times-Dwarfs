@@ -19,6 +19,11 @@
 		<stuffCategories>
 			<li>Metallic</li>
 		</stuffCategories>
+		<recipeMaker>
+			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
+			</recipeUsers>
+		</recipeMaker>
 	</ThingDef>
 
 	<ThingDef ParentName="RH_TET_Dwarf_ShieldBase">

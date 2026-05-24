@@ -70,6 +70,9 @@
 			<skillRequirements>
 				<Crafting>4</Crafting>
 			</skillRequirements>
+			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
+			</recipeUsers>
 		</recipeMaker>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Weapons_Low</li>
@@ -148,6 +151,9 @@
 			<skillRequirements>
 				<Crafting>8</Crafting>
 			</skillRequirements>
+			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
+			</recipeUsers>
 		</recipeMaker>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Weapons_High</li>
@@ -226,6 +232,9 @@
 			<skillRequirements>
 				<Crafting>12</Crafting>
 			</skillRequirements>
+			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
+			</recipeUsers>
 		</recipeMaker>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Weapons_Lordly</li>
@@ -294,6 +303,9 @@
 			<skillRequirements>
 				<Crafting>4</Crafting>
 			</skillRequirements>
+			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
+			</recipeUsers>
 		</recipeMaker>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Weapons_Low</li>
@@ -366,6 +378,9 @@
 			<skillRequirements>
 				<Crafting>8</Crafting>
 			</skillRequirements>
+			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
+			</recipeUsers>
 		</recipeMaker>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Weapons_High</li>
@@ -431,6 +446,9 @@
 			<skillRequirements>
 				<Crafting>4</Crafting>
 			</skillRequirements>
+			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
+			</recipeUsers>
 		</recipeMaker>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Weapons_Low</li>
@@ -499,6 +517,9 @@
 			<skillRequirements>
 				<Crafting>8</Crafting>
 			</skillRequirements>
+			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
+			</recipeUsers>
 		</recipeMaker>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Weapons_High</li>
@@ -556,6 +577,9 @@
 			<skillRequirements>
 				<Crafting>4</Crafting>
 			</skillRequirements>
+			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
+			</recipeUsers>
 		</recipeMaker>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Weapons_Low</li>
@@ -616,6 +640,9 @@
 			<skillRequirements>
 				<Crafting>8</Crafting>
 			</skillRequirements>
+			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
+			</recipeUsers>
 		</recipeMaker>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Weapons_High</li>
@@ -676,6 +703,9 @@
 			<skillRequirements>
 				<Crafting>5</Crafting>
 			</skillRequirements>
+			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
+			</recipeUsers>
 		</recipeMaker>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Weapons_Low</li>
@@ -739,6 +769,9 @@
 			<skillRequirements>
 				<Crafting>10</Crafting>
 			</skillRequirements>
+			<recipeUsers>
+				<li>RH_TET_Dwarfs_TableAnvil</li>
+			</recipeUsers>
 		</recipeMaker>
 		<tradeTags>
 			<li>RH_TET_Dwarf_Weapons_High</li>
