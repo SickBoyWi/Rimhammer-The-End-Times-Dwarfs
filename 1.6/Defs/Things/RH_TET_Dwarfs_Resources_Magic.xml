@@ -306,4 +306,37 @@
 		</graphicData>
 	</ThingDef>
 
+	<!--- Glowing Floor Tiles -->
+    <ThingDef ParentName="ResourceBase">
+        <defName>RH_TET_Dwarfs_FloorLight</defName>
+        <label>warpstone floor tile</label>
+        <description>A floor tile created from a combination of warpstone and steel. Glows to provide light.</description>
+        <graphicData>
+            <texPath>Things/Building/Structure/FloorTile/FloorTile</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <useHitPoints>false</useHitPoints>
+        <statBases>
+            <Beauty>0</Beauty>
+            <MarketValue>4</MarketValue>
+            <Mass>0.1</Mass>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>1</glowRadius>
+                <glowColor>(170,250,80,0)</glowColor>
+            </li>
+        </comps>
+        <tradeability>All</tradeability>
+        <tradeTags>
+			<li>DawiRunic</li>
+            <li>Exotic</li>
+        </tradeTags>
+    </ThingDef>	
+
 </Defs>

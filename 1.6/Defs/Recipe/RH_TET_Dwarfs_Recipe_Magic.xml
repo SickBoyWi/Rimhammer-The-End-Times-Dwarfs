@@ -573,5 +573,81 @@
 		</products>
 	</RecipeDef>
 
+    <!-- Make Floor Lights -->
+    <RecipeDef Name="RH_TET_Dwarfs_MakeFloorLightBase" Abstract="True">
+        <description>Create glowing runic floor lights from warpstone combined with steel. Melting down glowstone, and combining it with steel and the magic of rune crafting creates lights that can be laid along the floor to keep the undermountain lit.\n\nThe steel makes the light durable, and also helps negate most of the green color the warpstone emits.</description>
+        <jobString>Creating floor lights.</jobString>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Steel</li>
+                <li>RH_TET_Skaven_Warpstone</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+			<li>RH_TET_Dwarfs_TableRunicAnvil</li>
+        </recipeUsers>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Runic_Advanced</li>
+		</researchPrerequisites>
+    </RecipeDef>
 
+    <RecipeDef ParentName="RH_TET_Dwarfs_MakeFloorLightBase">
+        <defName>RH_TET_Dwarfs_CreateFloorLights</defName>
+        <label>make 5 runic floor lights</label>
+        <workAmount>500</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RH_TET_Skaven_Warpstone</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <targetCountAdjustment>5</targetCountAdjustment>
+        <products>
+            <RH_TET_Dwarfs_FloorLight>5</RH_TET_Dwarfs_FloorLight>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="RH_TET_Dwarfs_MakeFloorLightBase">
+        <defName>RH_TET_Dwarfs_CreateBulkFloorLights</defName>
+        <label>make 25 runic floor lights</label>
+        <workAmount>2000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RH_TET_Skaven_Warpstone</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <targetCountAdjustment>25</targetCountAdjustment>
+        <products>
+            <RH_TET_Dwarfs_FloorLight>25</RH_TET_Dwarfs_FloorLight>
+        </products>
+    </RecipeDef>
+	
 </Defs>

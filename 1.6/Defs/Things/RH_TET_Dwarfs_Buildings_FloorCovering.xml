@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="RH_TET_Dwarfs_RugBase" Abstract="True">
+		<designationCategory>Furniture</designationCategory>
+		<thingClass>Building</thingClass>
+		<building>
+			<isEdifice>false</isEdifice>
+		</building>
+		<graphicData>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<statBases>
+			<Flammability>0.0</Flammability>
+			<Cleanliness>0.5</Cleanliness>
+		</statBases>
+		<category>Building</category>
+		<thingCategories>
+			<li>RH_TET_Dwarfs_BuildingsFurniture</li>
+		</thingCategories>
+		<clearBuildingArea>false</clearBuildingArea>
+		<soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>Filth_RubbleRock</filthLeaving>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>Standable</passability>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtSculpture</nameMaker>
+				<descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<tradeTags>
+			<li>Furniture</li>
+		</tradeTags>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Advanced</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_RugBase">
+		<defName>RH_TET_Dwarfs_Rug2xTwo</defName>
+		<label>dawi rug (2x2)</label>
+		<description>A small rug, made of stoneweave. Good for a bedroom, or kitchen perhaps. Will help keep the area clean. Created by the skilled hands of a dwarf.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/Floor/DawiSlabMedium</texPath>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToMake>3600</WorkToMake>
+			<Beauty>30</Beauty>
+			<Mass>5</Mass>
+		</statBases>
+		<stuffCategories>
+			<li>RH_TET_Dwarfs_StoneFabric</li>
+		</stuffCategories>
+		<costStuffCount>60</costStuffCount>
+		<size>(2,2)</size>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_RugBase">
+		<defName>RH_TET_Dwarfs_Rug3xThree</defName>
+		<label>dawi rug (3x3)</label>
+		<description>A large rug, made of stoneweave. Good for a bedroom, or kitchen perhaps. Will help keep the area clean. Created by the skilled hands of a dwarf.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/Floor/DawiSlabBroad</texPath>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToMake>4800</WorkToMake>
+			<Beauty>45</Beauty>
+			<Mass>8</Mass>
+		</statBases>
+		<stuffCategories>
+			<li>RH_TET_Dwarfs_StoneFabric</li>
+		</stuffCategories>
+		<costStuffCount>90</costStuffCount>
+		<size>(3,3)</size>
+	</ThingDef>
+
+	<!-- Glowing Floor Tiles -->
+    <DesignatorDropdownGroupDef>
+        <defName>RH_TET_Dwarfs_FloorLights</defName> 
+    </DesignatorDropdownGroupDef>
+    
+    <ThingDef Name="RH_TET_Dwarfs_FloorTile_Base" ParentName="BuildingBase" Abstract="True">
+        <description>Warpstone infused floor tiles that glow. Multiple tiles can occupy the same space, allowing for interestig designs.</description>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <altitudeLayer>Floor</altitudeLayer>
+        <coversFloor>false</coversFloor>
+        <passability>Standable</passability>
+        <useHitPoints>true</useHitPoints>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToBuild>250</WorkToBuild>
+            <Beauty>3</Beauty>
+            <Flammability>0</Flammability>
+        </statBases>
+        <resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+        <designationCategory>Floors</designationCategory>
+        <selectable>true</selectable>
+        <building>
+            <isEdifice>false</isEdifice>
+            <isInert>true</isInert>
+        </building>
+        <designatorDropdown>RH_TET_Dwarfs_FloorLights</designatorDropdown>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>3</glowRadius>
+                <glowColor>(170,250,80,0)</glowColor>
+                <darklightToggle>true</darklightToggle>
+            </li>
+        </comps>
+        <researchPrerequisites>
+            <li>RH_TET_Dwarfs_Runic_Advanced</li>
+        </researchPrerequisites>
+    </ThingDef>
+    
+    <ThingDef ParentName="RH_TET_Dwarfs_FloorTile_Base">
+        <defName>RH_TET_Dwarfs_FloorTile_One</defName>
+        <label>floor tile one-sided</label>
+        <graphicData>
+            <texPath>Things/Building/Structure/FloorTile/FloorTile_One</texPath>
+        </graphicData>
+        <costList>
+            <RH_TET_Dwarfs_FloorLight>5</RH_TET_Dwarfs_FloorLight>
+        </costList>
+    </ThingDef>
+    
+    <ThingDef ParentName="RH_TET_Dwarfs_FloorTile_Base">
+        <defName>RH_TET_Dwarfs_FloorTile_Two</defName>
+        <label>floor tile two-sided</label>
+        <graphicData>
+            <texPath>Things/Building/Structure/FloorTile/FloorTile_Two</texPath>
+        </graphicData>
+        <costList>
+            <RH_TET_Dwarfs_FloorLight>10</RH_TET_Dwarfs_FloorLight>
+        </costList>
+    </ThingDef>
+    
+    <ThingDef ParentName="RH_TET_Dwarfs_FloorTile_Base">
+        <defName>RH_TET_Dwarfs_FloorTile_Three</defName>
+        <label>floor tile three-sided</label>
+        <graphicData>
+            <texPath>Things/Building/Structure/FloorTile/FloorTile_Three</texPath>
+        </graphicData>
+        <costList>
+            <RH_TET_Dwarfs_FloorLight>15</RH_TET_Dwarfs_FloorLight>
+        </costList>
+    </ThingDef>
+    
+    <ThingDef ParentName="RH_TET_Dwarfs_FloorTile_Base">
+        <defName>RH_TET_Dwarfs_FloorTile_CornerTwo</defName>
+            <label>floor tile corner inner</label>
+        <graphicData>
+            <texPath>Things/Building/Structure/FloorTile/FloorTileCorner_Two</texPath>
+        </graphicData>
+        <costList>
+            <RH_TET_Dwarfs_FloorLight>10</RH_TET_Dwarfs_FloorLight>
+        </costList>
+    </ThingDef>
+    
+    <ThingDef ParentName="RH_TET_Dwarfs_FloorTile_Base">
+        <defName>RH_TET_Dwarfs_FloorTile_DotsOne</defName>
+        <label>floor tile corner outer</label>
+        <graphicData>
+            <texPath>Things/Building/Structure/FloorTile/FloorTileDots_One</texPath>
+        </graphicData>
+        <costList>
+            <RH_TET_Dwarfs_FloorLight>1</RH_TET_Dwarfs_FloorLight>
+        </costList>
+    </ThingDef>
+    
+    <ThingDef ParentName="RH_TET_Dwarfs_FloorTile_Base">
+        <defName>RH_TET_Dwarfs_FloorTile_DotsTwo</defName>
+        <label>floor tile corner outer double</label>
+        <graphicData>
+            <texPath>Things/Building/Structure/FloorTile/FloorTileDots_Two</texPath>
+        </graphicData>
+        <costList>
+            <RH_TET_Dwarfs_FloorLight>2</RH_TET_Dwarfs_FloorLight>
+        </costList>
+    </ThingDef>	
+    
+    <ThingDef ParentName="RH_TET_Dwarfs_FloorTile_Base">
+        <defName>RH_TET_Dwarfs_FloorTile_DotsThree</defName>
+        <label>floor tile corner outer triple</label>
+        <graphicData>
+            <texPath>Things/Building/Structure/FloorTile/FloorTileDots_Three</texPath>
+        </graphicData>
+        <costList>
+            <RH_TET_Dwarfs_FloorLight>3</RH_TET_Dwarfs_FloorLight>
+        </costList>
+    </ThingDef>	
+    
+    <ThingDef ParentName="RH_TET_Dwarfs_FloorTile_Base">
+        <defName>RH_TET_Dwarfs_FloorTile_DotsFour</defName>
+        <label>floor tile corner outer quadruple</label>
+        <graphicData>
+            <texPath>Things/Building/Structure/FloorTile/FloorTileDots_Four</texPath>
+        </graphicData>
+        <costList>
+            <RH_TET_Dwarfs_FloorLight>4</RH_TET_Dwarfs_FloorLight>
+        </costList>
+    </ThingDef>	
+	
+</Defs>
