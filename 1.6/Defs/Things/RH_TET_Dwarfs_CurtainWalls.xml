@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- Massive Walls -->
+	<ThingDef Name="RH_TET_Dwarfs_CastleWallBase" ParentName="BuildingBase" Abstract="True">
+		<designationCategory>Structure</designationCategory>
+		<passability>Impassable</passability>
+		<pathCost>0</pathCost>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<fertility>0</fertility>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WallsHighBlood</li>
+		</researchPrerequisites>
+		<building>
+			<isInert>true</isInert>
+			<ai_chillDestination>false</ai_chillDestination>
+			<supportsWallAttachments>true</supportsWallAttachments>
+		</building>
+		<graphicData>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(8,8)</drawSize>
+			<drawOffset>(0,0,1.0)</drawOffset>
+			<drawRotated>true</drawRotated>
+			<shadowData>
+				<volume>(0.3, 0.5, 0.3)</volume>
+				<offset>(0,0,-0.23)</offset>
+			</shadowData>
+			<damageData>
+				<rectN>(0.1,0.3,2.8,2.0)</rectN>
+				<rectS>(0.1,0.3,2.8,2.0)</rectS>
+				<rectE>(0.5,0.0,2.0,2.0)</rectE>
+				<rectW>(0.5,0.0,2.0,2.0)</rectW>
+			</damageData>
+		</graphicData>
+		<canOverlapZones>false</canOverlapZones>
+		<size>(5,5)</size>
+		<defaultPlacingRot>South</defaultPlacingRot>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Dwarfs_CastleWallBase">
+		<defName>RH_TET_Dwarfs_CastleWallMassive</defName>
+		<label>Dwarf Massive Wall</label>
+		<description>A huge crennelated wall, intended to surround the settlement or quarters that are built up immediately outside of a dwarfen hold. Built to keep enemy armies outside. Made of stone. Very strong. Typically the first major gate in any assault on a dwarfen hold from the outside.\n\nThis is the standard wall piece.</description>
+		<altitudeLayer>Building</altitudeLayer>
+		<blockWind>true</blockWind>
+		<fillPercent>1</fillPercent>
+		<statBases>
+			<Mass>2000</Mass>
+			<MaxHitPoints>4000</MaxHitPoints>
+			<WorkToBuild>1800</WorkToBuild>
+			<Beauty>8</Beauty>
+		</statBases>
+		<rotatable>true</rotatable>
+		<graphicData>
+			<texPath>Things/Building/Structure/CurtainWall/Bottom_Half_Wall</texPath>
+		</graphicData>
+		<uiIconPath>UI/Menu/CurtainWallUI</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_CastleWallBase">
+		<defName>RH_TET_Dwarfs_CastleWallEndMassive</defName>
+		<label>Dwarf Massive Wall End</label>
+		<description>A huge crennelated wall, intended to surround the settlement or quarters that are built up immediately outside of a dwarfen hold. Built to keep enemy armies outside. Made of stone. Very strong. Typically the first major gate in any assault on a dwarfen hold from the outside.\n\nThis is an end piece, for when you have to end a wall that won't connect to a different wall piece on one end.</description>
+		<altitudeLayer>Building</altitudeLayer>
+		<blockWind>true</blockWind>
+		<fillPercent>1</fillPercent>
+		<statBases>
+			<Mass>2000</Mass>
+			<MaxHitPoints>4000</MaxHitPoints>
+			<WorkToBuild>1800</WorkToBuild>
+			<Beauty>8</Beauty>
+		</statBases>
+		<rotatable>true</rotatable>
+		<graphicData>
+			<texPath>Things/Building/Structure/CurtainWall/Bottom_Half_WallEnd</texPath>
+		</graphicData>
+		<uiIconPath>UI/Menu/CurtainWallEndUI</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_CastleWallBase">
+		<defName>RH_TET_Dwarfs_CastleWallEndOuterMassive</defName>
+		<label>Dwarf Massive Wall End Outer</label>
+		<description>A huge crennelated wall, intended to surround the settlement or quarters that are built up immediately outside of a dwarfen hold. Built to keep enemy armies outside. Made of stone. Very strong. Typically the first major gate in any assault on a dwarfen hold from the outside.\n\nThis is an end piece with reversed crennelations, for when you have to end a wall that won't connect to a different wall piece on one end.</description>
+		<altitudeLayer>Building</altitudeLayer>
+		<blockWind>true</blockWind>
+		<fillPercent>1</fillPercent>
+		<statBases>
+			<Mass>2000</Mass>
+			<MaxHitPoints>4000</MaxHitPoints>
+			<WorkToBuild>1800</WorkToBuild>
+			<Beauty>8</Beauty>
+		</statBases>
+		<rotatable>true</rotatable>
+		<graphicData>
+			<texPath>Things/Building/Structure/CurtainWall/Bottom_Half_WallEndOuter</texPath>
+		</graphicData>
+		<uiIconPath>UI/Menu/CurtainWallEndOuterUI</uiIconPath>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarfs_CastleWallBase">
+		<defName>RH_TET_Dwarfs_CastleWallShortMassive</defName>
+		<label>Dwarf Massive Wall Short</label>
+		<description>A huge crennelated wall, intended to surround the settlement or quarters that are built up immediately outside of a dwarfen hold. Built to keep enemy armies outside. Made of stone. Very strong. Typically the first major gate in any assault on a dwarfen hold from the outside.\n\nThis is a short piece, for when you have to connect other larger wall pieces with limited space.</description>
+		<altitudeLayer>Building</altitudeLayer>
+		<blockWind>true</blockWind>
+		<fillPercent>1</fillPercent>
+		<costStuffCount>15</costStuffCount>
+		<statBases>
+			<Mass>2000</Mass>
+			<MaxHitPoints>4000</MaxHitPoints>
+			<WorkToBuild>1800</WorkToBuild>
+			<Beauty>8</Beauty>
+		</statBases>
+		<rotatable>true</rotatable>
+		<graphicData>
+			<texPath>Things/Building/Structure/CurtainWall/Bottom_Half_WallShort</texPath>
+		</graphicData>
+		<size>(1,3)</size>
+		<uiIconPath>UI/Menu/CurtainWallShortUI</uiIconPath>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_CastleWallBase">
+		<defName>RH_TET_Dwarfs_CastleWallMassive_Corner</defName>
+		<label>Dwarf Massive Wall Outer Corner</label>
+		<description>A huge crennelated wall, intended to surround the settlement or quarters that are built up immediately outside of a dwarfen hold. Built to keep enemy armies outside. Made of stone. Very strong. Typically the first major gate in any assault on a dwarfen hold from the outside.\n\nThis is a corner piece, with outer crennelations.</description>
+		<altitudeLayer>Building</altitudeLayer>
+		<blockWind>true</blockWind>
+		<fillPercent>1</fillPercent>
+		<costStuffCount>40</costStuffCount>
+		<statBases>
+			<Mass>2000</Mass>
+			<MaxHitPoints>4000</MaxHitPoints>
+			<WorkToBuild>1800</WorkToBuild>
+			<Beauty>8</Beauty>
+		</statBases>
+		<canOverlapZones>false</canOverlapZones>
+		<rotatable>true</rotatable>
+		<graphicData>
+			<texPath>Things/Building/Structure/CurtainWall/Bottom_Half_Wall_Corner</texPath>
+		</graphicData>
+		<uiIconPath>UI/Menu/CurtainWallCornerUI</uiIconPath>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_CastleWallBase">
+		<defName>RH_TET_Dwarfs_CastleWallMassive_TConnector</defName>
+		<label>Dwarf Massive Wall T Connector</label>
+		<description>A huge crennelated wall, intended to surround the settlement or quarters that are built up immediately outside of a dwarfen hold. Built to keep enemy armies outside. Made of stone. Very strong. Typically the first major gate in any assault on a dwarfen hold from the outside.\n\nThis is a T connector.</description>
+		<altitudeLayer>Building</altitudeLayer>
+		<blockWind>true</blockWind>
+		<fillPercent>1</fillPercent>
+		<costStuffCount>40</costStuffCount>
+		<statBases>
+			<Mass>2000</Mass>
+			<MaxHitPoints>4000</MaxHitPoints>
+			<WorkToBuild>1800</WorkToBuild>
+			<Beauty>8</Beauty>
+		</statBases>
+		<canOverlapZones>false</canOverlapZones>
+		<rotatable>true</rotatable>
+		<graphicData>
+			<texPath>Things/Building/Structure/CurtainWall/GrandWall_TConnector</texPath>
+		</graphicData>
+		<uiIconPath>UI/Menu/CurtainWallTUI</uiIconPath>
+	</ThingDef>
+  
+	<ThingDef Name="RH_TET_Dwarfs_CastleTowerBase" ParentName="BuildingBase" Abstract="True">
+		<designationCategory>Structure</designationCategory>
+		<passability>Impassable</passability>
+		<pathCost>0</pathCost>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<fertility>0</fertility>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WallsHighBlood</li>
+		</researchPrerequisites>
+		<building>
+			<isInert>true</isInert>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<graphicData>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(8,8)</drawSize>
+			<drawOffset>(0,0,1.0)</drawOffset>
+			<drawRotated>true</drawRotated>
+			<shadowData>
+				<volume>(0.3, 0.5, 0.3)</volume>
+				<offset>(0,0,-0.23)</offset>
+			</shadowData>
+			<damageData>
+				<rectN>(0.3,0.2,2.0,2.6)</rectN>
+				<rectS>(0.0,0.2,2.9,2.5)</rectS>
+				<rectE>(0.0,0.2,2.9,2.5)</rectE>
+				<rectW>(0.0,0.2,2.9,2.5)</rectW>
+			</damageData>
+		</graphicData>
+		<canOverlapZones>false</canOverlapZones>
+		<size>(5,5)</size>
+		<defaultPlacingRot>South</defaultPlacingRot>
+	</ThingDef>
+  
+	<ThingDef Name="RH_TET_Dwarfs_CastleTowerLargeBase" ParentName="BuildingBase" Abstract="True">
+		<designationCategory>Security</designationCategory>
+		<thingClass>Building_TurretGun</thingClass>
+		<passability>Impassable</passability>
+		<pathCost>50</pathCost>
+		<fillPercent>1</fillPercent>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<fertility>0</fertility>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WallsHighBlood_Advanced</li>
+		</researchPrerequisites>
+		<building>
+			<ai_combatDangerous>true</ai_combatDangerous>
+		</building>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<stealable>false</stealable>
+		<blockWind>true</blockWind>
+		<graphicData>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(8,8)</drawSize>
+			<drawOffset>(0,0,0.1)</drawOffset>
+			<drawRotated>true</drawRotated>
+			<shadowData>
+				<volume>(0.3, 0.5, 0.3)</volume>
+				<offset>(0,0,-0.23)</offset>
+			</shadowData>
+			<damageData>
+				<rectN>(0.1,0.03,2.3,3.0)</rectN>
+				<rectS>(0.1,0.03,2.3,3.0)</rectS>
+				<rectE>(0.1,0.03,2.3,3.0)</rectE>
+				<rectW>(0.1,0.03,2.3,3.0)</rectW>
+			</damageData>
+		</graphicData>
+		<canOverlapZones>false</canOverlapZones>
+		<tickerType>Normal</tickerType>
+		<rotatable>true</rotatable>
+		<size>(5,5)</size>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Refuelable">
+				<fuelLabel>Shots remaining</fuelLabel>
+				<fuelGizmoLabel>Arrows remaining</fuelGizmoLabel>
+				<outOfFuelMessage>Cannot shoot: Needs more arrows</outOfFuelMessage>
+				<fuelFilter><thingDefs><li>Steel</li></thingDefs></fuelFilter>
+				<fuelCapacity>100</fuelCapacity><!-- 30 bursts -->
+				<fuelMultiplier>0.75</fuelMultiplier><!-- 1.333 steel per burst, 80 per full rearm -->
+				<initialFuelPercent>1</initialFuelPercent>
+				<autoRefuelPercent>0.5</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<minimumFueledThreshold>1</minimumFueledThreshold>
+				<factorByDifficulty>true</factorByDifficulty>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_TurretTop</li>
+			<li>PlaceWorker_ShowTurretRadius</li>
+		</placeWorkers>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Dwarfs_CastleTowerLargeBase">
+		<defName>RH_TET_Dwarfs_CastleWallMassive_TowerLarge</defName>
+		<label>Dwarf Defensive Tower</label>
+		<description>A large stone tower that will shoot defensive arrows. Not intended to be a part of a greater dwarfen wall.\n\nThis tower is intended to be built as an observation and defensive position, outside of a hold or massive wall.</description>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<costStuffCount>125</costStuffCount>
+		<costList>
+			<Steel>100</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<statBases>
+			<Mass>2000</Mass>
+			<MaxHitPoints>3000</MaxHitPoints>
+			<WorkToBuild>2000</WorkToBuild>
+			<Beauty>10</Beauty>
+			<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Structure/CurtainWall/GrandWall_Tower</texPath>
+			<drawOffset>(0,0,1.0)</drawOffset>
+			<drawRotated>false</drawRotated>
+		</graphicData>
+		<building>
+			<combatPower>45</combatPower>
+			<turretGunDef>RH_TET_TowerTurret</turretGunDef>
+			<turretBurstCooldownTime>4.5</turretBurstCooldownTime>
+		</building>
+		<uiIconPath>UI/Menu/DefensiveTowerUI</uiIconPath>
+	</ThingDef>
+  
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>RH_TET_TowerTurret</defName>
+		<label>dwarf tower turret</label>
+		<description>DESC HERE TOO</description>
+		<graphicData>
+			<texPath>Things/Building/Structure/CurtainWall/GrandWall_TowerTurretTop</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>0.68</AccuracyTouch>
+			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyLong>0.52</AccuracyLong>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1250</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<defaultProjectile>RH_TET_TowerTurret_Arrow</defaultProjectile>
+				<warmupTime>1.36</warmupTime>
+				<range>32.9</range>
+				<ticksBetweenBurstShots>50</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<soundCast>Bow_Large</soundCast>
+				<muzzleFlashScale>2</muzzleFlashScale>
+				<consumeFuelPerShot>1</consumeFuelPerShot>
+			</li>
+		</verbs>
+	</ThingDef>
+  
+	<ThingDef ParentName="BaseBullet">
+		<defName>RH_TET_TowerTurret_Arrow</defName>
+		<label>dwarf tower arrow</label>
+		<graphicData>
+			<texPath>Things/Projectile/Arrow_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Arrow</damageDef>
+			<damageAmountBase>18</damageAmountBase>
+			<stoppingPower>1.5</stoppingPower>
+			<armorPenetrationBase>0.20</armorPenetrationBase>
+			<speed>50</speed>
+		</projectile>
+	</ThingDef>
+  
+	<!-- Grand Gate -->
+	<DoorsExpanded.DoorExpandedDef ParentName="AbstractHeronDoorBase">
+		<defName>RH_TET_Dwarfs_MassiveGate</defName>
+		<label>Dwarf Massive Gate</label>
+		<description>A huge crennelated stone wall with a gate built into it. Meant to be built into a massive dwarfen wall. Built to keep enemy armies outside. Extremely strong. Typically the first major gate in any assault on a dwarfen hold from the outside.\n\nThis gate fits into the Dwarfen massive walls.</description>
+		<size>(5,5)</size>
+		<building>
+			<soundDoorOpenManual>HeronBlastDoorOpen</soundDoorOpenManual>
+			<soundDoorCloseManual>HeronBlastDoorClose</soundDoorCloseManual>
+		</building>
+		<placeWorkers>
+			<li>SickTools.PlaceWorker_Outline</li>
+		</placeWorkers>
+		<statBases>
+			<Mass>1600</Mass>
+			<MaxHitPoints>3000</MaxHitPoints>
+			<WorkToBuild>2300</WorkToBuild>
+		</statBases>
+		<useStuffTerrainAffordance>true</useStuffTerrainAffordance>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>125</costStuffCount>
+		<costList>
+			<Steel>125</Steel>
+			<WoodLog>300</WoodLog>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<doorOpenSpeedRate>1</doorOpenSpeedRate>
+		<uiIconPath>UI/Menu/GrandGateUI</uiIconPath>
+		<graphicData>
+			<texPath>Things/Building/Structure/GrandGateDoor_Mover</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(8,8)</drawSize>
+			<damageData>
+				<rect>(0.1,0.1,1,1)</rect>
+			</damageData>
+		</graphicData>
+		<doorAsync>
+			<texPath>Things/Building/Structure/GrandGateDoor_MoverOther</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(8,8)</drawSize>
+			<damageData>
+				<rect>(0.1,0.1,1,1)</rect>
+			</damageData>
+		</doorAsync>
+		<doorFrame>
+			<texPath>Things/Building/Structure/CurtainWall/GrandGate</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(8,8)</drawSize>
+			<damageData>
+				<rectN>(0.1,0.3,1.4,2.0)</rectN>
+				<rectS>(0.1,0.3,1.4,2.0)</rectS>
+				<rectE>(0.5,0.0,2.0,2.0)</rectE>
+				<rectW>(0.5,0.0,2.0,2.0)</rectW>
+			</damageData>
+		</doorFrame>
+		<doorFrameSplit>
+			<texPath>Things/Building/Structure/CurtainWall/GrandGateOther</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(8,8)</drawSize>
+			<damageData>
+				<rectN>(0.1,0.3,1.0,2.0)</rectN>
+				<rectS>(0.1,0.3,1.0,2.0)</rectS>
+				<rectE>(0.1,0.0,2.0,1.0)</rectE>
+				<rectW>(0.1,0.0,2.0,1.0)</rectW>
+			</damageData>
+		</doorFrameSplit>
+		<doorType>Standard</doorType>
+		<fixedPerspective>false</fixedPerspective>
+		<rotatesSouth>true</rotatesSouth>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarf_WallsHighBlood</li>
+			<li>RH_TET_Dwarf_GatesKing</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<designationCategory>Structure</designationCategory>
+	</DoorsExpanded.DoorExpandedDef>
+
+</Defs>

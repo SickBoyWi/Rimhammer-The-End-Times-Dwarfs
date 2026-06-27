@@ -948,8 +948,8 @@
 	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
 		<defName>RH_TET_Dwarf_WallsHighBlood</defName>
 		<label>High Blood Structure</label>
-		<description>Unlocks the ability to build massive pillars; both lighted and unlighted. They will truly grace the throne room of any high blood.\n\nUnder the theory that bigger is better, dwarfen high bloods required a bigger and better support pillar. It was a simple matter for engineers to approve of the idea as sound, and a more time-consuming matter for artisans to construct such a wonder.</description>
-		<baseCost>1500</baseCost>
+		<description>Unlocks the ability to build massive pillars; both lighted and unlighted. They will truly grace the throne room of any high blood. Also unlocks huge walls that can be used outside the hold as a secure defensive perimeter.\n\nUnder the theory that bigger is better, dwarfen high bloods required a bigger and better support pillar. It was a simple matter for engineers to approve of the idea as sound, and a more time-consuming matter for artisans to construct such a wonder.</description>
+		<baseCost>4000</baseCost>
 		<tags>
 			<li>RH_TET_Dwarf_ProjectTag</li>
 		</tags>
@@ -1072,6 +1072,22 @@
 		</prerequisites>
 		<researchViewX>12.00</researchViewX>
 		<researchViewY>1.40</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
+		<defName>RH_TET_Dwarf_WallsHighBlood_Advanced</defName>
+		<label>Advanced High Blood Structure</label>
+		<description>Unlocks the ability to build massive defensive towers that will defend themselves, and allies around them by firing at enemies.\n\nMassive dwarfen holds require massive security solutions.</description>
+		<baseCost>1500</baseCost>
+		<tags>
+			<li>RH_TET_Dwarf_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Dwarf_WallsHighBlood</li>
+			<li>RH_TET_Dwarfs_HighBlood</li>
+		</prerequisites>
+		<researchViewX>12.00</researchViewX>
+		<researchViewY>2.4</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RH_TET_DwarfResearch">
