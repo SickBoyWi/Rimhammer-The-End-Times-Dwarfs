@@ -41,6 +41,10 @@
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DoorsExpanded">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\3532342422\1.6\Assemblies\DoorsExpanded.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="HugsLib">
       <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\818773962\v1.6\Assemblies\HugsLib.dll</HintPath>
       <Private>False</Private>

@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using DoorsExpanded;
+using HarmonyLib;
 using JetBrains.Annotations;
 using RimWorld;
 using RimWorld.Planet;
@@ -9,6 +10,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Security.Cryptography;
 using System.Text;
 using System.Xml.Linq;
 using TheEndTimes_Magic;
@@ -17,6 +19,7 @@ using Verse;
 using Verse.AI;
 using Verse.AI.Group;
 using Verse.Sound;
+using static RimWorld.MechClusterSketch;
 
 namespace TheEndTimes_Dwarfs
 {
@@ -821,6 +824,58 @@ namespace TheEndTimes_Dwarfs
                     __result = true;
                     return false;
                 }
+                return true;
+            }
+        }
+
+        [HarmonyPatch(typeof(Building_DoorExpanded), "DrawFrameParams")]
+        static class Patch_DoorsExpanded_DrawFrameParams
+        {
+            static bool Prefix(ref ThingDef def,
+                      ref CompProperties_DoorExpanded props,
+                      ref Vector3 drawPos,
+                      ref Rot4 rotation,
+                      ref bool split,
+                      out Mesh mesh,
+                      out Matrix4x4 matrix)
+            {
+                if (def != null && def.defName.Equals("RH_TET_Dwarfs_MassiveGate") && rotation == Rot4.South)
+                {
+                    rotation = Rot4.North;
+
+                    int numOne = rotation.IsHorizontal ? 1 : 0;
+                    Vector3 vector3_1 = new Vector3(-1f, 0.0f, 0.0f);
+                    mesh = MeshPool.plane10;
+
+                    Quaternion queue = rotation.AsQuat;
+
+                    vector3_1 = queue * vector3_1;
+                    float num2 = (float)(0.0 + (double)props.doorOpenMultiplier * 1.0) * (float)def.Size.x;
+                    vector3_1 *= num2;
+                    Vector2 drawSizeLocal = props.doorFrame.drawSize;
+                    float numThree = numOne == 0 || !props.fixedPerspective ? 1f : 2f;
+                    Vector3 sss = new Vector3(drawSizeLocal.x * numThree, 1f, drawSizeLocal.y * numThree);
+                    Vector3 position = drawPos;
+                    position.y = AltitudeLayer.Blueprint.AltitudeFor();
+                    if (rotation == Rot4.North || rotation == Rot4.South)
+                        position.y = AltitudeLayer.PawnState.AltitudeFor();
+                    if (numOne == 0)
+                        position.x += num2;
+                    position += vector3_1;
+                    Vector3 vector3_2 = props.doorFrameOffset;
+                    position += vector3_2;
+                    matrix = Matrix4x4.TRS(position, queue, sss);
+                }
+
+                mesh = MeshPool.plane10;
+                Vector3 pos = new Vector3();
+                Quaternion q = Rot4.North.AsQuat;
+                Vector2 drawSize = props.doorFrame.drawSize;
+                int num1 = rotation.IsHorizontal ? 1 : 0;
+                float num3 = num1 == 0 || !props.fixedPerspective ? 1f : 2f;
+                Vector3 s = new Vector3(drawSize.x * num3, 1f, drawSize.y * num3);
+                matrix = Matrix4x4.TRS(pos, q, s);
+
                 return true;
             }
         }
