@@ -39,6 +39,13 @@
 		<canOverlapZones>false</canOverlapZones>
 		<size>(5,5)</size>
 		<defaultPlacingRot>South</defaultPlacingRot>
+		<!--
+		Adding this will make the walls so that they can be fired through. It will also make it so that 
+		gates adjacent to any of these walls won't close (due to Doors Expanded).
+		
+		<fillPercent>.75</fillPercent>
+		<disableImpassableShotOverConfigError>True</disableImpassableShotOverConfigError>
+		-->
 	</ThingDef>
  
 	<ThingDef ParentName="RH_TET_Dwarfs_CastleWallBase">
@@ -47,7 +54,6 @@
 		<description>A huge crennelated wall, intended to surround the settlement or quarters that are built up immediately outside of a dwarfen hold. Built to keep enemy armies outside. Made of stone. Very strong. Typically the first major gate in any assault on a dwarfen hold from the outside.\n\nThis is the standard wall piece.</description>
 		<altitudeLayer>Building</altitudeLayer>
 		<blockWind>true</blockWind>
-		<fillPercent>1</fillPercent>
 		<statBases>
 			<Mass>2000</Mass>
 			<MaxHitPoints>4000</MaxHitPoints>
@@ -67,7 +73,6 @@
 		<description>A huge crennelated wall, intended to surround the settlement or quarters that are built up immediately outside of a dwarfen hold. Built to keep enemy armies outside. Made of stone. Very strong. Typically the first major gate in any assault on a dwarfen hold from the outside.\n\nThis is an end piece, for when you have to end a wall that won't connect to a different wall piece on one end.</description>
 		<altitudeLayer>Building</altitudeLayer>
 		<blockWind>true</blockWind>
-		<fillPercent>1</fillPercent>
 		<statBases>
 			<Mass>2000</Mass>
 			<MaxHitPoints>4000</MaxHitPoints>
@@ -87,7 +92,6 @@
 		<description>A huge crennelated wall, intended to surround the settlement or quarters that are built up immediately outside of a dwarfen hold. Built to keep enemy armies outside. Made of stone. Very strong. Typically the first major gate in any assault on a dwarfen hold from the outside.\n\nThis is an end piece with reversed crennelations, for when you have to end a wall that won't connect to a different wall piece on one end.</description>
 		<altitudeLayer>Building</altitudeLayer>
 		<blockWind>true</blockWind>
-		<fillPercent>1</fillPercent>
 		<statBases>
 			<Mass>2000</Mass>
 			<MaxHitPoints>4000</MaxHitPoints>
@@ -107,7 +111,6 @@
 		<description>A huge crennelated wall, intended to surround the settlement or quarters that are built up immediately outside of a dwarfen hold. Built to keep enemy armies outside. Made of stone. Very strong. Typically the first major gate in any assault on a dwarfen hold from the outside.\n\nThis is a short piece, for when you have to connect other larger wall pieces with limited space.</description>
 		<altitudeLayer>Building</altitudeLayer>
 		<blockWind>true</blockWind>
-		<fillPercent>1</fillPercent>
 		<costStuffCount>15</costStuffCount>
 		<statBases>
 			<Mass>2000</Mass>
@@ -129,7 +132,6 @@
 		<description>A huge crennelated wall, intended to surround the settlement or quarters that are built up immediately outside of a dwarfen hold. Built to keep enemy armies outside. Made of stone. Very strong. Typically the first major gate in any assault on a dwarfen hold from the outside.\n\nThis is a corner piece, with outer crennelations.</description>
 		<altitudeLayer>Building</altitudeLayer>
 		<blockWind>true</blockWind>
-		<fillPercent>1</fillPercent>
 		<costStuffCount>40</costStuffCount>
 		<statBases>
 			<Mass>2000</Mass>
@@ -151,7 +153,6 @@
 		<description>A huge crennelated wall, intended to surround the settlement or quarters that are built up immediately outside of a dwarfen hold. Built to keep enemy armies outside. Made of stone. Very strong. Typically the first major gate in any assault on a dwarfen hold from the outside.\n\nThis is a T connector.</description>
 		<altitudeLayer>Building</altitudeLayer>
 		<blockWind>true</blockWind>
-		<fillPercent>1</fillPercent>
 		<costStuffCount>40</costStuffCount>
 		<statBases>
 			<Mass>2000</Mass>
