@@ -340,7 +340,7 @@
 		</thingCategories>
 		<projectileWhenLoaded>RH_TET_Dwarfs_BoltThrower_Bolt_Round</projectileWhenLoaded>
 		<tradeTags>
-		  <li>RH_TET_Dwarfs_MortarShell</li>
+			<li>RH_TET_Dwarfs_MortarShell</li>
 		</tradeTags>
 	</ThingDef>
 
@@ -379,7 +379,7 @@
 		</thingCategories>
 		<projectileWhenLoaded>RH_TET_Dwarfs_GrudgeThrower_GrudgeWrit_Round</projectileWhenLoaded>
 		<tradeTags>
-		  <li>RH_TET_Dwarfs_MortarShell</li>
+			<li>RH_TET_Dwarfs_MortarShell</li>
 		</tradeTags>
 	</ThingDef>
 	
@@ -428,7 +428,7 @@
 		</thingCategories>
 		<projectileWhenLoaded>RH_TET_Dwarfs_Cannon_Ball_Round</projectileWhenLoaded>
 		<tradeTags>
-		  <li>RH_TET_Dwarfs_MortarShell</li>
+			<li>RH_TET_Dwarfs_MortarShell</li>
 		</tradeTags>
 	</ThingDef>
 	
@@ -477,7 +477,7 @@
 		</thingCategories>
 		<projectileWhenLoaded>RH_TET_Dwarfs_Cannon_Shell_Round</projectileWhenLoaded>
 		<tradeTags>
-		  <li>RH_TET_Dwarfs_MortarShell</li>
+			<li>RH_TET_Dwarfs_MortarShell</li>
 		</tradeTags>
 	</ThingDef>
 
@@ -526,7 +526,7 @@
 		</thingCategories>
 		<projectileWhenLoaded>RH_TET_Dwarfs_OrganGun_Round_Shot</projectileWhenLoaded>
 		<tradeTags>
-		  <li>RH_TET_Dwarfs_MortarShell</li>
+			<li>RH_TET_Dwarfs_MortarShell</li>
 		</tradeTags>
 	</ThingDef>
 
@@ -565,7 +565,7 @@
 		</thingCategories>
 		<projectileWhenLoaded>RH_TET_Dwarfs_GoblinHewer_Round_Shot</projectileWhenLoaded>
 		<tradeTags>
-		  <li>RH_TET_Dwarfs_MortarShell</li>
+			<li>RH_TET_Dwarfs_MortarShell</li>
 		</tradeTags>
 	</ThingDef>
 
@@ -614,7 +614,7 @@
 		</thingCategories>
 		<projectileWhenLoaded>RH_TET_Dwarfs_FlameCannon_Round_Shot</projectileWhenLoaded>
 		<tradeTags>
-		  <li>RH_TET_Dwarfs_MortarShell</li>
+			<li>RH_TET_Dwarfs_MortarShell</li>
 		</tradeTags>
 	</ThingDef>
 
@@ -1233,4 +1233,250 @@
 		</researchPrerequisites>
 	</ThingDef>
 	
+	<!-- TRAPS -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Dwarfs_TrapSpike</defName>
+		<label>dawi spike trap</label>
+		<description>Spikes under tension, connected to a touch-activated trigger, hidden under what appears to be a slab of floor tile. When the victim disturbs the trigger, the spikes spring upwards, and strike the victim. Since it is hidden in the floor, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+		<thingClass>Building_TrapDamager</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Security/Traps/RH_TET_Dawi_SpikeSlabTrap</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<rect>(0,0,1,0.15)</rect>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>true</rotatable>
+		<tickerType>Normal</tickerType>
+		<stealable>false</stealable>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<uiOrder>30</uiOrder>
+		<thingCategories>
+			<li>BuildingsSecurity</li>
+		</thingCategories>
+		<statBases>
+			<Mass>3</Mass>
+			<MaxHitPoints>60</MaxHitPoints>
+			<WorkToBuild>3300</WorkToBuild>
+			<Flammability>0</Flammability>
+			<Beauty>3</Beauty>
+			<Cleanliness>0</Cleanliness>
+			<TrapMeleeDamage>100</TrapMeleeDamage>
+			<TrapSpringChance>1.0</TrapSpringChance>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>40</costStuffCount>
+		<costList>
+			<Steel>5</Steel>
+		</costList>
+		<designationCategory>Security</designationCategory>
+		<designationHotKey>Misc6</designationHotKey>
+		<building>
+			<isTrap>true</isTrap>
+			<trapDestroyOnSpring>true</trapDestroyOnSpring>
+			<trapDamageCategory>Sharp</trapDamageCategory>
+			<expandHomeArea>false</expandHomeArea>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<placeWorkers>
+			<li>PlaceWorker_NeverAdjacentTrap</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_FlooringAdvanced</li>
+			<li>RH_TET_Dwarf_Weapons_MeleeHand_Basic</li>
+		</researchPrerequisites>
+	</ThingDef>
+	
+  <ThingDef Name="RH_TET_Dwarfs_TrapIEDBase" ParentName="BuildingBase" Abstract="True">
+    <thingClass>Building_TrapExplosive</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0.1,0,0.8,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>true</rotatable>
+    <tickerType>Normal</tickerType>
+    <stealable>false</stealable>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <uiOrder>40</uiOrder>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <Mass>3</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <WorkToBuild>1600</WorkToBuild>
+      <Flammability>.5</Flammability>
+      <Beauty>3</Beauty>
+      <TrapSpringChance>1.0</TrapSpringChance>
+    </statBases>
+    <designationCategory>Security</designationCategory>
+    <building>
+      <isTrap>true</isTrap>
+      <trapPeacefulWildAnimalsSpringChanceFactor>0.10</trapPeacefulWildAnimalsSpringChanceFactor>
+      <expandHomeArea>false</expandHomeArea>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_FlooringAdvanced</li>
+			<li>RH_TET_Dwarf_BlackPowder</li>
+		</researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_NeverAdjacentTrap</li>
+    </placeWorkers>
+  </ThingDef>	
+	
+  <ThingDef ParentName="RH_TET_Dwarfs_TrapIEDBase">
+    <defName>RH_TET_Dwarfs_TrapIED_HighExplosive</defName>
+    <label>dawi bomb trap</label>
+    <description>A dawi gunpowder bomb connected to a trigger which detonates on touch or impact. Since it is hidden in the floor, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/Traps/RH_TET_Dawi_BombSlabTrap</texPath>
+    </graphicData>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>10</costStuffCount>
+		<costList>
+			<RH_TET_BlackPowder>35</RH_TET_BlackPowder>
+		</costList>
+    <designationHotKey>Misc7</designationHotKey>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <preExplosionSpawnSingleThingDef>Filth_BlastMark</preExplosionSpawnSingleThingDef>
+        <wickTicks>15</wickTicks>
+        <startWickOnDamageTaken>
+          <li>Bullet</li>
+          <li>Arrow</li>
+          <li>ArrowHighVelocity</li>
+        </startWickOnDamageTaken>
+      </li>
+    </comps>
+    <specialDisplayRadius>3.9</specialDisplayRadius>
+  </ThingDef>	
+
+  <ThingDef ParentName="RH_TET_Dwarfs_TrapIEDBase">
+    <defName>RH_TET_Dwarfs_TrapIED_Incendiary</defName>
+    <label>dawi fire trap</label>
+    <description>A dawi fire bomb connected to a trigger which detonates on touch or impact. Since it is hidden in the floor, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/Traps/RH_TET_Dawi_IncenSlabTrap</texPath>
+    </graphicData>
+    <uiOrder>41</uiOrder>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>10</costStuffCount>
+		<costList>
+			<RH_TET_BlackPowder>35</RH_TET_BlackPowder>
+		</costList>
+    <designationHotKey>Misc8</designationHotKey>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <wickTicks>15</wickTicks>
+        <startWickOnDamageTaken>
+          <li>Bullet</li>
+          <li>Arrow</li>
+          <li>ArrowHighVelocity</li>
+        </startWickOnDamageTaken>
+      </li>
+    </comps>
+    <specialDisplayRadius>3.9</specialDisplayRadius>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Dwarfs_TrapIEDBase">
+    <defName>RH_TET_Dwarfs_TrapIED_AntigrainWarhead</defName>
+    <label>dawi big bomb trap</label>
+    <description>A massive dawi gunpowder bomb connected to a trigger which detonates on touch or impact. Since it is hidden in the floor, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/Traps/RH_TET_Dawi_AntiGrainSlabTrap</texPath>
+    </graphicData>
+    <uiOrder>46</uiOrder>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>10</costStuffCount>
+		<costList>
+			<RH_TET_BlackPowder>135</RH_TET_BlackPowder>
+		</costList>
+    <designationHotKey>Misc11</designationHotKey>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>14.9</explosiveRadius>
+        <explosiveDamageType>BombSuper</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <chanceToStartFire>0.22</chanceToStartFire>
+        <damageFalloff>true</damageFalloff>
+        <explosionEffect>GiantExplosion</explosionEffect>
+        <explosionSound>Explosion_GiantBomb</explosionSound>
+        <wickTicks>15</wickTicks>
+        <startWickOnDamageTaken>
+          <li>Bullet</li>
+          <li>Arrow</li>
+          <li>ArrowHighVelocity</li>
+        </startWickOnDamageTaken>
+        <preExplosionSpawnSingleThingDef>CraterMedium</preExplosionSpawnSingleThingDef>
+      </li>
+    </comps>
+    <specialDisplayRadius>14.9</specialDisplayRadius>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Dwarfs_TrapIEDBase">
+    <defName>RH_TET_Dwarfs_TrapIED_MassiveIncen</defName>
+    <label>dawi big fire trap</label>
+    <description>A massive dawi fire bomb connected to a trigger which detonates on touch or impact. Since it is hidden in the floor, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/Traps/RH_TET_Dawi_IncenAntiGrainSlabTrap</texPath>
+    </graphicData>
+    <uiOrder>46</uiOrder>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>10</costStuffCount>
+		<costList>
+			<RH_TET_BlackPowder>135</RH_TET_BlackPowder>
+		</costList>
+    <designationHotKey>Misc11</designationHotKey>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>14.9</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <explosionSound>Explosion_GiantBomb</explosionSound>
+        <wickTicks>15</wickTicks>
+        <startWickOnDamageTaken>
+          <li>Bullet</li>
+          <li>Arrow</li>
+          <li>ArrowHighVelocity</li>
+        </startWickOnDamageTaken>
+        <preExplosionSpawnSingleThingDef>CraterMedium</preExplosionSpawnSingleThingDef>
+      </li>
+    </comps>
+    <specialDisplayRadius>14.9</specialDisplayRadius>
+  </ThingDef>
+  
 </Defs>

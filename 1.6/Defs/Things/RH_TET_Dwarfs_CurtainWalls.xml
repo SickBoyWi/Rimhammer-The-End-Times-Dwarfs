@@ -39,6 +39,9 @@
 		<canOverlapZones>false</canOverlapZones>
 		<size>(5,5)</size>
 		<defaultPlacingRot>South</defaultPlacingRot>
+		
+		<fillPercent>1</fillPercent>
+		
 		<!--
 		Adding this will make the walls so that they can be fired through. It will also make it so that 
 		gates adjacent to any of these walls won't close (due to Doors Expanded).
