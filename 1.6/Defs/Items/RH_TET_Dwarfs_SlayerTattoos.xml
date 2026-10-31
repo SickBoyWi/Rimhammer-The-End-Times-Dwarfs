@@ -87,7 +87,7 @@
 		<equippedStatOffsets>
 			<MentalBreakThreshold>0.10</MentalBreakThreshold>
 			<PainShockThreshold>0.10</PainShockThreshold>
-			<MeleeCooldownFactor>0.90</MeleeCooldownFactor>
+			<MeleeCooldownFactor>-0.90</MeleeCooldownFactor>
 		</equippedStatOffsets>
 		<costList>
 			<RH_TET_Coal>50</RH_TET_Coal>
@@ -142,7 +142,7 @@
 		<equippedStatOffsets>
 			<MentalBreakThreshold>0.15</MentalBreakThreshold>
 			<PainShockThreshold>0.15</PainShockThreshold>
-			<MeleeCooldownFactor>0.85</MeleeCooldownFactor>
+			<MeleeCooldownFactor>-0.85</MeleeCooldownFactor>
 			<MeleeDamageFactor>1.05</MeleeDamageFactor>
 		</equippedStatOffsets>
 		<costList>
@@ -198,7 +198,7 @@
 		<equippedStatOffsets>
 			<MentalBreakThreshold>0.20</MentalBreakThreshold>
 			<PainShockThreshold>0.20</PainShockThreshold>
-			<MeleeCooldownFactor>0.80</MeleeCooldownFactor>
+			<MeleeCooldownFactor>-0.80</MeleeCooldownFactor>
 			<MeleeDamageFactor>1.10</MeleeDamageFactor>
 		</equippedStatOffsets>
 		<costList>
@@ -254,7 +254,7 @@
 		<equippedStatOffsets>
 			<MentalBreakThreshold>0.25</MentalBreakThreshold>
 			<PainShockThreshold>0.25</PainShockThreshold>
-			<MeleeCooldownFactor>0.75</MeleeCooldownFactor>
+			<MeleeCooldownFactor>-0.75</MeleeCooldownFactor>
 			<MeleeDamageFactor>1.15</MeleeDamageFactor>
 		</equippedStatOffsets>
 		<costList>
@@ -313,7 +313,7 @@
 		<equippedStatOffsets>
 			<MentalBreakThreshold>0.05</MentalBreakThreshold>
 			<PainShockThreshold>0.05</PainShockThreshold>
-			<MeleeCooldownFactor>0.95</MeleeCooldownFactor>
+			<MeleeCooldownFactor>-0.95</MeleeCooldownFactor>
 			<MeleeDodgeChance>0.10</MeleeDodgeChance>
 		</equippedStatOffsets>
 		<costList>
@@ -364,7 +364,7 @@
 		<equippedStatOffsets>
 			<MentalBreakThreshold>0.10</MentalBreakThreshold>
 			<PainShockThreshold>0.10</PainShockThreshold>
-			<MeleeCooldownFactor>0.90</MeleeCooldownFactor>
+			<MeleeCooldownFactor>-0.90</MeleeCooldownFactor>
 			<MeleeDodgeChance>0.15</MeleeDodgeChance>
 		</equippedStatOffsets>
 		<costList>
@@ -415,7 +415,7 @@
 		<equippedStatOffsets>
 			<MentalBreakThreshold>0.15</MentalBreakThreshold>
 			<PainShockThreshold>0.15</PainShockThreshold>
-			<MeleeCooldownFactor>0.85</MeleeCooldownFactor>
+			<MeleeCooldownFactor>-0.85</MeleeCooldownFactor>
 			<MeleeDodgeChance>0.20</MeleeDodgeChance>
 		</equippedStatOffsets>
 		<costList>
@@ -466,7 +466,7 @@
 		<equippedStatOffsets>
 			<MentalBreakThreshold>0.20</MentalBreakThreshold>
 			<PainShockThreshold>0.20</PainShockThreshold>
-			<MeleeCooldownFactor>0.80</MeleeCooldownFactor>
+			<MeleeCooldownFactor>-0.80</MeleeCooldownFactor>
 			<MeleeDodgeChance>0.25</MeleeDodgeChance>
 		</equippedStatOffsets>
 		<costList>
