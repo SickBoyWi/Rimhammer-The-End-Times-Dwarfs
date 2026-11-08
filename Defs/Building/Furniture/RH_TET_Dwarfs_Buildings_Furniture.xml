@@ -1606,4 +1606,96 @@
 		</tradeTags>
 	</ThingDef>
 
+	<ThingDef ParentName="RH_TET_Dwarfs_FurnitureWithQualityBase">
+		<defName>RH_TET_Dwarfs_ShelfSingle</defName>
+		<label>dawi shelf narrow</label>
+		<description>A narrow shelf for storing things. Items stored in this will not affect room beauty and they won&apos;t deteriorate, even if outside.\n\nDwarfs excel at making the most of their often limited undermountain space. Large shelves are a must have for the clans, since having things laying around on the floor is unsightly.\n\nEXTENDED STORAGE NOTE: If you&apos;re using the Extended Storage mod, this shelf will automatically have the ability to store six times more than a normal shelf can store. It can hold anything you&apos;d like, except buildings. Make sure you set what you want it to hold, as it defaults to Raw Resources. If you are not using the Extended Storage mod, this will function like a normal shelf.</description>
+		<thingClass>Building_Storage</thingClass>
+		<size>(1,1)</size>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Dwarfs_ShelfSingle</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>3</drawSize>
+		</graphicData>
+		<uiIconScale>0.50</uiIconScale>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.9</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>0.75</staticSunShadowHeight>
+		<pathCost>90</pathCost>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>20</costStuffCount>
+		<statBases>
+			<MaxHitPoints>175</MaxHitPoints>
+			<Mass>10</Mass>
+			<WorkToBuild>600</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Beauty>5</Beauty>
+		</statBases>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<building>
+			<preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+			<ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+	  
+			<!-- new for 1.4 -->
+			<maxItemsInCell>4</maxItemsInCell>
+			<storageGroupTag>Shelf</storageGroupTag>
+			<blueprintClass>Blueprint_Storage</blueprintClass>
+			<defaultStorageSettings>
+				<priority>Preferred</priority>
+				<filter>
+					<categories>
+						<li>Foods</li>
+						<li>Manufactured</li>
+						<li>ResourcesRaw</li>
+						<li>Items</li>
+						<li>Weapons</li>
+						<li>Apparel</li>
+						<li>BodyParts</li>
+					</categories>
+				</filter>
+			</defaultStorageSettings>
+			<paintable>true</paintable>
+			<fixedStorageSettings>
+				<filter>
+					<disallowNotEverStorable>true</disallowNotEverStorable>
+					<categories>
+						<li>Root</li>
+					</categories>
+					<disallowedCategories>
+						<li>Plants</li>
+						<li>Buildings</li>
+					</disallowedCategories>
+					<disallowedThingDefs MayRequire="Ludeon.RimWorld.Biotech">
+						<li MayRequire="Ludeon.RimWorld.Biotech">Wastepack</li>
+					</disallowedThingDefs>
+					<specialFiltersToDisallow>
+						<li>AllowLargeCorpses</li>
+					</specialFiltersToDisallow>
+				</filter>
+			</fixedStorageSettings>
+		</building>
+		<tickerType>Normal</tickerType>
+		<drawGUIOverlay>False</drawGUIOverlay>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+		</inspectorTabs>
+		<designationHotKey>Misc12</designationHotKey>
+		<surfaceType>Item</surfaceType>
+		<canOverlapZones>false</canOverlapZones>
+		<researchPrerequisites>
+			<li>RH_TET_Dwarfs_Furniture_Basic</li>
+		</researchPrerequisites>
+		<designationCategory>Furniture</designationCategory>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tradeTags>
+			<li>Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
 </Defs>

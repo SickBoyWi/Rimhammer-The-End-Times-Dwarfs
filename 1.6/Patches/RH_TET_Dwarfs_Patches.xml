@@ -707,6 +707,32 @@
 						<drawGUIOverlay>True</drawGUIOverlay>
 					</value>
 				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Dwarfs_ShelfSingle"]/thingClass</xpath>
+					<value>
+						<thingClass>ExtendedStorage.Building_ExtendedStorage</thingClass>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Dwarfs_ShelfSingle"]/inspectorTabs</xpath>
+					<value>
+						<inspectorTabs>
+							<li>ExtendedStorage.ITab_ExtendedStorage</li>
+						</inspectorTabs>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Dwarfs_ShelfSingle"]/statBases</xpath>
+					<value>
+						<ES_StorageFactor>8</ES_StorageFactor>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Dwarfs_ShelfSingle"]/drawGUIOverlay</xpath>
+					<value>
+						<drawGUIOverlay>True</drawGUIOverlay>
+					</value>
+				</li>
 			</operations>
 		</match>
 	</Operation>
