@@ -492,7 +492,7 @@
 				<rect>(0.2,0.2,0.6,0.6)</rect>
 			</damageData>
 		</graphicData>
-		<uiIconScale>1.0</uiIconScale>
+		<uiIconScale>0.6</uiIconScale>
 		<uiIconOffset>(0, -.1)</uiIconOffset>
 		<researchPrerequisites>
 			<li>RH_TET_Dwarf_WallsHighBlood</li>

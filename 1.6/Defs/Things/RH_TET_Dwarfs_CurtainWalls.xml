@@ -40,15 +40,9 @@
 		<size>(5,5)</size>
 		<defaultPlacingRot>South</defaultPlacingRot>
 		
-		<fillPercent>1</fillPercent>
-		
-		<!--
-		Adding this will make the walls so that they can be fired through. It will also make it so that 
-		gates adjacent to any of these walls won't close (due to Doors Expanded).
-		
 		<fillPercent>.75</fillPercent>
 		<disableImpassableShotOverConfigError>True</disableImpassableShotOverConfigError>
-		-->
+
 	</ThingDef>
  
 	<ThingDef ParentName="RH_TET_Dwarfs_CastleWallBase">
@@ -65,9 +59,9 @@
 		</statBases>
 		<rotatable>true</rotatable>
 		<graphicData>
-			<texPath>Things/Building/Structure/Bottom_Half_Wall</texPath>
+			<texPath>Things/Building/Structure/DBottom_Half_Wall</texPath>
 		</graphicData>
-		<uiIconPath>UI/Menu/CurtainWallUI</uiIconPath>
+		<uiIconPath>UI/Menu/DCurtainWallUI</uiIconPath>
 	</ThingDef>
 
 	<ThingDef ParentName="RH_TET_Dwarfs_CastleWallBase">
@@ -84,9 +78,9 @@
 		</statBases>
 		<rotatable>true</rotatable>
 		<graphicData>
-			<texPath>Things/Building/Structure/Bottom_Half_WallEnd</texPath>
+			<texPath>Things/Building/Structure/DBottom_Half_WallEnd</texPath>
 		</graphicData>
-		<uiIconPath>UI/Menu/CurtainWallEndUI</uiIconPath>
+		<uiIconPath>UI/Menu/DCurtainWallEndUI</uiIconPath>
 	</ThingDef>
 
 	<ThingDef ParentName="RH_TET_Dwarfs_CastleWallBase">
@@ -103,9 +97,9 @@
 		</statBases>
 		<rotatable>true</rotatable>
 		<graphicData>
-			<texPath>Things/Building/Structure/Bottom_Half_WallEndOuter</texPath>
+			<texPath>Things/Building/Structure/DBottom_Half_WallEndOuter</texPath>
 		</graphicData>
-		<uiIconPath>UI/Menu/CurtainWallEndOuterUI</uiIconPath>
+		<uiIconPath>UI/Menu/DCurtainWallEndOuterUI</uiIconPath>
 	</ThingDef>
 
 	<ThingDef ParentName="RH_TET_Dwarfs_CastleWallBase">
@@ -123,10 +117,33 @@
 		</statBases>
 		<rotatable>true</rotatable>
 		<graphicData>
-			<texPath>Things/Building/Structure/Bottom_Half_WallShort</texPath>
+			<texPath>Things/Building/Structure/DBottom_Half_WallShort</texPath>
 		</graphicData>
 		<size>(1,5)</size>
-		<uiIconPath>UI/Menu/CurtainWallShortUI</uiIconPath>
+		<uiIconPath>UI/Menu/DCurtainWallShortUI</uiIconPath>
+	</ThingDef>
+	
+	<ThingDef ParentName="RH_TET_Dwarfs_CastleWallBase">
+		<defName>RH_TET_Dwarfs_CastleGateBorderMassive</defName>
+		<label>Dwarf Gate Wall</label>
+		<description>A huge crennelated wall, intended to go adjacent to a gate. This wall may not be shot over / through. Built to keep enemy armies outside. Made of stone. Very strong. Typically the first major gate in any assault on a dwarfen hold from the outside.\n\nThis is a short piece, for when you have to connect other larger wall pieces with limited space. Place one of these adjacent to both sides of a dwarfen gate in order to have it close properly. This is a limitation on the Doors Expanded mod.</description>
+		<altitudeLayer>Building</altitudeLayer>
+		<blockWind>true</blockWind>
+		<costStuffCount>15</costStuffCount>
+		<statBases>
+			<Mass>2000</Mass>
+			<MaxHitPoints>4000</MaxHitPoints>
+			<WorkToBuild>1800</WorkToBuild>
+			<Beauty>10</Beauty>
+		</statBases>
+		<rotatable>true</rotatable>
+		<graphicData>
+			<texPath>Things/Building/Structure/GateBorder</texPath>
+		</graphicData>
+		<size>(1,5)</size>
+		<uiIconPath>UI/Menu/GateBorderUI</uiIconPath>
+		<fillPercent>1</fillPercent>
+		<disableImpassableShotOverConfigError>false</disableImpassableShotOverConfigError>
 	</ThingDef>
   
 	<ThingDef ParentName="RH_TET_Dwarfs_CastleWallBase">
@@ -145,9 +162,9 @@
 		<canOverlapZones>false</canOverlapZones>
 		<rotatable>true</rotatable>
 		<graphicData>
-			<texPath>Things/Building/Structure/Bottom_Half_Wall_Corner</texPath>
+			<texPath>Things/Building/Structure/DBottom_Half_Wall_Corner</texPath>
 		</graphicData>
-		<uiIconPath>UI/Menu/CurtainWallCornerUI</uiIconPath>
+		<uiIconPath>UI/Menu/DCurtainWallCornerUI</uiIconPath>
 	</ThingDef>
   
 	<ThingDef ParentName="RH_TET_Dwarfs_CastleWallBase">
@@ -166,9 +183,9 @@
 		<canOverlapZones>false</canOverlapZones>
 		<rotatable>true</rotatable>
 		<graphicData>
-			<texPath>Things/Building/Structure/GrandWall_TConnector</texPath>
+			<texPath>Things/Building/Structure/DGrandWall_TConnector</texPath>
 		</graphicData>
-		<uiIconPath>UI/Menu/CurtainWallTUI</uiIconPath>
+		<uiIconPath>UI/Menu/DCurtainWallTUI</uiIconPath>
 	</ThingDef>
   
 	<ThingDef Name="RH_TET_Dwarfs_CastleTowerBase" ParentName="BuildingBase" Abstract="True">
@@ -295,7 +312,7 @@
 			<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
 		</statBases>
 		<graphicData>
-			<texPath>Things/Building/Structure/GrandWall_Tower</texPath>
+			<texPath>Things/Building/Structure/DawiGrandWall_Tower</texPath>
 			<drawOffset>(0,0,1.0)</drawOffset>
 			<drawRotated>false</drawRotated>
 		</graphicData>
@@ -304,7 +321,7 @@
 			<turretGunDef>RH_TET_TowerTurret</turretGunDef>
 			<turretBurstCooldownTime>4.5</turretBurstCooldownTime>
 		</building>
-		<uiIconPath>UI/Menu/DefensiveTowerUI</uiIconPath>
+		<uiIconPath>UI/Menu/DawiDefensiveTowerUI</uiIconPath>
 	</ThingDef>
   
 	<ThingDef ParentName="BaseWeaponTurret">
@@ -312,7 +329,7 @@
 		<label>dwarf tower turret</label>
 		<description>DESC HERE TOO</description>
 		<graphicData>
-			<texPath>Things/Building/Structure/GrandWall_TowerTurretTop</texPath>
+			<texPath>Things/Building/Structure/DGrandWall_TowerTurretTop</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
@@ -360,7 +377,7 @@
 	<DoorsExpanded.DoorExpandedDef ParentName="AbstractHeronDoorBase">
 		<defName>RH_TET_Dwarfs_MassiveGate</defName>
 		<label>Dwarf Massive Gate</label>
-		<description>A huge stone wall with a gate built into it. Meant to be built into a massive dwarfen wall. Built to keep enemy armies outside. Extremely strong. Typically the first major gate in any assault on a dwarfen hold from the outside.\n\nThis gate fits into the Dwarfen massive walls.</description>
+		<description>A huge stone wall with a gate built into it. Meant to be built into a massive dwarfen wall. Built to keep enemy armies outside. Extremely strong. Typically the first major gate in any assault on a dwarfen hold from the outside.\n\nThis gate fits into the Dwarfen massive walls.\n\nNOTE: Due to a limitation in the Doors Expanded dependency mod, these doors will not close unless the Dwarf Gate Walls are placed adjacent. The normal dwarf massive curtain walls will cause the door not to close due to the fact that they can be fired through with weapons. Place these adjacent to a Dwarf Gate Wall, mountain, or any other non-fire-throughable (lol) structure if you want them to actually close.</description>
 		<size>(5,5)</size>
 		<building>
 			<soundDoorOpenManual>HeronBlastDoorOpen</soundDoorOpenManual>
@@ -387,9 +404,9 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 		</costList>
 		<doorOpenSpeedRate>1</doorOpenSpeedRate>
-		<uiIconPath>UI/Menu/GrandGateUI</uiIconPath>
+		<uiIconPath>UI/Menu/DGrandGateUI</uiIconPath>
 		<graphicData>
-			<texPath>Things/Building/Doors/GrandGateDoor_Mover</texPath>
+			<texPath>Things/Building/Doors/DGrandGateDoor_Mover</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(8,8)</drawSize>
 			<damageData>
@@ -397,7 +414,7 @@
 			</damageData>
 		</graphicData>
 		<doorAsync>
-			<texPath>Things/Building/Doors/GrandGateDoor_MoverOther</texPath>
+			<texPath>Things/Building/Doors/DGrandGateDoor_MoverOther</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(8,8)</drawSize>
 			<damageData>
@@ -405,7 +422,7 @@
 			</damageData>
 		</doorAsync>
 		<doorFrame>
-			<texPath>Things/Building/Structure/GrandGate</texPath>
+			<texPath>Things/Building/Structure/DGrandGate</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(8,8)</drawSize>
@@ -417,7 +434,7 @@
 			</damageData>
 		</doorFrame>
 		<doorFrameSplit>
-			<texPath>Things/Building/Structure/GrandGateOther</texPath>
+			<texPath>Things/Building/Structure/DGrandGateOther</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(8,8)</drawSize>
